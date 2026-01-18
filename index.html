@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="theme-color" content="#0f172a" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Happy Hour Vienna Map | BarDeals Vienna</title>
+  <title>Happy Hour Vienna Map | BarDeals Vienna</title>
 
-  <head>
-  <meta charset="UTF-8">
-  <title>BarDeals Vienna</title>
+  <meta name="description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
+  <link rel="canonical" href="https://bardeals.at/" />
+
+  <meta property="og:title" content="Happy Hour Vienna Map | BarDeals Vienna" />
+  <meta property="og:description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bardeals.at/" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RRC5270D6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -23,53 +28,41 @@
     gtag('config', 'G-1RRC5270D6');
   </script>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Leaflet (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BarDeals Vienna",
+    "url": "https://bardeals.at/",
+    "description": "Happy hour deals and cheap drinks in Vienna on a live map.",
+    "inLanguage": "en",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bardeals.at/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 
-  
-<meta name="description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
-<link rel="canonical" href="https://bardeals.at/" />
-
-<meta property="og:title" content="Happy Hour Vienna Map | BarDeals Vienna" />
-<meta property="og:description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bardeals.at/" />
-
-<meta name="twitter:card" content="summary_large_image" />
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/style.css" />
-
-<!-- Leaflet (CDN) -->
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-crossorigin=""
-/>
-
-<!-- Schema -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "WebSite",
-"name": "BarDeals Vienna",
-"url": "https://bardeals.at/",
-"description": "Happy hour deals and cheap drinks in Vienna on a live map.",
-"inLanguage": "en",
-"potentialAction": {
-"@type": "SearchAction",
-"target": "https://bardeals.at/?q={search_term_string}",
-"query-input": "required name=search_term_string"
-}
-}
-</script>
-</head>
 
 <body>
 
@@ -348,3 +341,4 @@ crossorigin=""
 </body>
 
 </html> 
+
