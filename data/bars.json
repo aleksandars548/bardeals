@@ -290,6 +290,21 @@
 "deals": [
 { "days": [2,3,4,5], "from": "20:00", "to": "23:00", "text": " All Cocktails €6,50"}
 ]
+},
+{
+"id": "hard-rock-cafe",
+"name": "Hard Rock Cafe",
+"address": "Rotenturmstraße 25, 1010 Vienna",
+"zip": "1010",
+"lat": 48.211453212283985,
+"lng": 16.37548219670923,
+"category": "Bar",
+"featured": false,
+"image": "assets/img/bars/hardrockcafe.png",
+"deals": [
+{ "days": [0,1,2,3,4,5,7], "from": "15:00", "to": "17:00", "text": " 50% OFF on SELECTED BEERS, WINE, SPIRITS, COCKTAILS & SHOTS!"},
+{ "days": [0,1,2,3,4,5,7], "from": "22:00", "to": "01:00", "text": " 50% OFF on SELECTED BEERS, WINE, SPIRITS, COCKTAILS & SHOTS!"}
+]
 }
 
 ]
