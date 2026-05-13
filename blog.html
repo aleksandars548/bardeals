@@ -16,6 +16,7 @@
 
   <title>Vienna Bar Guide Blog | BarDeals Vienna</title>
   <meta name="description" content="Vienna bar guide with happy hour tips, cheap drinks, nightlife guides, student bar deals and weekly bar offers in Vienna.">
+  <link rel="canonical" href="https://bardeals.at/blog.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 
@@ -309,6 +310,15 @@
       font-size: 14px;
     }
 
+    .no-results {
+      display: none;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 800;
+      color: #555;
+      margin: -50px 0 80px;
+    }
+
     /* CTA */
     .cta {
       background: #111;
@@ -472,8 +482,9 @@
 
       <div class="nav-links">
         <a href="index.html">Deals</a>
+        <a href="bars.html">Bars</a>
+        <a href="clubs.html">Clubs</a>
         <a href="blog.html" class="active">Blog</a>
-        <a href="bars/belushis.html">Belushi’s</a>
       </div>
     </nav>
 
@@ -487,7 +498,7 @@
         </h1>
 
         <p class="hero-description">
-          Guides for finding happy hours, cheap drinks, student nights, food offers and bar deals in Vienna.
+          Guides for finding happy hours, cheap drinks, nightlife spots, student nights, food offers and bar deals in Vienna.
           Simple tips for tourists, hostel guests, students and anyone looking for a better night out.
         </p>
       </div>
@@ -498,7 +509,7 @@
         <div class="featured-info">
           <span class="tag">Featured Guide</span>
           <h2>Best Happy Hours in Vienna</h2>
-          <p>Where to find drink specials, weekly offers and affordable nights out in Vienna.</p>
+          <p>Where to find drink specials, cocktail deals and affordable nights out in Vienna.</p>
           <span class="read-btn">Read Guide</span>
         </div>
       </a>
@@ -508,72 +519,78 @@
       <h2 class="section-title">Latest Guides</h2>
 
       <div class="category-row">
-        <button class="active">All</button>
-        <button>Happy Hour</button>
-        <button>Students</button>
-        <button>Hostels</button>
-        <button>Nightlife</button>
+        <button class="active" type="button" data-filter="all">All</button>
+        <button type="button" data-filter="happy-hour">Happy Hour</button>
+        <button type="button" data-filter="students">Students</button>
+        <button type="button" data-filter="hostels">Hostels</button>
+        <button type="button" data-filter="nightlife">Nightlife</button>
       </div>
 
       <div class="blog-grid">
 
-        <a href="blog/best-sports-bars-vienna-world-cup-2026.html" class="blog-card">
-  <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=80" alt="Sports bars in Vienna">
-  <div class="blog-card-content">
-    <div class="meta">
-      <span>Sports Bars</span>
-      <span>·</span>
-      <span>6 min read</span>
-    </div>
-    <h3>Best Sports Bars in Vienna for World Cup 2026</h3>
-    <p>Where to watch football, big tournaments and live sports in Vienna with drinks, screens and atmosphere.</p>
-    <span class="mini-link">Read article →</span>
-  </div>
-</a>
+        <a href="blog/best-sports-bars-vienna-world-cup-2026.html" class="blog-card" data-category="nightlife sports">
+          <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=80" alt="Sports bars in Vienna">
 
-        <a href="blog/best-happy-hours-vienna.html" class="blog-card">
-          <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=900&q=80" alt="Happy hour drinks in Vienna">
           <div class="blog-card-content">
             <div class="meta">
-              <span>Happy Hour</span>
+              <span>Sports Bars</span>
               <span>·</span>
-              <span>5 min read</span>
+              <span>6 min read</span>
             </div>
-            <h3>Best Happy Hours in Vienna</h3>
-            <p>A simple guide to finding happy hour deals, cheap drinks and weekly bar offers around Vienna.</p>
+
+            <h3>Best Sports Bars in Vienna for World Cup 2026</h3>
+
+            <p>
+              Where to watch football, big tournaments and live sports in Vienna with drinks, screens and atmosphere.
+            </p>
+
             <span class="mini-link">Read article →</span>
           </div>
         </a>
 
-   
+        <a href="blog/best-happy-hours-vienna.html" class="blog-card" data-category="happy-hour nightlife">
+          <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=900&q=80" alt="Happy hour drinks in Vienna">
 
-       
+          <div class="blog-card-content">
+            <div class="meta">
+              <span>Happy Hour</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
 
-        
+            <h3>Best Happy Hours in Vienna</h3>
 
-      
+            <p>
+              A practical guide to cocktail deals, cheap drinks, shots, beer offers and happy hour bars around Vienna.
+            </p>
 
-        <a href="blog/where-to-watch-eurovision-2026-vienna.html" class="blog-card">
-  <img src="https://images.unsplash.com/photo-1574663086412-43db1a03506d?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Where to watch Eurovision 2026 in Vienna">
+            <span class="mini-link">Read article →</span>
+          </div>
+        </a>
 
-  <div class="blog-card-content">
-    <div class="meta">
-      <span>Eurovision Guide</span>
-      <span>·</span>
-      <span>7 min read</span>
-    </div>
+        <a href="blog/where-to-watch-eurovision-2026-vienna.html" class="blog-card" data-category="nightlife">
+          <img src="https://images.unsplash.com/photo-1574663086412-43db1a03506d?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Where to watch Eurovision 2026 in Vienna">
 
-    <h3>Where to Watch Eurovision 2026 in Vienna</h3>
+          <div class="blog-card-content">
+            <div class="meta">
+              <span>Eurovision Guide</span>
+              <span>·</span>
+              <span>7 min read</span>
+            </div>
 
-    <p>
-      Best bars, public viewings, watch parties and fan zones in Vienna for Eurovision 2026.
-    </p>
+            <h3>Where to Watch Eurovision 2026 in Vienna</h3>
 
-    <span class="mini-link">Read article →</span>
-  </div>
-</a>
+            <p>
+              Best bars, public viewings, watch parties and fan zones in Vienna for Eurovision 2026.
+            </p>
+
+            <span class="mini-link">Read article →</span>
+          </div>
+        </a>
 
       </div>
+
+      <p id="noResults" class="no-results">No guides in this category yet.</p>
     </section>
 
     <section class="cta">
@@ -584,7 +601,7 @@
 
       <div class="cta-actions">
         <a class="btn btn-light" href="index.html">View Bar Deals</a>
-        <a class="btn btn-dark" href="bars/belushis.html">View Belushi’s Vienna</a>
+        <a class="btn btn-dark" href="bars.html">View All Bars</a>
       </div>
     </section>
 
@@ -593,6 +610,35 @@
     </footer>
 
   </main>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".category-row button");
+    const blogCards = document.querySelectorAll(".blog-grid .blog-card");
+    const noResults = document.getElementById("noResults");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        let visibleCards = 0;
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        blogCards.forEach(card => {
+          const categories = (card.dataset.category || "").split(" ");
+          const shouldShow = filter === "all" || categories.includes(filter);
+
+          card.style.display = shouldShow ? "block" : "none";
+
+          if (shouldShow) {
+            visibleCards++;
+          }
+        });
+
+        noResults.style.display = visibleCards === 0 ? "block" : "none";
+      });
+    });
+  </script>
 
 </body>
 </html>
