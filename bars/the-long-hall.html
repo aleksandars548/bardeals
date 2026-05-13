@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCPTVZJSXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CCPTVZJSXR');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Long Hall Vienna | Irish Pub, Live Sports & Bar Info</title>
+  <meta name="description" content="The Long Hall Vienna Irish pub and sports bar information, opening times, address, live sports, menu info and Google Maps directions.">
+
+  <link rel="canonical" href="https://bardeals.at/bars/the-long-hall.html">
+
+  <meta property="og:title" content="The Long Hall Vienna | BarDeals Vienna">
+  <meta property="og:description" content="Irish pub and sports bar in Vienna with live sports, food, brunch, drinks and Google Maps directions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bardeals.at/bars/the-long-hall.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "The Long Hall",
+    "url": "https://thelonghall.at/",
+    "telephone": "+43 1 2951080",
+    "email": "office@thelonghall.at",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Florianigasse 2",
+      "postalCode": "1080",
+      "addressLocality": "Vienna",
+      "addressCountry": "AT"
+    },
+    "openingHours": [
+      "Mo-Th 09:00-01:00",
+      "Fr-Sa 09:00-02:00",
+      "Su 09:00-01:00"
+    ],
+    "servesCuisine": "Irish pub food",
+    "sameAs": [
+      "https://thelonghall.at/"
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f4f4f2;
+      color: #111;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      width: 100%;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      font-weight: 900;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      background: #303030;
+      color: #fff;
+      padding: 2px 8px 5px;
+      margin-left: 3px;
+    }
+
+    .back-link {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid #111;
+      padding: 10px 18px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .bar-hero {
+      padding: 40px 6% 70px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      background: #111;
+      color: #fff;
+      padding: 8px 13px;
+      border-radius: 999px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 8vw, 118px);
+      line-height: 0.92;
+      font-weight: 900;
+      color: #2d2d2d;
+      margin-bottom: 28px;
+      word-break: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-title span {
+      display: inline-block;
+      background: #303030;
+      color: #fff;
+      padding: 0 18px 10px;
+      margin-top: 8px;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 900;
+      border: 1px solid #111;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #303030;
+    }
+
+    .btn-light {
+      background: transparent;
+      color: #111;
+    }
+
+    .btn-light:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 55px rgba(0,0,0,0.22);
+    }
+
+    .feature-card img {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      display: block;
+    }
+
+    .feature-info {
+      padding: 30px 28px 34px;
+      text-align: center;
+    }
+
+    .feature-info h2 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 9px;
+      overflow-wrap: anywhere;
+    }
+
+    .feature-info p {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 25px;
+      margin-bottom: 24px;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: #666;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .content {
+      padding: 20px 6% 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 6vw, 72px);
+      margin-bottom: 38px;
+      color: #2d2d2d;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 70px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+    }
+
+    .info-card .card-icon {
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .info-card h3 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .info-card ul {
+      padding-left: 18px;
+    }
+
+    .deal-box {
+      background: #111;
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      margin-bottom: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.22);
+    }
+
+    .deal-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .deal-box p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e8e8e8;
+    }
+
+    .deal-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .deal-item {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    .deal-item strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .deal-item span {
+      color: #d6d6d6;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .verified-note {
+      margin-top: 22px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #d6d6d6;
+      font-weight: 700;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      margin-bottom: 70px;
+    }
+
+    .photo-strip img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+    }
+
+    .photo-strip .side-photos {
+      display: grid;
+      gap: 28px;
+    }
+
+    .photo-strip .side-photos img {
+      height: 196px;
+    }
+
+    .faq-section {
+      margin-bottom: 70px;
+    }
+
+    .faq-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-grid details {
+      background: #fff;
+      border-radius: 18px;
+      padding: 0 22px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .faq-grid summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 17px;
+      font-weight: 900;
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .faq-grid summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-grid summary::after {
+      content: "+";
+      font-size: 26px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .faq-grid details[open] summary::after {
+      content: "-";
+    }
+
+    .faq-grid p {
+      padding: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .cta {
+      background: #fff;
+      border-radius: 30px;
+      padding: 46px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.13);
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 5vw, 64px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .footer {
+      padding: 35px 6%;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1000px) {
+      .bar-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 45px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .feature-card {
+        max-width: 470px;
+        margin: 0 auto;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .deal-box {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .top-nav {
+        padding: 18px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .back-link {
+        font-size: 12px;
+        padding: 9px 13px;
+      }
+
+      .bar-hero {
+        padding: 28px 18px 55px;
+      }
+
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .feature-card img {
+        height: 300px;
+      }
+
+      .feature-info h2 {
+        font-size: 27px;
+      }
+
+      .content {
+        padding: 10px 18px 60px;
+      }
+
+      .deal-box {
+        padding: 30px 22px;
+      }
+
+      .deal-box h2 {
+        font-size: 40px;
+      }
+
+      .section-title {
+        font-size: 42px;
+      }
+
+      .photo-strip img {
+        height: 300px;
+      }
+
+      .photo-strip .side-photos img {
+        height: 220px;
+      }
+
+      .cta {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <nav class="top-nav">
+      <a href="../index.html" class="logo">BAR<span>DEALS</span></a>
+      <a href="../index.html" class="back-link">← Back to deals</a>
+    </nav>
+
+    <header class="bar-hero">
+
+      <div class="hero-text">
+        <div class="eyebrow">Irish Pub & Sports Bar</div>
+
+        <h1 class="hero-title">
+          The Long
+          <span>Hall</span>
+        </h1>
+
+        <p class="hero-description">
+          Irish pub and sports bar in Vienna's 8th district, close to Rathaus.
+          The Long Hall is known for pub food, brunch, pints, live sports, Celtic matches,
+          music nights and a proper Irish pub atmosphere.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=The+Long+Hall+Florianigasse+2+1080+Wien" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+
+          <a class="btn btn-light" href="#deals">
+            View Info
+          </a>
+
+          <a class="btn btn-light" href="https://thelonghall.at/" target="_blank" rel="noopener">
+            Official Website
+          </a>
+        </div>
+      </div>
+
+      <article class="feature-card">
+        <img src="/assets/img/placeholders/irish-pub-vienna.jpg" alt="The Long Hall Vienna Irish pub and sports bar">
+
+        <div class="feature-info">
+          <h2>The Long Hall</h2>
+          <p>Irish Pub · Live Sports · Food · Brunch</p>
+
+          <div class="icon-row">
+            <span>🍺</span>
+            <span>⚽</span>
+            <span>📍</span>
+            <span>🍔</span>
+          </div>
+
+          <div class="small-note">
+            Florianigasse 2, 1080 Vienna · Near Rathaus
+          </div>
+        </div>
+      </article>
+
+    </header>
+
+    <main class="content">
+
+      <section id="deals" class="deal-box">
+        <div>
+          <h2>Current Offers & Info</h2>
+          <p>
+            The Long Hall has official food, brunch and drinks menus, plus live sports and events.
+            I did not find a confirmed official happy-hour deal, so check current offers directly with the venue.
+          </p>
+
+          <p class="verified-note">
+            Deals, prices, opening times and events can change. Last checked: May 2026.
+            Always confirm with the venue before ordering or visiting.
+          </p>
+        </div>
+
+        <div class="deal-list">
+
+          <div class="deal-item">
+            <strong>Food Menu</strong>
+            <span>Official food menu listed from 09:00-22:00.</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>Brunch Menu</strong>
+            <span>Official brunch menu listed from 09:00-13:00.</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>Live Sports</strong>
+            <span>Football, rugby, GAA, American football, ice hockey, golf, tennis and major events.</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>Celtic Matches</strong>
+            <span>The Long Hall says every Celtic match is shown live.</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>Current Drink Deals</strong>
+            <span>Check current offers with the venue.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Bar Info</h2>
+
+        <div class="info-grid">
+
+          <article class="info-card">
+            <div class="card-icon">📍</div>
+            <h3>Location</h3>
+            <p>
+              Florianigasse 2, 1080 Vienna. The Long Hall is in Josefstadt, close to Rathaus
+              and easy to reach from the city centre by public transport.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">🍻</div>
+            <h3>Good For</h3>
+            <ul>
+              <li>Watching live football and rugby</li>
+              <li>Irish pub food and pints</li>
+              <li>Groups and match nights</li>
+              <li>Brunch, dinner and casual drinks</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">🕒</div>
+            <h3>Opening Times</h3>
+            <p>
+              Mon-Thu 09:00-01:00<br>
+              Fri 09:00-02:00<br>
+              Sat 09:00-02:00<br>
+              Sun 09:00-01:00
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="photo-strip">
+        <img src="/assets/img/placeholders/pub-vienna.jpg" alt="Irish pub in Vienna">
+
+        <div class="side-photos">
+          <img src="/assets/img/placeholders/sports-bar-vienna.jpg" alt="Sports bar in Vienna showing live football">
+          <img src="/assets/img/placeholders/drinks-vienna.jpg" alt="Pints and drinks in Vienna pub">
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2 class="section-title">FAQ</h2>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>Does The Long Hall show live sports?</summary>
+            <p>
+              Yes. The Long Hall lists worldwide sports such as football, rugby, GAA, American football,
+              ice hockey, golf and tennis, and says it has indoor and outdoor screens plus a projector.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does The Long Hall show Celtic matches?</summary>
+            <p>
+              Yes. The Long Hall says every Celtic match is shown live.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where is The Long Hall in Vienna?</summary>
+            <p>
+              The Long Hall is at Florianigasse 2, 1080 Wien, near Rathaus in Vienna’s 8th district.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does The Long Hall have confirmed drink deals?</summary>
+            <p>
+              I did not find a confirmed official happy-hour or drink deal. Check current offers directly with the venue.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Going Tonight?</h2>
+        <p>
+          Save the location, check today’s sports schedule and confirm current offers directly with The Long Hall before visiting.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=The+Long+Hall+Florianigasse+2+1080+Wien" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+
+          <a class="btn btn-light" href="https://thelonghall.at/menu/" target="_blank" rel="noopener">
+            View Menu
+          </a>
+
+          <a class="btn btn-light" href="../index.html">
+            See More Bar Deals
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      BarDeals Vienna · Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,351 +1,514 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <title>Happy Hour Vienna Map | BarDeals Vienna</title>
-
-<link rel="icon" href="/favicon.ico?v=6">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=6">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=6">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=6">
-<link rel="manifest" href="/site.webmanifest?v=6">
-
-
-  <meta name="description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
-  <link rel="canonical" href="https://bardeals.at/" />
-
-  <meta property="og:title" content="Happy Hour Vienna Map | BarDeals Vienna" />
-  <meta property="og:description" content="Find happy hour deals and cheap drinks in Vienna. Live map with deals near you, sorted by what’s open now." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bardeals.at/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RRC5270D6"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCPTVZJSXR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1RRC5270D6');
+    gtag("js", new Date());
+    gtag("config", "G-CCPTVZJSXR");
   </script>
 
-  <!-- Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BarDeals Vienna | Happy Hours, Bar Deals & Nightlife</title>
+  <meta name="description" content="Find Vienna bars, pubs, sports bars, cocktail bars and nightlife venues with happy hours, drink deals, food offers, Google Maps links and full bar pages.">
+  <link rel="canonical" href="https://bardeals.at/">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Leaflet (CDN) -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
-  />
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "BarDeals Vienna",
-    "url": "https://bardeals.at/",
-    "description": "Happy hour deals and cheap drinks in Vienna on a live map.",
-    "inLanguage": "en",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://bardeals.at/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+  <link rel="stylesheet" href="/assets/css/launch.css">
 </head>
-
 
 <body>
 
-<header class="dark-nav">
-<div class="nav-inner">
-<div></div>
+  <main class="page">
 
-<a class="nav-logo" href="/" aria-label="BarDeals home">
-<span class="logo-strong">BAR</span>
-<img class="nav-icon" src="assets/logo/logo.png" alt="BarDeals logo">
-<span class="logo-light">DEALS</span>
-</a>
+    <nav class="top-nav">
+      <a class="logo" href="/">BAR<span>DEALS</span></a>
 
-<nav class="nav-links" aria-label="Primary">
-<a href="#deals">Deals</a>
-<a href="/blog/">Blog</a>
-<a href="/about/">About</a>
-<a href="/contact/">Contact</a>
-</nav>
-
-<button
-class="nav-burger"
-id="navBurger"
-type="button"
-aria-label="Open menu"
-aria-expanded="false"
-aria-controls="mobileMenu"
->
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div>
-
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-<a href="#deals">Deals</a>
-<a href="/blog/">Blog</a>
-<a href="/about/">About</a>
-<a href="/contact/">Contact</a>
-</div>
-</header>
-
-<div class="action-bar">
-<div class="action-inner">
-<span class="action-text">🔥 Deals happening right now</span>
-<button class="action-btn" id="actionViewMap" type="button">VIEW</button>
-</div>
-</div>
-
-<section class="hero-big" id="top">
-<div class="hero-big__bg" aria-hidden="true"></div>
-<div class="hero-big__overlay" aria-hidden="true"></div>
-
-<div class="hero-big__inner">
-<div class="hero-big__kicker">@ VIENNA</div>
-
-<h1 class="hero-big__title">
-BAR <span class="hero-big__titleAccent">DEALS</span> IN VIENNA
-</h1>
-
-<p class="hero-big__sub">
-Happy hours, cheap drinks, and the best deals - shown on a live map.
-</p>
-
-<div class="hero-big__actions">
-<button class="hero-big__cta" id="heroViewMapBtn" type="button">VIEW MAP</button>
-<button class="hero-big__cta hero-big__cta--ghost" id="heroNearMeBtn" type="button">NEAR ME</button>
-</div>
-
-<div class="hero-big__search">
-<input id="heroSearchInput" type="text" placeholder="Search bars, streets, areas…" />
-<button id="heroSearchBtn" type="button">SEARCH</button>
-</div>
-</div>
-</section>
-
-<nav class="bottom-nav" aria-label="Bottom navigation">
-<button class="bn-item" id="bnList" type="button">🍻 List</button>
-<button class="bn-item" id="bnMap" type="button">🗺️ Map</button>
-<button class="bn-item bn-primary" id="bnRandom" type="button">🎲 Random</button>
-</nav>
-
-<main class="container">
-
-<section class="home-top">
-<div class="home-cats" id="homeCategories"></div>
-</section>
-
-<section class="home-featured">
-<div class="home-rowhead">  
-<h2>OUR FAVORITES</h2>
-<a href="#" id="seeAllFeatured">SEE ALL</a>
-</div>
-
-<div class="featured-track belu-track" id="featuredTrack"></div>
-<div class="featured-dots" id="featuredDots"></div>
-</section>
-
-<!-- DEALS CONTROLS -->
-<section class="deals-controls" id="deals">
-<div class="deals-controls__inner">
-<button class="bd-btn" id="nearMeBtn" type="button">NEAR ME</button>
-
-<div class="bd-group" role="group" aria-label="Time filter">
-<button class="bd-btn bd-btn--active" data-time="now" type="button">NOW</button>
-<button class="bd-btn" data-time="later" type="button">LATER</button>
-</div>
-
-<div class="bd-selectWrap">
-<label class="bd-label" for="areaSelect">DISTRICT</label>
-<select id="areaSelect" class="bd-select">
-<option value="all">ALL DISTRICTS</option>
-<option value="1010">1010</option>
-<option value="1020">1020</option>
-<option value="1030">1030</option>
-<option value="1040">1040</option>
-<option value="1050">1050</option>
-<option value="1060">1060</option>
-<option value="1070">1070</option>
-<option value="1080">1080</option>
-<option value="1090">1090</option>
-<option value="1100">1100</option>
-</select>
-</div>
-</div>
-</section>
-
-<!-- MAP + LIST (LIST LEFT, MAP RIGHT) -->
-<section class="layout">
-<div class="mobile-toggle" id="mobileToggle" aria-label="Toggle map and list">
-<button class="mt-btn" id="showListBtn" type="button">LIST</button>
-<button class="mt-btn" id="showMapBtn" type="button">MAP</button>
-</div>
-
-<!-- LIST FIRST in DOM to guarantee LEFT -->
-<aside class="list-card">
-<div class="list-head">
-<h2>Deals</h2>
-<div id="resultCount" class="muted"></div>
-</div>
-<div id="dealList" class="deal-list"></div>
-<div class="muted footnote">
-Deals provided by venues. Subject to change.
-</div>
-</aside>
-
-<div class="map-card">
-<div id="map"></div>
-<div class="map-hint">
-Tip: search for a place, or click “Near me”.
-</div>
-</div>
-</section>
-
-</main>
-
-<div class="modal" id="modal" aria-hidden="true">
-<div class="modal-backdrop" id="modalBackdrop"></div>
-
-<div class="modal-card" role="dialog" aria-modal="true">
-<div class="modal-head">
-<h3 id="modalTitle">Form</h3>
-<button class="modal-x" id="modalClose" type="button">✕</button>
-</div>
-
-<form id="dealForm" class="modal-form">
-<input type="hidden" id="formType" name="type" value="add" />
-
-<label>
-Your name (optional)
-<input name="name" type="text" placeholder="Alex" />
-</label>
-
-<label>
-Your email (optional)
-<input name="email" type="email" placeholder="you@email.com" />
-</label>
-
-<label>
-Bar name
-<input name="bar_name" type="text" placeholder="Example Bar" required />
-</label>
-
-<label>
-Address
-<input name="address" type="text" placeholder="Street, 1010 Vienna" required />
-</label>
-
-<label>
-Deal details
-<textarea name="deal_text" rows="4" placeholder="Days + time + prices. Example: Mon–Fri 17:00–19:00 €3 beer, €6 cocktails" required></textarea>
-</label>
-
-<label id="reportNoteWrap">
-What’s wrong / what changed? (only for report)
-<textarea name="report_note" id="reportNote" rows="3" placeholder="What needs updating?"></textarea>
-</label>
-
-<button type="submit" class="btn" id="submitBtn">Submit</button>
-<p class="muted" id="formStatus" style="margin:10px 0 0;"></p>
-</form>
-</div>
-</div>
-
-<footer class="belu-footer" id="footer">
-  <div class="belu-footer__inner">
-
-    <!-- LEFT: links -->
-    <nav class="belu-footer__col belu-footer__col--left" aria-label="Footer">
-      <a href="/blog/">BLOGS</a>
-      <a href="/about/">ABOUT US</a>
-      <a href="/ADD BAR/">ADD BAR</a>
-      <a href="/student-deals/">DEALS</a>
-      <a href="/hostels/">SIGN UP</a>
-      <a href="/contact/">CONTACT US</a>
-
-      <div class="belu-footer__smallLinks">
-        <a href="/privacy/">Privacy policy</a>
-        <a href="/terms/">Terms</a>
+      <div class="nav-links">
+        <a class="active" href="/">Deals</a>
+        <a href="/bars.html">Bars</a>
+        <a href="/clubs.html">Clubs</a>
+        <a href="/blog.html">Blog</a>
       </div>
     </nav>
 
-    <!-- CENTER: circular CTA -->
-    <div class="belu-footer__col belu-footer__col--center">
-     <a class="belu-circle" href="#newsletter" aria-label="Sign up for bar deals">
-  <svg class="belu-circle__svg" viewBox="0 0 300 300" aria-hidden="true">
-    <defs>
-      <path id="beluTextCircle"
-        d="M150,150 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0" />
-    </defs>
-
-    <text class="belu-circle__text">
-      <textPath href="#beluTextCircle" startOffset="50%" text-anchor="middle">
-        SIGN UP • NEVER MISS A DEAL • SIGN UP • GET BEST DEALS •
-      </textPath>
-    </text>
-  </svg>
-
-  <div class="belu-circle__core" aria-hidden="true">
-    <div class="belu-circle__photo"></div>
-  </div>
-</a>
-
-    </div>
-
-    <!-- RIGHT: brand/contact/social -->
-    <div class="belu-footer__col belu-footer__col--right">
-      <div class="belu-footer__brand">BarDeals</div>
-
-      <div class="belu-footer__contact">
-        <div class="belu-footer__contactTitle">Press &amp; Marketing</div>
-        <a class="belu-footer__email" href="mailto:hello@bardeals.at">hello@bardeals.at</a>
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          <span class="word">BAR</span>
+          <span class="mark">DEALS</span>
+        </h1>
+        <p class="hero-subtitle">BARS & CLUBS VIENNA</p>
       </div>
 
-      <div class="belu-footer__social" aria-label="Social links">
-        <a class="belu-ico" href="https://www.instagram.com/bardeals.at/" aria-label="Instagram">IG</a>
-        <a class="belu-ico" href="#" aria-label="TikTok">TT</a>
+      <article id="heroCard" class="venue-card hero-card" tabindex="0">
+        <img id="heroImage" src="/assets/img/bars/belushis1.jpg" alt="Belushi's Vienna">
+
+        <div class="venue-info">
+          <h2 id="heroName">Belushi's Vienna</h2>
+          <p id="heroDescription">
+            Monday–Sunday drink deals plus weekly food and cocktail offers.
+          </p>
+
+          <div id="heroTags" class="tags"></div>
+
+          <div class="card-actions">
+            <a id="heroMap" class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien" target="_blank" rel="noopener">
+              Google Maps
+            </a>
+            <a id="heroLink" class="btn btn-dark" href="/bars/belushis.html">
+              View Deal
+            </a>
+          </div>
+        </div>
+
+        <div id="heroDots" class="hero-dots"></div>
+      </article>
+    </section>
+
+    <section id="swipe" class="section swiper-section show">
+      <p class="section-kicker">Quick Picks</p>
+      <h2 class="section-title">Swipe Venues</h2>
+
+      <div id="swipeStack" class="tinder-stack"></div>
+
+      <div class="swipe-actions">
+        <button class="filter-btn" type="button" onclick="prevCard()">Back</button>
+        <button class="filter-btn" type="button" onclick="nextCard()">Next Venue</button>
       </div>
-    </div>
+    </section>
 
-  </div>
-</footer>
+    <section class="section">
+      <p class="section-kicker">Categories</p>
 
+      <div class="filters">
+        <button class="filter-btn active" type="button">Sports</button>
+        <button class="filter-btn" type="button">Irish Pub</button>
+        <button class="filter-btn" type="button">Cocktails</button>
+        <button class="filter-btn" type="button">Cheap Drinks</button>
+        <button class="filter-btn" type="button">Live Music</button>
+        <button class="filter-btn" type="button">Club</button>
+      </div>
+    </section>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <section id="featured" class="section">
+      <p class="section-kicker">Bars and Pubs</p>
+      <h2 class="section-title">Featured Venues</h2>
 
-<script
-src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-crossorigin=""
-></script>
+      <div id="barsGrid" class="grid"></div>
+    </section>
 
-<script src="assets/js/main.js"></script>
+    <section class="section">
+      <p class="section-kicker">Nightlife</p>
+      <h2 class="section-title">Clubs</h2>
+
+      <div id="clubsGrid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <p class="section-kicker">Before You Go</p>
+      <h2 class="section-title">FAQ</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Are all deals confirmed?</summary>
+          <p>
+            Confirmed offers are shown when a venue publishes them or the information was already checked.
+            If a deal is not fully confirmed, the page tells you to check directly with the venue.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why do most cards use placeholder images?</summary>
+          <p>
+            BarDeals only uses owned, supplied or legal placeholder images.
+            We do not copy Google Maps guest photos or random image-search photos.
+          </p>
+        </details>
+
+        <details>
+          <summary>How should I use the Google Maps buttons?</summary>
+          <p>
+            Open the venue in Google Maps, check directions, current opening times and recent venue updates before visiting.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can a venue get a full bar page?</summary>
+          <p>
+            Yes. Full pages can include real photos, official offers, events and richer venue details once the information is confirmed.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+  </footer>
+
+  <script>
+    const img = {
+      belushis: "/assets/img/bars/belushis1.jpg",
+      longHall: "/assets/img/bars/The-Long-Hall-Bar-Vienna.webp",
+      shortHall: "/assets/img/bars/the-short-hall.webp",
+      bukowski: "/assets/img/bars/cocktailbarmeeru.png",
+      charliePs: "/assets/img/bars/Charlie-Ps-Irish-Pub-Vienna.webp",
+      joJoe: "/assets/img/bars/jojoe-vienna-restaurant-bar.webp",
+      hardRock: "/assets/img/bars/hard-rock-cafe.webp",
+      meinz: "/assets/img/bars/meinz-bar.webp",
+      daiquiri: "/assets/img/bars/DAIQUIRISHOTOTHEK.png",
+      santos: "/assets/img/bars/santos-wieden.webp",
+      admiral: "/assets/img/bars/admiral-arena.webp",
+      matiki: "/assets/img/bars/matiki.webp",
+
+      club: "/assets/img/placeholders/club-vienna.jpg",
+      sports: "/assets/img/placeholders/sports-bar-vienna.jpg",
+      cocktail: "/assets/img/placeholders/cocktail-bar-vienna.jpg",
+      pub: "/assets/img/placeholders/pub-vienna.jpg"
+    };
+
+    const venues = [
+      {
+        name: "Belushi's Vienna",
+        description: "Monday–Sunday drink deals plus weekly food and cocktail offers.",
+        tags: ["Sports", "Hostel Bar", "Real Deals"],
+        image: img.belushis,
+        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
+        page: "/bars/belushis.html",
+        cta: "View Deal"
+      },
+      {
+        name: "The Long Hall",
+        description: "Irish pub on Florianigasse with live sports, brunch, food, pints and Celtic matches.",
+        tags: ["Irish Pub", "Sports", "Food"],
+        image: img.longHall,
+        map: "https://www.google.com/maps/search/?api=1&query=The+Long+Hall+Florianigasse+2+1080+Wien",
+        page: "/bars/the-long-hall.html",
+        cta: "View Bar"
+      },
+      {
+        name: "The Short Hall",
+        description: "Irish sports pub in Neubau with Monday Stelze Night and live sport.",
+        tags: ["Irish Pub", "Sports", "Food Deal"],
+        image: img.shortHall,
+        map: "https://www.google.com/maps/search/?api=1&query=The+Short+Hall+Burggasse+17+1070+Wien",
+        page: "/bars/the-short-hall.html",
+        cta: "View Deal"
+      },
+      {
+        name: "Bukowski The Pub",
+        description: "Late-night pub in Neubau, open until early morning with drinks and pub atmosphere.",
+        tags: ["Late Night", "Happy Hour", "Pub"],
+        image: img.bukowski,
+        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
+        page: "/bars/bukowski-the-pub.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Charlie P's Irish Pub",
+        description: "Irish pub and sports bar near Schottentor with happy hour, quiz nights and live sport.",
+        tags: ["Irish Pub", "Sports", "Happy Hour"],
+        image: img.charliePs,
+        map: "https://www.google.com/maps/search/?api=1&query=Charlie+P%27s+Irish+Pub+W%C3%A4hringer+Stra%C3%9Fe+3+1090+Wien",
+        page: "/bars/charlie-ps.html",
+        cta: "View Deal"
+      },
+      {
+        name: "JO&JOE Vienna",
+        description: "Rooftop bar and restaurant above Westbahnhof with food, drinks, beer wall and DJs.",
+        tags: ["Rooftop", "Cocktails", "Events"],
+        image: img.joJoe,
+        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
+        page: "/bars/jo-and-joe-vienna.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Hard Rock Cafe Vienna",
+        description: "American restaurant and bar in the city centre with burgers, cocktails and happy hour.",
+        tags: ["Happy Hour", "Burgers", "Cocktails"],
+        image: img.hardRock,
+        map: "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Vienna+Rotenturmstra%C3%9Fe+25+1010+Wien",
+        page: "/bars/hard-rock-cafe-vienna.html",
+        cta: "View Deal"
+      },
+      {
+        name: "MEINZ Sportsbar",
+        description: "Modern sports bar in the Bermudadreieck with football, NFL, Formula 1, burgers and beer.",
+        tags: ["Sports", "Burgers", "Happy Hour"],
+        image: img.meinz,
+        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
+        page: "/bars/meinz-sportsbar.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Daiquiri Shotothek",
+        description: "Shot and cocktail bar near Schwedenplatz, good for shots, cocktails, birthdays and groups.",
+        tags: ["Shots", "Cocktails", "Happy Hour"],
+        image: img.daiquiri,
+        map: "https://www.google.com/maps/search/?api=1&query=Daiquiri+Shotothek+Sterngasse+2+1010+Wien",
+        page: "/bars/daiquiri-shotothek.html",
+        cta: "View Deal"
+      },
+      {
+        name: "Santos Wieden",
+        description: "Mexican Grill & Bar in Wieden with cocktails, Mexican food and Happy Hora.",
+        tags: ["Cocktails", "Mexican", "Happy Hour"],
+        image: img.santos,
+        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
+        page: "/bars/santos-wieden.html",
+        cta: "View Deal"
+      },
+      {
+        name: "ADMIRAL Arena Prater",
+        description: "Large sportsbar in Prater with big screens, food, drinks, reservations and live sports.",
+        tags: ["Sports", "Big Screens", "Food"],
+        image: img.admiral,
+        map: "https://www.google.com/maps/search/?api=1&query=ADMIRAL+Arena+Prater+Perspektivstra%C3%9Fe+141+1020+Wien",
+        page: "/bars/admiral-arena-prater.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Matiki Bar",
+        description: "Tiki cocktail bar in Neubau with tropical cocktails, rum drinks and relaxed bar atmosphere.",
+        tags: ["Cocktails", "Tiki Bar", "Rum"],
+        image: img.matiki,
+        map: "https://www.google.com/maps/search/?api=1&query=Matiki+Bar+Gardegasse+2%2F4+1070+Wien",
+        page: "/bars/matiki-bar.html",
+        cta: "View Bar"
+      }
+    ];
+
+    const clubs = [
+      {
+        name: "Prater Dome",
+        description: "Large Prater nightclub with multiple areas, varied club music and weekend events. Check current offers with the venue.",
+        tags: ["Club", "EDM", "Hip Hop"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Prater+Dome+Riesenradplatz+7+1020+Wien"
+      },
+      {
+        name: "Volksgarten",
+        description: "Historic city-center club disco with indoor and outdoor party nights. Check current offers with the venue.",
+        tags: ["Club", "House", "Disco"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Volksgarten+Clubdisco+Heldenplatz+1010+Wien"
+      },
+      {
+        name: "Flex",
+        description: "Danube Canal club and live venue known for concerts, electronic music and club nights. Check current offers with the venue.",
+        tags: ["Club", "Live Music", "Electronic"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Flex+Augartenbr%C3%BCcke+1+1010+Wien"
+      },
+      {
+        name: "Grelle Forelle",
+        description: "Electronic music club on Spittelauer Lände with techno, house, hip-hop shows and alternative concerts. Check current offers with the venue.",
+        tags: ["Club", "Techno", "Electronic"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Grelle+Forelle+Spittelauer+L%C3%A4nde+12+1090+Wien"
+      },
+      {
+        name: "O Club",
+        description: "Club under the State Opera with electronic Fridays, Super Disco Saturdays and multiple areas. Check current offers with the venue.",
+        tags: ["Club", "Electronic", "Disco"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=O+der+Klub+Opernring+Operngasse+1010+Wien"
+      }
+    ];
+
+    const featured = [
+      venues[0],
+      venues[6],
+      venues[9],
+      venues[8]
+    ];
+
+    let currentHero = 0;
+    let currentCard = 0;
+    let startX = 0;
+    let currentX = 0;
+
+    function tagsHtml(tags) {
+      return tags.map(tag => `<span>${tag}</span>`).join("");
+    }
+
+    function cardHtml(v) {
+      const viewButton = v.page
+        ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "View Bar"}</a>`
+        : "";
+
+      return `
+        <article class="venue-card">
+          <img src="${v.image}" alt="${v.name}">
+          <div class="venue-info">
+            <h3>${v.name}</h3>
+            <p>${v.description}</p>
+            <div class="tags">${tagsHtml(v.tags)}</div>
+            <div class="card-actions">
+              <a class="btn btn-light" href="${v.map}" target="_blank" rel="noopener">Google Maps</a>
+              ${viewButton}
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function renderGrid(id, list) {
+      document.getElementById(id).innerHTML = list.map(cardHtml).join("");
+    }
+
+    function renderHeroDots() {
+      const dots = document.getElementById("heroDots");
+      dots.innerHTML = featured.map((_, index) => `
+        <button
+          class="hero-dot ${index === currentHero ? "active" : ""}"
+          type="button"
+          aria-label="Show featured venue ${index + 1}"
+          onclick="showHero(${index}, event)">
+        </button>
+      `).join("");
+    }
+
+    function showHero(index, event) {
+      if (event) event.stopPropagation();
+
+      const v = featured[index];
+      const card = document.getElementById("heroCard");
+
+      currentHero = index;
+      card.classList.add("is-changing");
+
+      setTimeout(() => {
+        document.getElementById("heroImage").src = v.image;
+        document.getElementById("heroImage").alt = v.name;
+        document.getElementById("heroName").textContent = v.name;
+        document.getElementById("heroDescription").textContent = v.description;
+        document.getElementById("heroTags").innerHTML = tagsHtml(v.tags);
+        document.getElementById("heroMap").href = v.map;
+
+        const heroLink = document.getElementById("heroLink");
+
+        if (v.page) {
+          heroLink.style.display = "inline-flex";
+          heroLink.href = v.page;
+          heroLink.textContent = v.cta || "View Bar";
+        } else {
+          heroLink.style.display = "none";
+        }
+
+        renderHeroDots();
+        card.classList.remove("is-changing");
+      }, 220);
+    }
+
+    function renderSwipe() {
+      document.getElementById("swipeStack").innerHTML = featured.map((v, index) => `
+        <article class="venue-card swipe-card ${index === 0 ? "active" : ""} ${index === 1 ? "next" : ""}">
+          <img src="${v.image}" alt="${v.name}">
+          <div class="venue-info">
+            <h3>${v.name}</h3>
+            <p>${v.description}</p>
+            <div class="tags">${tagsHtml(v.tags)}</div>
+            <div class="card-actions">
+              <a class="btn btn-light" href="${v.map}" target="_blank" rel="noopener">Google Maps</a>
+              ${v.page ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "View Bar"}</a>` : ""}
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      enableSwipe();
+    }
+
+    function updateCards() {
+      document.querySelectorAll(".swipe-card").forEach((card, index) => {
+        card.classList.remove("active", "next");
+        card.style.transform = "";
+        card.style.opacity = "";
+
+        if (index === currentCard) card.classList.add("active");
+        if (index === (currentCard + 1) % featured.length) card.classList.add("next");
+      });
+
+      enableSwipe();
+    }
+
+    function enableSwipe() {
+      const active = document.querySelector(".swipe-card.active");
+      if (!active) return;
+
+      active.onpointerdown = e => {
+        startX = e.clientX;
+        active.setPointerCapture(e.pointerId);
+
+        active.onpointermove = moveEvent => {
+          currentX = moveEvent.clientX - startX;
+          active.style.transition = "none";
+          active.style.transform = `translateX(${currentX}px) rotate(${currentX / 18}deg)`;
+        };
+
+        active.onpointerup = () => {
+          active.onpointermove = null;
+          active.style.transition = "0.35s ease";
+
+          if (Math.abs(currentX) > 110) {
+            active.style.transform = `translateX(${currentX > 0 ? 500 : -500}px) rotate(${currentX > 0 ? 18 : -18}deg)`;
+            active.style.opacity = "0";
+
+            setTimeout(nextCardInstant, 280);
+          } else {
+            active.style.transform = "";
+          }
+
+          currentX = 0;
+        };
+      };
+    }
+
+    function nextCardInstant() {
+      currentCard = (currentCard + 1) % featured.length;
+      updateCards();
+    }
+
+    function nextCard() {
+      const active = document.querySelector(".swipe-card.active");
+      if (!active) return;
+
+      active.style.transform = "translateX(420px) rotate(16deg)";
+      active.style.opacity = "0";
+
+      setTimeout(nextCardInstant, 300);
+    }
+
+    function prevCard() {
+      currentCard = currentCard === 0 ? featured.length - 1 : currentCard - 1;
+      updateCards();
+    }
+
+    document.getElementById("heroCard").addEventListener("click", event => {
+      if (event.target.closest("a") || event.target.closest("button")) return;
+
+      const v = featured[currentHero];
+      window.location.href = v.page || v.map;
+    });
+
+    renderGrid("barsGrid", venues);
+    renderGrid("clubsGrid", clubs);
+    renderSwipe();
+    showHero(0);
+
+    setInterval(() => {
+      showHero((currentHero + 1) % featured.length);
+    }, 5000);
+  </script>
+
 </body>
-
-</html> 
-
+</html>

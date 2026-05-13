@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Optional: paste your Google Analytics code here -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CHANGE THIS FOR EVERY BAR -->
+  <title>CHANGE_THIS_BAR_NAME Deals | BarDeals Vienna</title>
+  <meta name="description" content="CHANGE_THIS_BAR_NAME bar deals, opening times, address, events and Google Maps directions. Find bar deals in Vienna.">
+  <link rel="canonical" href="https://bardeals.at/bars/CHANGE_THIS_FILE_NAME.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #f4f4f2;
+      color: #111;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      width: 100%;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      font-weight: 900;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      background: #303030;
+      color: #fff;
+      padding: 2px 8px 5px;
+      margin-left: 3px;
+    }
+
+    .back-link {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid #111;
+      padding: 10px 18px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .bar-hero {
+      padding: 40px 6% 70px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      background: #111;
+      color: #fff;
+      padding: 8px 13px;
+      border-radius: 999px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 8vw, 118px);
+      line-height: 0.92;
+      font-weight: 900;
+      color: #2d2d2d;
+      margin-bottom: 28px;
+    }
+
+    .hero-title span {
+      display: inline-block;
+      background: #303030;
+      color: #fff;
+      padding: 0 18px 10px;
+      margin-top: 8px;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 900;
+      border: 1px solid #111;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #303030;
+    }
+
+    .btn-light {
+      background: transparent;
+      color: #111;
+    }
+
+    .btn-light:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 55px rgba(0,0,0,0.22);
+    }
+
+    .feature-card img {
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      display: block;
+    }
+
+    .feature-info {
+      padding: 30px 28px 34px;
+      text-align: center;
+    }
+
+    .feature-info h2 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 9px;
+    }
+
+    .feature-info p {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 25px;
+      margin-bottom: 24px;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: #666;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .content {
+      padding: 20px 6% 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 6vw, 72px);
+      margin-bottom: 38px;
+      color: #2d2d2d;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 70px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+    }
+
+    .info-card .card-icon {
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    .info-card h3 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .info-card ul {
+      padding-left: 18px;
+    }
+
+    .deal-box {
+      background: #111;
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      margin-bottom: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.22);
+    }
+
+    .deal-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .deal-box p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e8e8e8;
+    }
+
+    .deal-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .deal-item {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    .deal-item strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .deal-item span {
+      color: #d6d6d6;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .verified-note {
+      margin-top: 22px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #d6d6d6;
+      font-weight: 700;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      margin-bottom: 70px;
+    }
+
+    .photo-strip img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+    }
+
+    .photo-strip .side-photos {
+      display: grid;
+      gap: 28px;
+    }
+
+    .photo-strip .side-photos img {
+      height: 196px;
+    }
+
+    .cta {
+      background: #fff;
+      border-radius: 30px;
+      padding: 46px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.13);
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 5vw, 64px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .footer {
+      padding: 35px 6%;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1000px) {
+      .bar-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 45px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .feature-card {
+        max-width: 470px;
+        margin: 0 auto;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .deal-box {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .top-nav {
+        padding: 18px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .back-link {
+        font-size: 12px;
+        padding: 9px 13px;
+      }
+
+      .bar-hero {
+        padding: 28px 18px 55px;
+      }
+
+      .hero-title {
+        font-size: 58px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .feature-card img {
+        height: 300px;
+      }
+
+      .feature-info h2 {
+        font-size: 27px;
+      }
+
+      .content {
+        padding: 10px 18px 60px;
+      }
+
+      .deal-box {
+        padding: 30px 22px;
+      }
+
+      .photo-strip img {
+        height: 300px;
+      }
+
+      .photo-strip .side-photos img {
+        height: 220px;
+      }
+
+      .cta {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <nav class="top-nav">
+      <a href="../index.html" class="logo">BAR<span>DEALS</span></a>
+      <a href="../index.html" class="back-link">← Back to deals</a>
+    </nav>
+
+    <header class="bar-hero">
+
+      <div class="hero-text">
+        <div class="eyebrow">CHANGE_THIS_CATEGORY</div>
+
+        <h1 class="hero-title">
+          CHANGE_THIS_NAME_LINE_1
+          <span>CHANGE_THIS_NAME_LINE_2</span>
+        </h1>
+
+        <p class="hero-description">
+          CHANGE_THIS_SHORT_DESCRIPTION. Mention what the bar is good for, the area, the vibe,
+          and why someone should go there.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-dark" href="CHANGE_THIS_GOOGLE_MAPS_LINK" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+
+          <a class="btn btn-light" href="#deals">
+            View Deals
+          </a>
+        </div>
+      </div>
+
+      <article class="feature-card">
+        <img src="/assets/img/placeholders/pub-vienna.jpg" alt="CHANGE_THIS_BAR_NAME in Vienna">
+
+        <div class="feature-info">
+          <h2>CHANGE_THIS_BAR_NAME</h2>
+          <p>CHANGE_THIS_MAIN_DEAL_OR_VIBE</p>
+
+          <div class="icon-row">
+            <span>🍺</span>
+            <span>🕒</span>
+            <span>📍</span>
+            <span>🏷️</span>
+          </div>
+
+          <div class="small-note">
+            CHANGE_THIS_ADDRESS · CHANGE_THIS_AREA_NOTE
+          </div>
+        </div>
+      </article>
+
+    </header>
+
+    <main class="content">
+
+      <section id="deals" class="deal-box">
+        <div>
+          <h2>Current Deals</h2>
+          <p>
+            CHANGE_THIS_DEAL_INTRO. Add real confirmed offers here. If you have not confirmed deals yet,
+            write that visitors should check current offers with the venue.
+          </p>
+
+          <p class="verified-note">
+            Deals, prices and opening times can change. Last checked: CHANGE_THIS_LAST_CHECKED_DATE.
+            Always confirm with the venue before ordering.
+          </p>
+        </div>
+
+        <div class="deal-list">
+
+          <div class="deal-item">
+            <strong>CHANGE_THIS_DEAL_1_TITLE</strong>
+            <span>CHANGE_THIS_DEAL_1_DESCRIPTION</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>CHANGE_THIS_DEAL_2_TITLE</strong>
+            <span>CHANGE_THIS_DEAL_2_DESCRIPTION</span>
+          </div>
+
+          <div class="deal-item">
+            <strong>CHANGE_THIS_DEAL_3_TITLE</strong>
+            <span>CHANGE_THIS_DEAL_3_DESCRIPTION</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Bar Info</h2>
+
+        <div class="info-grid">
+
+          <article class="info-card">
+            <div class="card-icon">📍</div>
+            <h3>Location</h3>
+            <p>
+              CHANGE_THIS_ADDRESS. Add area info here, for example close to a station, central Vienna,
+              near the Gürtel, near the city centre, or easy to reach by public transport.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">🍻</div>
+            <h3>Good For</h3>
+            <ul>
+              <li>CHANGE_THIS_GOOD_FOR_1</li>
+              <li>CHANGE_THIS_GOOD_FOR_2</li>
+              <li>CHANGE_THIS_GOOD_FOR_3</li>
+              <li>CHANGE_THIS_GOOD_FOR_4</li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <div class="card-icon">🕒</div>
+            <h3>Opening Times</h3>
+            <p>
+              CHANGE_THIS_OPENING_TIMES_TEXT. If you are not sure, write:
+              Check directly with the venue for today’s opening times.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="photo-strip">
+        <img src="/assets/img/placeholders/bar-interior-vienna.jpg" alt="CHANGE_THIS_BAR_NAME interior">
+
+        <div class="side-photos">
+          <img src="/assets/img/placeholders/drinks-vienna.jpg" alt="Drinks at CHANGE_THIS_BAR_NAME">
+          <img src="/assets/img/placeholders/bar-crowd-vienna.jpg" alt="Night out at CHANGE_THIS_BAR_NAME">
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Going Tonight?</h2>
+        <p>
+          Save the location, check the current offers and confirm details directly with the venue before visiting.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-dark" href="CHANGE_THIS_GOOGLE_MAPS_LINK" target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+
+          <a class="btn btn-light" href="../index.html">
+            See More Bar Deals
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      BarDeals Vienna · Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+    </footer>
+
+  </div>
+
+</body>
+</html>
