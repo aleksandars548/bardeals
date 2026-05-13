@@ -13,15 +13,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BarDeals Vienna | Happy Hours, Bar Deals & Nightlife</title>
-  <meta name="description" content="Find Vienna bars, pubs, sports bars, cocktail bars and nightlife venues with happy hours, drink deals, food offers, Google Maps links and full bar pages.">
+  <title>Happy Hour Near Me in Vienna | BarDeals</title>
+  <meta name="description" content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues with Google Maps directions.">
   <link rel="canonical" href="https://bardeals.at/">
+
+  <link rel="alternate" hreflang="en" href="https://bardeals.at/">
+  <link rel="alternate" hreflang="de" href="https://bardeals.at/de/">
+  <link rel="alternate" hreflang="x-default" href="https://bardeals.at/">
+
+  <meta property="og:title" content="Happy Hour Near Me in Vienna | BarDeals">
+  <meta property="og:description" content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues.">
+  <meta property="og:url" content="https://bardeals.at/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BarDeals Vienna">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/launch.css">
+
+  <style>
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #111;
+      border-radius: 999px;
+      padding: 4px;
+      background: rgba(255,255,255,0.45);
+    }
+
+    .language-switcher a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 7px 10px;
+      line-height: 1;
+      transition: 0.2s ease;
+    }
+
+    .language-switcher a.active,
+    .language-switcher a:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .seo-copy {
+      max-width: 880px;
+    }
+
+    .seo-copy p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+      margin-top: 14px;
+    }
+
+    .tinder-stack {
+      touch-action: pan-y;
+    }
+
+    .swipe-card {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      will-change: transform, opacity;
+    }
+
+    .swipe-card img {
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    @media (max-width: 650px) {
+      .nav-wrap {
+        justify-content: flex-start;
+      }
+
+      .language-switcher a {
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+
+      .seo-copy p {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -31,21 +125,28 @@
     <nav class="top-nav">
       <a class="logo" href="/">BAR<span>DEALS</span></a>
 
-      <div class="nav-links">
-        <a class="active" href="/">Deals</a>
-        <a href="/bars.html">Bars</a>
-        <a href="/clubs.html">Clubs</a>
-        <a href="/blog.html">Blog</a>
+      <div class="nav-wrap">
+        <div class="nav-links">
+          <a class="active" href="/">Deals</a>
+          <a href="/bars.html">Bars</a>
+          <a href="/clubs.html">Clubs</a>
+          <a href="/blog.html">Blog</a>
+        </div>
+
+        <!-- <div class="language-switcher" aria-label="Language selector">
+          <a class="active" href="/" hreflang="en" lang="en">EN</a>
+          <a href="/de/" hreflang="de" lang="de">DE</a>
+        </div> -->
       </div>
     </nav>
 
     <section class="hero">
       <div>
         <h1 class="hero-title">
-          <span class="word">BAR</span>
-          <span class="mark">DEALS</span>
+          <span class="word">HAPPY HOUR</span>
+          <span class="mark">VIENNA</span>
         </h1>
-        <p class="hero-subtitle">BARS & CLUBS VIENNA</p>
+        <p class="hero-subtitle">Find happy hour deals near you in Vienna</p>
       </div>
 
       <article id="heroCard" class="venue-card hero-card" tabindex="0">
@@ -110,6 +211,17 @@
       <h2 class="section-title">Clubs</h2>
 
       <div id="clubsGrid" class="grid"></div>
+    </section>
+
+    <section class="section seo-copy">
+      <p class="section-kicker">Happy hour near me</p>
+      <h2 class="section-title">Find happy hour deals near you in Vienna</h2>
+      <p>
+        Looking for happy hour near me in Vienna? BarDeals helps you find bars, pubs, sports bars,
+        cocktail bars and nightlife venues with drink offers, beer specials, cocktail deals and
+        Google Maps directions. Browse venues, check the deal details and open the location in
+        Google Maps before you visit.
+      </p>
     </section>
 
     <section class="section">
@@ -336,6 +448,7 @@
     let currentCard = 0;
     let startX = 0;
     let currentX = 0;
+    let activePointerId = null;
 
     function tagsHtml(tags) {
       return tags.map(tag => `<span>${tag}</span>`).join("");
@@ -431,6 +544,7 @@
     function updateCards() {
       document.querySelectorAll(".swipe-card").forEach((card, index) => {
         card.classList.remove("active", "next");
+        card.style.transition = "";
         card.style.transform = "";
         card.style.opacity = "";
 
@@ -438,6 +552,8 @@
         if (index === (currentCard + 1) % featured.length) card.classList.add("next");
       });
 
+      currentX = 0;
+      activePointerId = null;
       enableSwipe();
     }
 
@@ -446,35 +562,77 @@
       if (!active) return;
 
       active.onpointerdown = e => {
-        startX = e.clientX;
-        active.setPointerCapture(e.pointerId);
+        if (e.target.closest("a") || e.target.closest("button")) return;
 
-        active.onpointermove = moveEvent => {
+        e.preventDefault();
+
+        startX = e.clientX;
+        currentX = 0;
+        activePointerId = e.pointerId;
+
+        active.style.transition = "none";
+
+        const moveSwipe = moveEvent => {
+          if (moveEvent.pointerId !== activePointerId) return;
+
+          moveEvent.preventDefault();
+
           currentX = moveEvent.clientX - startX;
-          active.style.transition = "none";
           active.style.transform = `translateX(${currentX}px) rotate(${currentX / 18}deg)`;
         };
 
-        active.onpointerup = () => {
-          active.onpointermove = null;
-          active.style.transition = "0.35s ease";
+        const finishSwipe = endEvent => {
+          if (endEvent && endEvent.pointerId !== activePointerId) return;
+
+          document.removeEventListener("pointermove", moveSwipe);
+          document.removeEventListener("pointerup", finishSwipe);
+          document.removeEventListener("pointercancel", cancelSwipe);
+
+          active.style.transition = "transform 0.35s ease, opacity 0.35s ease";
 
           if (Math.abs(currentX) > 110) {
-            active.style.transform = `translateX(${currentX > 0 ? 500 : -500}px) rotate(${currentX > 0 ? 18 : -18}deg)`;
+            active.style.transform = `translateX(${currentX > 0 ? 520 : -520}px) rotate(${currentX > 0 ? 18 : -18}deg)`;
             active.style.opacity = "0";
 
-            setTimeout(nextCardInstant, 280);
+            setTimeout(() => {
+              currentCard = (currentCard + 1) % featured.length;
+              currentX = 0;
+              activePointerId = null;
+              updateCards();
+            }, 320);
           } else {
             active.style.transform = "";
+            active.style.opacity = "";
+            currentX = 0;
+            activePointerId = null;
           }
+        };
+
+        const cancelSwipe = cancelEvent => {
+          if (cancelEvent && cancelEvent.pointerId !== activePointerId) return;
+
+          document.removeEventListener("pointermove", moveSwipe);
+          document.removeEventListener("pointerup", finishSwipe);
+          document.removeEventListener("pointercancel", cancelSwipe);
+
+          active.style.transition = "transform 0.25s ease, opacity 0.25s ease";
+          active.style.transform = "";
+          active.style.opacity = "";
 
           currentX = 0;
+          activePointerId = null;
         };
+
+        document.addEventListener("pointermove", moveSwipe, { passive: false });
+        document.addEventListener("pointerup", finishSwipe);
+        document.addEventListener("pointercancel", cancelSwipe);
       };
     }
 
     function nextCardInstant() {
       currentCard = (currentCard + 1) % featured.length;
+      currentX = 0;
+      activePointerId = null;
       updateCards();
     }
 
@@ -482,14 +640,17 @@
       const active = document.querySelector(".swipe-card.active");
       if (!active) return;
 
-      active.style.transform = "translateX(420px) rotate(16deg)";
+      active.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+      active.style.transform = "translateX(520px) rotate(18deg)";
       active.style.opacity = "0";
 
-      setTimeout(nextCardInstant, 300);
+      setTimeout(nextCardInstant, 320);
     }
 
     function prevCard() {
       currentCard = currentCard === 0 ? featured.length - 1 : currentCard - 1;
+      currentX = 0;
+      activePointerId = null;
       updateCards();
     }
 
