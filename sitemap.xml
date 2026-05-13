@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- EN MAIN PAGES -->
   <url>
     <loc>https://bardeals.at/</loc>
     <changefreq>daily</changefreq>
@@ -25,6 +26,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- DE MAIN PAGES -->
+  <url>
+    <loc>https://bardeals.at/de/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/clubs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- EN BAR PAGES -->
   <url>
     <loc>https://bardeals.at/bars/belushis.html</loc>
     <changefreq>weekly</changefreq>
@@ -97,6 +124,80 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- DE BAR PAGES -->
+  <url>
+    <loc>https://bardeals.at/de/bars/belushis.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/the-long-hall.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/the-short-hall.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/bukowski-the-pub.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/charlie-ps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/jo-and-joe-vienna.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/hard-rock-cafe-vienna.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/meinz-sportsbar.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/daiquiri-shotothek.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/santos-wieden.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/admiral-arena-prater.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/bars/matiki-bar.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- EN BLOG PAGES -->
   <url>
     <loc>https://bardeals.at/blog/best-sports-bars-vienna-world-cup-2026.html</loc>
     <changefreq>monthly</changefreq>
@@ -107,6 +208,19 @@
     <loc>https://bardeals.at/blog/where-to-watch-eurovision-2026-vienna.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- DE BLOG PAGES -->
+  <url>
+    <loc>https://bardeals.at/de/blog/best-sports-bars-vienna-world-cup-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://bardeals.at/de/blog/where-to-watch-eurovision-2026-vienna.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

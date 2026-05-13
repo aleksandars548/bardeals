@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCPTVZJSXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-CCPTVZJSXR");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Hour Wien | BarDeals</title>
+  <meta name="description" content="Finde Happy-Hour-Deals in deiner Nähe in Wien. Entdecke Drink-Angebote, Cocktail-Specials, Bierdeals, Pubs, Sportsbars und Nachtleben mit Google-Maps-Routen.">
+  <link rel="canonical" href="https://bardeals.at/de/">
+
+  <link rel="alternate" hreflang="en" href="https://bardeals.at/">
+  <link rel="alternate" hreflang="de-AT" href="https://bardeals.at/de/">
+  <link rel="alternate" hreflang="x-default" href="https://bardeals.at/">
+
+  <meta property="og:title" content="Happy Hour Wien | BarDeals">
+  <meta property="og:description" content="Finde Happy-Hour-Deals in deiner Nähe in Wien. Drink-Angebote, Cocktails, Bierdeals, Pubs, Sportsbars und Nachtleben.">
+  <meta property="og:url" content="https://bardeals.at/de/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BarDeals Wien">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/launch.css">
+
+  <style>
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #111;
+      border-radius: 999px;
+      padding: 4px;
+      background: rgba(255,255,255,0.45);
+    }
+
+    .language-switcher a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 7px 10px;
+      line-height: 1;
+      transition: 0.2s ease;
+    }
+
+    .language-switcher a.active,
+    .language-switcher a:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .seo-copy {
+      max-width: 880px;
+    }
+
+    .seo-copy p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+      margin-top: 14px;
+    }
+
+    .tinder-stack {
+      touch-action: pan-y;
+    }
+
+    .swipe-card {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      will-change: transform, opacity;
+    }
+
+    .swipe-card img {
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    @media (max-width: 650px) {
+      .nav-wrap {
+        justify-content: flex-start;
+      }
+
+      .language-switcher a {
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+
+      .seo-copy p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <nav class="top-nav">
+      <a class="logo" href="/de/">BAR<span>DEALS</span></a>
+
+      <div class="nav-wrap">
+        <div class="nav-links">
+          <a class="active" href="/de/">Deals</a>
+          <a href="/de/bars.html">Bars</a>
+          <a href="/de/clubs.html">Clubs</a>
+          <a href="/de/blog.html">Blog</a>
+        </div>
+
+        <div class="language-switcher" aria-label="Sprachauswahl">
+          <a href="/" hreflang="en" lang="en">EN</a>
+          <a class="active" href="/de/" hreflang="de-AT" lang="de">DE</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          <span class="word">HAPPY HOUR</span>
+          <span class="mark">WIEN</span>
+        </h1>
+        <p class="hero-subtitle">Finde Happy-Hour-Deals in deiner Nähe in Wien</p>
+      </div>
+
+      <article id="heroCard" class="venue-card hero-card" tabindex="0">
+        <img id="heroImage" src="/assets/img/bars/belushis1.jpg" alt="Belushi's Wien">
+
+        <div class="venue-info">
+          <h2 id="heroName">Belushi's Wien</h2>
+          <p id="heroDescription">
+            Getränkedeals von Montag bis Sonntag plus wöchentliche Food- und Cocktail-Angebote.
+          </p>
+
+          <div id="heroTags" class="tags"></div>
+
+          <div class="card-actions">
+            <a id="heroMap" class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien" target="_blank" rel="noopener">
+              Google Maps
+            </a>
+            <a id="heroLink" class="btn btn-dark" href="/de/bars/belushis.html">
+              Deal ansehen
+            </a>
+          </div>
+        </div>
+
+        <div id="heroDots" class="hero-dots"></div>
+      </article>
+    </section>
+
+    <section id="swipe" class="section swiper-section show">
+      <p class="section-kicker">Schnellwahl</p>
+      <h2 class="section-title">Locations swipen</h2>
+
+      <div id="swipeStack" class="tinder-stack"></div>
+
+      <div class="swipe-actions">
+        <button class="filter-btn" type="button" onclick="prevCard()">Zurück</button>
+        <button class="filter-btn" type="button" onclick="nextCard()">Nächste Location</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-kicker">Kategorien</p>
+
+      <div class="filters">
+        <button class="filter-btn active" type="button">Sport</button>
+        <button class="filter-btn" type="button">Irish Pub</button>
+        <button class="filter-btn" type="button">Cocktails</button>
+        <button class="filter-btn" type="button">Günstige Drinks</button>
+        <button class="filter-btn" type="button">Live-Musik</button>
+        <button class="filter-btn" type="button">Club</button>
+      </div>
+    </section>
+
+    <section id="featured" class="section">
+      <p class="section-kicker">Bars und Pubs</p>
+      <h2 class="section-title">Empfohlene Locations</h2>
+
+      <div id="barsGrid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <p class="section-kicker">Nachtleben</p>
+      <h2 class="section-title">Clubs</h2>
+
+      <div id="clubsGrid" class="grid"></div>
+    </section>
+
+    <section class="section seo-copy">
+      <p class="section-kicker">Happy Hour in der Nähe</p>
+      <h2 class="section-title">Happy-Hour-Deals in deiner Nähe in Wien finden</h2>
+      <p>
+        Suchst du nach Happy Hour in der Nähe in Wien? BarDeals hilft dir, Bars, Pubs,
+        Sportsbars, Cocktailbars und Nachtleben mit Drink-Angeboten, Bierdeals,
+        Cocktail-Specials und Google-Maps-Routen zu finden. Prüfe die Details und
+        öffne die Location in Google Maps, bevor du hingehst.
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="section-kicker">Vor dem Besuch</p>
+      <h2 class="section-title">FAQ</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Sind alle Deals bestätigt?</summary>
+          <p>
+            Bestätigte Angebote werden angezeigt, wenn eine Location sie veröffentlicht hat oder die Information bereits geprüft wurde.
+            Wenn ein Deal nicht vollständig bestätigt ist, weist die Seite darauf hin, direkt bei der Location nachzufragen.
+          </p>
+        </details>
+
+        <details>
+          <summary>Warum verwenden manche Karten Platzhalterbilder?</summary>
+          <p>
+            BarDeals verwendet nur eigene, bereitgestellte oder rechtlich sichere Platzhalterbilder.
+            Wir kopieren keine Google-Maps-Gästefotos oder zufällige Bilder aus der Bildersuche.
+          </p>
+        </details>
+
+        <details>
+          <summary>Wie soll ich die Google-Maps-Buttons verwenden?</summary>
+          <p>
+            Öffne die Location in Google Maps und prüfe vor dem Besuch die Route, aktuelle Öffnungszeiten und neue Updates der Location.
+          </p>
+        </details>
+
+        <details>
+          <summary>Kann eine Location eine eigene Bar-Seite bekommen?</summary>
+          <p>
+            Ja. Eigene Seiten können echte Fotos, offizielle Angebote, Events und ausführlichere Informationen enthalten, sobald die Details bestätigt sind.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    Deals, Preise, Öffnungszeiten und Events können sich ändern. Bitte prüfe die Informationen immer direkt bei der Location, bevor du hingehst.
+  </footer>
+
+  <script>
+    const img = {
+      belushis: "/assets/img/bars/belushis1.jpg",
+      longHall: "/assets/img/bars/The-Long-Hall-Bar-Vienna.webp",
+      shortHall: "/assets/img/bars/the-short-hall.webp",
+      bukowski: "/assets/img/bars/cocktailbarmeeru.png",
+      charliePs: "/assets/img/bars/Charlie-Ps-Irish-Pub-Vienna.webp",
+      joJoe: "/assets/img/bars/jojoe-vienna-restaurant-bar.webp",
+      hardRock: "/assets/img/bars/hard-rock-cafe.webp",
+      meinz: "/assets/img/bars/meinz-bar.webp",
+      daiquiri: "/assets/img/bars/DAIQUIRISHOTOTHEK.png",
+      santos: "/assets/img/bars/santos-wieden.webp",
+      admiral: "/assets/img/bars/admiral-arena.webp",
+      matiki: "/assets/img/bars/matiki.webp",
+
+      club: "/assets/img/placeholders/club-vienna.jpg",
+      sports: "/assets/img/placeholders/sports-bar-vienna.jpg",
+      cocktail: "/assets/img/placeholders/cocktail-bar-vienna.jpg",
+      pub: "/assets/img/placeholders/pub-vienna.jpg"
+    };
+
+    const venues = [
+      {
+        name: "Belushi's Wien",
+        description: "Getränkedeals von Montag bis Sonntag plus wöchentliche Food- und Cocktail-Angebote.",
+        tags: ["Sport", "Hostelbar", "Echte Deals"],
+        image: img.belushis,
+        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
+        page: "/de/bars/belushis.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "The Long Hall",
+        description: "Irish Pub an der Florianigasse mit Live-Sport, Brunch, Essen, Pints und Celtic-Spielen.",
+        tags: ["Irish Pub", "Sport", "Essen"],
+        image: img.longHall,
+        map: "https://www.google.com/maps/search/?api=1&query=The+Long+Hall+Florianigasse+2+1080+Wien",
+        page: "/de/bars/the-long-hall.html",
+        cta: "Bar ansehen"
+      },
+      {
+        name: "The Short Hall",
+        description: "Irish Sports Pub in Neubau mit Monday Stelze Night und Live-Sport.",
+        tags: ["Irish Pub", "Sport", "Food-Deal"],
+        image: img.shortHall,
+        map: "https://www.google.com/maps/search/?api=1&query=The+Short+Hall+Burggasse+17+1070+Wien",
+        page: "/de/bars/the-short-hall.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "Bukowski The Pub",
+        description: "Late-Night-Pub in Neubau, bis in die frühen Morgenstunden geöffnet, mit Drinks und Pub-Atmosphäre.",
+        tags: ["Late Night", "Happy Hour", "Pub"],
+        image: img.bukowski,
+        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
+        page: "/de/bars/bukowski-the-pub.html",
+        cta: "Bar ansehen"
+      },
+      {
+        name: "Charlie P's Irish Pub",
+        description: "Irish Pub und Sportsbar nahe Schottentor mit Happy Hour, Quizabenden und Live-Sport.",
+        tags: ["Irish Pub", "Sport", "Happy Hour"],
+        image: img.charliePs,
+        map: "https://www.google.com/maps/search/?api=1&query=Charlie+P%27s+Irish+Pub+W%C3%A4hringer+Stra%C3%9Fe+3+1090+Wien",
+        page: "/de/bars/charlie-ps.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "JO&JOE Wien",
+        description: "Rooftop-Bar und Restaurant über dem Westbahnhof mit Essen, Drinks, Beer Wall und DJs.",
+        tags: ["Rooftop", "Cocktails", "Events"],
+        image: img.joJoe,
+        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
+        page: "/de/bars/jo-and-joe-vienna.html",
+        cta: "Bar ansehen"
+      },
+      {
+        name: "Hard Rock Cafe Wien",
+        description: "Amerikanisches Restaurant und Bar im Stadtzentrum mit Burgern, Cocktails und Happy Hour.",
+        tags: ["Happy Hour", "Burger", "Cocktails"],
+        image: img.hardRock,
+        map: "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Vienna+Rotenturmstra%C3%9Fe+25+1010+Wien",
+        page: "/de/bars/hard-rock-cafe-vienna.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "MEINZ Sportsbar",
+        description: "Moderne Sportsbar im Bermudadreieck mit Fußball, NFL, Formel 1, Burgern und Bier.",
+        tags: ["Sport", "Burger", "Happy Hour"],
+        image: img.meinz,
+        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
+        page: "/de/bars/meinz-sportsbar.html",
+        cta: "Bar ansehen"
+      },
+      {
+        name: "Daiquiri Shotothek",
+        description: "Shot- und Cocktailbar nahe Schwedenplatz, gut für Shots, Cocktails, Geburtstage und Gruppen.",
+        tags: ["Shots", "Cocktails", "Happy Hour"],
+        image: img.daiquiri,
+        map: "https://www.google.com/maps/search/?api=1&query=Daiquiri+Shotothek+Sterngasse+2+1010+Wien",
+        page: "/de/bars/daiquiri-shotothek.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "Santos Wieden",
+        description: "Mexican Grill & Bar in Wieden mit Cocktails, mexikanischem Essen und Happy Hora.",
+        tags: ["Cocktails", "Mexikanisch", "Happy Hour"],
+        image: img.santos,
+        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
+        page: "/de/bars/santos-wieden.html",
+        cta: "Deal ansehen"
+      },
+      {
+        name: "ADMIRAL Arena Prater",
+        description: "Große Sportsbar im Prater mit großen Screens, Essen, Drinks, Reservierungen und Live-Sport.",
+        tags: ["Sport", "Große Screens", "Essen"],
+        image: img.admiral,
+        map: "https://www.google.com/maps/search/?api=1&query=ADMIRAL+Arena+Prater+Perspektivstra%C3%9Fe+141+1020+Wien",
+        page: "/de/bars/admiral-arena-prater.html",
+        cta: "Bar ansehen"
+      },
+      {
+        name: "Matiki Bar",
+        description: "Tiki-Cocktailbar in Neubau mit tropischen Cocktails, Rum-Drinks und entspannter Bar-Atmosphäre.",
+        tags: ["Cocktails", "Tiki Bar", "Rum"],
+        image: img.matiki,
+        map: "https://www.google.com/maps/search/?api=1&query=Matiki+Bar+Gardegasse+2%2F4+1070+Wien",
+        page: "/de/bars/matiki-bar.html",
+        cta: "Bar ansehen"
+      }
+    ];
+
+    const clubs = [
+      {
+        name: "Prater Dome",
+        description: "Großer Prater-Club mit mehreren Bereichen, unterschiedlicher Clubmusik und Wochenend-Events. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        tags: ["Club", "EDM", "Hip Hop"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Prater+Dome+Riesenradplatz+7+1020+Wien"
+      },
+      {
+        name: "Volksgarten",
+        description: "Historische Clubdisco im Stadtzentrum mit Indoor- und Outdoor-Partynächten. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        tags: ["Club", "House", "Disco"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Volksgarten+Clubdisco+Heldenplatz+1010+Wien"
+      },
+      {
+        name: "Flex",
+        description: "Club und Live-Location am Donaukanal, bekannt für Konzerte, elektronische Musik und Clubnächte. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        tags: ["Club", "Live-Musik", "Electronic"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Flex+Augartenbr%C3%BCcke+1+1010+Wien"
+      },
+      {
+        name: "Grelle Forelle",
+        description: "Electronic-Music-Club an der Spittelauer Lände mit Techno, House, Hip-Hop-Shows und alternativen Konzerten. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        tags: ["Club", "Techno", "Electronic"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=Grelle+Forelle+Spittelauer+L%C3%A4nde+12+1090+Wien"
+      },
+      {
+        name: "O Club",
+        description: "Club unter der Staatsoper mit elektronischen Freitagen, Super Disco Saturdays und mehreren Bereichen. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        tags: ["Club", "Electronic", "Disco"],
+        image: img.club,
+        map: "https://www.google.com/maps/search/?api=1&query=O+der+Klub+Opernring+Operngasse+1010+Wien"
+      }
+    ];
+
+    const featured = [
+      venues[0],
+      venues[6],
+      venues[9],
+      venues[8]
+    ];
+
+    let currentHero = 0;
+    let currentCard = 0;
+    let startX = 0;
+    let currentX = 0;
+    let activePointerId = null;
+
+    function tagsHtml(tags) {
+      return tags.map(tag => `<span>${tag}</span>`).join("");
+    }
+
+    function cardHtml(v) {
+      const viewButton = v.page
+        ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "Bar ansehen"}</a>`
+        : "";
+
+      return `
+        <article class="venue-card">
+          <img src="${v.image}" alt="${v.name}">
+          <div class="venue-info">
+            <h3>${v.name}</h3>
+            <p>${v.description}</p>
+            <div class="tags">${tagsHtml(v.tags)}</div>
+            <div class="card-actions">
+              <a class="btn btn-light" href="${v.map}" target="_blank" rel="noopener">Google Maps</a>
+              ${viewButton}
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function renderGrid(id, list) {
+      document.getElementById(id).innerHTML = list.map(cardHtml).join("");
+    }
+
+    function renderHeroDots() {
+      const dots = document.getElementById("heroDots");
+      dots.innerHTML = featured.map((_, index) => `
+        <button
+          class="hero-dot ${index === currentHero ? "active" : ""}"
+          type="button"
+          aria-label="Empfohlene Location ${index + 1} anzeigen"
+          onclick="showHero(${index}, event)">
+        </button>
+      `).join("");
+    }
+
+    function showHero(index, event) {
+      if (event) event.stopPropagation();
+
+      const v = featured[index];
+      const card = document.getElementById("heroCard");
+
+      currentHero = index;
+      card.classList.add("is-changing");
+
+      setTimeout(() => {
+        document.getElementById("heroImage").src = v.image;
+        document.getElementById("heroImage").alt = v.name;
+        document.getElementById("heroName").textContent = v.name;
+        document.getElementById("heroDescription").textContent = v.description;
+        document.getElementById("heroTags").innerHTML = tagsHtml(v.tags);
+        document.getElementById("heroMap").href = v.map;
+
+        const heroLink = document.getElementById("heroLink");
+
+        if (v.page) {
+          heroLink.style.display = "inline-flex";
+          heroLink.href = v.page;
+          heroLink.textContent = v.cta || "Bar ansehen";
+        } else {
+          heroLink.style.display = "none";
+        }
+
+        renderHeroDots();
+        card.classList.remove("is-changing");
+      }, 220);
+    }
+
+    function renderSwipe() {
+      document.getElementById("swipeStack").innerHTML = featured.map((v, index) => `
+        <article class="venue-card swipe-card ${index === 0 ? "active" : ""} ${index === 1 ? "next" : ""}">
+          <img src="${v.image}" alt="${v.name}">
+          <div class="venue-info">
+            <h3>${v.name}</h3>
+            <p>${v.description}</p>
+            <div class="tags">${tagsHtml(v.tags)}</div>
+            <div class="card-actions">
+              <a class="btn btn-light" href="${v.map}" target="_blank" rel="noopener">Google Maps</a>
+              ${v.page ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "Bar ansehen"}</a>` : ""}
+            </div>
+          </div>
+        </article>
+      `).join("");
+
+      enableSwipe();
+    }
+
+    function updateCards() {
+      document.querySelectorAll(".swipe-card").forEach((card, index) => {
+        card.classList.remove("active", "next");
+        card.style.transition = "";
+        card.style.transform = "";
+        card.style.opacity = "";
+
+        if (index === currentCard) card.classList.add("active");
+        if (index === (currentCard + 1) % featured.length) card.classList.add("next");
+      });
+
+      currentX = 0;
+      activePointerId = null;
+      enableSwipe();
+    }
+
+    function enableSwipe() {
+      const active = document.querySelector(".swipe-card.active");
+      if (!active) return;
+
+      active.onpointerdown = e => {
+        if (e.target.closest("a") || e.target.closest("button")) return;
+
+        e.preventDefault();
+
+        startX = e.clientX;
+        currentX = 0;
+        activePointerId = e.pointerId;
+
+        active.style.transition = "none";
+
+        const moveSwipe = moveEvent => {
+          if (moveEvent.pointerId !== activePointerId) return;
+
+          moveEvent.preventDefault();
+
+          currentX = moveEvent.clientX - startX;
+          active.style.transform = `translateX(${currentX}px) rotate(${currentX / 18}deg)`;
+        };
+
+        const finishSwipe = endEvent => {
+          if (endEvent && endEvent.pointerId !== activePointerId) return;
+
+          document.removeEventListener("pointermove", moveSwipe);
+          document.removeEventListener("pointerup", finishSwipe);
+          document.removeEventListener("pointercancel", cancelSwipe);
+
+          active.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+
+          if (Math.abs(currentX) > 110) {
+            active.style.transform = `translateX(${currentX > 0 ? 520 : -520}px) rotate(${currentX > 0 ? 18 : -18}deg)`;
+            active.style.opacity = "0";
+
+            setTimeout(() => {
+              currentCard = (currentCard + 1) % featured.length;
+              currentX = 0;
+              activePointerId = null;
+              updateCards();
+            }, 320);
+          } else {
+            active.style.transform = "";
+            active.style.opacity = "";
+            currentX = 0;
+            activePointerId = null;
+          }
+        };
+
+        const cancelSwipe = cancelEvent => {
+          if (cancelEvent && cancelEvent.pointerId !== activePointerId) return;
+
+          document.removeEventListener("pointermove", moveSwipe);
+          document.removeEventListener("pointerup", finishSwipe);
+          document.removeEventListener("pointercancel", cancelSwipe);
+
+          active.style.transition = "transform 0.25s ease, opacity 0.25s ease";
+          active.style.transform = "";
+          active.style.opacity = "";
+
+          currentX = 0;
+          activePointerId = null;
+        };
+
+        document.addEventListener("pointermove", moveSwipe, { passive: false });
+        document.addEventListener("pointerup", finishSwipe);
+        document.addEventListener("pointercancel", cancelSwipe);
+      };
+    }
+
+    function nextCardInstant() {
+      currentCard = (currentCard + 1) % featured.length;
+      currentX = 0;
+      activePointerId = null;
+      updateCards();
+    }
+
+    function nextCard() {
+      const active = document.querySelector(".swipe-card.active");
+      if (!active) return;
+
+      active.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+      active.style.transform = "translateX(520px) rotate(18deg)";
+      active.style.opacity = "0";
+
+      setTimeout(nextCardInstant, 320);
+    }
+
+    function prevCard() {
+      currentCard = currentCard === 0 ? featured.length - 1 : currentCard - 1;
+      currentX = 0;
+      activePointerId = null;
+      updateCards();
+    }
+
+    document.getElementById("heroCard").addEventListener("click", event => {
+      if (event.target.closest("a") || event.target.closest("button")) return;
+
+      const v = featured[currentHero];
+      window.location.href = v.page || v.map;
+    });
+
+    renderGrid("barsGrid", venues);
+    renderGrid("clubsGrid", clubs);
+    renderSwipe();
+    showHero(0);
+
+    setInterval(() => {
+      showHero((currentHero + 1) % featured.length);
+    }, 5000);
+  </script>
+
+</body>
+</html>
