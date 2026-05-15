@@ -101,6 +101,165 @@
       -webkit-user-drag: none;
     }
 
+    .platform-cta {
+      border-radius: 34px;
+      background: #111;
+      color: #fff;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .platform-cta::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      right: -90px;
+      top: -90px;
+    }
+
+    .platform-cta h2 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .platform-cta p {
+      color: #d6d6d6;
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 720px;
+    }
+
+    .cta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .cta-pills span {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .platform-card {
+      background: #fff;
+      color: #111;
+      border-radius: 26px;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 8px 8px 0 rgba(255,255,255,0.18);
+    }
+
+    .platform-card strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .platform-card p {
+      color: #333;
+      font-size: 15px;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .platform-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .footer {
+      margin-top: 70px;
+      padding: 42px 20px 28px;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand span {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+    }
+
+    .footer p {
+      color: #bdbdbd;
+      line-height: 1.65;
+      max-width: 620px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      max-width: 1180px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      color: #aaa;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 800px) {
+      .platform-cta {
+        grid-template-columns: 1fr;
+        padding: 26px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
     @media (max-width: 650px) {
       .nav-wrap {
         justify-content: flex-start;
@@ -112,6 +271,10 @@
       }
 
       .seo-copy p {
+        font-size: 15px;
+      }
+
+      .platform-cta p {
         font-size: 15px;
       }
     }
@@ -130,6 +293,7 @@
           <a class="active" href="/">Deals</a>
           <a href="/bars.html">Bars</a>
           <a href="/clubs.html">Clubs</a>
+          <a href="/for-bars.html">For Bars</a>
           <a href="/blog.html">Blog</a>
         </div>
 
@@ -150,21 +314,21 @@
       </div>
 
       <article id="heroCard" class="venue-card hero-card" tabindex="0">
-        <img id="heroImage" src="/assets/img/bars/belushis1.jpg" alt="Belushi's Vienna">
+        <img id="heroImage" src="/assets/img/bars/hard-rock-cafe.webp" alt="Hard Rock Cafe Vienna">
 
         <div class="venue-info">
-          <h2 id="heroName">Belushi's Vienna</h2>
+          <h2 id="heroName">Hard Rock Cafe Vienna</h2>
           <p id="heroDescription">
-            Monday–Sunday drink deals plus weekly food and cocktail offers.
+            American restaurant and bar in the city centre with burgers, cocktails and happy hour.
           </p>
 
           <div id="heroTags" class="tags"></div>
 
           <div class="card-actions">
-            <a id="heroMap" class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien" target="_blank" rel="noopener">
+            <a id="heroMap" class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Vienna+Rotenturmstra%C3%9Fe+25+1010+Wien" target="_blank" rel="noopener">
               Google Maps
             </a>
-            <a id="heroLink" class="btn btn-dark" href="/bars/belushis.html">
+            <a id="heroLink" class="btn btn-dark" href="/bars/hard-rock-cafe-vienna.html">
               View Deal
             </a>
           </div>
@@ -225,6 +389,36 @@
     </section>
 
     <section class="section">
+      <div class="platform-cta">
+        <div>
+          <p class="section-kicker">For Bars</p>
+          <h2 class="section-title">Own or manage a bar in Vienna?</h2>
+          <p>
+            BarDeals is building a Vienna nightlife guide for tourists, students and groups looking
+            for happy hours, drink deals, sports bars, events and group-friendly venues.
+            During the launch phase, selected Vienna bars can get listed for free.
+          </p>
+
+          <div class="cta-pills">
+            <span>Happy hours</span>
+            <span>Sports nights</span>
+            <span>Group bookings</span>
+            <span>Google Maps clicks</span>
+            <span>Tourists & students</span>
+          </div>
+        </div>
+
+        <div class="platform-card">
+          <strong>Get your bar listed</strong>
+          <p>
+            Send your bar name, address, opening hours, current deals and Instagram or website link.
+          </p>
+          <a class="btn btn-dark" href="/for-bars.html">For Bars</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <p class="section-kicker">Before You Go</p>
       <h2 class="section-title">FAQ</h2>
 
@@ -258,13 +452,42 @@
             Yes. Full pages can include real photos, official offers, events and richer venue details once the information is confirmed.
           </p>
         </details>
+
+        <details>
+          <summary>How can a bar update or claim a listing?</summary>
+          <p>
+            Bar owners and managers can use the For Bars page to send updated information, official deals,
+            photos, opening hours and group booking details.
+          </p>
+        </details>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">BAR<span>DEALS</span></div>
+        <p>
+          Happy hours, drink deals, sports bars, clubs and group-friendly venues in Vienna.
+          Built for tourists, students, expats and locals looking for a better night out.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/bars.html">Bars</a>
+        <a href="/clubs.html">Clubs</a>
+        <a href="/for-bars.html">For Bars</a>
+        <a href="/blog.html">Blog</a>
+        <a href="mailto:hello@bardeals.at">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+    </div>
   </footer>
 
   <script>
@@ -290,15 +513,6 @@
 
     const venues = [
       {
-        name: "Belushi's Vienna",
-        description: "Monday–Sunday drink deals plus weekly food and cocktail offers.",
-        tags: ["Sports", "Hostel Bar", "Real Deals"],
-        image: img.belushis,
-        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
-        page: "/bars/belushis.html",
-        cta: "View Deal"
-      },
-      {
         name: "The Long Hall",
         description: "Irish pub on Florianigasse with live sports, brunch, food, pints and Celtic matches.",
         tags: ["Irish Pub", "Sports", "Food"],
@@ -317,15 +531,6 @@
         cta: "View Deal"
       },
       {
-        name: "Bukowski The Pub",
-        description: "Late-night pub in Neubau, open until early morning with drinks and pub atmosphere.",
-        tags: ["Late Night", "Happy Hour", "Pub"],
-        image: img.bukowski,
-        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
-        page: "/bars/bukowski-the-pub.html",
-        cta: "View Bar"
-      },
-      {
         name: "Charlie P's Irish Pub",
         description: "Irish pub and sports bar near Schottentor with happy hour, quiz nights and live sport.",
         tags: ["Irish Pub", "Sports", "Happy Hour"],
@@ -333,15 +538,6 @@
         map: "https://www.google.com/maps/search/?api=1&query=Charlie+P%27s+Irish+Pub+W%C3%A4hringer+Stra%C3%9Fe+3+1090+Wien",
         page: "/bars/charlie-ps.html",
         cta: "View Deal"
-      },
-      {
-        name: "JO&JOE Vienna",
-        description: "Rooftop bar and restaurant above Westbahnhof with food, drinks, beer wall and DJs.",
-        tags: ["Rooftop", "Cocktails", "Events"],
-        image: img.joJoe,
-        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
-        page: "/bars/jo-and-joe-vienna.html",
-        cta: "View Bar"
       },
       {
         name: "Hard Rock Cafe Vienna",
@@ -353,13 +549,13 @@
         cta: "View Deal"
       },
       {
-        name: "MEINZ Sportsbar",
-        description: "Modern sports bar in the Bermudadreieck with football, NFL, Formula 1, burgers and beer.",
-        tags: ["Sports", "Burgers", "Happy Hour"],
-        image: img.meinz,
-        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
-        page: "/bars/meinz-sportsbar.html",
-        cta: "View Bar"
+        name: "Santos Wieden",
+        description: "Mexican Grill & Bar in Wieden with cocktails, Mexican food and Happy Hora.",
+        tags: ["Cocktails", "Mexican", "Happy Hour"],
+        image: img.santos,
+        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
+        page: "/bars/santos-wieden.html",
+        cta: "View Deal"
       },
       {
         name: "Daiquiri Shotothek",
@@ -371,13 +567,13 @@
         cta: "View Deal"
       },
       {
-        name: "Santos Wieden",
-        description: "Mexican Grill & Bar in Wieden with cocktails, Mexican food and Happy Hora.",
-        tags: ["Cocktails", "Mexican", "Happy Hour"],
-        image: img.santos,
-        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
-        page: "/bars/santos-wieden.html",
-        cta: "View Deal"
+        name: "MEINZ Sportsbar",
+        description: "Modern sports bar in the Bermudadreieck with football, NFL, Formula 1, burgers and beer.",
+        tags: ["Sports", "Burgers", "Happy Hour"],
+        image: img.meinz,
+        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
+        page: "/bars/meinz-sportsbar.html",
+        cta: "View Bar"
       },
       {
         name: "ADMIRAL Arena Prater",
@@ -396,6 +592,33 @@
         map: "https://www.google.com/maps/search/?api=1&query=Matiki+Bar+Gardegasse+2%2F4+1070+Wien",
         page: "/bars/matiki-bar.html",
         cta: "View Bar"
+      },
+      {
+        name: "JO&JOE Vienna",
+        description: "Rooftop bar and restaurant above Westbahnhof with food, drinks, beer wall and DJs.",
+        tags: ["Rooftop", "Cocktails", "Events"],
+        image: img.joJoe,
+        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
+        page: "/bars/jo-and-joe-vienna.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Bukowski The Pub",
+        description: "Late-night pub in Neubau, open until early morning with drinks and pub atmosphere.",
+        tags: ["Late Night", "Happy Hour", "Pub"],
+        image: img.bukowski,
+        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
+        page: "/bars/bukowski-the-pub.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Belushi's Vienna",
+        description: "Drink deals, weekly food offers, live sports and hostel bar atmosphere near Hauptbahnhof.",
+        tags: ["Sports", "Hostel Bar", "Drink Deals"],
+        image: img.belushis,
+        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
+        page: "/bars/belushis.html",
+        cta: "View Deal"
       }
     ];
 
@@ -438,10 +661,10 @@
     ];
 
     const featured = [
-      venues[0],
-      venues[6],
-      venues[9],
-      venues[8]
+      venues[3],
+      venues[4],
+      venues[5],
+      venues[7]
     ];
 
     let currentHero = 0;
