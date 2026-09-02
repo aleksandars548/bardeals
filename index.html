@@ -1391,8 +1391,12 @@
 
       const locationText = dealFeedLocation ? " · sorted by distance" : "";
       status.textContent = fallbackToToday
-        ? `Nothing stored as open right now - showing ${rows.length} deal(s) for today${locationText}`
-        : `${rows.length} deal(s)${locationText}`;
+        ? `Nothing stored as open right now - showing ${rows.length} venues with deals today${locationText}`
+        : dealFeedMode === "now"
+          ? `${rows.length} venues with deals now${locationText}`
+          : dealFeedMode === "today"
+            ? `${rows.length} venues with deals today${locationText}`
+            : `${rows.length} venues with deals${locationText}`;
     }
 
     async function loadAutomaticDealFeed() {
