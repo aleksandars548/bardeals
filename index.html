@@ -260,6 +260,248 @@
       }
     }
 
+
+
+    /* Automatic deal feed */
+    .live-deals {
+      scroll-margin-top: 18px;
+    }
+
+    .live-deals-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .live-deals-head .section-title {
+      margin-bottom: 0;
+    }
+
+    .near-me-btn {
+      appearance: none;
+      border: 2px solid #111;
+      background: #111;
+      color: #fff;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .near-me-btn:hover,
+    .near-me-btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .near-me-btn:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    .deal-feed-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .deal-feed-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .deal-feed-filter {
+      appearance: none;
+      border: 1.5px solid #111;
+      background: #fff;
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .deal-feed-filter.active {
+      background: #111;
+      color: #fff;
+    }
+
+    .deal-feed-status {
+      color: #555;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .deal-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .live-deal-card {
+      border: 1.5px solid #111;
+      border-radius: 24px;
+      padding: 20px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .live-deal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .live-deal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #111;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .live-deal-badge.open {
+      background: #0b6b36;
+    }
+
+    .live-deal-distance {
+      font-size: 13px;
+      font-weight: 900;
+      color: #333;
+    }
+
+    .live-deal-card h3 {
+      font-size: clamp(21px, 2.5vw, 28px);
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .live-deal-offer {
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .live-deal-meta,
+    .live-deal-address,
+    .live-deal-verified {
+      color: #555;
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .live-deal-actions {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .live-deal-actions a {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      padding: 0 14px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      border: 1.5px solid #111;
+    }
+
+    .live-deal-directions {
+      background: #111;
+      color: #fff;
+    }
+
+    .live-deal-source {
+      background: #fff;
+      color: #111;
+    }
+
+    .deal-feed-empty {
+      border: 1.5px dashed #999;
+      border-radius: 22px;
+      padding: 24px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .deal-feed-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .live-deals-head {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .near-me-btn {
+        width: 100%;
+        min-height: 58px;
+        font-size: 16px;
+      }
+
+      .deal-feed-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .deal-feed-filters {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .deal-feed-filter {
+        padding: 11px 8px;
+      }
+
+      .deal-feed-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .live-deal-card {
+        border-radius: 20px;
+        padding: 18px;
+      }
+
+      .live-deal-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .live-deal-actions a {
+        min-height: 50px;
+      }
+    }
+
     @media (max-width: 650px) {
       .nav-wrap {
         justify-content: flex-start;
@@ -336,6 +578,27 @@
 
         <div id="heroDots" class="hero-dots"></div>
       </article>
+    </section>
+
+    <section id="live-deals" class="section live-deals" aria-labelledby="liveDealsTitle">
+      <div class="live-deals-head">
+        <div>
+          <p class="section-kicker">Tonight in Vienna</p>
+          <h2 id="liveDealsTitle" class="section-title">Happy hours near you</h2>
+        </div>
+        <button id="dealNearMeBtn" class="near-me-btn" type="button">📍 Use my location</button>
+      </div>
+
+      <div class="deal-feed-toolbar">
+        <div class="deal-feed-filters" aria-label="Deal time filter">
+          <button class="deal-feed-filter active" type="button" data-deal-mode="now">Open now</button>
+          <button class="deal-feed-filter" type="button" data-deal-mode="today">Today</button>
+          <button class="deal-feed-filter" type="button" data-deal-mode="all">All deals</button>
+        </div>
+        <p id="dealFeedStatus" class="deal-feed-status" aria-live="polite">Loading current deals…</p>
+      </div>
+
+      <div id="dealFeedGrid" class="deal-feed-grid"></div>
     </section>
 
     <section id="swipe" class="section swiper-section show">
@@ -486,7 +749,8 @@
     </div>
 
     <div class="footer-note">
-      Deals, prices, opening times and events can change. Always check directly with the venue before visiting.
+      Deals, prices, opening times and events can change. Always check directly with the venue before visiting.<br>
+      Automatic venue discovery may use <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color:inherit">© OpenStreetMap contributors</a>.
     </div>
   </footer>
 
@@ -892,6 +1156,272 @@
     setInterval(() => {
       showHero((currentHero + 1) % featured.length);
     }, 5000);
+
+
+    // ===== Automatic + near-me deal feed =====
+    let dealFeedVenues = [];
+    let dealFeedLocation = null;
+    let dealFeedMode = "now";
+
+    function dealFeedEscape(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function dealFeedNormalizeName(value) {
+      return String(value || "")
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "");
+    }
+
+    function dealFeedValidDeals(venue) {
+      return (Array.isArray(venue?.deals) ? venue.deals : [])
+        .filter(deal => Array.isArray(deal?.days) && deal.days.some(day => day >= 0 && day <= 6))
+        .filter(deal => /^\d{2}:\d{2}$/.test(deal?.from || "") && /^\d{2}:\d{2}$/.test(deal?.to || ""))
+        .filter(deal => !/\bno\s+deals?\b/i.test(deal?.text || ""));
+    }
+
+    function mergeDealFeedVenues(manual, automatic) {
+      const byName = new Map();
+      for (const sourceVenue of [...manual, ...automatic]) {
+        if (!sourceVenue?.name || !Number.isFinite(Number(sourceVenue.lat)) || !Number.isFinite(Number(sourceVenue.lng))) continue;
+        const key = dealFeedNormalizeName(sourceVenue.name);
+        const deals = dealFeedValidDeals(sourceVenue);
+        if (!deals.length) continue;
+
+        if (!byName.has(key)) {
+          byName.set(key, { ...sourceVenue, lat: Number(sourceVenue.lat), lng: Number(sourceVenue.lng), deals: [] });
+        }
+        const target = byName.get(key);
+        for (const deal of deals) {
+          const dealKey = `${deal.days.join(",")}|${deal.from}|${deal.to}|${String(deal.text || "").toLowerCase()}`;
+          const existingIndex = target.deals.findIndex(old =>
+            `${old.days.join(",")}|${old.from}|${old.to}|${String(old.text || "").toLowerCase()}` === dealKey
+          );
+          if (existingIndex === -1) target.deals.push(deal);
+          else if (deal.auto && !target.deals[existingIndex].auto) target.deals[existingIndex] = deal;
+        }
+        if (sourceVenue.website && !target.website) target.website = sourceVenue.website;
+      }
+      return [...byName.values()];
+    }
+
+    function viennaClock() {
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Vienna",
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23"
+      }).formatToParts(new Date());
+      const get = type => parts.find(part => part.type === type)?.value;
+      const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      return {
+        day: dayMap[get("weekday")],
+        minutes: Number(get("hour")) * 60 + Number(get("minute"))
+      };
+    }
+
+    function feedToMinutes(value) {
+      const [hours, minutes] = String(value).split(":").map(Number);
+      return hours * 60 + minutes;
+    }
+
+    function dealIsOpenNow(deal, clock = viennaClock()) {
+      const from = feedToMinutes(deal.from);
+      const to = feedToMinutes(deal.to);
+      if (from <= to) return deal.days.includes(clock.day) && clock.minutes >= from && clock.minutes <= to;
+      const previousDay = (clock.day + 6) % 7;
+      return (deal.days.includes(clock.day) && clock.minutes >= from) ||
+        (deal.days.includes(previousDay) && clock.minutes <= to);
+    }
+
+    function dealIsToday(deal, clock = viennaClock()) {
+      if (deal.days.includes(clock.day)) return true;
+      const from = feedToMinutes(deal.from);
+      const to = feedToMinutes(deal.to);
+      return from > to && deal.days.includes((clock.day + 6) % 7) && clock.minutes <= to;
+    }
+
+    function feedDistanceKm(a, b) {
+      const toRad = value => value * Math.PI / 180;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const x = Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+      return 6371 * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
+    }
+
+    function formatFeedDistance(km) {
+      if (!Number.isFinite(km)) return "";
+      if (km < 1) return `${Math.max(10, Math.round(km * 1000 / 10) * 10)} m`;
+      return `${km.toFixed(1)} km`;
+    }
+
+    function feedDayLabel(days) {
+      const all = [0,1,2,3,4,5,6].every(day => days.includes(day));
+      if (all) return "Daily";
+      const weekdays = [1,2,3,4,5].every(day => days.includes(day)) && !days.includes(0) && !days.includes(6);
+      if (weekdays) return "Mon-Fri";
+      const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      return days.map(day => labels[day]).filter(Boolean).join(", ");
+    }
+
+    function pickFeedDeal(venue) {
+      const clock = viennaClock();
+      const deals = dealFeedValidDeals(venue);
+      const open = deals.filter(deal => dealIsOpenNow(deal, clock));
+      if (open.length) return open.sort((a, b) => feedToMinutes(a.to) - feedToMinutes(b.to))[0];
+      const today = deals.filter(deal => deal.days.includes(clock.day) && feedToMinutes(deal.from) > clock.minutes);
+      if (today.length) return today.sort((a, b) => feedToMinutes(a.from) - feedToMinutes(b.from))[0];
+      return deals[0] || null;
+    }
+
+    function feedDealStatus(deal) {
+      const clock = viennaClock();
+      if (dealIsOpenNow(deal, clock)) return { label: "OPEN NOW", open: true };
+      if (deal.days.includes(clock.day) && feedToMinutes(deal.from) > clock.minutes) {
+        return { label: `TODAY ${deal.from}`, open: false };
+      }
+      return { label: feedDayLabel(deal.days), open: false };
+    }
+
+    function feedVerifiedLabel(deal) {
+      if (!deal?.verifiedAt) return "";
+      const date = new Date(deal.verifiedAt);
+      if (Number.isNaN(date.getTime())) return "";
+      return `Automatically checked ${new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Vienna", day: "numeric", month: "short" }).format(date)}`;
+    }
+
+    function feedCard(venue) {
+      const deal = pickFeedDeal(venue);
+      if (!deal) return "";
+      const status = feedDealStatus(deal);
+      const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
+      const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
+      const sourceUrl = deal.sourceUrl || venue.website || "";
+      const verified = feedVerifiedLabel(deal);
+      return `
+        <article class="live-deal-card">
+          <div class="live-deal-top">
+            <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
+            ${distance != null ? `<span class="live-deal-distance">📍 ${dealFeedEscape(formatFeedDistance(distance))}</span>` : ""}
+          </div>
+          <h3>${dealFeedEscape(venue.name)}</h3>
+          <p class="live-deal-offer">${dealFeedEscape(deal.text || deal.label || "Drink deal")}</p>
+          <p class="live-deal-meta">${dealFeedEscape(feedDayLabel(deal.days))} · ${dealFeedEscape(deal.from)}-${dealFeedEscape(deal.to)}</p>
+          <p class="live-deal-address">${dealFeedEscape(venue.address || "Vienna")}</p>
+          ${verified ? `<p class="live-deal-verified">✓ ${dealFeedEscape(verified)}</p>` : ""}
+          <div class="live-deal-actions">
+            <a class="live-deal-directions" href="${directions}" target="_blank" rel="noopener">Google Maps</a>
+            ${sourceUrl ? `<a class="live-deal-source" href="${dealFeedEscape(sourceUrl)}" target="_blank" rel="noopener">Source</a>` : ""}
+          </div>
+        </article>`;
+    }
+
+    function renderDealFeed() {
+      const grid = document.getElementById("dealFeedGrid");
+      const status = document.getElementById("dealFeedStatus");
+      if (!grid || !status) return;
+      const clock = viennaClock();
+
+      let rows = dealFeedVenues.filter(venue => {
+        const deals = dealFeedValidDeals(venue);
+        if (dealFeedMode === "now") return deals.some(deal => dealIsOpenNow(deal, clock));
+        if (dealFeedMode === "today") return deals.some(deal => dealIsToday(deal, clock));
+        return deals.length > 0;
+      });
+
+      let fallbackToToday = false;
+      if (dealFeedMode === "now" && rows.length === 0) {
+        rows = dealFeedVenues.filter(venue => dealFeedValidDeals(venue).some(deal => dealIsToday(deal, clock)));
+        fallbackToToday = rows.length > 0;
+      }
+
+      rows = rows.map(venue => ({
+        ...venue,
+        _distance: dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null,
+        _deal: pickFeedDeal(venue)
+      })).sort((a, b) => {
+        const aOpen = a._deal ? dealIsOpenNow(a._deal, clock) : false;
+        const bOpen = b._deal ? dealIsOpenNow(b._deal, clock) : false;
+        if (aOpen !== bOpen) return aOpen ? -1 : 1;
+        if (dealFeedLocation && a._distance !== b._distance) return a._distance - b._distance;
+        return a.name.localeCompare(b.name, "en");
+      });
+
+      if (!rows.length) {
+        grid.innerHTML = `<div class="deal-feed-empty">No matching deals are stored yet. The automatic bot checks official Vienna venue websites every day and adds only high-confidence offers.</div>`;
+      } else {
+        grid.innerHTML = rows.slice(0, dealFeedMode === "all" ? 30 : 18).map(feedCard).join("");
+      }
+
+      const locationText = dealFeedLocation ? " · sorted by distance" : "";
+      status.textContent = fallbackToToday
+        ? `Nothing stored as open right now - showing ${rows.length} deal(s) for today${locationText}`
+        : `${rows.length} deal(s)${locationText}`;
+    }
+
+    async function loadAutomaticDealFeed() {
+      const status = document.getElementById("dealFeedStatus");
+      try {
+        const [manualResult, autoResult] = await Promise.allSettled([
+          fetch("/data/bars.json", { cache: "no-store" }).then(response => response.ok ? response.json() : []),
+          fetch("/data/deals-auto.json", { cache: "no-store" }).then(response => response.ok ? response.json() : [])
+        ]);
+        const manual = manualResult.status === "fulfilled" && Array.isArray(manualResult.value) ? manualResult.value : [];
+        const automatic = autoResult.status === "fulfilled" && Array.isArray(autoResult.value) ? autoResult.value : [];
+        dealFeedVenues = mergeDealFeedVenues(manual, automatic);
+        renderDealFeed();
+      } catch (error) {
+        console.warn("Could not load automatic deal feed", error);
+        if (status) status.textContent = "Could not load deal data.";
+      }
+    }
+
+    document.querySelectorAll("[data-deal-mode]").forEach(button => {
+      button.addEventListener("click", () => {
+        dealFeedMode = button.dataset.dealMode || "now";
+        document.querySelectorAll("[data-deal-mode]").forEach(item => item.classList.toggle("active", item === button));
+        renderDealFeed();
+      });
+    });
+
+    document.getElementById("dealNearMeBtn")?.addEventListener("click", () => {
+      const button = document.getElementById("dealNearMeBtn");
+      const status = document.getElementById("dealFeedStatus");
+      if (!navigator.geolocation) {
+        if (status) status.textContent = "Your browser does not support location. You can still browse Vienna deals.";
+        return;
+      }
+      button.disabled = true;
+      button.textContent = "Finding you…";
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          dealFeedLocation = { lat: position.coords.latitude, lng: position.coords.longitude };
+          button.disabled = false;
+          button.textContent = "✓ Nearest first";
+          dealFeedMode = "now";
+          document.querySelectorAll("[data-deal-mode]").forEach(item => item.classList.toggle("active", item.dataset.dealMode === "now"));
+          renderDealFeed();
+          document.getElementById("live-deals")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        },
+        () => {
+          button.disabled = false;
+          button.textContent = "📍 Use my location";
+          if (status) status.textContent = "Location permission was not available. You can still browse Vienna deals.";
+        },
+        { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 }
+      );
+    });
+
+    loadAutomaticDealFeed();
   </script>
 
 </body>
