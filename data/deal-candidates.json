@@ -1,1 +1,793 @@
-[]
+[
+  {
+    "id": "down-under-409188525",
+    "name": "Down Under",
+    "website": "https://www.downunder.at/",
+    "candidates": [
+      {
+        "days": [
+          4
+        ],
+        "from": null,
+        "to": null,
+        "text": "Your weeknight after work local or a late night spot, Down Under Aussie Pub has it all, weekly Thursday Pub Quiz (in German), Live Music and regular Big Screen sports events.. Come Down Und…",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.downunder.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:44:44.035Z",
+        "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "eva-adam-10948791505",
+    "name": "Eva & Adam",
+    "website": "https://evaundadam.bar/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Cocktail Happy Hour . Firmenfeier &#038; private Party .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Service was fantastic (Felix was lovely), drinks were great and we hit happy hour (6-9pm). Highly recommended!",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "Recommend you look for cocktail happy hours but go anyway. Daniel Ennemoser ★★★★★ Top Cocktails...verschiedenste probiert und ALLE gewaltig!",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Happy Hour Cocktailbar Wien - evaundadam.bar Zum Inhalt springen . .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/happy-hour-cocktailbar-wien/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "first-american-bar-5812632953",
+    "name": "First American Bar",
+    "website": "https://www.firstamericanbar.at/",
+    "candidates": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "en Cocktails… Denn ein schöner Abend in Wien beginnt mit der passenden Atmosphäre und natürlich der beliebten Happy Hour in der First American Bar!. Für Fragen und Reservierungen sind wir v…",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.firstamericanbar.at/bar-room-beste-bar-der-stadt/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:07.686Z",
+        "confidence": 0.7,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "funky-monkey-566660740",
+    "name": "Funky Monkey",
+    "website": "http://www.funkymonkey.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Afterwork . Touristen .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Flaschen-Specials und Happy Hour für eine coole Party in Wien . Home .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.funkymonkeybar.at/specials/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Endlich Feierabend mit coolen Afterwork Event in Wien . Home .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [
+          3,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Afterwork Event in Wien . Home .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          3,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Raus aus dem Büro, rein in die Bar &#8211; Afterwork. Unsere Bar ist ideal gelegen und lockt schon seit 18 Jahren Partytiger, Nachtschwärmer und alle, die nach der Arbeit noch Lust auf ein…",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          3,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "t schon seit 18 Jahren Partytiger, Nachtschwärmer und alle, die nach der Arbeit noch Lust auf ein entspanntes Afterwork und köstliche Drinks haben. Geöffnet ist von Mittwoch bi s Samstag ab…",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "In unserer Bar könnt ihr die coole Afterwork-Atmosphäre in Wien genießen. Und wenn ihr dann doch nicht nach Hause wollt, ist unsere Bar der ideale Startpunkt fürs Vorglühen und Fortgehen.",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Afterwork . Touristen .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Afterwork. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:26.528Z",
+        "confidence": 0.7,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "halbestadt-3425523135",
+    "name": "Halbestadt",
+    "website": "https://www.halbestadt.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Weißwein G’spritz 0,25l. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.halbestadt.bar/our-menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:38.139Z",
+        "confidence": 0.6,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "il-toro-4602682592",
+    "name": "Il Toro",
+    "website": "http://www.iltoro.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "IL TORO setzt neue Maßstäbe für Firmenfeiern und Afterwork. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://iltoro.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.191Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "n und Afterwork. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://iltoro.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.191Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [
+          0
+        ],
+        "from": null,
+        "to": null,
+        "text": "Ob als After-Work-Event, Sommerfest oder Weihnachtsfeier: Eine Firmenfeier ist weit mehr als nur Essen und Trinken. Sie schafft Raum für Gespräche abseits des Arbeitsalltags, lässt Hierarch…",
+        "label": "Afterwork",
+        "sourceUrl": "https://iltoro.at/firmenfeier-wien/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.191Z",
+        "confidence": 0.7,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "jazzcafe-sofa-8201863423",
+    "name": "Jazzcafe Sofa",
+    "website": "https://www.jazzcafesofa.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Pssst, ask for our Beer Special for only 2,80€. .",
+        "label": "Beer special",
+        "sourceUrl": "https://www.jazzcafesofa.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:52.680Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Weekly Special Beer 0.5l €2.80 . We always have a special bottled beer on offer, just ask the barkeeper and we'll bring you a bottle of great beer for only €2.80!",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.jazzcafesofa.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:52.680Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Spritzer 1/4l (with 1/8 Housewine Red or White) €2.40 . A viennese classic, a combination of wine and carbonated water makes for an incredible refreshing and especially tasty drink .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.jazzcafesofa.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:52.680Z",
+        "confidence": 0.6,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "johnny-s-pub-370931029",
+    "name": "Johnny's Pub",
+    "website": "https://johnnys-pub.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Tab Beer Specials. Johnnys Special.",
+        "label": "Beer special",
+        "sourceUrl": "https://johnnys-pub.at/drinks/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:59.677Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "koo-billardcafe-1363142293",
+    "name": "Köö Billardcafe",
+    "website": "https://www.billardcafe.at/de/lokale/k-oe-oe-23.html",
+    "candidates": [
+      {
+        "days": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Longdrink Happy Hour. Mittwoch.",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/lokale/k-oe-oe-23.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.267Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          3
+        ],
+        "from": null,
+        "to": null,
+        "text": "Longdrink Happy Hour - Event Aktuell - Events - billardcafe.at Toggle navigation JOBS . BILLARD-CARD .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/longdrink-happy-hour-1.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.267Z",
+        "confidence": 0.7,
+        "auto": true
+      },
+      {
+        "days": [
+          3
+        ],
+        "from": null,
+        "to": null,
+        "text": "Longdrink Happy Hour. .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/longdrink-happy-hour-1.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.267Z",
+        "confidence": 0.7,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "krypt-2152354102",
+    "name": "krypt.",
+    "website": "https://krypt.bar/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "No Alcohol Aperitivo. .",
+        "label": "Aperitivo",
+        "sourceUrl": "https://www.krypt.bar/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.300Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "cohol Aperitivo. .",
+        "label": "Aperitivo",
+        "sourceUrl": "https://www.krypt.bar/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.300Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "from": null,
+        "to": null,
+        "text": "Aperitivo Deal. .",
+        "label": "Aperitivo",
+        "sourceUrl": "https://www.krypt.bar/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:10.300Z",
+        "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "la-paninoteca-12790367171",
+    "name": "La Paninoteca",
+    "website": "https://lapaninoteca.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Inspiriert von unzähligen Italienreisen bringen wir nun das authentische Aperitivo-Flair nach Wien: erstklassige Panini, Feinkostplatten, perfekt servierte Aperitivi, Cocktails und ausgewäh…",
+        "label": "Aperitivo",
+        "sourceUrl": "https://lapaninoteca.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:12.126Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Italienische Feinkost, Aperitivo & Genuss pur. .",
+        "label": "Aperitivo",
+        "sourceUrl": "https://lapaninoteca.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:12.126Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Aperitivo Bar & Café . .",
+        "label": "Aperitivo",
+        "sourceUrl": "https://lapaninoteca.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:12.126Z",
+        "confidence": 0.55,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Mit unserer Aperitivo-Bar bringen wir italienisches Flair auf dein Event – ob in unserem Lokal oder bei dir vor Ort . Maßgeschneiderte Catering-Erlebnisse, von Fingerfood bis Live-Pasta, fü…",
+        "label": "Aperitivo",
+        "sourceUrl": "https://lapaninoteca.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:12.126Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "laurel-leaf-5349669220",
+    "name": "Laurel Leaf",
+    "website": "https://laurel-leaf.at/",
+    "candidates": [
+      {
+        "days": [
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "Früli Strawberry Beer 4,1%. A .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://laurel-leaf.at/de/karte/bier",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:17.419Z",
+        "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "loco-bar-5184042865",
+    "name": "Loco Bar",
+    "website": "https://www.locobar.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "0,28 l *von Happy Hour ausgeschlossen! .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.locobar.at/karte/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:28.941Z",
+        "confidence": 0.6,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "loop-588084968",
+    "name": "Loop",
+    "website": "https://loop.co.at/",
+    "candidates": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Happy Hour: 19 &#8211; 21h . Sex on the Beach, .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://loop.co.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:28.204Z",
+        "confidence": 0.75,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": null,
+        "to": null,
+        "text": "Late Night Happy Hour . täglich von 21 &#8211; 23h .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://loop.co.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:28.204Z",
+        "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "mabel-s-no90-311820993",
+    "name": "Mabel's No90",
+    "website": "https://www.mabels.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": "18:00",
+        "to": "20:00",
+        "text": "Großes (Craft-)Bierangebot, Cider vom Fass, Cocktail des Monats, sehr günstige Happy Hour.. .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.mabels.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:35.199Z",
+        "confidence": 0.8,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": "18:00",
+        "to": "20:00",
+        "text": "Tägliche Happy Hour von 18-20 Uhr! Genießen Sie Ihren Cocktail zubereitet von unserem Barkeeper – auf Wunsch auch Ihre Eigenkreation.",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.mabels.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:35.199Z",
+        "confidence": 0.8,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Die Happy Hour bietet eine gute Möglichkeit für After-Work Drinks. Das Essen ist jedes Mal ein Genuss auf ganzer Länge.",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.mabels.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:35.199Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "miranda-3796926372",
+    "name": "Miranda",
+    "website": "http://www.mirandabar.com/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Piz Spritz 9 € . Gin, Blutwurz, Elderflower, Lemon, Prosecco .",
+        "label": "Discount drinks",
+        "sourceUrl": "http://www.mirandabar.com/?page_id=143",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:41.448Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "molly-darcy-s-370931244",
+    "name": "Molly Darcy's",
+    "website": "http://www.mollydarcys.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "White Wine Spritzer 1/4 l o Soda, white wine.. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.mollydarcys.at/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:45.558Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Spritzer 1/4 l o Soda, white wine.. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.mollydarcys.at/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:45.558Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Aperol Spritz 1/4 l o Prosecco, Aperol, soda.. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.mollydarcys.at/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:45.558Z",
+        "confidence": 0.6,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Sarti Spritz 1/4 l o Prosecco, soda, Sarti, lime.. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.mollydarcys.at/menu",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:45.558Z",
+        "confidence": 0.6,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "monami-409188535",
+    "name": "Monami",
+    "website": "https://monami.at/",
+    "candidates": [
+      {
+        "days": [
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "Unter der Woche ideal fürs Date oder das verdiente Afterwork – mit soliden Drinks und schnuckeligem Programm im entspannten Wohnzimmer-Vibe.. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://monami.at/bar",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:43.918Z",
+        "confidence": 0.7,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "na-nog-irish-pub-2609889223",
+    "name": "Na-nÓg – Irish Pub",
+    "website": "https://www.nanog.at/",
+    "candidates": [
+      {
+        "days": [
+          0,
+          4
+        ],
+        "from": null,
+        "to": null,
+        "text": "After-work, team build, leaving do. Reserved tables, tab on us to set up..",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.nanog.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:50.729Z",
+        "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "potions-vienna-13681113501",
+    "name": "Potions Vienna",
+    "website": "https://www.potionsvienna.com/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Ginger Beer 0,2l. .",
+        "label": "Discount drinks",
+        "sourceUrl": "https://www.potionsvienna.com/cocktail-karte-potions-vienna/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:47:18.116Z",
+        "confidence": 0.6,
+        "auto": true
+      }
+    ]
+  }
+]

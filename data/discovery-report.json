@@ -1,6 +1,11 @@
 {
-  "generatedAt": null,
-  "totalVenues": 0,
-  "venuesWithWebsite": 0,
-  "note": "Run the GitHub Action or npm run bot:discover to populate this file."
+  "generatedAt": "2026-09-02T16:44:39.561Z",
+  "totalVenues": 870,
+  "venuesWithWebsite": 427,
+  "radiusMeters": 18000,
+  "center": {
+    "lat": 48.2082,
+    "lng": 16.3738
+  },
+  "overpassUrl": "https://overpass-api.de/api/interpreter"
 }
