@@ -1,0 +1,53 @@
+name: Update Vienna happy-hour deals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bardeals-deal-crawler
+  cancel-in-progress: false
+
+jobs:
+  update-deals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Test parser
+        run: npm test
+
+      - name: Discover Vienna bars from OpenStreetMap
+        run: npm run bot:discover
+
+      - name: Crawl official venue websites
+        env:
+          MAX_BARS: "180"
+          CRAWL_CONCURRENCY: "4"
+          MAX_PAGES_PER_BAR: "5"
+          MIN_PUBLISH_CONFIDENCE: "0.85"
+          STALE_DAYS: "21"
+        run: npm run bot:crawl
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- data/discovered-bars.json data/discovery-report.json data/deals-auto.json data/deal-candidates.json data/crawl-report.json; then
+            echo "No deal data changes."
+            exit 0
+          fi
+          git config user.name "BarDeals Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/discovered-bars.json data/discovery-report.json data/deals-auto.json data/deal-candidates.json data/crawl-report.json
+          git commit -m "chore: update Vienna deal data"
+          git push
