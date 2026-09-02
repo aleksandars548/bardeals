@@ -6,9 +6,9 @@ This project can now discover Vienna nightlife venues from OpenStreetMap and che
 
 1. `scripts/discover-bars.mjs` discovers bars, pubs, nightclubs and beer gardens around Vienna using Overpass / OpenStreetMap.
 2. `scripts/crawl-deals.mjs` visits official websites listed in OpenStreetMap.
-3. It checks the homepage plus a few relevant internal pages (happy hour, drinks, offers, events, menu, etc.).
+3. It checks the homepage plus a few relevant internal pages (happy hour, drinks, offers, events, menu, etc.) and stores the venue’s official `og:image`/`twitter:image` when available.
 4. The rule-based parser looks for explicit deal language, days and a time range.
-5. Only high-confidence deals with a schedule are published automatically to `data/deals-auto.json`.
+5. Only high-confidence deals with a schedule are published automatically to `data/deals-auto.json`. Soft phrases such as “after-work” or “aperitivo” require a concrete discount/price/1+1-style signal before they can be published.
 6. Ambiguous matches go to `data/deal-candidates.json` for review instead of being shown publicly.
 7. `.github/workflows/update-deals.yml` runs this every day and commits updated JSON back to the repository.
 
@@ -26,7 +26,7 @@ npm run bot:update
 Useful environment variables:
 
 ```bash
-MAX_BARS=180
+MAX_BARS=450
 CRAWL_CONCURRENCY=4
 MAX_PAGES_PER_BAR=5
 MIN_PUBLISH_CONFIDENCE=0.85

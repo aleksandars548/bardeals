@@ -360,6 +360,16 @@
       min-width: 0;
     }
 
+    .live-deal-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(17,17,17,0.14);
+      background: #f2f2f2;
+      display: block;
+    }
+
     .live-deal-top {
       display: flex;
       align-items: center;
@@ -1172,6 +1182,21 @@
         .replaceAll("'", "&#039;");
     }
 
+    function dealFeedSafeHttpUrl(value) {
+      try {
+        const url = new URL(String(value || ""), window.location.href);
+        return /^https?:$/.test(url.protocol) ? url.href : "";
+      } catch {
+        return "";
+      }
+    }
+
+    function dealFeedMergeKey(deal) {
+      const schedule = `${(deal.days || []).join(",")}|${deal.from}|${deal.to}`;
+      if (deal.auto) return `auto|${String(deal.label || "deal").toLowerCase()}|${schedule}`;
+      return `manual|${schedule}|${String(deal.text || "").toLowerCase().replace(/\s+/g, " ").trim()}`;
+    }
+
     function dealFeedNormalizeName(value) {
       return String(value || "")
         .normalize("NFKD")
@@ -1200,14 +1225,14 @@
         }
         const target = byName.get(key);
         for (const deal of deals) {
-          const dealKey = `${deal.days.join(",")}|${deal.from}|${deal.to}|${String(deal.text || "").toLowerCase()}`;
-          const existingIndex = target.deals.findIndex(old =>
-            `${old.days.join(",")}|${old.from}|${old.to}|${String(old.text || "").toLowerCase()}` === dealKey
-          );
+          const mergeKey = dealFeedMergeKey(deal);
+          const existingIndex = target.deals.findIndex(old => dealFeedMergeKey(old) === mergeKey);
           if (existingIndex === -1) target.deals.push(deal);
-          else if (deal.auto && !target.deals[existingIndex].auto) target.deals[existingIndex] = deal;
+          else if (Number(deal.confidence || 0) > Number(target.deals[existingIndex].confidence || 0)) target.deals[existingIndex] = deal;
         }
         if (sourceVenue.website && !target.website) target.website = sourceVenue.website;
+        if (sourceVenue.image && (!target.image || sourceVenue.auto)) target.image = sourceVenue.image;
+        if (sourceVenue.imageSourceUrl && (!target.imageSourceUrl || sourceVenue.auto)) target.imageSourceUrl = sourceVenue.imageSourceUrl;
       }
       return [...byName.values()];
     }
@@ -1305,10 +1330,12 @@
       const status = feedDealStatus(deal);
       const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
       const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
-      const sourceUrl = deal.sourceUrl || venue.website || "";
+      const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
+      const imageUrl = dealFeedSafeHttpUrl(venue.image || "");
       const verified = feedVerifiedLabel(deal);
       return `
         <article class="live-deal-card">
+          ${imageUrl ? `<img class="live-deal-image" src="${dealFeedEscape(imageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ""}
           <div class="live-deal-top">
             <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
             ${distance != null ? `<span class="live-deal-distance">📍 ${dealFeedEscape(formatFeedDistance(distance))}</span>` : ""}

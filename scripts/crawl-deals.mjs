@@ -7,7 +7,7 @@ const INPUT = path.join(ROOT, "data", "discovered-bars.json");
 const OUTPUT = path.join(ROOT, "data", "deals-auto.json");
 const CANDIDATES_OUTPUT = path.join(ROOT, "data", "deal-candidates.json");
 const REPORT = path.join(ROOT, "data", "crawl-report.json");
-const MAX_BARS = Number(process.env.MAX_BARS || 180);
+const MAX_BARS = Number(process.env.MAX_BARS || 450);
 const CONCURRENCY = Math.max(1, Math.min(8, Number(process.env.CRAWL_CONCURRENCY || 4)));
 const MAX_PAGES = Math.max(1, Math.min(8, Number(process.env.MAX_PAGES_PER_BAR || 5)));
 const MIN_PUBLISH_CONFIDENCE = Number(process.env.MIN_PUBLISH_CONFIDENCE || 0.85);
@@ -22,7 +22,13 @@ function htmlDecode(value) {
     .replace(/&quot;/gi, '"')
     .replace(/&#39;|&apos;/gi, "'")
     .replace(/&lt;/gi, "<")
-    .replace(/&gt;/gi, ">");
+    .replace(/&gt;/gi, ">")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => {
+      try { return String.fromCodePoint(Number.parseInt(hex, 16)); } catch { return ""; }
+    })
+    .replace(/&#(\d+);/g, (_, num) => {
+      try { return String.fromCodePoint(Number(num)); } catch { return ""; }
+    });
 }
 
 function htmlToText(html) {
@@ -38,6 +44,56 @@ function htmlToText(html) {
       .replace(/\s+/g, " ")
       .trim()
   );
+}
+
+function parseTagAttributes(tag) {
+  const attrs = {};
+  const re = /([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g;
+  let match;
+  while ((match = re.exec(String(tag || "")))) {
+    attrs[match[1].toLowerCase()] = htmlDecode(match[2] ?? match[3] ?? match[4] ?? "").trim();
+  }
+  return attrs;
+}
+
+function absoluteHttpUrl(raw, baseUrl) {
+  try {
+    const url = new URL(String(raw || "").trim(), baseUrl);
+    if (!/^https?:$/.test(url.protocol)) return null;
+    if (/\.svg(?:$|[?#])/i.test(url.pathname + url.search)) return null;
+    return url.toString();
+  } catch {
+    return null;
+  }
+}
+
+function extractOfficialImage(html, baseUrl) {
+  const preferred = new Map();
+  const metaRe = /<meta\b[^>]*>/gi;
+  let tag;
+  while ((tag = metaRe.exec(String(html || "")))) {
+    const attrs = parseTagAttributes(tag[0]);
+    const key = String(attrs.property || attrs.name || attrs.itemprop || "").toLowerCase();
+    if (!attrs.content) continue;
+    if (["og:image:secure_url", "og:image", "twitter:image", "twitter:image:src", "image"].includes(key) && !preferred.has(key)) {
+      preferred.set(key, attrs.content);
+    }
+  }
+
+  for (const key of ["og:image:secure_url", "og:image", "twitter:image", "twitter:image:src", "image"]) {
+    const url = absoluteHttpUrl(preferred.get(key), baseUrl);
+    if (url) return url;
+  }
+
+  const linkRe = /<link\b[^>]*>/gi;
+  while ((tag = linkRe.exec(String(html || "")))) {
+    const attrs = parseTagAttributes(tag[0]);
+    if (!/^(?:image_src|preload)$/i.test(attrs.rel || "")) continue;
+    if ((attrs.rel || "").toLowerCase() === "preload" && (attrs.as || "").toLowerCase() !== "image") continue;
+    const url = absoluteHttpUrl(attrs.href, baseUrl);
+    if (url) return url;
+  }
+  return null;
 }
 
 function extractLinks(html, baseUrl) {
@@ -132,7 +188,15 @@ function validWebsite(raw) {
 }
 
 function dealKey(deal) {
-  return `${deal.days.join(",")}|${deal.from}|${deal.to}|${String(deal.text).toLowerCase().replace(/\s+/g, " ")}`;
+  return `${String(deal.label || "deal").toLowerCase()}|${(deal.days || []).join(",")}|${deal.from}|${deal.to}`;
+}
+
+function dealQuality(deal) {
+  let score = Number(deal.confidence || 0);
+  if (deal.priceHint) score += 0.08;
+  if (/2\s*(?:for|für)\s*1|1\s*\+\s*1|%|€|eur|gratis|free|discount|rabatt/i.test(deal.text || "")) score += 0.05;
+  if (/happy[\s-]*hour/i.test(deal.text || "")) score += 0.03;
+  return score;
 }
 
 function dedupeDeals(deals) {
@@ -140,7 +204,7 @@ function dedupeDeals(deals) {
   for (const deal of deals) {
     const key = dealKey(deal);
     const old = map.get(key);
-    if (!old || deal.confidence > old.confidence) map.set(key, deal);
+    if (!old || dealQuality(deal) > dealQuality(old)) map.set(key, deal);
   }
   return [...map.values()];
 }
@@ -155,6 +219,8 @@ async function crawlVenue(venue) {
   const candidates = [];
   let pages = 0;
   let lastError = null;
+  let image = null;
+  let imageSourceUrl = null;
 
   while (queue.length && pages < MAX_PAGES) {
     const url = queue.shift();
@@ -165,6 +231,10 @@ async function crawlVenue(venue) {
     try {
       const { text: html, finalUrl } = await fetchText(url);
       pages += 1;
+      if (!image) {
+        image = extractOfficialImage(html, finalUrl);
+        if (image) imageSourceUrl = finalUrl;
+      }
       const text = htmlToText(html);
       candidates.push(...extractDealCandidates(text, finalUrl));
 
@@ -184,6 +254,7 @@ async function crawlVenue(venue) {
     to: c.to,
     text: c.text,
     label: c.label,
+    priceHint: c.priceHint || null,
     sourceUrl: c.sourceUrl,
     source: "official_website",
     verifiedAt: now,
@@ -204,6 +275,8 @@ async function crawlVenue(venue) {
     pages,
     published,
     candidates: normalized,
+    image,
+    imageSourceUrl,
   };
 }
 
@@ -255,6 +328,7 @@ const cutoff = Date.now() - STALE_DAYS * 86_400_000;
 for (const result of results) {
   if (result.status === "ok") {
     if (result.published.length) {
+      const previousVenue = byId.get(result.venue.id);
       byId.set(result.venue.id, {
         id: result.venue.id,
         name: result.venue.name,
@@ -265,6 +339,8 @@ for (const result of results) {
         category: result.venue.category,
         featured: false,
         website: result.venue.website,
+        image: result.image || previousVenue?.image || null,
+        imageSourceUrl: result.imageSourceUrl || previousVenue?.imageSourceUrl || null,
         deals: result.published,
         discoveredFrom: result.venue.sourceUrl,
         auto: true,
@@ -306,6 +382,7 @@ const report = {
   publishedVenuesTotal: autoDeals.length,
   publishedDealsTotal: autoDeals.reduce((n, v) => n + (v.deals?.length || 0), 0),
   reviewCandidates: allCandidates.reduce((n, v) => n + v.candidates.length, 0),
+  publishedVenuesWithImage: autoDeals.filter((v) => v.image).length,
   minimumPublishConfidence: MIN_PUBLISH_CONFIDENCE,
   staleAfterDays: STALE_DAYS,
 };

@@ -18,7 +18,38 @@ const german = extractDealCandidates(
   "Afterwork: Montag bis Freitag von 16:00 bis 19:00 Uhr. Spritzer 1+1 gratis.",
   "https://example.at/angebote"
 );
-assert.ok(german.some((d) => d.from === "16:00" && d.to === "19:00" && d.days.includes(1) && d.days.includes(5)));
+assert.ok(german.some((d) => d.from === "16:00" && d.to === "19:00" && d.days.includes(1) && d.days.includes(5) && d.confidence >= 0.85));
+
+const happyHourNoPrice = extractDealCandidates(
+  "Bier Happy Hour. Montag bis Donnerstag 16:00-18:00.",
+  "https://example.at/happy-hour"
+);
+assert.ok(happyHourNoPrice.some((d) => d.label === "Happy Hour" && d.from === "16:00" && d.to === "18:00" && d.confidence >= 0.85));
+
+const openingHoursTrap = extractDealCandidates(
+  "Öffnungszeiten Montag-Freitag 10:00-17:00. Cocktail Happy Hour. Montag-Freitag 16:00-20:00. Cocktails €7.",
+  "https://example.at/happy-hour"
+);
+assert.ok(openingHoursTrap.some((d) => d.label === "Happy Hour" && d.from === "16:00" && d.to === "20:00"));
+assert.equal(openingHoursTrap.some((d) => d.label === "Happy Hour" && d.from === "10:00" && d.to === "17:00" && d.confidence >= 0.85), false);
+
+const afterworkVibe = extractDealCandidates(
+  "Perfekt für After-Work, Date-Night oder einfach einen entspannten Abend mit Freunden. Geöffnet täglich 11:30-22:00.",
+  "https://example.at/"
+);
+assert.equal(afterworkVibe.some((d) => d.label === "Afterwork" && d.confidence >= 0.85), false);
+
+const aperitivoVibe = extractDealCandidates(
+  "Der perfekte Treffpunkt für Aperitivo, Spritz und italienische Drinks. Täglich 11:00-22:00.",
+  "https://example.at/"
+);
+assert.equal(aperitivoVibe.some((d) => d.label === "Aperitivo" && d.confidence >= 0.85), false);
+
+const duplicate = extractDealCandidates(
+  "Happy Hour täglich 18:00-20:00. Happy Hour täglich 18:00-20:00. Happy Hour täglich 18:00-20:00.",
+  "https://example.at/happy-hour"
+).filter((d) => d.label === "Happy Hour");
+assert.equal(duplicate.length, 1);
 
 const weak = extractDealCandidates("We serve cocktails, beer and food every day.", "https://example.com");
 assert.equal(weak.length, 0);
