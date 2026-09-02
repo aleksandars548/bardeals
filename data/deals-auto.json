@@ -1,1 +1,535 @@
-[]
+[
+  {
+    "id": "eva-adam-10948791505",
+    "name": "Eva & Adam",
+    "address": "Linke Wienzeile 42, Wien",
+    "zip": "",
+    "lat": 48.1973607,
+    "lng": 16.3588837,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://evaundadam.bar/",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "16:00",
+        "to": "20:00",
+        "text": "Cocktail Happy Hour. .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 1,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "10:00",
+        "to": "17:00",
+        "text": "Cocktail Happy Hour . Cocktailkurse .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "from": "09:00",
+        "to": "15:00",
+        "text": "Egal ob After-Work-Prickeln unter der Woche oder ein ausgelassener Brunch am Samstag. Die perfekte Gelegenheit, um stilvoll den Stress der ersten Wochentage hinter sich zu lassen oder das W…",
+        "label": "Afterwork",
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "16:00",
+        "to": "20:00",
+        "text": "Cocktail Happy Hour . Firmenfeier &#038; private Party .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/happy-hour-cocktailbar-wien/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "16:00",
+        "to": "20:00",
+        "text": "Cocktial Happy Hour . .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://evaundadam.bar/happy-hour-cocktailbar-wien/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:05.573Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/10948791505",
+    "auto": true
+  },
+  {
+    "id": "jin-s-zieglergasse-11550881464",
+    "name": "Jin's Zieglergasse",
+    "address": "Zieglergasse 13, 1070 Wien",
+    "zip": "1070",
+    "lat": 48.1986943,
+    "lng": 16.3450482,
+    "category": "Restaurant Bar",
+    "featured": false,
+    "website": "https://www.jins.at/jins1070",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:30",
+        "to": "22:00",
+        "text": "Perfekt f&uuml;r After-Work, Date-Night oder einfach einen entspannten Abend mit Freunden. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.jins.at/jins1070",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:45:55.267Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/11550881464",
+    "auto": true
+  },
+  {
+    "id": "klyo-5503379821",
+    "name": "KLYO",
+    "address": "Uraniastraße 1, Wien",
+    "zip": "",
+    "lat": 48.2116774,
+    "lng": 16.3840177,
+    "category": "Restaurant Bar",
+    "featured": false,
+    "website": "https://www.klyo.at/",
+    "deals": [
+      {
+        "days": [
+          4
+        ],
+        "from": "16:00",
+        "to": "22:00",
+        "text": "AFTERWORK Dayclub . Donnerstag, 27.08.2026.",
+        "label": "Afterwork",
+        "sourceUrl": "https://klyo.at/pages/events-wien",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:07.380Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/5503379821",
+    "auto": true
+  },
+  {
+    "id": "koo-7-3016770833",
+    "name": "KÖÖ 7",
+    "address": "Kirchengasse 41, 1070 Wien",
+    "zip": "1070",
+    "lat": 48.2045545,
+    "lng": 16.3513894,
+    "category": "Pub",
+    "featured": false,
+    "website": "http://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "from": "10:00",
+        "to": "02:00",
+        "text": "Bier Happy Hour. Montag bis Donnerstag 16:00-18:00.",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.259Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "from": "16:00",
+        "to": "18:00",
+        "text": "Bier Happy Hour - Event Aktuell - Events - billardcafe.at Toggle navigation JOBS . BILLARD-CARD .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-2.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.259Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "from": "16:00",
+        "to": "18:00",
+        "text": "Bier Happy Hour. .",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-2.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:08.259Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/3016770833",
+    "auto": true
+  },
+  {
+    "id": "la-paninoteca-12790367171",
+    "name": "La Paninoteca",
+    "address": "Wien",
+    "zip": "",
+    "lat": 48.2051857,
+    "lng": 16.3400416,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://lapaninoteca.at/",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "16:00",
+        "to": "23:00",
+        "text": "La Paninoteca // Aperitivo Bar & Alimentari Zum Inhalt springen . Über uns.",
+        "label": "Aperitivo",
+        "sourceUrl": "https://lapaninoteca.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:12.126Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/12790367171",
+    "auto": true
+  },
+  {
+    "id": "lenz-social-dining-10819836558",
+    "name": "LENZ - Social Dining",
+    "address": "Am Stadtpark 1, 1030 Wien",
+    "zip": "1030",
+    "lat": 48.2061375,
+    "lng": 16.3837085,
+    "category": "Restaurant Bar",
+    "featured": false,
+    "website": "https://lenz-socialdining.at/",
+    "deals": [
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "17:00",
+        "to": "19:00",
+        "text": "After work: Austrian Wine & Cheese . After work: Austrian Wine & Cheese .",
+        "label": "Afterwork",
+        "sourceUrl": "https://lenz-socialdining.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:23.415Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "17:00",
+        "to": "19:00",
+        "text": "After work: Austrian Wine & Cheese . After work: Austrian Wine & Cheese .",
+        "label": "Afterwork",
+        "sourceUrl": "https://lenz-socialdining.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:23.415Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "17:00",
+        "to": "19:00",
+        "text": "After work: Austrian Wine & Cheese. After work: Austrian Wine & Cheese.",
+        "label": "Afterwork",
+        "sourceUrl": "https://lenz-socialdining.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:23.415Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/10819836558",
+    "auto": true
+  },
+  {
+    "id": "lucy-bar-11700863535",
+    "name": "Lucy Bar",
+    "address": "Wien",
+    "zip": "",
+    "lat": 48.1857106,
+    "lng": 16.3836959,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://lucybar.at/",
+    "deals": [
+      {
+        "days": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "18:00",
+        "text": "Afterwork-Donnerstag . 11.00-21.00 .",
+        "label": "Afterwork",
+        "sourceUrl": "https://lucybar.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:30.128Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          4
+        ],
+        "from": "11:00",
+        "to": "21:00",
+        "text": "Afterwork in gediegener Atmosphäre . Jeden Donnerstag haben wir bis 21 Uhr für euch geöffnet.",
+        "label": "Afterwork",
+        "sourceUrl": "https://lucybar.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:30.128Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/11700863535",
+    "auto": true
+  },
+  {
+    "id": "mabel-s-no90-311820993",
+    "name": "Mabel's No90",
+    "address": "Laxenburger Straße 90, 1100 Wien",
+    "zip": "1100",
+    "lat": 48.1692604,
+    "lng": 16.3703852,
+    "category": "Pub",
+    "featured": false,
+    "website": "https://www.mabels.at/",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "18:00",
+        "to": "20:00",
+        "text": "Daily Happy Hour. Unsere Happy Hour – täglich von 18-20 Uhr, auch am Samstag, Sonntag und an Feiertagen – bietet die beste Gelegenheit zum ausführlichen Probieren unserer Cocktail-Kreatione…",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.mabels.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:35.199Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          6
+        ],
+        "from": "08:00",
+        "to": "20:00",
+        "text": "Die Happy Hour bietet eine gute Möglichkeit für After-Work Drinks. Das Essen ist jedes Mal ein Genuss auf ganzer Länge.",
+        "label": "Happy Hour",
+        "sourceUrl": "https://www.mabels.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:35.199Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/311820993",
+    "auto": true
+  },
+  {
+    "id": "napo-lindo-6331569607",
+    "name": "Napo Lindo",
+    "address": "1010 Wien",
+    "zip": "1010",
+    "lat": 48.2042415,
+    "lng": 16.3679195,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://www.napolino.at/",
+    "deals": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "22:00",
+        "text": "en perfekten Treffpunkt für Aperitivo, Spritz und italienische Drinks. Ob Frühstück, Lunch, Coffee Break oder After Work – bei Napolino genießt du Italien zu jeder Tageszeit..",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.napolino.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:54.374Z",
+        "confidence": 1,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "22:00",
+        "text": "Am Abend verwandelt sich Napolino in den perfekten Treffpunkt für Aperitivo, Spritz und italienische Drinks. Ob Frühstück, Lunch, Coffee Break oder After Work – bei Napolino genießt du Ital…",
+        "label": "Aperitivo",
+        "sourceUrl": "https://www.napolino.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:54.374Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/6331569607",
+    "auto": true
+  },
+  {
+    "id": "noa-334636027",
+    "name": "Noa",
+    "address": "Salztorgasse 4, 1010 Wien",
+    "zip": "1010",
+    "lat": 48.2132357,
+    "lng": 16.3732171,
+    "category": "Restaurant Bar",
+    "featured": false,
+    "website": "https://www.noa.wien/",
+    "deals": [
+      {
+        "days": [
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "02:00",
+        "text": "After work. .",
+        "label": "Afterwork",
+        "sourceUrl": "https://www.noa.wien/events/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-02T16:46:57.039Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/334636027",
+    "auto": true
+  }
+]
