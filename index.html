@@ -995,9 +995,172 @@
       text-align: center;
     }
 
-    /* Keep legacy homepage sections, but make them visually quieter below the primary deal finder. */
-    #swipe, #featured, .swiper-section + .section, #featured + .section {
-      margin-top: 76px;
+    .home-discovery,
+    .home-how,
+    .home-for-bars,
+    .home-seo-copy {
+      border-top: 1px solid var(--bd-line);
+      padding-top: 54px;
+    }
+
+    .home-section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .home-section-head .section-title,
+    .home-for-bars .section-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(32px, 4vw, 46px);
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+
+    .home-text-link {
+      color: var(--bd-green-dark);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .home-district-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .home-district-grid button {
+      appearance: none;
+      min-height: 92px;
+      border: 1px solid var(--bd-line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+    }
+
+    .home-district-grid button:hover {
+      border-color: #9fcfac;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+
+    .home-district-grid strong {
+      display: block;
+      color: var(--bd-green-dark);
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .home-district-grid span {
+      color: #666;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .home-how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .home-how-grid article {
+      border: 1px solid var(--bd-line);
+      border-radius: 16px;
+      padding: 22px;
+      background: #fff;
+    }
+
+    .home-how-grid article > span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #edf8f0;
+      color: var(--bd-green-dark);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .home-how-grid h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+      letter-spacing: -.025em;
+    }
+
+    .home-how-grid p {
+      margin: 0;
+      color: #6b6b6b;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .home-for-bars {
+      margin-top: 70px;
+      padding: 34px;
+      border: 1px solid #cfe7d5;
+      border-radius: 22px;
+      background: #f2faf4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .home-for-bars-copy p:last-child {
+      margin: 10px 0 0;
+      max-width: 690px;
+      color: #5d665f;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .home-for-bars-btn {
+      flex: 0 0 auto;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 0 20px;
+      background: var(--bd-green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .home-seo-copy {
+      padding-bottom: 18px;
+    }
+
+    .home-seo-copy p {
+      max-width: 860px;
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background: #fff;
+      color: var(--bd-ink);
+      border-top: 1px solid var(--bd-line);
+    }
+    .footer p { color: #6f6f6f; }
+    .footer-links a { color: var(--bd-ink); }
+    .footer-note {
+      border-top-color: var(--bd-line);
+      color: #8a8a8a;
     }
 
     @media (max-width: 1050px) {
@@ -1006,6 +1169,24 @@
     }
 
     @media (max-width: 760px) {
+      .home-discovery, .home-how, .home-seo-copy { padding-top: 38px; }
+      .home-section-head { align-items:flex-start; margin-bottom:16px; }
+      .home-section-head .section-title, .home-for-bars .section-title { font-size: 30px; }
+      .home-text-link { display:none; }
+      .home-district-grid {
+        display:flex;
+        overflow-x:auto;
+        gap:8px;
+        padding-bottom:5px;
+        scrollbar-width:none;
+      }
+      .home-district-grid::-webkit-scrollbar { display:none; }
+      .home-district-grid button { min-width:128px; min-height:76px; padding:13px; }
+      .home-district-grid strong { font-size:19px; margin-bottom:6px; }
+      .home-how-grid { grid-template-columns:1fr; gap:10px; }
+      .home-how-grid article { padding:17px; }
+      .home-for-bars { margin-top:46px; padding:24px 20px; flex-direction:column; align-items:stretch; gap:18px; }
+      .home-for-bars-btn { width:100%; }
       .top-nav { min-height: 64px; padding-block: 10px; position: sticky; }
       .nav-links { display: none; }
       .nav-wrap { margin-left: auto; }
@@ -1182,129 +1363,63 @@
       </div>
     </section>
 
-    <section id="swipe" class="section swiper-section show">
-      <p class="section-kicker">Quick Picks</p>
-      <h2 class="section-title">Swipe Venues</h2>
-
-      <div id="swipeStack" class="tinder-stack"></div>
-
-      <div class="swipe-actions">
-        <button class="filter-btn" type="button" onclick="prevCard()">Back</button>
-        <button class="filter-btn" type="button" onclick="nextCard()">Next Venue</button>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="section-kicker">Categories</p>
-
-      <div class="filters">
-        <button class="filter-btn active" type="button">Sports</button>
-        <button class="filter-btn" type="button">Irish Pub</button>
-        <button class="filter-btn" type="button">Cocktails</button>
-        <button class="filter-btn" type="button">Cheap Drinks</button>
-        <button class="filter-btn" type="button">Live Music</button>
-        <button class="filter-btn" type="button">Club</button>
-      </div>
-    </section>
-
-    <section id="featured" class="section">
-      <p class="section-kicker">Bars and Pubs</p>
-      <h2 class="section-title">Featured Venues</h2>
-
-      <div id="barsGrid" class="grid"></div>
-    </section>
-
-    <section class="section">
-      <p class="section-kicker">Nightlife</p>
-      <h2 class="section-title">Clubs</h2>
-
-      <div id="clubsGrid" class="grid"></div>
-    </section>
-
-    <section class="section seo-copy">
-      <p class="section-kicker">Happy hour near me</p>
-      <h2 class="section-title">Find happy hour deals near you in Vienna</h2>
-      <p>
-        Looking for happy hour near me in Vienna? BarDeals helps you find bars, pubs, sports bars,
-        cocktail bars and nightlife venues with drink offers, beer specials, cocktail deals and
-        Google Maps directions. Browse venues, check the deal details and open the location in
-        Google Maps before you visit.
-      </p>
-    </section>
-
-    <section class="section">
-      <div class="platform-cta">
+    <section id="districts" class="section home-discovery" aria-labelledby="districtsTitle">
+      <div class="home-section-head">
         <div>
-          <p class="section-kicker">For Bars</p>
-          <h2 class="section-title">Own or manage a bar in Vienna?</h2>
-          <p>
-            BarDeals is building a Vienna nightlife guide for tourists, students and groups looking
-            for happy hours, drink deals, sports bars, events and group-friendly venues.
-            During the launch phase, selected Vienna bars can get listed for free.
-          </p>
-
-          <div class="cta-pills">
-            <span>Happy hours</span>
-            <span>Sports nights</span>
-            <span>Group bookings</span>
-            <span>Google Maps clicks</span>
-            <span>Tourists & students</span>
-          </div>
+          <p class="section-kicker">Popular areas</p>
+          <h2 id="districtsTitle" class="section-title">Browse Vienna by district</h2>
         </div>
+        <a class="home-text-link" href="/bars.html">See all bars →</a>
+      </div>
 
-        <div class="platform-card">
-          <strong>Get your bar listed</strong>
-          <p>
-            Send your bar name, address, opening hours, current deals and Instagram or website link.
-          </p>
-          <a class="btn btn-dark" href="/for-bars.html">For Bars</a>
-        </div>
+      <div class="home-district-grid">
+        <button type="button" data-home-district="1010"><strong>1010</strong><span>Innere Stadt</span></button>
+        <button type="button" data-home-district="1030"><strong>1030</strong><span>Landstraße</span></button>
+        <button type="button" data-home-district="1060"><strong>1060</strong><span>Mariahilf</span></button>
+        <button type="button" data-home-district="1070"><strong>1070</strong><span>Neubau</span></button>
+        <button type="button" data-home-district="1080"><strong>1080</strong><span>Josefstadt</span></button>
+        <button type="button" data-home-district="1100"><strong>1100</strong><span>Favoriten</span></button>
       </div>
     </section>
 
-    <section class="section">
-      <p class="section-kicker">Before You Go</p>
-      <h2 class="section-title">FAQ</h2>
-
-      <div class="faq">
-        <details>
-          <summary>Are all deals confirmed?</summary>
-          <p>
-            Confirmed offers are shown when a venue publishes them or the information was already checked.
-            If a deal is not fully confirmed, the page tells you to check directly with the venue.
-          </p>
-        </details>
-
-        <details>
-          <summary>Why do most cards use placeholder images?</summary>
-          <p>
-            BarDeals only uses owned, supplied or legal placeholder images.
-            We do not copy Google Maps guest photos or random image-search photos.
-          </p>
-        </details>
-
-        <details>
-          <summary>How should I use the Google Maps buttons?</summary>
-          <p>
-            Open the venue in Google Maps, check directions, current opening times and recent venue updates before visiting.
-          </p>
-        </details>
-
-        <details>
-          <summary>Can a venue get a full bar page?</summary>
-          <p>
-            Yes. Full pages can include real photos, official offers, events and richer venue details once the information is confirmed.
-          </p>
-        </details>
-
-        <details>
-          <summary>How can a bar update or claim a listing?</summary>
-          <p>
-            Bar owners and managers can use the For Bars page to send updated information, official deals,
-            photos, opening hours and group booking details.
-          </p>
-        </details>
+    <section class="section home-how" aria-labelledby="howTitle">
+      <div class="home-section-head">
+        <div>
+          <p class="section-kicker">Simple and fast</p>
+          <h2 id="howTitle" class="section-title">How BarDeals works</h2>
+        </div>
       </div>
+
+      <div class="home-how-grid">
+        <article>
+          <span>1</span>
+          <h3>Use your location</h3>
+          <p>Allow location once and we sort Vienna deals by distance.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Pick a live deal</h3>
+          <p>See the offer, time, venue and official source without digging around.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Open Google Maps</h3>
+          <p>Get directions and check the venue details before you go.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section home-for-bars" aria-labelledby="forBarsTitle">
+      <div class="home-for-bars-copy">
+        <p class="section-kicker">For Bars</p>
+        <h2 id="forBarsTitle" class="section-title">Own a bar in Vienna?</h2>
+        <p>Get your happy hour or drink deal in front of people actively looking for somewhere to go.</p>
+      </div>
+      <a class="home-for-bars-btn" href="/for-bars.html">List your bar →</a>
+    </section>
+
+    <section class="section home-seo-copy" aria-label="About BarDeals Vienna">
+      <p>BarDeals helps people find happy hours, cocktail specials, beer deals and bar offers near them in Vienna. Deal information is checked against official venue sources and refreshed regularly. Prices, times and availability can change, so always confirm the current offer before ordering.</p>
     </section>
 
   </main>
@@ -1543,7 +1658,9 @@
     }
 
     function renderGrid(id, list) {
-      document.getElementById(id).innerHTML = list.map(cardHtml).join("");
+      const target = document.getElementById(id);
+      if (!target) return;
+      target.innerHTML = list.map(cardHtml).join("");
     }
 
     function renderHeroDots() {
@@ -1591,7 +1708,9 @@
     }
 
     function renderSwipe() {
-      document.getElementById("swipeStack").innerHTML = featured.map((v, index) => `
+      const stack = document.getElementById("swipeStack");
+      if (!stack) return;
+      stack.innerHTML = featured.map((v, index) => `
         <article class="venue-card swipe-card ${index === 0 ? "active" : ""} ${index === 1 ? "next" : ""}">
           <img src="${v.image}" alt="${v.name}">
           <div class="venue-info">
@@ -2037,6 +2156,17 @@
         dealFeedDistrict = button.dataset.dealDistrict || "all";
         document.querySelectorAll("[data-deal-district]").forEach(item => item.classList.toggle("active", item === button));
         renderDealFeed();
+      });
+    });
+
+    document.querySelectorAll("[data-home-district]").forEach(button => {
+      button.addEventListener("click", () => {
+        dealFeedDistrict = button.dataset.homeDistrict || "all";
+        document.querySelectorAll("[data-deal-district]").forEach(item => {
+          item.classList.toggle("active", item.dataset.dealDistrict === dealFeedDistrict);
+        });
+        renderDealFeed();
+        document.getElementById("live-deals")?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
 
