@@ -51,6 +51,31 @@ const duplicate = extractDealCandidates(
 ).filter((d) => d.label === "Happy Hour");
 assert.equal(duplicate.length, 1);
 
+const normalMenuPrice = extractDealCandidates(
+  "Weißer Spritzer € 5,10. Ginger Beer € 4,50. Bier 0,5l € 5,20.",
+  "https://example.at/drinks"
+);
+assert.equal(normalMenuPrice.length, 0);
+
+const afterworkWithRandomPrice = extractDealCandidates(
+  "Perfekt für Afterwork mit Freunden. Unsere normale Karte: Spritzer €5,10.",
+  "https://example.at/"
+);
+assert.equal(afterworkWithRandomPrice.some((d) => d.label === "Afterwork" && d.confidence >= 0.85), false);
+
+const correctNearbyPrice = extractDealCandidates(
+  "Beer Special for only €2.80. House wine €3.80. Happy Hour daily 18:00-20:00.",
+  "https://example.at/specials"
+);
+const beerSpecial = correctNearbyPrice.find((d) => d.label === "Beer special");
+assert.equal(beerSpecial?.priceHint, "€2.80");
+
+const reviewText = extractDealCandidates(
+  "I recommend this place. Approximately €3 for a pint and there was happy hour on spirits.",
+  "https://example.at/"
+);
+assert.equal(reviewText.some((d) => d.confidence >= 0.85), false);
+
 const weak = extractDealCandidates("We serve cocktails, beer and food every day.", "https://example.com");
 assert.equal(weak.length, 0);
 

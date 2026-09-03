@@ -19,14 +19,13 @@ const PROMO_PATTERNS = [
   { label: "Drink special", strength: "strong", re: /\bdrinks?\s+(?:special|deal|aktion|angebot)s?\b/i },
   { label: "Beer special", strength: "strong", re: /\b(?:beer|bier)\s+(?:special|deal|aktion|angebot)s?\b/i },
   { label: "Spritz special", strength: "strong", re: /\bspritz(?:er)?\s+(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Discount drinks", strength: "strong", re: /\b(?:all\s+)?(?:cocktails?|drinks?|spritz(?:er)?|beer|bier|wein|wine)\s+(?:only\s+|nur\s+)?(?:€\s*)?\d{1,2}(?:[.,]\d{1,2})?\s*(?:€|eur)?\b/i },
   // These words often describe a vibe/event rather than a discount. They are candidates only
   // until another concrete deal signal (price, discount, 1+1, etc.) is present nearby.
   { label: "Afterwork", strength: "soft", re: /\bafter[\s-]*work\b/i },
   { label: "Aperitivo", strength: "soft", re: /\baperitivo\b/i },
 ];
 
-const HARD_DEAL_SIGNAL_RE = /(?:\b(?:2\s*(?:for|für)\s*1|2\s*[-:]\s*1|1\s*\+\s*1|buy\s+one\s+get\s+one|happy[\s-]*hours?|specials?|deals?|aktion(?:en)?|angebot(?:e)?|rabatt|discount|reduced|save|off|free|gratis|kostenlos|günstiger|guenstiger)\b|\b\d{1,3}\s*%\s*(?:off|discount|rabatt)?\b|(?:€\s*\d{1,3}(?:[.,]\d{1,2})?|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur)))/i;
+const HARD_DEAL_SIGNAL_RE = /(?:\b(?:2\s*(?:for|für)\s*1|2\s*[-:]\s*1|1\s*\+\s*1|buy\s+one\s+get\s+one|happy[\s-]*hours?|specials?|deals?|aktion(?:en)?|angebot(?:e)?|rabatt|discount|reduced|save|off|free|gratis|kostenlos|günstiger|guenstiger)\b|\b\d{1,3}\s*%\s*(?:off|discount|rabatt)?\b)/i;
 const OPENING_HOURS_RE = /(?:opening\s+hours?|öffnungszeiten|oeffnungszeiten|geöffnet|geoeffnet|kitchen\s+hours?|bar\s+hours?)/i;
 
 function uniqueSorted(values) {
@@ -147,9 +146,47 @@ function nearestTimeRange(text, anchorIndex) {
     .sort((a, b) => a.distance - b.distance)[0];
 }
 
+function sentenceAround(text, anchorIndex) {
+  const input = String(text || "");
+  const left = input.slice(0, Math.max(0, anchorIndex));
+  const startBoundary = Math.max(left.lastIndexOf("."), left.lastIndexOf("!"), left.lastIndexOf("?"), left.lastIndexOf(";"));
+  const right = input.slice(Math.max(0, anchorIndex));
+  const ends = [right.indexOf("."), right.indexOf("!"), right.indexOf("?"), right.indexOf(";")].filter((v) => v >= 0);
+  const endBoundary = ends.length ? Math.min(...ends) : Math.min(220, right.length);
+  return input.slice(startBoundary + 1, Math.max(0, anchorIndex) + endBoundary + 1).trim();
+}
+
 function firstMoney(text) {
-  const match = /(?:€\s*\d{1,3}(?:[.,]\d{1,2})?|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur))\b/i.exec(String(text || ""));
+  const match = /(?:€\s*\d{1,3}(?:[.,]\d{1,2})?(?![.,]\d)|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur)\b)/i.exec(String(text || ""));
   return match ? match[0].replace(/\s+/g, " ").trim() : null;
+}
+
+function moneyNearPromo(text, anchorIndex) {
+  const input = String(text || "");
+  const re = /(?:€\s*\d{1,3}(?:[.,]\d{1,2})?(?![.,]\d)|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur)\b)/gi;
+  const hits = [];
+  let match;
+  while ((match = re.exec(input))) {
+    hits.push({
+      value: match[0].replace(/\s+/g, " ").trim(),
+      distance: Math.abs((match.index + match[0].length / 2) - anchorIndex),
+    });
+  }
+  hits.sort((a, b) => a.distance - b.distance);
+  return hits[0]?.distance <= 120 ? hits[0].value : null;
+}
+
+function looksLikeReviewOrQuote(text) {
+  return /\b(?:recommend(?:ed)?|review|tripadvisor|google review|approximately|about \d|we went|we visited|I went|I visited|stars?|rating)\b/i.test(String(text || ""));
+}
+
+function sourceUrlBoost(sourceUrl) {
+  try {
+    const path = new URL(sourceUrl).pathname.toLowerCase();
+    return /(?:happy[-_]?hour|specials?|deals?|angebote?|aktionen?|promos?)/.test(path) ? 0.08 : 0;
+  } catch {
+    return 0;
+  }
 }
 
 function localPromoContext(input, index, length) {
@@ -211,8 +248,9 @@ export function extractDealCandidates(text, sourceUrl = "") {
       const timeRange = nearestTimeRange(local.text, anchor);
       const times = timeRange ? { from: timeRange.from, to: timeRange.to } : null;
       const days = parseDays(local.text);
-      const money = firstMoney(local.text);
+      const money = moneyNearPromo(local.text, anchor);
       const hardSignal = HARD_DEAL_SIGNAL_RE.test(local.text);
+      const reviewLike = looksLikeReviewOrQuote(local.text);
       const openingHoursOnly = OPENING_HOURS_RE.test(local.text) && !hardSignal && promo.strength === "soft";
 
       let confidence = 0.45;
@@ -221,6 +259,8 @@ export function extractDealCandidates(text, sourceUrl = "") {
       if (days.length) confidence += 0.1;
       if (hardSignal) confidence += 0.15;
       if (/^https?:\/\//i.test(sourceUrl)) confidence += 0.05;
+      confidence += sourceUrlBoost(sourceUrl);
+      if (reviewLike) confidence -= 0.35;
       if (promo.strength === "soft" && !hardSignal) confidence -= 0.25;
       if (openingHoursOnly) confidence -= 0.2;
       confidence = Math.max(0, Math.min(1, Number(confidence.toFixed(2))));

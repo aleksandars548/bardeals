@@ -257,13 +257,34 @@ function isPdfUrl(url) {
 }
 
 function concreteDealSignal(text) {
-  return /happy[\s-]*hours?|2\s*(?:for|für)\s*1|1\s*\+\s*1|buy\s+one\s+get\s+one|\b\d{1,3}\s*%\s*(?:off|discount|rabatt)?\b|(?:€\s*\d{1,3}(?:[.,]\d{1,2})?|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur))|gratis|free|kostenlos|rabatt|discount|reduced|save\s+\d/i.test(String(text || ""));
+  return /happy[\s-]*hours?|2\s*(?:for|für)\s*1|1\s*\+\s*1|buy\s+one\s+get\s+one|\b\d{1,3}\s*%\s*(?:off|discount|rabatt)?\b|\b(?:specials?|deals?|aktion(?:en)?|angebot(?:e)?|rabatt|discount|reduced|gratis|free|kostenlos)\b/i.test(String(text || ""));
+}
+
+function explicitPastDate(text, sourceUrl = "") {
+  const now = new Date();
+  const currentYear = now.getUTCFullYear();
+  const haystack = `${String(text || "")} ${String(sourceUrl || "")}`;
+  const years = [...haystack.matchAll(/\b(20\d{2})\b/g)].map((m) => Number(m[1]));
+  if (years.some((year) => year < currentYear)) return true;
+
+  // ISO-like event URLs such as ...-2026-07-22-18-00/...
+  for (const m of haystack.matchAll(/\b(20\d{2})[-/.](0?[1-9]|1[0-2])[-/.]([0-2]?\d|3[01])\b/g)) {
+    const d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]), 23, 59, 59));
+    if (Number.isFinite(d.getTime()) && d.getTime() < now.getTime() - 86_400_000) return true;
+  }
+  return false;
+}
+
+function looksLikeReviewText(text) {
+  return /\b(?:recommend(?:ed)?|tripadvisor|google review|approximately|we went|we visited|I went|I visited|stars?|rating)\b/i.test(String(text || ""));
 }
 
 function publishableCandidate(deal) {
   if (deal.confidence < MIN_PUBLISH_CONFIDENCE) return false;
   if (!Array.isArray(deal.days) || deal.days.length === 0) return false;
   if (!/^\d{2}:\d{2}$/.test(deal.from || "") || !/^\d{2}:\d{2}$/.test(deal.to || "")) return false;
+  if (explicitPastDate(deal.text, deal.sourceUrl)) return false;
+  if (looksLikeReviewText(deal.text)) return false;
   if (/^(?:Afterwork|Aperitivo)$/i.test(deal.label || "") && !concreteDealSignal(deal.text)) return false;
   return true;
 }

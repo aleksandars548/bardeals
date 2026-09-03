@@ -1,9 +1,15 @@
-BarDeals real placeholder fix
+BarDeals parser hardening v5 - DIRECT REPLACEMENTS
 
-This patch fixes the actual cause of empty grey media blocks:
-- legacy homepage/page URLs are no longer treated as official images in EN or DE
-- current invalid image values are scrubbed from data/deals-auto.json
-- future crawler runs no longer preserve invalid legacy image URLs
-- validated extensionless images from future crawler runs are marked imageValidated
+Copy these files into the root of your current bardeals repo and replace existing files:
+- scripts/lib/deal-parser.mjs
+- scripts/crawl-deals.mjs
+- scripts/test-deal-parser.mjs
 
-Copy the entire patch into the root of your bardeals repository and replace existing files.
+Then run:
+node scripts/test-deal-parser.mjs
+node --check scripts/crawl-deals.mjs
+
+Expected:
+Deal parser tests passed.
+
+No apply-parser-hardening-v5.mjs script is needed.
