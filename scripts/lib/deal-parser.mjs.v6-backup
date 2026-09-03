@@ -19,12 +19,6 @@ const PROMO_PATTERNS = [
   { label: "Drink special", strength: "strong", re: /\bdrinks?\s+(?:special|deal|aktion|angebot)s?\b/i },
   { label: "Beer special", strength: "strong", re: /\b(?:beer|bier)\s+(?:special|deal|aktion|angebot)s?\b/i },
   { label: "Spritz special", strength: "strong", re: /\bspritz(?:er)?\s+(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Longdrink special", strength: "strong", re: /\blong\s*drinks?\s+(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Shot special", strength: "strong", re: /\bshots?\s+(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Bottle special", strength: "strong", re: /\b(?:bottle|flaschen?)\s*[- ]?(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Bucket special", strength: "strong", re: /\bbuckets?\s+(?:special|deal|aktion|angebot)s?\b/i },
-  { label: "Student special", strength: "strong", re: /\bstudent(?:en)?\s+(?:special|deal|aktion|angebot|night)s?\b/i },
-  { label: "Ladies special", strength: "strong", re: /\b(?:ladies|women(?:'s)?)\s+(?:special|deal|night)s?\b/i },
   // These words often describe a vibe/event rather than a discount. They are candidates only
   // until another concrete deal signal (price, discount, 1+1, etc.) is present nearby.
   { label: "Afterwork", strength: "soft", re: /\bafter[\s-]*work\b/i },
@@ -103,20 +97,6 @@ function findTimeRanges(text) {
   while ((match = amPmRe.exec(value))) {
     const from = to24Hour(match[1], match[2], match[3]);
     const to = to24Hour(match[4], match[5], match[6]);
-    if (from && to) ranges.push({ from, to, index: match.index, length: match[0].length });
-  }
-
-  // Common bar wording omits the first am/pm suffix: "from 5 to 7pm".
-  const compactAmPmRe = /\b(?:from\s*)?(\d{1,2})(?::([0-5]\d))?\s*(?:-|to|until|till|through)\s*(\d{1,2})(?::([0-5]\d))?\s*(am|pm)\b/gi;
-  while ((match = compactAmPmRe.exec(value))) {
-    const endHour = Number(match[3]);
-    const suffix = String(match[5]).toLowerCase();
-    let startSuffix = suffix;
-    const startHour = Number(match[1]);
-    // 5-7pm => both PM; 11-1am => 11pm to 1am is the natural overnight interpretation.
-    if (suffix === "am" && startHour > endHour) startSuffix = "pm";
-    const from = to24Hour(match[1], match[2], startSuffix);
-    const to = to24Hour(match[3], match[4], suffix);
     if (from && to) ranges.push({ from, to, index: match.index, length: match[0].length });
   }
 
@@ -210,8 +190,8 @@ function sourceUrlBoost(sourceUrl) {
 }
 
 function localPromoContext(input, index, length) {
-  const start = Math.max(0, index - 180);
-  const end = Math.min(input.length, index + Math.max(length, 1) + 520);
+  const start = Math.max(0, index - 120);
+  const end = Math.min(input.length, index + Math.max(length, 1) + 360);
   return { text: input.slice(start, end), start };
 }
 

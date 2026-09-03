@@ -1,15 +1,23 @@
-BarDeals crawler cleanup v6
+BarDeals v7 - find more real deals
 
-Copy the scripts folder into the root of your bardeals project and replace/merge files.
-This adds:
-- scripts/lib/deal-cleanup.mjs
-- scripts/test-deal-cleanup.mjs
-- replaces scripts/merge-crawl-shards.mjs
+1. Copy apply-v7-more-deals.mjs into the ROOT of your bardeals repo.
+2. Run:
+   node apply-v7-more-deals.mjs
+3. Then run:
+   node scripts/test-deal-parser.mjs
+   node scripts/test-deal-cleanup.mjs
+   node --check scripts/crawl-deals.mjs
+4. Commit and push.
+5. GitHub > Actions > Update Vienna happy-hour deals > Run workflow.
 
-Run locally:
-  node scripts/test-deal-cleanup.mjs
-  node --check scripts/merge-crawl-shards.mjs
+What changes:
+- Default pages per venue: 8 -> 12
+- PDFs per venue: 2 -> 4
+- Sitemap candidates: 18 -> 32
+- Better priority for deal/special/drink links
+- More direct paths such as /specials, /deals, /promotions, /student-night
+- More promo types: longdrink, shot, bottle, bucket, student, ladies specials
+- Parses compact times such as "from 5 to 7pm"
+- Larger nearby context for connecting deal + day + time
 
-Then commit/push and run the Update Vienna happy-hour deals workflow again.
-Suggested commit:
-  Clean duplicate and mismatched crawler deals
+It does NOT lower the 0.85 publish confidence threshold.

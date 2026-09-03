@@ -9,9 +9,9 @@ const CANDIDATES_OUTPUT = path.join(ROOT, "data", "deal-candidates.json");
 const REPORT = path.join(ROOT, "data", "crawl-report.json");
 const MAX_BARS = Number(process.env.MAX_BARS || 450);
 const CONCURRENCY = Math.max(1, Math.min(8, Number(process.env.CRAWL_CONCURRENCY || 4)));
-const MAX_PAGES = Math.max(1, Math.min(14, Number(process.env.MAX_PAGES_PER_BAR || 12)));
-const MAX_PDFS = Math.max(0, Math.min(5, Number(process.env.MAX_PDFS_PER_BAR || 4)));
-const MAX_SITEMAP_URLS = Math.max(0, Math.min(40, Number(process.env.MAX_SITEMAP_URLS || 32)));
+const MAX_PAGES = Math.max(1, Math.min(14, Number(process.env.MAX_PAGES_PER_BAR || 8)));
+const MAX_PDFS = Math.max(0, Math.min(5, Number(process.env.MAX_PDFS_PER_BAR || 2)));
+const MAX_SITEMAP_URLS = Math.max(0, Math.min(40, Number(process.env.MAX_SITEMAP_URLS || 18)));
 const MIN_PUBLISH_CONFIDENCE = Number(process.env.MIN_PUBLISH_CONFIDENCE || 0.85);
 const STALE_DAYS = Number(process.env.STALE_DAYS || 21);
 const SHARD_TOTAL = Math.max(1, Number(process.env.CRAWL_SHARD_TOTAL || 1));
@@ -19,13 +19,11 @@ const SHARD_INDEX = Math.max(0, Number(process.env.CRAWL_SHARD_INDEX || 0));
 const SHARD_MODE = SHARD_TOTAL > 1 || process.env.CRAWL_SHARD_MODE === "1";
 const SHARD_DIR = path.join(ROOT, "data", "crawl-shards");
 const USER_AGENT = "BarDealsBot/1.0 (+https://bardeals.at/for-bars.html)";
-const PAGE_HINT = /happy|hour|deal|offer|special|drink|cocktail|beer|bier|spritz|afterwork|aperitivo|aktion|angebot|event|menu|karte|getr[aä]nk|beverage|promo|promotion|student|ladies|women|shot|shots|bucket|longdrink|rabatt|discount|gratis|free|weekday|weekend|night|terrace|bar/i;
-const PDF_HINT = /\.pdf(?:$|[?#])|menu|karte|getr[aä]nk|drink|cocktail|happy|offer|angebot|aktion|special|deal|promo|rabatt|discount|shot|bucket/i;
+const PAGE_HINT = /happy|hour|deal|offer|special|drink|cocktail|beer|bier|spritz|afterwork|aperitivo|aktion|angebot|event|menu|karte|getr[aä]nk|beverage|promo|student|ladies|terrace|bar/i;
+const PDF_HINT = /\.pdf(?:$|[?#])|menu|karte|getr[aä]nk|drink|cocktail|happy|offer|angebot|aktion|special/i;
 const DIRECT_PATH_HINTS = [
   "/happy-hour", "/happyhour", "/happy_hour", "/angebote", "/angebot", "/aktionen", "/aktion",
-  "/drinks", "/drink-menu", "/menu", "/menus", "/getraenkekarte", "/getränkekarte", "/bar", "/events",
-  "/specials", "/deals", "/promotions", "/promo", "/happyhours", "/student-night", "/student",
-  "/ladies-night", "/weekly-specials", "/drink-specials", "/cocktail-specials", "/bar-specials"
+  "/drinks", "/drink-menu", "/menu", "/menus", "/getraenkekarte", "/getränkekarte", "/bar", "/events"
 ];
 
 function htmlDecode(value) {
@@ -138,18 +136,6 @@ function extractOfficialImage(html, baseUrl) {
   return null;
 }
 
-function linkPriority(haystack) {
-  const text = String(haystack || "").toLowerCase();
-  let score = 0;
-  if (/happy|2\s*(?:for|für)\s*1|1\s*\+\s*1/.test(text)) score += 12;
-  if (/special|deal|aktion|angebot|promo|promotion|rabatt|discount|gratis|free/.test(text)) score += 9;
-  if (/drink|cocktail|longdrink|beer|bier|spritz|shot|bucket/.test(text)) score += 6;
-  if (/student|ladies|women|afterwork|aperitivo/.test(text)) score += 4;
-  if (/menu|karte|getr[aä]nk|beverage/.test(text)) score += 3;
-  if (/event/.test(text)) score += 2;
-  return score;
-}
-
 function extractLinks(html, baseUrl) {
   const out = [];
   const base = new URL(baseUrl);
@@ -163,17 +149,10 @@ function extractLinks(html, baseUrl) {
       const label = htmlToText(match[2]);
       const haystack = `${url.pathname} ${url.search} ${label}`;
       if (!PAGE_HINT.test(haystack) && !PDF_HINT.test(haystack)) continue;
-      out.push({ url: url.toString(), score: linkPriority(haystack) });
+      out.push(url.toString());
     } catch {}
   }
-  const best = new Map();
-  for (const item of out) {
-    const old = best.get(item.url);
-    if (!old || item.score > old.score) best.set(item.url, item);
-  }
-  return [...best.values()]
-    .sort((a, b) => b.score - a.score)
-    .map((item) => item.url);
+  return [...new Set(out)];
 }
 
 
