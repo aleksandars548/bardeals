@@ -23,7 +23,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:30:52.802Z",
+        "verifiedAt": "2026-09-03T17:16:47.725Z",
         "confidence": 1,
         "auto": true
       }
@@ -61,7 +61,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:32:40.882Z",
+        "verifiedAt": "2026-09-03T17:18:44.049Z",
         "confidence": 1,
         "auto": true
       },
@@ -82,28 +82,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:32:40.882Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "10:00",
-        "to": "22:00",
-        "text": "Happy Hour. Jeden Tag 16:00 - 24:00. Alle Cocktails 7,50€ .",
-        "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "https://cafefrog.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:32:40.882Z",
+        "verifiedAt": "2026-09-03T17:18:44.049Z",
         "confidence": 1,
         "auto": true
       }
@@ -141,7 +120,7 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:32:18.860Z",
+        "verifiedAt": "2026-09-03T17:17:48.744Z",
         "confidence": 1,
         "auto": true
       }
@@ -179,7 +158,7 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:32:17.993Z",
+        "verifiedAt": "2026-09-03T17:17:48.874Z",
         "confidence": 1,
         "auto": true
       }
@@ -214,10 +193,10 @@
         "to": "20:00",
         "text": "Cocktail Happy Hour.",
         "label": "Happy Hour",
-        "priceHint": "€ 9,50",
+        "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:37:12.340Z",
+        "verifiedAt": "2026-09-03T17:22:53.700Z",
         "confidence": 1,
         "auto": true
       },
@@ -233,7 +212,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:37:12.340Z",
+        "verifiedAt": "2026-09-03T17:22:53.700Z",
         "confidence": 1,
         "auto": true
       }
@@ -268,7 +247,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:40:09.741Z",
+        "verifiedAt": "2026-09-03T17:25:30.371Z",
         "confidence": 1,
         "auto": true
       }
@@ -303,7 +282,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:36:26.592Z",
+        "verifiedAt": "2026-09-03T17:22:00.585Z",
         "confidence": 1,
         "auto": true
       }
@@ -334,27 +313,6 @@
           5,
           6
         ],
-        "from": "19:00",
-        "to": "21:00",
-        "text": "Happy Hour: 19 – 21h . Piña Colada, Gin Fizz, Wodka Fizz, Daiquiri nur € 8,00 .",
-        "label": "Happy Hour",
-        "priceHint": "€ 8,00",
-        "sourceUrl": "https://loop.co.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:40:11.975Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
         "from": "21:00",
         "to": "23:00",
         "text": "Late Night Happy Hour . täglich von 21 – 23h . LONGDRINKS € 7,50 .",
@@ -362,7 +320,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:40:11.975Z",
+        "verifiedAt": "2026-09-03T17:25:31.280Z",
         "confidence": 1,
         "auto": true
       }
@@ -400,50 +358,12 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:41:35.333Z",
+        "verifiedAt": "2026-09-03T17:26:59.303Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/311820993",
-    "auto": true
-  },
-  {
-    "id": "santos-13116627555",
-    "name": "Santos",
-    "address": "Praterstraße 24, 1020 Wien",
-    "zip": "1020",
-    "lat": 48.2138634,
-    "lng": 16.3833966,
-    "category": "Restaurant Bar",
-    "featured": false,
-    "website": "https://www.santos-bar.com/",
-    "image": "https://www.santos-bar.com/xstorage/1/_cache/DSC_5521_8027_1_4eafcaca6c67725cd5c3ad5628e1f865.jpg",
-    "imageSourceUrl": "https://www.santos-bar.com/",
-    "deals": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "16:00",
-        "to": "20:00",
-        "text": "alle Cocktails € 9.9.",
-        "label": "Discount drinks",
-        "priceHint": "€ 9.9",
-        "sourceUrl": "https://www.santos-bar.com/de/dirty-drinks/cocteles.html",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:42:49.527Z",
-        "confidence": 1,
-        "auto": true
-      }
-    ],
-    "discoveredFrom": "https://www.openstreetmap.org/node/13116627555",
     "auto": true
   },
   {
@@ -474,7 +394,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/de/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:43:15.013Z",
+        "verifiedAt": "2026-09-03T17:28:51.222Z",
         "confidence": 1,
         "auto": true
       },
@@ -495,59 +415,12 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/en/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:43:15.013Z",
+        "verifiedAt": "2026-09-03T17:28:51.222Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/256669972",
-    "auto": true
-  },
-  {
-    "id": "summer-station-344657319",
-    "name": "Summer Station",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.2398117,
-    "lng": 16.3957116,
-    "category": "Bar",
-    "featured": false,
-    "website": "https://www.summerstation.at/",
-    "image": null,
-    "imageSourceUrl": null,
-    "deals": [
-      {
-        "days": [
-          3
-        ],
-        "from": "18:00",
-        "to": "22:00",
-        "text": "Afterwork: Island Groove FREE Entry. Mi., 22.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-22-18-00/form",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:47:50.260Z",
-        "confidence": 0.95,
-        "auto": true
-      },
-      {
-        "days": [
-          4
-        ],
-        "from": "18:00",
-        "to": "19:00",
-        "text": "Angebot: 18-19 Uhr 1+1 auf alle Infusion Drinks (Finlandia Botanicals & Kinley mixers) . 🌅 Dance to House Beats from 90s/2000s with DJ Martin_van_Vienna .",
-        "label": "1+1",
-        "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:47:50.260Z",
-        "confidence": 1,
-        "auto": true
-      }
-    ],
-    "discoveredFrom": "https://www.openstreetmap.org/way/344657319",
     "auto": true
   },
   {
@@ -576,7 +449,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:49:06.548Z",
+        "verifiedAt": "2026-09-03T17:34:18.607Z",
         "confidence": 1,
         "auto": true
       },
@@ -592,66 +465,12 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:49:06.548Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "from": "19:00",
-        "to": "21:00",
-        "text": "Captain Morgan & Gin Long drinks 2 for 1 until 11pm.",
-        "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "https://travelshackvienna.com/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:49:06.548Z",
+        "verifiedAt": "2026-09-03T17:34:18.607Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1530271340",
-    "auto": true
-  },
-  {
-    "id": "usus-am-wasser-3461389414",
-    "name": "USUS am Wasser",
-    "address": "An der Neuen Donau 1, 1210 Wien",
-    "zip": "1210",
-    "lat": 48.2409906,
-    "lng": 16.398665,
-    "category": "Bar",
-    "featured": false,
-    "website": "https://amwasser.wien/event",
-    "image": null,
-    "imageSourceUrl": null,
-    "deals": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "10:00",
-        "to": "16:00",
-        "text": "Weißer Spritzer 0,5l vom Fass . 4,16 € 4,16 € 4.16 EUR .",
-        "label": "Discount drinks",
-        "priceHint": "€ 4,16",
-        "sourceUrl": "https://amwasser.wien/shop/category/bar-4",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:47:37.620Z",
-        "confidence": 1,
-        "auto": true
-      }
-    ],
-    "discoveredFrom": "https://www.openstreetmap.org/node/3461389414",
     "auto": true
   },
   {
@@ -684,7 +503,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:50:22.549Z",
+        "verifiedAt": "2026-09-03T17:35:51.489Z",
         "confidence": 1,
         "auto": true
       },
@@ -699,26 +518,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T16:50:22.549Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4
-        ],
-        "from": "18:00",
-        "to": "20:00",
-        "text": "HAPPY HOURS . Sonntag bis Donnerstag 18:00h-20:00h . Spaten Bier 0,5L um 3.80€ .",
-        "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "https://weberknecht.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T16:50:22.549Z",
+        "verifiedAt": "2026-09-03T17:35:51.489Z",
         "confidence": 1,
         "auto": true
       }
