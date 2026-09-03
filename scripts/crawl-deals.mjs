@@ -9,11 +9,18 @@ const CANDIDATES_OUTPUT = path.join(ROOT, "data", "deal-candidates.json");
 const REPORT = path.join(ROOT, "data", "crawl-report.json");
 const MAX_BARS = Number(process.env.MAX_BARS || 450);
 const CONCURRENCY = Math.max(1, Math.min(8, Number(process.env.CRAWL_CONCURRENCY || 4)));
-const MAX_PAGES = Math.max(1, Math.min(8, Number(process.env.MAX_PAGES_PER_BAR || 5)));
+const MAX_PAGES = Math.max(1, Math.min(14, Number(process.env.MAX_PAGES_PER_BAR || 8)));
+const MAX_PDFS = Math.max(0, Math.min(5, Number(process.env.MAX_PDFS_PER_BAR || 2)));
+const MAX_SITEMAP_URLS = Math.max(0, Math.min(40, Number(process.env.MAX_SITEMAP_URLS || 18)));
 const MIN_PUBLISH_CONFIDENCE = Number(process.env.MIN_PUBLISH_CONFIDENCE || 0.85);
 const STALE_DAYS = Number(process.env.STALE_DAYS || 21);
 const USER_AGENT = "BarDealsBot/1.0 (+https://bardeals.at/for-bars.html)";
-const PAGE_HINT = /happy|hour|deal|offer|special|drink|cocktail|beer|bier|spritz|afterwork|aperitivo|aktion|angebot|event|menu|karte|bar/i;
+const PAGE_HINT = /happy|hour|deal|offer|special|drink|cocktail|beer|bier|spritz|afterwork|aperitivo|aktion|angebot|event|menu|karte|getr[aä]nk|beverage|promo|student|ladies|terrace|bar/i;
+const PDF_HINT = /\.pdf(?:$|[?#])|menu|karte|getr[aä]nk|drink|cocktail|happy|offer|angebot|aktion|special/i;
+const DIRECT_PATH_HINTS = [
+  "/happy-hour", "/happyhour", "/happy_hour", "/angebote", "/angebot", "/aktionen", "/aktion",
+  "/drinks", "/drink-menu", "/menu", "/menus", "/getraenkekarte", "/getränkekarte", "/bar", "/events"
+];
 
 function htmlDecode(value) {
   return String(value || "")
@@ -136,11 +143,125 @@ function extractLinks(html, baseUrl) {
       if (!/^https?:$/.test(url.protocol) || url.origin !== base.origin) continue;
       url.hash = "";
       const label = htmlToText(match[2]);
-      if (!PAGE_HINT.test(`${url.pathname} ${url.search} ${label}`)) continue;
+      const haystack = `${url.pathname} ${url.search} ${label}`;
+      if (!PAGE_HINT.test(haystack) && !PDF_HINT.test(haystack)) continue;
       out.push(url.toString());
     } catch {}
   }
   return [...new Set(out)];
+}
+
+
+function extractXmlLocs(xml) {
+  const out = [];
+  const re = /<loc\b[^>]*>([\s\S]*?)<\/loc>/gi;
+  let match;
+  while ((match = re.exec(String(xml || "")))) {
+    const value = htmlDecode(match[1]).trim();
+    if (value) out.push(value);
+  }
+  return [...new Set(out)];
+}
+
+async function fetchSitemapUrls(website) {
+  const base = new URL(website);
+  const seeds = [new URL("/sitemap.xml", base).toString()];
+  const seenMaps = new Set();
+  const urls = [];
+
+  while (seeds.length && seenMaps.size < 4 && urls.length < MAX_SITEMAP_URLS * 3) {
+    const sitemapUrl = seeds.shift();
+    if (seenMaps.has(sitemapUrl)) continue;
+    seenMaps.add(sitemapUrl);
+    try {
+      const response = await fetch(sitemapUrl, {
+        redirect: "follow",
+        headers: { "user-agent": USER_AGENT, accept: "application/xml,text/xml,*/*;q=0.1" },
+        signal: AbortSignal.timeout(8_000),
+      });
+      if (!response.ok) continue;
+      const xml = (await response.text()).slice(0, 2_000_000);
+      for (const raw of extractXmlLocs(xml)) {
+        try {
+          const url = new URL(raw, base);
+          if (!/^https?:$/.test(url.protocol) || url.origin !== base.origin) continue;
+          url.hash = "";
+          if (/sitemap/i.test(url.pathname) && /\.xml(?:$|[?#])/i.test(url.pathname + url.search)) {
+            if (!seenMaps.has(url.toString())) seeds.push(url.toString());
+            continue;
+          }
+          if (PAGE_HINT.test(url.pathname + url.search) || PDF_HINT.test(url.pathname + url.search)) urls.push(url.toString());
+        } catch {}
+      }
+    } catch {}
+  }
+
+  return [...new Set(urls)].slice(0, MAX_SITEMAP_URLS);
+}
+
+function decodePdfLiteral(value) {
+  return String(value || "")
+    .replace(/\\([nrtbf()\\])/g, (_, c) => ({n:"\n", r:"\r", t:"\t", b:"\b", f:"\f", "(":"(", ")":")", "\\":"\\"}[c] || c))
+    .replace(/\\([0-7]{1,3})/g, (_, oct) => String.fromCharCode(parseInt(oct, 8)))
+    .replace(/\\\r?\n/g, "");
+}
+
+function extractPdfTextFromBuffer(buffer) {
+  const raw = Buffer.from(buffer).toString("latin1");
+  const chunks = [];
+  const literalRe = /\((?:\\.|[^\\()])*\)\s*Tj|\[(.*?)\]\s*TJ/gs;
+  let match;
+  while ((match = literalRe.exec(raw))) {
+    const block = match[0];
+    const innerRe = /\(((?:\\.|[^\\()])*)\)/g;
+    let inner;
+    while ((inner = innerRe.exec(block))) chunks.push(decodePdfLiteral(inner[1]));
+    const hexRe = /<([0-9A-Fa-f]{4,})>/g;
+    let hex;
+    while ((hex = hexRe.exec(block))) {
+      try {
+        const bytes = Buffer.from(hex[1].length % 2 ? `0${hex[1]}` : hex[1], "hex");
+        const text = bytes.toString("utf16le").replace(/\u0000/g, "");
+        if (/\w/.test(text)) chunks.push(text);
+      } catch {}
+    }
+  }
+  return chunks.join(" ").replace(/\s+/g, " ").trim();
+}
+
+async function fetchPdfText(url, timeout = 15_000) {
+  const response = await fetch(url, {
+    redirect: "follow",
+    headers: {
+      "user-agent": USER_AGENT,
+      accept: "application/pdf,*/*;q=0.1",
+      "accept-language": "de-AT,de;q=0.9,en;q=0.8",
+    },
+    signal: AbortSignal.timeout(timeout),
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const type = String(response.headers.get("content-type") || "").toLowerCase();
+  if (!type.includes("pdf") && !/\.pdf(?:$|[?#])/i.test(response.url)) throw new Error(`Unsupported PDF content-type: ${type}`);
+  const length = Number(response.headers.get("content-length") || 0);
+  if (length > 8_000_000) throw new Error("PDF too large");
+  const buffer = Buffer.from(await response.arrayBuffer());
+  return { text: extractPdfTextFromBuffer(buffer).slice(0, 500_000), finalUrl: response.url };
+}
+
+function isPdfUrl(url) {
+  return /\.pdf(?:$|[?#])/i.test(String(url || ""));
+}
+
+function concreteDealSignal(text) {
+  return /happy[\s-]*hours?|2\s*(?:for|für)\s*1|1\s*\+\s*1|buy\s+one\s+get\s+one|\b\d{1,3}\s*%\s*(?:off|discount|rabatt)?\b|(?:€\s*\d{1,3}(?:[.,]\d{1,2})?|\d{1,3}(?:[.,]\d{1,2})?\s*(?:€|eur))|gratis|free|kostenlos|rabatt|discount|reduced|save\s+\d/i.test(String(text || ""));
+}
+
+function publishableCandidate(deal) {
+  if (deal.confidence < MIN_PUBLISH_CONFIDENCE) return false;
+  if (!Array.isArray(deal.days) || deal.days.length === 0) return false;
+  if (!/^\d{2}:\d{2}$/.test(deal.from || "") || !/^\d{2}:\d{2}$/.test(deal.to || "")) return false;
+  if (/^(?:Afterwork|Aperitivo)$/i.test(deal.label || "") && !concreteDealSignal(deal.text)) return false;
+  return true;
 }
 
 async function fetchText(url, timeout = 12_000) {
@@ -240,24 +361,40 @@ function dedupeDeals(deals) {
 
 async function crawlVenue(venue) {
   const website = validWebsite(venue.website);
-  if (!website) return { venue, status: "no-website", published: [], candidates: [], pages: 0 };
-  if (!(await robotsAllows(website))) return { venue, status: "robots-blocked", published: [], candidates: [], pages: 0 };
+  if (!website) return { venue, status: "no-website", published: [], candidates: [], pages: 0, pdfs: 0, sitemapDiscovered: 0 };
+  if (!(await robotsAllows(website))) return { venue, status: "robots-blocked", published: [], candidates: [], pages: 0, pdfs: 0, sitemapDiscovered: 0 };
 
-  const queue = [website];
+  const sitemapUrls = await fetchSitemapUrls(website);
+  const directProbes = DIRECT_PATH_HINTS.map((pathname) => {
+    try { return new URL(pathname, website).toString(); } catch { return null; }
+  }).filter(Boolean);
+  const queue = [website, ...sitemapUrls, ...directProbes];
   const seen = new Set();
+  const queued = new Set(queue);
   const candidates = [];
   let pages = 0;
+  let pdfs = 0;
+  let sitemapDiscovered = sitemapUrls.length;
   let lastError = null;
   let image = null;
   let imageSourceUrl = null;
 
-  while (queue.length && pages < MAX_PAGES) {
+  while (queue.length && (pages < MAX_PAGES || pdfs < MAX_PDFS)) {
     const url = queue.shift();
     if (seen.has(url)) continue;
     seen.add(url);
     if (!(await robotsAllows(url))) continue;
 
     try {
+      if (isPdfUrl(url)) {
+        if (pdfs >= MAX_PDFS) continue;
+        const { text, finalUrl } = await fetchPdfText(url);
+        pdfs += 1;
+        if (text) candidates.push(...extractDealCandidates(text, finalUrl));
+        continue;
+      }
+
+      if (pages >= MAX_PAGES) continue;
       const { text: html, finalUrl } = await fetchText(url);
       pages += 1;
       if (!image) {
@@ -271,11 +408,17 @@ async function crawlVenue(venue) {
       const text = htmlToText(html);
       candidates.push(...extractDealCandidates(text, finalUrl));
 
-      if (pages === 1) {
-        const links = extractLinks(html, finalUrl).slice(0, MAX_PAGES * 3);
-        for (const link of links) if (!seen.has(link)) queue.push(link);
+      // Discover relevant pages from every crawled page, not just the homepage.
+      const links = extractLinks(html, finalUrl).slice(0, MAX_PAGES * 4);
+      for (const link of links) {
+        if (!seen.has(link) && !queued.has(link)) {
+          queued.add(link);
+          queue.push(link);
+        }
       }
     } catch (error) {
+      // Direct-path probes are expected to 404 on many sites, so only retain the
+      // latest error for diagnostics rather than treating a probe as fatal.
       lastError = String(error?.message || error);
     }
   }
@@ -295,17 +438,15 @@ async function crawlVenue(venue) {
     auto: true,
   }));
 
-  const published = normalized.filter((d) =>
-    d.confidence >= MIN_PUBLISH_CONFIDENCE &&
-    Array.isArray(d.days) && d.days.length > 0 &&
-    /^\d{2}:\d{2}$/.test(d.from || "") && /^\d{2}:\d{2}$/.test(d.to || "")
-  );
+  const published = normalized.filter(publishableCandidate);
 
   return {
     venue,
     status: pages ? "ok" : "failed",
     error: pages ? null : lastError,
     pages,
+    pdfs,
+    sitemapDiscovered,
     published,
     candidates: normalized,
     image,
@@ -372,11 +513,8 @@ for (const result of results) {
         category: result.venue.category,
         featured: false,
         website: result.venue.website,
-        // Never preserve legacy homepage/page URLs that were previously stored
-        // as images. Only keep a previous image when it is clearly an image file.
         image: result.image || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue.image : null),
         imageSourceUrl: result.imageSourceUrl || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue?.imageSourceUrl || null : null),
-        imageValidated: Boolean(result.image) || Boolean(IMAGE_FILE_RE.test(String(previousVenue?.image || ""))),
         deals: result.published,
         discoveredFrom: result.venue.sourceUrl,
         auto: true,
@@ -410,7 +548,9 @@ const report = {
   discoveredVenues: discovered.length,
   venuesWithWebsite: withWebsites.length,
   venuesCrawledThisRun: selected.length,
-  pagesFetched: results.reduce((n, r) => n + r.pages, 0),
+  pagesFetched: results.reduce((n, r) => n + (r.pages || 0), 0),
+  pdfMenusFetched: results.reduce((n, r) => n + (r.pdfs || 0), 0),
+  sitemapUrlsDiscovered: results.reduce((n, r) => n + (r.sitemapDiscovered || 0), 0),
   successfulVenues: results.filter((r) => r.status === "ok").length,
   robotsBlocked: results.filter((r) => r.status === "robots-blocked").length,
   failedVenues: results.filter((r) => r.status === "failed").length,

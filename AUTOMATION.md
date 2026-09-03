@@ -51,3 +51,15 @@ After uploading/pushing these files:
 - Published deals include `sourceUrl`, `verifiedAt` and `confidence`.
 - Deals not reverified within the stale window are removed from automatic output.
 - Always keep the website disclaimer because venues can change offers without notice.
+
+
+## Discovery v3
+
+The crawler now also:
+- reads venue `sitemap.xml` files and prioritizes deal/menu/event pages,
+- follows relevant internal links from every crawled page, not only the homepage,
+- probes common deal/menu paths such as `/happy-hour`, `/angebote`, `/aktionen`, `/drinks`, `/menu`, and `/events`,
+- fetches up to 2 relevant PDF menus per venue and extracts simple embedded PDF text without a paid API,
+- keeps `Afterwork` and `Aperitivo` out of the public feed unless the same candidate contains a concrete deal signal such as a price, discount, Happy Hour, 2-for-1, or free/gratis offer.
+
+No Google Maps scraping or paid search API is used.

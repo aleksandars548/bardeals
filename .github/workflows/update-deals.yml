@@ -35,7 +35,9 @@ jobs:
         env:
           MAX_BARS: "450"
           CRAWL_CONCURRENCY: "4"
-          MAX_PAGES_PER_BAR: "5"
+          MAX_PAGES_PER_BAR: "8"
+          MAX_PDFS_PER_BAR: "2"
+          MAX_SITEMAP_URLS: "18"
           MIN_PUBLISH_CONFIDENCE: "0.85"
           STALE_DAYS: "21"
         run: npm run bot:crawl
