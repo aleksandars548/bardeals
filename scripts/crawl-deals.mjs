@@ -67,6 +67,35 @@ function absoluteHttpUrl(raw, baseUrl) {
   }
 }
 
+
+const IMAGE_FILE_RE = /\.(?:avif|gif|jpe?g|png|webp)(?:$|[?#])/i;
+
+async function validateOfficialImage(rawUrl) {
+  const url = absoluteHttpUrl(rawUrl, rawUrl);
+  if (!url) return null;
+
+  // Most real OG images are direct image files. Accept these without another request.
+  if (IMAGE_FILE_RE.test(url)) return url;
+
+  // Some CDNs use extensionless image URLs. Verify those by Content-Type so a
+  // homepage or ordinary HTML page can never be stored as a venue image.
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const response = await fetch(url, {
+      method: "HEAD",
+      redirect: "follow",
+      signal: controller.signal,
+      headers: { "User-Agent": USER_AGENT }
+    });
+    clearTimeout(timeout);
+    const contentType = String(response.headers.get("content-type") || "").toLowerCase();
+    if (response.ok && contentType.startsWith("image/")) return response.url || url;
+  } catch {}
+
+  return null;
+}
+
 function extractOfficialImage(html, baseUrl) {
   const preferred = new Map();
   const metaRe = /<meta\b[^>]*>/gi;
@@ -232,8 +261,12 @@ async function crawlVenue(venue) {
       const { text: html, finalUrl } = await fetchText(url);
       pages += 1;
       if (!image) {
-        image = extractOfficialImage(html, finalUrl);
-        if (image) imageSourceUrl = finalUrl;
+        const candidateImage = extractOfficialImage(html, finalUrl);
+        const validatedImage = await validateOfficialImage(candidateImage);
+        if (validatedImage) {
+          image = validatedImage;
+          imageSourceUrl = finalUrl;
+        }
       }
       const text = htmlToText(html);
       candidates.push(...extractDealCandidates(text, finalUrl));

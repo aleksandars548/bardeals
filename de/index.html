@@ -1999,6 +1999,33 @@
       return `Automatisch geprüft ${new Intl.DateTimeFormat("de-AT", { timeZone: "Europe/Vienna", day: "numeric", month: "short" }).format(date)}`;
     }
 
+
+    function feedPlaceholderKind(venue, deal) {
+      const text = [
+        venue?.category,
+        venue?.name,
+        deal?.label,
+        deal?.text
+      ].filter(Boolean).join(" ").toLowerCase();
+
+      if (/(sports?|sportbar|football|fussball|fußball|nfl|screen|champions|arena)/i.test(text)) return "sports";
+      if (/(club|nightlife|night club|nightclub|disco|dj|techno|dance)/i.test(text)) return "club";
+      if (/(irish|pub|beer|bier|craft beer)/i.test(text)) return "pub";
+      if (/(cocktail|spritz|negroni|aperitivo|mixology|speakeasy|daiquiri|martini)/i.test(text)) return "cocktail";
+      return "bar";
+    }
+
+    function feedPlaceholderUrl(venue, deal) {
+      const placeholders = {
+        cocktail: "/assets/img/placeholders/cocktail-bar.webp",
+        pub: "/assets/img/placeholders/pub.webp",
+        sports: "/assets/img/placeholders/sports-bar.webp",
+        club: "/assets/img/placeholders/club.webp",
+        bar: "/assets/img/placeholders/bar.webp"
+      };
+      return placeholders[feedPlaceholderKind(venue, deal)] || placeholders.bar;
+    }
+
     function feedCard(venue) {
       const deal = pickFeedDeal(venue);
       if (!deal) return "";
@@ -2006,13 +2033,15 @@
       const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
       const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
       const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
-      const imageUrl = dealFeedSafeHttpUrl(venue.image || "");
+      const placeholderUrl = feedPlaceholderUrl(venue, deal);
+      const officialImageUrl = dealFeedSafeHttpUrl(venue.image || "");
+      const imageUrl = officialImageUrl || placeholderUrl;
       const verified = feedVerifiedLabel(deal);
       const district = dealFeedVenueDistrict(venue);
       return `
         <article class="live-deal-card">
           <div class="live-deal-media">
-            ${imageUrl ? `<img class="live-deal-image" src="${dealFeedEscape(imageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.closest('.live-deal-media')?.classList.add('image-failed'); this.style.display='none'">` : ""}
+            <img class="live-deal-image${officialImageUrl ? "" : " is-placeholder"}" src="${dealFeedEscape(imageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.onerror=null; this.classList.add('is-placeholder'); this.src='${placeholderUrl}'">
             <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
           </div>
           <div class="live-deal-body">

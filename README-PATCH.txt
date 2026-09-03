@@ -1,19 +1,15 @@
-BarDeals bot v2 patch
+BarDeals placeholder + DE homepage patch
 
-Copy EVERYTHING inside this folder into your existing local bardeals GitHub clone.
-Choose Replace files in destination when Windows asks.
-Do NOT delete or replace the data folder; this patch intentionally does not contain it.
+Copy this entire folder over the root of the bardeals repository and replace existing files.
 
-Then in GitHub Desktop:
-1. Commit message: Improve deal bot quality and official images
-2. Commit to main
-3. Push origin
-4. GitHub > Actions > Update Vienna happy-hour deals > Run workflow
+Includes:
+- index.html: automatic branded placeholder fallback for live deal cards
+- de/index.html: new German finder homepage + same live deal feed + placeholders
+- scripts/crawl-deals.mjs: validates extensionless image URLs by Content-Type and rejects HTML/homepage URLs
+- assets/css/site.css: latest shared mobile overflow/header fix
+- assets/img/placeholders/: Cocktail, Pub, Sports Bar, Club, and default Bar placeholders
 
-Changes:
-- stricter false-positive filtering
-- opening-hours trap protection
-- stronger duplicate removal
-- official og:image/twitter:image support
-- images on live deal cards
-- crawls up to 450 website-backed Vienna venues per run
+No deal parser rules, data JSON, or GitHub Action schedule are changed.
+
+Suggested commit:
+Add branded venue placeholders and sync German deal finder
