@@ -9,8 +9,8 @@
     "category": "Bar",
     "featured": false,
     "website": "https://www.allitaliana.at/",
-    "image": "https://www.allitaliana.at/",
-    "imageSourceUrl": "https://www.allitaliana.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -56,7 +56,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/13275971977",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "cafe-frog-347442567",
@@ -68,8 +69,8 @@
     "category": "Bar",
     "featured": false,
     "website": "https://www.cafefrog.at/",
-    "image": "https://cafefrog.at/",
-    "imageSourceUrl": "https://cafefrog.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -136,7 +137,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/347442567",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "casablanca-3215857484",
@@ -148,8 +150,8 @@
     "category": "Bar",
     "featured": false,
     "website": "http://www.casablanca-musik.at/",
-    "image": "https://casablanca.gusti.at/",
-    "imageSourceUrl": "https://casablanca.gusti.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -174,7 +176,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3215857484",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "chill-out-1756941534",
@@ -186,8 +189,8 @@
     "category": "Bar",
     "featured": false,
     "website": "http://www.chillout-lounge.at/",
-    "image": "http://www.chillout-lounge.at/startseite/",
-    "imageSourceUrl": "http://www.chillout-lounge.at/startseite/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -212,7 +215,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1756941534",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "eva-adam-10948791505",
@@ -282,7 +286,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/10948791505",
-    "auto": true
+    "auto": true,
+    "imageValidated": true
   },
   {
     "id": "funky-monkey-566660740",
@@ -294,8 +299,8 @@
     "category": "Bar",
     "featured": false,
     "website": "http://www.funkymonkey.at/",
-    "image": "https://www.funkymonkeybar.at/",
-    "imageSourceUrl": "https://www.funkymonkeybar.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -316,7 +321,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/566660740",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "koo-7-3016770833",
@@ -328,8 +334,8 @@
     "category": "Pub",
     "featured": false,
     "website": "http://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
-    "image": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
-    "imageSourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -351,7 +357,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3016770833",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "lenz-social-dining-10819836558",
@@ -363,8 +370,8 @@
     "category": "Restaurant Bar",
     "featured": false,
     "website": "https://lenz-socialdining.at/",
-    "image": "https://lenz-socialdining.at/",
-    "imageSourceUrl": "https://lenz-socialdining.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -387,7 +394,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/10819836558",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "loop-588084968",
@@ -399,8 +407,8 @@
     "category": "Bar",
     "featured": false,
     "website": "https://loop.co.at/",
-    "image": "https://loop.co.at/",
-    "imageSourceUrl": "https://loop.co.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -446,7 +454,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/588084968",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "mabel-s-no90-311820993",
@@ -458,8 +467,8 @@
     "category": "Pub",
     "featured": false,
     "website": "https://www.mabels.at/",
-    "image": "https://www.mabels.at/",
-    "imageSourceUrl": "https://www.mabels.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -484,7 +493,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/311820993",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "santos-13116627555",
@@ -522,7 +532,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/13116627555",
-    "auto": true
+    "auto": true,
+    "imageValidated": true
   },
   {
     "id": "shebeen-256669972",
@@ -558,7 +569,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/256669972",
-    "auto": true
+    "auto": true,
+    "imageValidated": true
   },
   {
     "id": "summer-station-344657319",
@@ -570,8 +582,8 @@
     "category": "Bar",
     "featured": false,
     "website": "https://www.summerstation.at/",
-    "image": "https://www.summerstation.at/",
-    "imageSourceUrl": "https://www.summerstation.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -590,7 +602,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/way/344657319",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   },
   {
     "id": "travelshack-vienna-1530271340",
@@ -657,7 +670,8 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1530271340",
-    "auto": true
+    "auto": true,
+    "imageValidated": true
   },
   {
     "id": "weberknecht-3360770299",
@@ -669,8 +683,8 @@
     "category": "Bar",
     "featured": false,
     "website": "https://www.weberknecht.net/",
-    "image": "https://weberknecht.at/",
-    "imageSourceUrl": "https://weberknecht.at/",
+    "image": null,
+    "imageSourceUrl": null,
     "deals": [
       {
         "days": [
@@ -729,6 +743,7 @@
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3360770299",
-    "auto": true
+    "auto": true,
+    "imageValidated": false
   }
 ]

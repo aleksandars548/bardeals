@@ -372,8 +372,11 @@ for (const result of results) {
         category: result.venue.category,
         featured: false,
         website: result.venue.website,
-        image: result.image || previousVenue?.image || null,
-        imageSourceUrl: result.imageSourceUrl || previousVenue?.imageSourceUrl || null,
+        // Never preserve legacy homepage/page URLs that were previously stored
+        // as images. Only keep a previous image when it is clearly an image file.
+        image: result.image || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue.image : null),
+        imageSourceUrl: result.imageSourceUrl || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue?.imageSourceUrl || null : null),
+        imageValidated: Boolean(result.image) || Boolean(IMAGE_FILE_RE.test(String(previousVenue?.image || ""))),
         deals: result.published,
         discoveredFrom: result.venue.sourceUrl,
         auto: true,

@@ -1978,6 +1978,17 @@
       }
     }
 
+    const DEAL_FEED_IMAGE_FILE_RE = /\.(?:avif|gif|jpe?g|png|webp)(?:$|[?#])/i;
+
+    function dealFeedOfficialImageUrl(venue) {
+      const url = dealFeedSafeHttpUrl(venue?.image || "");
+      if (!url) return "";
+      // Legacy bot data sometimes stored a normal webpage in the image field.
+      // Direct image files are safe immediately. Extensionless URLs are only
+      // trusted when a newer crawler run explicitly marked them as validated.
+      return (DEAL_FEED_IMAGE_FILE_RE.test(url) || venue?.imageValidated === true) ? url : "";
+    }
+
     function dealFeedMergeKey(deal) {
       const schedule = `${(deal.days || []).join(",")}|${deal.from}|${deal.to}`;
       if (deal.auto) return `auto|${String(deal.label || "deal").toLowerCase()}|${schedule}`;
@@ -2174,7 +2185,7 @@
       const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
       const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
       const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
-      const officialImageUrl = dealFeedSafeHttpUrl(venue.image || "");
+      const officialImageUrl = dealFeedOfficialImageUrl(venue);
       const verified = feedVerifiedLabel(deal);
       const district = dealFeedVenueDistrict(venue);
       return `
