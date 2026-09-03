@@ -14,6 +14,10 @@ const MAX_PDFS = Math.max(0, Math.min(5, Number(process.env.MAX_PDFS_PER_BAR || 
 const MAX_SITEMAP_URLS = Math.max(0, Math.min(40, Number(process.env.MAX_SITEMAP_URLS || 18)));
 const MIN_PUBLISH_CONFIDENCE = Number(process.env.MIN_PUBLISH_CONFIDENCE || 0.85);
 const STALE_DAYS = Number(process.env.STALE_DAYS || 21);
+const SHARD_TOTAL = Math.max(1, Number(process.env.CRAWL_SHARD_TOTAL || 1));
+const SHARD_INDEX = Math.max(0, Number(process.env.CRAWL_SHARD_INDEX || 0));
+const SHARD_MODE = SHARD_TOTAL > 1 || process.env.CRAWL_SHARD_MODE === "1";
+const SHARD_DIR = path.join(ROOT, "data", "crawl-shards");
 const USER_AGENT = "BarDealsBot/1.0 (+https://bardeals.at/for-bars.html)";
 const PAGE_HINT = /happy|hour|deal|offer|special|drink|cocktail|beer|bier|spritz|afterwork|aperitivo|aktion|angebot|event|menu|karte|getr[aä]nk|beverage|promo|student|ladies|terrace|bar/i;
 const PDF_HINT = /\.pdf(?:$|[?#])|menu|karte|getr[aä]nk|drink|cocktail|happy|offer|angebot|aktion|special/i;
@@ -485,82 +489,111 @@ if (!Array.isArray(discovered) || !discovered.length) {
 
 const withWebsites = discovered.filter((v) => validWebsite(v.website));
 const start = withWebsites.length > MAX_BARS ? (dayOfYear() * MAX_BARS) % withWebsites.length : 0;
-const selected = [];
-for (let i = 0; i < Math.min(MAX_BARS, withWebsites.length); i++) selected.push(withWebsites[(start + i) % withWebsites.length]);
+const baseSelected = [];
+for (let i = 0; i < Math.min(MAX_BARS, withWebsites.length); i++) baseSelected.push(withWebsites[(start + i) % withWebsites.length]);
 
-console.log(`Crawling ${selected.length}/${withWebsites.length} venue websites (concurrency ${CONCURRENCY})...`);
+if (SHARD_INDEX >= SHARD_TOTAL) {
+  throw new Error(`CRAWL_SHARD_INDEX ${SHARD_INDEX} must be smaller than CRAWL_SHARD_TOTAL ${SHARD_TOTAL}.`);
+}
+
+const selected = SHARD_MODE
+  ? baseSelected.filter((_, index) => index % SHARD_TOTAL === SHARD_INDEX)
+  : baseSelected;
+
+const shardLabel = SHARD_MODE ? ` shard ${SHARD_INDEX + 1}/${SHARD_TOTAL}` : "";
+console.log(`Crawling${shardLabel}: ${selected.length}/${withWebsites.length} venue websites (concurrency ${CONCURRENCY})...`);
 const results = await mapLimit(selected, CONCURRENCY, async (venue, index) => {
   const result = await crawlVenue(venue);
   console.log(`[${index + 1}/${selected.length}] ${venue.name}: ${result.status}, ${result.published.length} publishable deal(s)`);
   return result;
 });
 
-const previous = await readJson(OUTPUT, []);
-const byId = new Map(Array.isArray(previous) ? previous.map((v) => [v.id, v]) : []);
-const cutoff = Date.now() - STALE_DAYS * 86_400_000;
+if (SHARD_MODE) {
+  await fs.mkdir(SHARD_DIR, { recursive: true });
+  const shardFile = path.join(SHARD_DIR, `shard-${SHARD_INDEX}.json`);
+  const shardPayload = {
+    generatedAt: new Date().toISOString(),
+    shardIndex: SHARD_INDEX,
+    shardTotal: SHARD_TOTAL,
+    discoveredVenues: discovered.length,
+    venuesWithWebsite: withWebsites.length,
+    venuesCrawledThisRun: selected.length,
+    minimumPublishConfidence: MIN_PUBLISH_CONFIDENCE,
+    staleAfterDays: STALE_DAYS,
+    results,
+  };
+  await fs.writeFile(shardFile, `${JSON.stringify(shardPayload, null, 2)}\n`);
+  const publishable = results.reduce((n, r) => n + r.published.length, 0);
+  console.log(`Shard ${SHARD_INDEX + 1}/${SHARD_TOTAL} finished: ${selected.length} venues, ${publishable} publishable deal(s).`);
+  console.log(`Wrote ${path.relative(ROOT, shardFile)}.`);
+} else {
+  const previous = await readJson(OUTPUT, []);
+  const byId = new Map(Array.isArray(previous) ? previous.map((v) => [v.id, v]) : []);
+  const cutoff = Date.now() - STALE_DAYS * 86_400_000;
 
-for (const result of results) {
-  if (result.status === "ok") {
-    if (result.published.length) {
-      const previousVenue = byId.get(result.venue.id);
-      byId.set(result.venue.id, {
-        id: result.venue.id,
-        name: result.venue.name,
-        address: result.venue.address,
-        zip: result.venue.zip,
-        lat: result.venue.lat,
-        lng: result.venue.lng,
-        category: result.venue.category,
-        featured: false,
-        website: result.venue.website,
-        image: result.image || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue.image : null),
-        imageSourceUrl: result.imageSourceUrl || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue?.imageSourceUrl || null : null),
-        deals: result.published,
-        discoveredFrom: result.venue.sourceUrl,
-        auto: true,
-      });
-    } else {
-      byId.delete(result.venue.id);
+  for (const result of results) {
+    if (result.status === "ok") {
+      if (result.published.length) {
+        const previousVenue = byId.get(result.venue.id);
+        byId.set(result.venue.id, {
+          id: result.venue.id,
+          name: result.venue.name,
+          address: result.venue.address,
+          zip: result.venue.zip,
+          lat: result.venue.lat,
+          lng: result.venue.lng,
+          category: result.venue.category,
+          featured: false,
+          website: result.venue.website,
+          image: result.image || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue.image : null),
+          imageSourceUrl: result.imageSourceUrl || (IMAGE_FILE_RE.test(String(previousVenue?.image || "")) ? previousVenue?.imageSourceUrl || null : null),
+          deals: result.published,
+          discoveredFrom: result.venue.sourceUrl,
+          auto: true,
+        });
+      } else {
+        byId.delete(result.venue.id);
+      }
     }
   }
+
+  for (const [id, venue] of byId) {
+    const latest = Math.max(...(venue.deals || []).map((d) => Date.parse(d.verifiedAt || 0)).filter(Number.isFinite), 0);
+    if (!latest || latest < cutoff) byId.delete(id);
+  }
+
+  const autoDeals = [...byId.values()].sort((a, b) => a.name.localeCompare(b.name, "de"));
+  const allCandidates = results
+    .filter((r) => r.candidates.length)
+    .map((r) => ({
+      id: r.venue.id,
+      name: r.venue.name,
+      website: r.venue.website,
+      candidates: r.candidates.filter((d) => !r.published.some((p) => dealKey(p) === dealKey(d))),
+    }))
+    .filter((r) => r.candidates.length);
+
+  await fs.writeFile(OUTPUT, `${JSON.stringify(autoDeals, null, 2)}\n`);
+  await fs.writeFile(CANDIDATES_OUTPUT, `${JSON.stringify(allCandidates, null, 2)}\n`);
+  const report = {
+    generatedAt: new Date().toISOString(),
+    discoveredVenues: discovered.length,
+    venuesWithWebsite: withWebsites.length,
+    venuesCrawledThisRun: selected.length,
+    pagesFetched: results.reduce((n, r) => n + (r.pages || 0), 0),
+    pdfMenusFetched: results.reduce((n, r) => n + (r.pdfs || 0), 0),
+    sitemapUrlsDiscovered: results.reduce((n, r) => n + (r.sitemapDiscovered || 0), 0),
+    successfulVenues: results.filter((r) => r.status === "ok").length,
+    robotsBlocked: results.filter((r) => r.status === "robots-blocked").length,
+    failedVenues: results.filter((r) => r.status === "failed").length,
+    publishableDealsThisRun: results.reduce((n, r) => n + r.published.length, 0),
+    publishedVenuesTotal: autoDeals.length,
+    publishedDealsTotal: autoDeals.reduce((n, v) => n + (v.deals?.length || 0), 0),
+    reviewCandidates: allCandidates.reduce((n, v) => n + v.candidates.length, 0),
+    publishedVenuesWithImage: autoDeals.filter((v) => v.image).length,
+    minimumPublishConfidence: MIN_PUBLISH_CONFIDENCE,
+    staleAfterDays: STALE_DAYS,
+  };
+  await fs.writeFile(REPORT, `${JSON.stringify(report, null, 2)}\n`);
+  console.log(`Published ${report.publishedDealsTotal} auto-verified deal(s) across ${report.publishedVenuesTotal} venue(s).`);
 }
-
-for (const [id, venue] of byId) {
-  const latest = Math.max(...(venue.deals || []).map((d) => Date.parse(d.verifiedAt || 0)).filter(Number.isFinite), 0);
-  if (!latest || latest < cutoff) byId.delete(id);
-}
-
-const autoDeals = [...byId.values()].sort((a, b) => a.name.localeCompare(b.name, "de"));
-const allCandidates = results
-  .filter((r) => r.candidates.length)
-  .map((r) => ({
-    id: r.venue.id,
-    name: r.venue.name,
-    website: r.venue.website,
-    candidates: r.candidates.filter((d) => !r.published.some((p) => dealKey(p) === dealKey(d))),
-  }))
-  .filter((r) => r.candidates.length);
-
-await fs.writeFile(OUTPUT, `${JSON.stringify(autoDeals, null, 2)}\n`);
-await fs.writeFile(CANDIDATES_OUTPUT, `${JSON.stringify(allCandidates, null, 2)}\n`);
-const report = {
-  generatedAt: new Date().toISOString(),
-  discoveredVenues: discovered.length,
-  venuesWithWebsite: withWebsites.length,
-  venuesCrawledThisRun: selected.length,
-  pagesFetched: results.reduce((n, r) => n + (r.pages || 0), 0),
-  pdfMenusFetched: results.reduce((n, r) => n + (r.pdfs || 0), 0),
-  sitemapUrlsDiscovered: results.reduce((n, r) => n + (r.sitemapDiscovered || 0), 0),
-  successfulVenues: results.filter((r) => r.status === "ok").length,
-  robotsBlocked: results.filter((r) => r.status === "robots-blocked").length,
-  failedVenues: results.filter((r) => r.status === "failed").length,
-  publishableDealsThisRun: results.reduce((n, r) => n + r.published.length, 0),
-  publishedVenuesTotal: autoDeals.length,
-  publishedDealsTotal: autoDeals.reduce((n, v) => n + (v.deals?.length || 0), 0),
-  reviewCandidates: allCandidates.reduce((n, v) => n + v.candidates.length, 0),
-  publishedVenuesWithImage: autoDeals.filter((v) => v.image).length,
-  minimumPublishConfidence: MIN_PUBLISH_CONFIDENCE,
-  staleAfterDays: STALE_DAYS,
-};
-await fs.writeFile(REPORT, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Published ${report.publishedDealsTotal} auto-verified deal(s) across ${report.publishedVenuesTotal} venue(s).`);

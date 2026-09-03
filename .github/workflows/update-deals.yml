@@ -13,9 +13,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-deals:
+  discover:
+    name: Discover Vienna venues
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,6 +32,48 @@ jobs:
       - name: Discover Vienna bars from OpenStreetMap
         run: npm run bot:discover
 
+      - name: Upload discovery data
+        uses: actions/upload-artifact@v4
+        with:
+          name: venue-discovery
+          path: |
+            data/discovered-bars.json
+            data/discovery-report.json
+          if-no-files-found: error
+          retention-days: 1
+
+  crawl:
+    name: Crawl shard ${{ matrix.label }}
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - shard: 0
+            label: "1/4"
+          - shard: 1
+            label: "2/4"
+          - shard: 2
+            label: "3/4"
+          - shard: 3
+            label: "4/4"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download discovery data
+        uses: actions/download-artifact@v4
+        with:
+          name: venue-discovery
+          path: data
+
       - name: Crawl official venue websites
         env:
           MAX_BARS: "450"
@@ -40,7 +83,51 @@ jobs:
           MAX_SITEMAP_URLS: "18"
           MIN_PUBLISH_CONFIDENCE: "0.85"
           STALE_DAYS: "21"
+          CRAWL_SHARD_MODE: "1"
+          CRAWL_SHARD_TOTAL: "4"
+          CRAWL_SHARD_INDEX: "${{ matrix.shard }}"
         run: npm run bot:crawl
+
+      - name: Upload crawl shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-shard-${{ matrix.shard }}
+          path: data/crawl-shards/shard-${{ matrix.shard }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  merge:
+    name: Merge and publish deal data
+    needs: [discover, crawl]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Download discovery data
+        uses: actions/download-artifact@v4
+        with:
+          name: venue-discovery
+          path: data
+
+      - name: Download all crawl shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: crawl-shard-*
+          path: data/crawl-shards
+          merge-multiple: true
+
+      - name: Merge crawl shards
+        env:
+          CRAWL_SHARD_TOTAL: "4"
+          STALE_DAYS: "21"
+        run: npm run bot:merge
 
       - name: Commit updated data
         run: |

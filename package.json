@@ -6,6 +6,7 @@
     "bot:discover": "node scripts/discover-bars.mjs",
     "bot:crawl": "node scripts/crawl-deals.mjs",
     "bot:update": "node scripts/discover-bars.mjs && node scripts/crawl-deals.mjs",
-    "test": "node scripts/test-deal-parser.mjs"
+    "test": "node scripts/test-deal-parser.mjs",
+    "bot:merge": "node scripts/merge-crawl-shards.mjs"
   }
 }
