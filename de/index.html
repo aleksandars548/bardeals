@@ -12,14 +12,14 @@
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Happy Hour Wien | BarDeals</title>
-<meta content="Finde Happy-Hour-Deals in deiner Nähe in Wien. Entdecke Drink-Angebote, Cocktail-Specials, Bierdeals, Pubs, Sportsbars und Nachtleben mit Google-Maps-Routen." name="description"/>
+<title>Happy Hour in der Nähe in Wien | BarDeals</title>
+<meta content="Finde heute Happy-Hour-Deals in deiner Nähe in Wien. Entdecke Drink-Angebote, Cocktail-Specials, Bierdeals, Pubs und Bars mit Google-Maps-Routen." name="description"/>
 <link href="https://bardeals.at/de/" rel="canonical"/>
 <link href="https://bardeals.at/" hreflang="en" rel="alternate"/>
 <link href="https://bardeals.at/de/" hreflang="de-AT" rel="alternate"/>
 <link href="https://bardeals.at/" hreflang="x-default" rel="alternate"/>
-<meta content="Happy Hour Wien | BarDeals" property="og:title"/>
-<meta content="Finde Happy-Hour-Deals in deiner Nähe in Wien. Drink-Angebote, Cocktails, Bierdeals, Pubs, Sportsbars und Nachtleben." property="og:description"/>
+<meta content="Happy Hour in der Nähe in Wien | BarDeals" property="og:title"/>
+<meta content="Finde Happy-Hour-Deals in deiner Nähe in Wien. Drink-Angebote, Cocktail-Specials, Bierdeals und Bars mit aktuellen Deal-Infos." property="og:description"/>
 <meta content="https://bardeals.at/de/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="BarDeals Wien" property="og:site_name"/>
@@ -94,6 +94,417 @@
       -webkit-user-drag: none;
     }
 
+    .platform-cta {
+      border-radius: 34px;
+      background: #111;
+      color: #fff;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .platform-cta::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      right: -90px;
+      top: -90px;
+    }
+
+    .platform-cta h2 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .platform-cta p {
+      color: #d6d6d6;
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 720px;
+    }
+
+    .cta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .cta-pills span {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .platform-card {
+      background: #fff;
+      color: #111;
+      border-radius: 26px;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 8px 8px 0 rgba(255,255,255,0.18);
+    }
+
+    .platform-card strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .platform-card p {
+      color: #333;
+      font-size: 15px;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .platform-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .footer {
+      margin-top: 70px;
+      padding: 42px 20px 28px;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .footer-brand {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand span {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+    }
+
+    .footer p {
+      color: #bdbdbd;
+      line-height: 1.65;
+      max-width: 620px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      max-width: 1180px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      color: #aaa;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 800px) {
+      .platform-cta {
+        grid-template-columns: 1fr;
+        padding: 26px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+
+
+    /* Automatic deal feed */
+    .live-deals {
+      scroll-margin-top: 18px;
+    }
+
+    .live-deals-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .live-deals-head .section-title {
+      margin-bottom: 0;
+    }
+
+    .near-me-btn {
+      appearance: none;
+      border: 2px solid #111;
+      background: #111;
+      color: #fff;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .near-me-btn:hover,
+    .near-me-btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .near-me-btn:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    .deal-feed-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .deal-feed-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .deal-feed-filter {
+      appearance: none;
+      border: 1.5px solid #111;
+      background: #fff;
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .deal-feed-filter.active {
+      background: #111;
+      color: #fff;
+    }
+
+    .deal-feed-status {
+      color: #555;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .deal-feed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .live-deal-card {
+      border: 1.5px solid #111;
+      border-radius: 24px;
+      padding: 20px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .live-deal-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(17,17,17,0.14);
+      background: #f2f2f2;
+      display: block;
+    }
+
+    .live-deal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .live-deal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #111;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .live-deal-badge.open {
+      background: #0b6b36;
+    }
+
+    .live-deal-distance {
+      font-size: 13px;
+      font-weight: 900;
+      color: #333;
+    }
+
+    .live-deal-card h3 {
+      font-size: clamp(21px, 2.5vw, 28px);
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .live-deal-offer {
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .live-deal-meta,
+    .live-deal-address,
+    .live-deal-verified {
+      color: #555;
+      font-size: 13px;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .live-deal-actions {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    .live-deal-actions a {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      padding: 0 14px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      border: 1.5px solid #111;
+    }
+
+    .live-deal-directions {
+      background: #111;
+      color: #fff;
+    }
+
+    .live-deal-source {
+      background: #fff;
+      color: #111;
+    }
+
+    .deal-feed-empty {
+      border: 1.5px dashed #999;
+      border-radius: 22px;
+      padding: 24px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .deal-feed-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .live-deals-head {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .near-me-btn {
+        width: 100%;
+        min-height: 58px;
+        font-size: 16px;
+      }
+
+      .deal-feed-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .deal-feed-filters {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .deal-feed-filter {
+        padding: 11px 8px;
+      }
+
+      .deal-feed-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .live-deal-card {
+        border-radius: 20px;
+        padding: 18px;
+      }
+
+      .live-deal-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .live-deal-actions a {
+        min-height: 50px;
+      }
+    }
+
     @media (max-width: 650px) {
       .nav-wrap {
         justify-content: flex-start;
@@ -107,13 +518,736 @@
       .seo-copy p {
         font-size: 15px;
       }
+
+      .platform-cta p {
+        font-size: 15px;
+      }
     }
+
+
+    /* ===== 2026 homepage redesign: fast, clean, fool-proof ===== */
+    :root {
+      --bd-ink: #151515;
+      --bd-muted: #676767;
+      --bd-line: #e7e7e7;
+      --bd-soft: #f7f8f7;
+      --bd-green: #18823b;
+      --bd-green-dark: #11682e;
+      --bd-orange: #ef5b2a;
+      --bd-orange-soft: #fff2ec;
+    }
+
+    body {
+      background: #fff;
+      color: var(--bd-ink);
+    }
+
+    .page {
+      max-width: 1240px;
+      padding-inline: clamp(18px, 3vw, 36px);
+    }
+
+    .top-nav {
+      min-height: 82px;
+      border-bottom: 1px solid var(--bd-line);
+      margin-bottom: 0;
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      font-family: Inter, sans-serif;
+      font-size: 25px;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+
+    .logo span { color: var(--bd-orange); font-family: inherit; font-style: normal; }
+
+    .nav-links a {
+      padding-block: 29px 25px;
+      border-bottom: 3px solid transparent;
+      border-radius: 0;
+      font-size: 14px;
+    }
+
+    .nav-links a.active {
+      color: var(--bd-green);
+      border-bottom-color: var(--bd-green);
+      background: transparent;
+    }
+
+    .language-switcher {
+      border-color: var(--bd-line);
+      background: #fff;
+    }
+
+    .language-switcher a.active,
+    .language-switcher a:hover {
+      background: var(--bd-green);
+      color: #fff;
+    }
+
+    .search-hero {
+      display: block;
+      text-align: center;
+      padding: clamp(56px, 7vw, 88px) 0 34px;
+      min-height: 0;
+    }
+
+    .search-hero-inner { max-width: 820px; margin: 0 auto; }
+    .search-hero-kicker {
+      margin: 0 0 10px;
+      color: var(--bd-green);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .search-hero h1 {
+      margin: 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(43px, 6vw, 72px);
+      letter-spacing: -.045em;
+      line-height: .98;
+      font-weight: 800;
+    }
+
+    .search-hero-subtitle {
+      max-width: 690px;
+      margin: 18px auto 26px;
+      color: #4d4d4d;
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.55;
+    }
+
+    .hero-search {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .hero-search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #555;
+      pointer-events: none;
+    }
+
+    .hero-search input {
+      width: 100%;
+      height: 60px;
+      border: 1px solid #d9d9d9;
+      border-radius: 17px;
+      background: #fff;
+      padding: 0 20px 0 52px;
+      font: inherit;
+      font-size: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+      outline: none;
+    }
+
+    .hero-search input:focus {
+      border-color: var(--bd-green);
+      box-shadow: 0 0 0 4px rgba(24,130,59,.09), 0 8px 30px rgba(0,0,0,.06);
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .near-me-btn,
+    .browse-bars-btn {
+      min-height: 52px;
+      border-radius: 13px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 850;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .near-me-btn {
+      background: var(--bd-green);
+      border: 1px solid var(--bd-green);
+      box-shadow: 0 8px 20px rgba(24,130,59,.18);
+    }
+    .near-me-btn:hover { background: var(--bd-green-dark); border-color: var(--bd-green-dark); }
+
+    .browse-bars-btn {
+      color: var(--bd-ink);
+      background: #fff;
+      border: 1px solid #d4d4d4;
+    }
+    .browse-bars-btn:hover { border-color: #999; }
+
+    .hero-trust {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: #666;
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .hero-trust span::first-letter { color: var(--bd-green); }
+    .legacy-hero-data { display: none !important; }
+
+    .live-deals {
+      padding-top: 34px;
+      border-top: 1px solid var(--bd-line);
+    }
+
+    .live-deals-head {
+      align-items: flex-end;
+      margin-bottom: 18px;
+    }
+
+    .live-deals .section-kicker {
+      color: var(--bd-green);
+      font-size: 12px;
+      letter-spacing: .11em;
+    }
+
+    .live-deals .section-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(34px, 4vw, 48px);
+      letter-spacing: -.04em;
+    }
+
+    .live-deals-intro {
+      margin: 8px 0 0;
+      color: var(--bd-muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .deal-feed-toolbar {
+      padding: 13px 0 18px;
+      border-bottom: 1px solid var(--bd-line);
+      margin-bottom: 22px;
+    }
+
+    .deal-feed-filter {
+      border-color: #d8d8d8;
+      background: #fff;
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-size: 12px;
+      box-shadow: none;
+    }
+    .deal-feed-filter.active {
+      border-color: var(--bd-green);
+      background: var(--bd-green);
+      color: #fff;
+    }
+
+    .deal-feed-status { font-size: 13px; color: #707070; }
+
+    .deal-browser-shell {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .deal-sidebar {
+      position: sticky;
+      top: 104px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .sidebar-block h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      letter-spacing: -.02em;
+    }
+
+    .district-filter-list { display: grid; gap: 7px; }
+    .district-filter {
+      width: 100%;
+      min-height: 45px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      border: 1px solid #dedede;
+      border-radius: 9px;
+      background: #fff;
+      padding: 0 11px;
+      font: inherit;
+      cursor: pointer;
+      color: #3b3b3b;
+    }
+    .district-filter strong { font-size: 13px; color: #171717; }
+    .district-filter span { font-size: 11px; color: #777; }
+    .district-filter.active {
+      border-color: #9fd3ad;
+      color: var(--bd-green-dark);
+      background: #f1faf3;
+      box-shadow: inset 3px 0 0 var(--bd-green);
+    }
+
+    .sidebar-info-card {
+      padding: 16px;
+      border: 1px solid var(--bd-line);
+      border-radius: 14px;
+      background: #fbfcfb;
+    }
+    .sidebar-info-icon {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e9f6ed;
+      color: var(--bd-green);
+      font-weight: 900;
+      margin-bottom: 9px;
+    }
+    .sidebar-info-card strong { display:block; font-size: 12px; line-height:1.35; }
+    .sidebar-info-card p { margin: 7px 0 0; color:#747474; font-size:11px; line-height:1.5; }
+    .sidebar-bars-link { color: var(--bd-green-dark); font-weight: 850; font-size: 12px; text-decoration: none; }
+
+    .deal-feed-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .live-deal-card {
+      border: 1px solid var(--bd-line);
+      border-radius: 13px;
+      padding: 0;
+      overflow: hidden;
+      background: #fff;
+      gap: 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,.055);
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+    .live-deal-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0,0,0,.085);
+    }
+
+    .live-deal-media {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg,#eeeeee,#fafafa);
+      overflow: hidden;
+    }
+    .live-deal-media.image-failed::after,
+    .live-deal-media:not(:has(img))::after {
+      content: "BARDEALS";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .live-deal-image {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: auto;
+      object-fit: cover;
+      border: 0;
+      border-radius: 0;
+      background: #eee;
+    }
+
+    .live-deal-badge {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 2;
+      background: #323232;
+      padding: 6px 8px;
+      font-size: 9px;
+      letter-spacing: .03em;
+      box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    }
+    .live-deal-badge.open { background: var(--bd-green); }
+
+    .live-deal-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .live-deal-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .live-deal-card h3 {
+      font-family: Inter, sans-serif;
+      font-size: 17px;
+      line-height: 1.18;
+      letter-spacing: -.025em;
+    }
+
+    .live-deal-distance {
+      white-space: nowrap;
+      font-size: 10px;
+      color: #666;
+      font-weight: 750;
+      margin-top: 2px;
+    }
+
+    .live-deal-offer {
+      color: var(--bd-orange);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 850;
+      margin: 6px 0 10px;
+      min-height: 38px;
+    }
+
+    .live-deal-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      color: #666;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .district-chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      padding: 2px 6px;
+      color: #555;
+      background: #fafafa;
+      font-weight: 800;
+    }
+
+    .live-deal-address {
+      margin-top: 7px;
+      font-size: 10px;
+      color: #777;
+      min-height: 29px;
+    }
+
+    .live-deal-verified {
+      margin-top: 7px;
+      color: var(--bd-green-dark);
+      font-size: 9px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .035em;
+    }
+
+    .live-deal-actions {
+      margin-top: 12px;
+      grid-template-columns: 1fr auto;
+      gap: 7px;
+    }
+    .live-deal-actions a {
+      min-height: 38px;
+      border-radius: 8px;
+      font-size: 10px;
+      border-color: #d6d6d6;
+    }
+    .live-deal-directions {
+      color: var(--bd-ink);
+      background: #fff;
+    }
+    .live-deal-directions:hover { border-color: var(--bd-green); color: var(--bd-green-dark); }
+    .live-deal-source { background:#fff; color:#444; }
+
+    .deal-feed-empty {
+      grid-column: 1 / -1;
+      border: 1px dashed #cfcfcf;
+      background: #fbfbfb;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .home-discovery,
+    .home-how,
+    .home-for-bars,
+    .home-seo-copy {
+      border-top: 1px solid var(--bd-line);
+      padding-top: 54px;
+    }
+
+    .home-section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .home-section-head .section-title,
+    .home-for-bars .section-title {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(32px, 4vw, 46px);
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+
+    .home-text-link {
+      color: var(--bd-green-dark);
+      font-size: 13px;
+      font-weight: 850;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .home-district-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .home-district-grid button {
+      appearance: none;
+      min-height: 92px;
+      border: 1px solid var(--bd-line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+    }
+
+    .home-district-grid button:hover {
+      border-color: #9fcfac;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+    }
+
+    .home-district-grid strong {
+      display: block;
+      color: var(--bd-green-dark);
+      font-size: 22px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .home-district-grid span {
+      color: #666;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .home-how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .home-how-grid article {
+      border: 1px solid var(--bd-line);
+      border-radius: 16px;
+      padding: 22px;
+      background: #fff;
+    }
+
+    .home-how-grid article > span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #edf8f0;
+      color: var(--bd-green-dark);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .home-how-grid h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+      letter-spacing: -.025em;
+    }
+
+    .home-how-grid p {
+      margin: 0;
+      color: #6b6b6b;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .home-for-bars {
+      margin-top: 70px;
+      padding: 34px;
+      border: 1px solid #cfe7d5;
+      border-radius: 22px;
+      background: #f2faf4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .home-for-bars-copy p:last-child {
+      margin: 10px 0 0;
+      max-width: 690px;
+      color: #5d665f;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .home-for-bars-btn {
+      flex: 0 0 auto;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 0 20px;
+      background: var(--bd-green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .home-seo-copy {
+      padding-bottom: 18px;
+    }
+
+    .home-seo-copy p {
+      max-width: 860px;
+      margin: 0;
+      color: #777;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background: #fff;
+      color: var(--bd-ink);
+      border-top: 1px solid var(--bd-line);
+    }
+    .footer p { color: #6f6f6f; }
+    .footer-links a { color: var(--bd-ink); }
+    .footer-note {
+      border-top-color: var(--bd-line);
+      color: #8a8a8a;
+    }
+
+    @media (max-width: 1050px) {
+      .deal-browser-shell { grid-template-columns: 160px minmax(0, 1fr); gap: 18px; }
+      .deal-feed-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .home-discovery, .home-how, .home-seo-copy { padding-top: 38px; }
+      .home-section-head { align-items:flex-start; margin-bottom:16px; }
+      .home-section-head .section-title, .home-for-bars .section-title { font-size: 30px; }
+      .home-text-link { display:none; }
+      .home-district-grid {
+        display:flex;
+        overflow-x:auto;
+        gap:8px;
+        padding-bottom:5px;
+        scrollbar-width:none;
+      }
+      .home-district-grid::-webkit-scrollbar { display:none; }
+      .home-district-grid button { min-width:128px; min-height:76px; padding:13px; }
+      .home-district-grid strong { font-size:19px; margin-bottom:6px; }
+      .home-how-grid { grid-template-columns:1fr; gap:10px; }
+      .home-how-grid article { padding:17px; }
+      .home-for-bars { margin-top:46px; padding:24px 20px; flex-direction:column; align-items:stretch; gap:18px; }
+      .home-for-bars-btn { width:100%; }
+      .top-nav { min-height: 64px; padding-block: 10px; position: sticky; }
+      .nav-links { display: none; }
+      .nav-wrap { margin-left: auto; }
+      .language-switcher { margin-left: auto; }
+      .search-hero { padding: 38px 0 26px; }
+      .search-hero h1 { font-size: clamp(38px, 11vw, 54px); }
+      .search-hero-subtitle { font-size: 15px; margin-top: 14px; }
+      .hero-search input { height: 56px; border-radius: 14px; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .near-me-btn, .browse-bars-btn { width: 100%; min-height: 52px; }
+      .hero-trust { justify-content: flex-start; text-align:left; gap:8px 14px; }
+      .deal-feed-toolbar { align-items: stretch; }
+      .deal-feed-filters { display:grid; grid-template-columns:repeat(3,1fr); }
+      .deal-feed-filter { padding-inline: 7px; }
+      .deal-browser-shell { display:block; }
+      .deal-sidebar { position:static; margin-bottom:18px; }
+      .sidebar-info-card, .sidebar-bars-link { display:none; }
+      .sidebar-block h3 { font-size:12px; color:#666; }
+      .district-filter-list {
+        display:flex;
+        overflow-x:auto;
+        padding-bottom:5px;
+        gap:7px;
+        scrollbar-width:none;
+      }
+      .district-filter-list::-webkit-scrollbar { display:none; }
+      .district-filter {
+        width:auto;
+        min-width:max-content;
+        min-height:38px;
+        border-radius:999px;
+        padding:0 12px;
+      }
+      .district-filter span { display:none; }
+      .district-filter.active { box-shadow:none; }
+      .deal-feed-grid { grid-template-columns: 1fr; gap: 12px; }
+      .live-deal-card {
+        display:grid;
+        grid-template-columns: 118px minmax(0,1fr);
+        border-radius: 12px;
+      }
+      .live-deal-media { aspect-ratio:auto; min-height:100%; }
+      .live-deal-body { padding: 12px; }
+      .live-deal-card h3 { font-size:16px; }
+      .live-deal-offer { font-size:13px; min-height:0; margin:4px 0 7px; }
+      .live-deal-address { display:none; }
+      .live-deal-actions { grid-template-columns:1fr auto; margin-top:9px; }
+      .live-deal-actions a { min-height:36px; padding:0 10px; }
+      .live-deal-badge { left:7px; top:7px; font-size:8px; }
+      .footer { margin-top:52px; }
+    }
+
+    @media (max-width: 430px) {
+      .page { padding-inline: 14px; }
+      .logo { font-size:22px; }
+      .search-hero h1 { font-size: 40px; }
+      .live-deals .section-title { font-size:34px; }
+      .deal-feed-status { width:100%; }
+      .live-deal-card { grid-template-columns: 105px minmax(0,1fr); }
+      .live-deal-distance { font-size:9px; }
+    }
+
   </style>
 <link href="/assets/css/site.css" rel="stylesheet"/></head>
 <body>
 <main class="page">
-<nav aria-label="Primary navigation" class="top-nav site-nav">
-<a aria-label="BarDeals home" class="logo" href="/de/">BAR<span>DEALS</span></a>
+<nav aria-label="Hauptnavigation" class="top-nav site-nav">
+<a aria-label="BarDeals Startseite" class="logo" href="/de/">BAR<span>DEALS</span></a>
 <button aria-controls="siteNavPanel" aria-expanded="false" aria-label="Menü" class="site-menu-toggle" type="button">
 <span></span><span></span><span></span>
 </button>
@@ -121,114 +1255,164 @@
 <div class="nav-links"><a aria-current="page" class="active" href="/de/">Deals</a><a href="/de/bars.html">Bars</a><a href="/de/clubs.html">Clubs</a><a href="/for-bars.html">Für Bars</a><a href="/de/blog.html">Blog</a></div>
 <div aria-label="Sprachauswahl" class="language-switcher">
 <a href="/" hreflang="en" lang="en">EN</a>
-<a class="active" href="/de/index.html" hreflang="de-AT" lang="de">DE</a>
+<a class="active" href="/de/" hreflang="de-AT" lang="de">DE</a>
 </div>
 </div>
 </nav>
-<section class="hero">
-<div>
-<h1 class="hero-title">
-<span class="word">HAPPY HOUR</span>
-<span class="mark">WIEN</span>
-</h1>
-<p class="hero-subtitle">Finde Happy-Hour-Deals in deiner Nähe in Wien</p>
+<section aria-labelledby="pageTitle" class="hero search-hero">
+<div class="search-hero-inner">
+<p class="search-hero-kicker">Wien · aktuelle Bar-Deals</p>
+<h1 id="pageTitle">Happy Hour in deiner Nähe in Wien</h1>
+<p class="search-hero-subtitle">Finde Cocktail-Deals, Bier-Specials und Happy Hours aus offiziellen Quellen — schnell.</p>
+<div class="hero-search" role="search">
+<span aria-hidden="true" class="hero-search-icon">⌕</span>
+<input aria-label="Happy-Hour-Deals suchen" autocomplete="off" id="dealSearchInput" placeholder="Nach Bar, Deal oder Bezirk suchen…" type="search"/>
 </div>
-<article class="venue-card hero-card" id="heroCard" tabindex="0">
-<img alt="Belushi's Wien" id="heroImage" src="/assets/img/bars/belushis1.jpg"/>
+<div class="hero-actions">
+<button class="near-me-btn" id="dealNearMeBtn" type="button">📍 Meinen Standort verwenden</button>
+<a class="browse-bars-btn" href="/de/bars.html">Alle Bars ansehen</a>
+</div>
+<div aria-label="Informationen zu BarDeals-Daten" class="hero-trust">
+<span>✓ Offizielle Quellen</span>
+<span>✓ Täglich aktualisiert</span>
+<span>✓ Google-Maps-Routen</span>
+</div>
+</div>
+<!-- Kept for the existing featured-venue JavaScript. Hidden visually so legacy functionality does not break. -->
+<article aria-hidden="true" class="venue-card hero-card legacy-hero-data" id="heroCard" tabindex="-1">
+<img alt="" id="heroImage" src="/assets/img/bars/hard-rock-cafe.webp"/>
 <div class="venue-info">
-<h2 id="heroName">Belushi's Wien</h2>
-<p id="heroDescription">
-            Getränkedeals von Montag bis Sonntag plus wöchentliche Food- und Cocktail-Angebote.
-          </p>
+<h2 id="heroName">Hard Rock Cafe Wien</h2>
+<p id="heroDescription">Amerikanisches Restaurant und Bar im Stadtzentrum.</p>
 <div class="tags" id="heroTags"></div>
 <div class="card-actions">
-<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien" id="heroMap" rel="noopener" target="_blank">
-              Google Maps
-            </a>
-<a class="btn btn-dark" href="/de/bars/belushis.html" id="heroLink">
-              Deal ansehen
-            </a>
+<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=Hard+Rock+Cafe+Vienna" id="heroMap" rel="noopener" target="_blank">Google Maps</a>
+<a class="btn btn-dark" href="/de/bars/hard-rock-cafe-vienna.html" id="heroLink">Deal ansehen</a>
 </div>
 </div>
 <div class="hero-dots" id="heroDots"></div>
 </article>
 </section>
-<section class="section swiper-section show" id="swipe">
-<p class="section-kicker">Schnellwahl</p>
-<h2 class="section-title">Locations swipen</h2>
-<div class="tinder-stack" id="swipeStack"></div>
-<div class="swipe-actions">
-<button class="filter-btn" onclick="prevCard()" type="button">Zurück</button>
-<button class="filter-btn" onclick="nextCard()" type="button">Nächste Location</button>
+<section aria-labelledby="liveDealsTitle" class="section live-deals" id="live-deals">
+<div class="live-deals-head">
+<div>
+<p class="section-kicker">Deals in Wien</p>
+<h2 class="section-title" id="liveDealsTitle">Happy Hours in deiner Nähe</h2>
+<p class="live-deals-intro">Deal öffnen, offizielle Quelle prüfen und anschließend die Route in Google Maps anzeigen.</p>
+</div>
+</div>
+<div class="deal-feed-toolbar">
+<div aria-label="Deal-Zeitfilter" class="deal-feed-filters">
+<button class="deal-feed-filter active" data-deal-mode="now" type="button">● Jetzt offen</button>
+<button class="deal-feed-filter" data-deal-mode="today" type="button">Heute</button>
+<button class="deal-feed-filter" data-deal-mode="all" type="button">Alle Deals</button>
+</div>
+<p aria-live="polite" class="deal-feed-status" id="dealFeedStatus">Aktuelle Deals werden geladen…</p>
+</div>
+<div class="deal-browser-shell">
+<aside aria-label="Deals nach Bezirk filtern" class="deal-sidebar">
+<div class="sidebar-block">
+<h3>Nach Bezirk filtern</h3>
+<div class="district-filter-list">
+<button class="district-filter active" data-deal-district="all" type="button">Alle Bezirke</button>
+<button class="district-filter" data-deal-district="1010" type="button"><strong>1010</strong><span>Innere Stadt</span></button>
+<button class="district-filter" data-deal-district="1030" type="button"><strong>1030</strong><span>Landstraße</span></button>
+<button class="district-filter" data-deal-district="1060" type="button"><strong>1060</strong><span>Mariahilf</span></button>
+<button class="district-filter" data-deal-district="1070" type="button"><strong>1070</strong><span>Neubau</span></button>
+<button class="district-filter" data-deal-district="1080" type="button"><strong>1080</strong><span>Josefstadt</span></button>
+<button class="district-filter" data-deal-district="1100" type="button"><strong>1100</strong><span>Favoriten</span></button>
+<button class="district-filter" data-deal-district="1110" type="button"><strong>1110</strong><span>Simmering</span></button>
+</div>
+</div>
+<div class="sidebar-info-card">
+<span aria-hidden="true" class="sidebar-info-icon">✓</span>
+<strong>Aus offiziellen Quellen geprüft</strong>
+<p>Automatische Deal-Daten werden täglich aktualisiert. Prüfe die Details vor der Bestellung immer in der Quelle.</p>
+</div>
+<a class="sidebar-bars-link" href="/de/bars.html">Alle Wiener Bars ansehen →</a>
+</aside>
+<div class="deal-results">
+<div class="deal-feed-grid" id="dealFeedGrid"></div>
+</div>
 </div>
 </section>
-<section class="section">
-<p class="section-kicker">Kategorien</p>
-<div class="filters">
-<button class="filter-btn active" type="button">Sport</button>
-<button class="filter-btn" type="button">Irish Pub</button>
-<button class="filter-btn" type="button">Cocktails</button>
-<button class="filter-btn" type="button">Günstige Drinks</button>
-<button class="filter-btn" type="button">Live-Musik</button>
-<button class="filter-btn" type="button">Club</button>
+<section aria-labelledby="districtsTitle" class="section home-discovery" id="districts">
+<div class="home-section-head">
+<div>
+<p class="section-kicker">Beliebte Bezirke</p>
+<h2 class="section-title" id="districtsTitle">Wien nach Bezirk entdecken</h2>
+</div>
+<a class="home-text-link" href="/de/bars.html">Alle Bars ansehen →</a>
+</div>
+<div class="home-district-grid">
+<button data-home-district="1010" type="button"><strong>1010</strong><span>Innere Stadt</span></button>
+<button data-home-district="1030" type="button"><strong>1030</strong><span>Landstraße</span></button>
+<button data-home-district="1060" type="button"><strong>1060</strong><span>Mariahilf</span></button>
+<button data-home-district="1070" type="button"><strong>1070</strong><span>Neubau</span></button>
+<button data-home-district="1080" type="button"><strong>1080</strong><span>Josefstadt</span></button>
+<button data-home-district="1100" type="button"><strong>1100</strong><span>Favoriten</span></button>
 </div>
 </section>
-<section class="section" id="featured">
-<p class="section-kicker">Bars und Pubs</p>
-<h2 class="section-title">Empfohlene Locations</h2>
-<div class="grid" id="barsGrid"></div>
-</section>
-<section class="section">
-<p class="section-kicker">Nachtleben</p>
-<h2 class="section-title">Clubs</h2>
-<div class="grid" id="clubsGrid"></div>
-</section>
-<section class="section seo-copy">
-<p class="section-kicker">Happy Hour in der Nähe</p>
-<h2 class="section-title">Happy-Hour-Deals in deiner Nähe in Wien finden</h2>
-<p>
-        Suchst du nach Happy Hour in der Nähe in Wien? BarDeals hilft dir, Bars, Pubs,
-        Sportsbars, Cocktailbars und Nachtleben mit Drink-Angeboten, Bierdeals,
-        Cocktail-Specials und Google-Maps-Routen zu finden. Prüfe die Details und
-        öffne die Location in Google Maps, bevor du hingehst.
-      </p>
-</section>
-<section class="section">
-<p class="section-kicker">Vor dem Besuch</p>
-<h2 class="section-title">FAQ</h2>
-<div class="faq">
-<details>
-<summary>Sind alle Deals bestätigt?</summary>
-<p>
-            Bestätigte Angebote werden angezeigt, wenn eine Location sie veröffentlicht hat oder die Information bereits geprüft wurde.
-            Wenn ein Deal nicht vollständig bestätigt ist, weist die Seite darauf hin, direkt bei der Location nachzufragen.
-          </p>
-</details>
-<details>
-<summary>Warum verwenden manche Karten Platzhalterbilder?</summary>
-<p>
-            BarDeals verwendet nur eigene, bereitgestellte oder rechtlich sichere Platzhalterbilder.
-            Wir kopieren keine Google-Maps-Gästefotos oder zufällige Bilder aus der Bildersuche.
-          </p>
-</details>
-<details>
-<summary>Wie soll ich die Google-Maps-Buttons verwenden?</summary>
-<p>
-            Öffne die Location in Google Maps und prüfe vor dem Besuch die Route, aktuelle Öffnungszeiten und neue Updates der Location.
-          </p>
-</details>
-<details>
-<summary>Kann eine Location eine eigene Bar-Seite bekommen?</summary>
-<p>
-            Ja. Eigene Seiten können echte Fotos, offizielle Angebote, Events und ausführlichere Informationen enthalten, sobald die Details bestätigt sind.
-          </p>
-</details>
+<section aria-labelledby="howTitle" class="section home-how">
+<div class="home-section-head">
+<div>
+<p class="section-kicker">Einfach und schnell</p>
+<h2 class="section-title" id="howTitle">So funktioniert BarDeals</h2>
 </div>
+</div>
+<div class="home-how-grid">
+<article>
+<span>1</span>
+<h3>Standort verwenden</h3>
+<p>Standort einmal freigeben und wir sortieren Wiener Deals nach Entfernung.</p>
+</article>
+<article>
+<span>2</span>
+<h3>Deal auswählen</h3>
+<p>Angebot, Zeit, Location und offizielle Quelle sofort sehen.</p>
+</article>
+<article>
+<span>3</span>
+<h3>Google Maps öffnen</h3>
+<p>Route anzeigen und die Details der Location vor dem Besuch prüfen.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="forBarsTitle" class="section home-for-bars">
+<div class="home-for-bars-copy">
+<p class="section-kicker">Für Bars</p>
+<h2 class="section-title" id="forBarsTitle">Du betreibst eine Bar in Wien?</h2>
+<p>Zeige deine Happy Hour oder deinen Drink-Deal Menschen, die gerade nach einer Bar suchen.</p>
+</div>
+<a class="home-for-bars-btn" href="/for-bars.html">Bar eintragen →</a>
+</section>
+<section aria-label="Über BarDeals Wien" class="section home-seo-copy">
+<p>BarDeals hilft dabei, Happy Hours, Cocktail-Specials, Bierdeals und Bar-Angebote in der Nähe in Wien zu finden. Deal-Informationen werden mit offiziellen Quellen abgeglichen und regelmäßig aktualisiert. Preise, Zeiten und Verfügbarkeit können sich ändern – prüfe das aktuelle Angebot daher vor der Bestellung.</p>
 </section>
 </main>
 <footer class="footer">
-    Deals, Preise, Öffnungszeiten und Events können sich ändern. Bitte prüfe die Informationen immer direkt bei der Location, bevor du hingehst.
-  </footer>
+<div class="footer-inner">
+<div>
+<div class="footer-brand">BAR<span>DEALS</span></div>
+<p>
+          Happy Hours, Drink-Deals, Sportsbars, Clubs und gruppenfreundliche Locations in Wien.
+          Für Touristen, Studierende, Expats und Locals, die leichter den passenden Abend finden möchten.
+        </p>
+</div>
+<div class="footer-links">
+<a href="/de/">Startseite</a>
+<a href="/de/bars.html">Bars</a>
+<a href="/de/clubs.html">Clubs</a>
+<a href="/for-bars.html">Für Bars</a>
+<a href="/de/blog.html">Blog</a>
+<a href="mailto:hello@bardeals.at">Kontakt</a>
+</div>
+</div>
+<div class="footer-note">
+      Deals, Preise, Öffnungszeiten und Events können sich ändern. Prüfe die Angaben vor dem Besuch immer direkt bei der Location.<br/>
+      Die automatische Location-Suche kann Daten verwenden von <a href="https://www.openstreetmap.org/copyright" rel="noopener" style="color:inherit" target="_blank">© OpenStreetMap contributors</a>.
+    </div>
+</footer>
 <script>
     const img = {
       belushis: "/assets/img/bars/belushis1.jpg",
@@ -252,147 +1436,147 @@
 
     const venues = [
       {
-        name: "Belushi's Wien",
-        description: "Getränkedeals von Montag bis Sonntag plus wöchentliche Food- und Cocktail-Angebote.",
-        tags: ["Sport", "Hostelbar", "Echte Deals"],
-        image: img.belushis,
-        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
-        page: "/de/bars/belushis.html",
-        cta: "Deal ansehen"
-      },
-      {
         name: "The Long Hall",
-        description: "Irish Pub an der Florianigasse mit Live-Sport, Brunch, Essen, Pints und Celtic-Spielen.",
-        tags: ["Irish Pub", "Sport", "Essen"],
+        description: "Irish pub on Florianigasse with live sports, brunch, food, pints and Celtic matches.",
+        tags: ["Irish Pub", "Sports", "Food"],
         image: img.longHall,
         map: "https://www.google.com/maps/search/?api=1&query=The+Long+Hall+Florianigasse+2+1080+Wien",
         page: "/de/bars/the-long-hall.html",
-        cta: "Bar ansehen"
+        cta: "View Bar"
       },
       {
         name: "The Short Hall",
-        description: "Irish Sports Pub in Neubau mit Monday Stelze Night und Live-Sport.",
-        tags: ["Irish Pub", "Sport", "Food-Deal"],
+        description: "Irish sports pub in Neubau with Monday Stelze Night and live sport.",
+        tags: ["Irish Pub", "Sports", "Food Deal"],
         image: img.shortHall,
         map: "https://www.google.com/maps/search/?api=1&query=The+Short+Hall+Burggasse+17+1070+Wien",
         page: "/de/bars/the-short-hall.html",
-        cta: "Deal ansehen"
-      },
-      {
-        name: "Bukowski The Pub",
-        description: "Late-Night-Pub in Neubau, bis in die frühen Morgenstunden geöffnet, mit Drinks und Pub-Atmosphäre.",
-        tags: ["Late Night", "Happy Hour", "Pub"],
-        image: img.bukowski,
-        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
-        page: "/de/bars/bukowski-the-pub.html",
-        cta: "Bar ansehen"
+        cta: "View Deal"
       },
       {
         name: "Charlie P's Irish Pub",
-        description: "Irish Pub und Sportsbar nahe Schottentor mit Happy Hour, Quizabenden und Live-Sport.",
-        tags: ["Irish Pub", "Sport", "Happy Hour"],
+        description: "Irish pub and sports bar near Schottentor with happy hour, quiz nights and live sport.",
+        tags: ["Irish Pub", "Sports", "Happy Hour"],
         image: img.charliePs,
         map: "https://www.google.com/maps/search/?api=1&query=Charlie+P%27s+Irish+Pub+W%C3%A4hringer+Stra%C3%9Fe+3+1090+Wien",
         page: "/de/bars/charlie-ps.html",
-        cta: "Deal ansehen"
-      },
-      {
-        name: "JO&JOE Wien",
-        description: "Rooftop-Bar und Restaurant über dem Westbahnhof mit Essen, Drinks, Beer Wall und DJs.",
-        tags: ["Rooftop", "Cocktails", "Events"],
-        image: img.joJoe,
-        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
-        page: "/de/bars/jo-and-joe-vienna.html",
-        cta: "Bar ansehen"
+        cta: "View Deal"
       },
       {
         name: "Hard Rock Cafe Wien",
-        description: "Amerikanisches Restaurant und Bar im Stadtzentrum mit Burgern, Cocktails und Happy Hour.",
-        tags: ["Happy Hour", "Burger", "Cocktails"],
+        description: "American restaurant and bar in the city centre with burgers, cocktails and happy hour.",
+        tags: ["Happy Hour", "Burgers", "Cocktails"],
         image: img.hardRock,
         map: "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Vienna+Rotenturmstra%C3%9Fe+25+1010+Wien",
         page: "/de/bars/hard-rock-cafe-vienna.html",
-        cta: "Deal ansehen"
+        cta: "View Deal"
       },
       {
-        name: "MEINZ Sportsbar",
-        description: "Moderne Sportsbar im Bermudadreieck mit Fußball, NFL, Formel 1, Burgern und Bier.",
-        tags: ["Sport", "Burger", "Happy Hour"],
-        image: img.meinz,
-        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
-        page: "/de/bars/meinz-sportsbar.html",
-        cta: "Bar ansehen"
+        name: "Santos Wieden",
+        description: "Mexican Grill & Bar in Wieden with cocktails, Mexican food and Happy Hora.",
+        tags: ["Cocktails", "Mexican", "Happy Hour"],
+        image: img.santos,
+        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
+        page: "/de/bars/santos-wieden.html",
+        cta: "View Deal"
       },
       {
         name: "Daiquiri Shotothek",
-        description: "Shot- und Cocktailbar nahe Schwedenplatz, gut für Shots, Cocktails, Geburtstage und Gruppen.",
+        description: "Shot and cocktail bar near Schwedenplatz, good for shots, cocktails, birthdays and groups.",
         tags: ["Shots", "Cocktails", "Happy Hour"],
         image: img.daiquiri,
         map: "https://www.google.com/maps/search/?api=1&query=Daiquiri+Shotothek+Sterngasse+2+1010+Wien",
         page: "/de/bars/daiquiri-shotothek.html",
-        cta: "Deal ansehen"
+        cta: "View Deal"
       },
       {
-        name: "Santos Wieden",
-        description: "Mexican Grill & Bar in Wieden mit Cocktails, mexikanischem Essen und Happy Hora.",
-        tags: ["Cocktails", "Mexikanisch", "Happy Hour"],
-        image: img.santos,
-        map: "https://www.google.com/maps/search/?api=1&query=Santos+Wieden+Favoritenstra%C3%9Fe+4-6+1040+Wien",
-        page: "/de/bars/santos-wieden.html",
-        cta: "Deal ansehen"
+        name: "MEINZ Sportsbar",
+        description: "Modern sports bar in the Bermudadreieck with football, NFL, Formula 1, burgers and beer.",
+        tags: ["Sports", "Burgers", "Happy Hour"],
+        image: img.meinz,
+        map: "https://www.google.com/maps/search/?api=1&query=MEINZ+Sportsbar+Seitenstettengasse+5+1010+Wien",
+        page: "/de/bars/meinz-sportsbar.html",
+        cta: "View Bar"
       },
       {
         name: "ADMIRAL Arena Prater",
-        description: "Große Sportsbar im Prater mit großen Screens, Essen, Drinks, Reservierungen und Live-Sport.",
-        tags: ["Sport", "Große Screens", "Essen"],
+        description: "Large sportsbar in Prater with big screens, food, drinks, reservations and live sports.",
+        tags: ["Sports", "Big Screens", "Food"],
         image: img.admiral,
         map: "https://www.google.com/maps/search/?api=1&query=ADMIRAL+Arena+Prater+Perspektivstra%C3%9Fe+141+1020+Wien",
         page: "/de/bars/admiral-arena-prater.html",
-        cta: "Bar ansehen"
+        cta: "View Bar"
       },
       {
         name: "Matiki Bar",
-        description: "Tiki-Cocktailbar in Neubau mit tropischen Cocktails, Rum-Drinks und entspannter Bar-Atmosphäre.",
+        description: "Tiki cocktail bar in Neubau with tropical cocktails, rum drinks and relaxed bar atmosphere.",
         tags: ["Cocktails", "Tiki Bar", "Rum"],
         image: img.matiki,
         map: "https://www.google.com/maps/search/?api=1&query=Matiki+Bar+Gardegasse+2%2F4+1070+Wien",
         page: "/de/bars/matiki-bar.html",
-        cta: "Bar ansehen"
+        cta: "View Bar"
+      },
+      {
+        name: "JO&JOE Vienna",
+        description: "Rooftop bar and restaurant above Westbahnhof with food, drinks, beer wall and DJs.",
+        tags: ["Rooftop", "Cocktails", "Events"],
+        image: img.joJoe,
+        map: "https://www.google.com/maps/search/?api=1&query=JO%26JOE+Vienna+Europaplatz+1%2F6+1150+Wien",
+        page: "/de/bars/jo-and-joe-vienna.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Bukowski The Pub",
+        description: "Late-night pub in Neubau, open until early morning with drinks and pub atmosphere.",
+        tags: ["Late Night", "Happy Hour", "Pub"],
+        image: img.bukowski,
+        map: "https://www.google.com/maps/search/?api=1&query=Bukowski+The+Pub+Siebensterngasse+8+1070+Wien",
+        page: "/de/bars/bukowski-the-pub.html",
+        cta: "View Bar"
+      },
+      {
+        name: "Belushi's Vienna",
+        description: "Drink deals, weekly food offers, live sports and hostel bar atmosphere near Hauptbahnhof.",
+        tags: ["Sports", "Hostel Bar", "Drink Deals"],
+        image: img.belushis,
+        map: "https://www.google.com/maps/search/?api=1&query=Belushi%27s+Vienna+Columbusgasse+16+1100+Wien",
+        page: "/de/bars/belushis.html",
+        cta: "View Deal"
       }
     ];
 
     const clubs = [
       {
         name: "Prater Dome",
-        description: "Großer Prater-Club mit mehreren Bereichen, unterschiedlicher Clubmusik und Wochenend-Events. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        description: "Large Prater nightclub with multiple areas, varied club music and weekend events. Check current offers with the venue.",
         tags: ["Club", "EDM", "Hip Hop"],
         image: img.club,
         map: "https://www.google.com/maps/search/?api=1&query=Prater+Dome+Riesenradplatz+7+1020+Wien"
       },
       {
         name: "Volksgarten",
-        description: "Historische Clubdisco im Stadtzentrum mit Indoor- und Outdoor-Partynächten. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        description: "Historic city-center club disco with indoor and outdoor party nights. Check current offers with the venue.",
         tags: ["Club", "House", "Disco"],
         image: img.club,
         map: "https://www.google.com/maps/search/?api=1&query=Volksgarten+Clubdisco+Heldenplatz+1010+Wien"
       },
       {
         name: "Flex",
-        description: "Club und Live-Location am Donaukanal, bekannt für Konzerte, elektronische Musik und Clubnächte. Aktuelle Angebote bitte direkt bei der Location prüfen.",
-        tags: ["Club", "Live-Musik", "Electronic"],
+        description: "Danube Canal club and live venue known for concerts, electronic music and club nights. Check current offers with the venue.",
+        tags: ["Club", "Live Music", "Electronic"],
         image: img.club,
         map: "https://www.google.com/maps/search/?api=1&query=Flex+Augartenbr%C3%BCcke+1+1010+Wien"
       },
       {
         name: "Grelle Forelle",
-        description: "Electronic-Music-Club an der Spittelauer Lände mit Techno, House, Hip-Hop-Shows und alternativen Konzerten. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        description: "Electronic music club on Spittelauer Lände with techno, house, hip-hop shows and alternative concerts. Check current offers with the venue.",
         tags: ["Club", "Techno", "Electronic"],
         image: img.club,
         map: "https://www.google.com/maps/search/?api=1&query=Grelle+Forelle+Spittelauer+L%C3%A4nde+12+1090+Wien"
       },
       {
         name: "O Club",
-        description: "Club unter der Staatsoper mit elektronischen Freitagen, Super Disco Saturdays und mehreren Bereichen. Aktuelle Angebote bitte direkt bei der Location prüfen.",
+        description: "Club under the State Opera with electronic Fridays, Super Disco Saturdays and multiple areas. Check current offers with the venue.",
         tags: ["Club", "Electronic", "Disco"],
         image: img.club,
         map: "https://www.google.com/maps/search/?api=1&query=O+der+Klub+Opernring+Operngasse+1010+Wien"
@@ -400,10 +1584,10 @@
     ];
 
     const featured = [
-      venues[0],
-      venues[6],
-      venues[9],
-      venues[8]
+      venues[3],
+      venues[4],
+      venues[5],
+      venues[7]
     ];
 
     let currentHero = 0;
@@ -418,7 +1602,7 @@
 
     function cardHtml(v) {
       const viewButton = v.page
-        ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "Bar ansehen"}</a>`
+        ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "View Bar"}</a>`
         : "";
 
       return `
@@ -437,7 +1621,9 @@
     }
 
     function renderGrid(id, list) {
-      document.getElementById(id).innerHTML = list.map(cardHtml).join("");
+      const target = document.getElementById(id);
+      if (!target) return;
+      target.innerHTML = list.map(cardHtml).join("");
     }
 
     function renderHeroDots() {
@@ -446,7 +1632,7 @@
         <button
           class="hero-dot ${index === currentHero ? "active" : ""}"
           type="button"
-          aria-label="Empfohlene Location ${index + 1} anzeigen"
+          aria-label="Show featured venue ${index + 1}"
           onclick="showHero(${index}, event)">
         </button>
       `).join("");
@@ -474,7 +1660,7 @@
         if (v.page) {
           heroLink.style.display = "inline-flex";
           heroLink.href = v.page;
-          heroLink.textContent = v.cta || "Bar ansehen";
+          heroLink.textContent = v.cta || "View Bar";
         } else {
           heroLink.style.display = "none";
         }
@@ -485,7 +1671,9 @@
     }
 
     function renderSwipe() {
-      document.getElementById("swipeStack").innerHTML = featured.map((v, index) => `
+      const stack = document.getElementById("swipeStack");
+      if (!stack) return;
+      stack.innerHTML = featured.map((v, index) => `
         <article class="venue-card swipe-card ${index === 0 ? "active" : ""} ${index === 1 ? "next" : ""}">
           <img src="${v.image}" alt="${v.name}">
           <div class="venue-info">
@@ -494,7 +1682,7 @@
             <div class="tags">${tagsHtml(v.tags)}</div>
             <div class="card-actions">
               <a class="btn btn-light" href="${v.map}" target="_blank" rel="noopener">Google Maps</a>
-              ${v.page ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "Bar ansehen"}</a>` : ""}
+              ${v.page ? `<a class="btn btn-dark" href="${v.page}">${v.cta || "View Bar"}</a>` : ""}
             </div>
           </div>
         </article>
@@ -631,6 +1819,349 @@
     setInterval(() => {
       showHero((currentHero + 1) % featured.length);
     }, 5000);
+
+
+    // ===== Automatic + near-me deal feed =====
+    let dealFeedVenues = [];
+    let dealFeedLocation = null;
+    let dealFeedMode = "now";
+    let dealFeedDistrict = "all";
+    let dealFeedSearch = "";
+
+    function dealFeedEscape(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function dealFeedSafeHttpUrl(value) {
+      try {
+        const url = new URL(String(value || ""), window.location.href);
+        return /^https?:$/.test(url.protocol) ? url.href : "";
+      } catch {
+        return "";
+      }
+    }
+
+    function dealFeedMergeKey(deal) {
+      const schedule = `${(deal.days || []).join(",")}|${deal.from}|${deal.to}`;
+      if (deal.auto) return `auto|${String(deal.label || "deal").toLowerCase()}|${schedule}`;
+      return `manual|${schedule}|${String(deal.text || "").toLowerCase().replace(/\s+/g, " ").trim()}`;
+    }
+
+    function dealFeedNormalizeName(value) {
+      return String(value || "")
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "");
+    }
+
+    function dealFeedVenueDistrict(venue) {
+      const direct = String(venue?.zip || "").match(/\b1\d{3}\b/);
+      if (direct) return direct[0];
+      const address = String(venue?.address || "").match(/\b1\d{3}\b/);
+      return address ? address[0] : "";
+    }
+
+    function dealFeedMatchesSearch(venue) {
+      const query = dealFeedSearch.trim().toLowerCase();
+      if (!query) return true;
+      const haystack = [
+        venue?.name,
+        venue?.address,
+        venue?.zip,
+        venue?.category,
+        ...(Array.isArray(venue?.deals) ? venue.deals.flatMap(deal => [deal?.text, deal?.label, deal?.priceHint]) : [])
+      ].filter(Boolean).join(" ").toLowerCase();
+      return haystack.includes(query);
+    }
+
+    function dealFeedValidDeals(venue) {
+      return (Array.isArray(venue?.deals) ? venue.deals : [])
+        .filter(deal => Array.isArray(deal?.days) && deal.days.some(day => day >= 0 && day <= 6))
+        .filter(deal => /^\d{2}:\d{2}$/.test(deal?.from || "") && /^\d{2}:\d{2}$/.test(deal?.to || ""))
+        .filter(deal => !/\bno\s+deals?\b/i.test(deal?.text || ""));
+    }
+
+    function mergeDealFeedVenues(manual, automatic) {
+      const byName = new Map();
+      for (const sourceVenue of [...manual, ...automatic]) {
+        if (!sourceVenue?.name || !Number.isFinite(Number(sourceVenue.lat)) || !Number.isFinite(Number(sourceVenue.lng))) continue;
+        const key = dealFeedNormalizeName(sourceVenue.name);
+        const deals = dealFeedValidDeals(sourceVenue);
+        if (!deals.length) continue;
+
+        if (!byName.has(key)) {
+          byName.set(key, { ...sourceVenue, lat: Number(sourceVenue.lat), lng: Number(sourceVenue.lng), deals: [] });
+        }
+        const target = byName.get(key);
+        for (const deal of deals) {
+          const mergeKey = dealFeedMergeKey(deal);
+          const existingIndex = target.deals.findIndex(old => dealFeedMergeKey(old) === mergeKey);
+          if (existingIndex === -1) target.deals.push(deal);
+          else if (Number(deal.confidence || 0) > Number(target.deals[existingIndex].confidence || 0)) target.deals[existingIndex] = deal;
+        }
+        if (sourceVenue.website && !target.website) target.website = sourceVenue.website;
+        if (sourceVenue.image && (!target.image || sourceVenue.auto)) target.image = sourceVenue.image;
+        if (sourceVenue.imageSourceUrl && (!target.imageSourceUrl || sourceVenue.auto)) target.imageSourceUrl = sourceVenue.imageSourceUrl;
+      }
+      return [...byName.values()];
+    }
+
+    function viennaClock() {
+      const parts = new Intl.DateTimeFormat("de-AT", {
+        timeZone: "Europe/Vienna",
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        hourCycle: "h23"
+      }).formatToParts(new Date());
+      const get = type => parts.find(part => part.type === type)?.value;
+      const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      return {
+        day: dayMap[get("weekday")],
+        minutes: Number(get("hour")) * 60 + Number(get("minute"))
+      };
+    }
+
+    function feedToMinutes(value) {
+      const [hours, minutes] = String(value).split(":").map(Number);
+      return hours * 60 + minutes;
+    }
+
+    function dealIsOpenNow(deal, clock = viennaClock()) {
+      const from = feedToMinutes(deal.from);
+      const to = feedToMinutes(deal.to);
+      if (from <= to) return deal.days.includes(clock.day) && clock.minutes >= from && clock.minutes <= to;
+      const previousDay = (clock.day + 6) % 7;
+      return (deal.days.includes(clock.day) && clock.minutes >= from) ||
+        (deal.days.includes(previousDay) && clock.minutes <= to);
+    }
+
+    function dealIsToday(deal, clock = viennaClock()) {
+      if (deal.days.includes(clock.day)) return true;
+      const from = feedToMinutes(deal.from);
+      const to = feedToMinutes(deal.to);
+      return from > to && deal.days.includes((clock.day + 6) % 7) && clock.minutes <= to;
+    }
+
+    function feedDistanceKm(a, b) {
+      const toRad = value => value * Math.PI / 180;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const x = Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+      return 6371 * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
+    }
+
+    function formatFeedDistance(km) {
+      if (!Number.isFinite(km)) return "";
+      if (km < 1) return `${Math.max(10, Math.round(km * 1000 / 10) * 10)} m`;
+      return `${km.toFixed(1)} km`;
+    }
+
+    function feedDayLabel(days) {
+      const all = [0,1,2,3,4,5,6].every(day => days.includes(day));
+      if (all) return "Täglich";
+      const weekdays = [1,2,3,4,5].every(day => days.includes(day)) && !days.includes(0) && !days.includes(6);
+      if (weekdays) return "Mo–Fr";
+      const labels = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+      return days.map(day => labels[day]).filter(Boolean).join(", ");
+    }
+
+    function pickFeedDeal(venue) {
+      const clock = viennaClock();
+      const deals = dealFeedValidDeals(venue);
+      const open = deals.filter(deal => dealIsOpenNow(deal, clock));
+      if (open.length) return open.sort((a, b) => feedToMinutes(a.to) - feedToMinutes(b.to))[0];
+      const today = deals.filter(deal => deal.days.includes(clock.day) && feedToMinutes(deal.from) > clock.minutes);
+      if (today.length) return today.sort((a, b) => feedToMinutes(a.from) - feedToMinutes(b.from))[0];
+      return deals[0] || null;
+    }
+
+    function feedDealStatus(deal) {
+      const clock = viennaClock();
+      if (dealIsOpenNow(deal, clock)) return { label: "JETZT OFFEN", open: true };
+      if (deal.days.includes(clock.day) && feedToMinutes(deal.from) > clock.minutes) {
+        return { label: `HEUTE ${deal.from}`, open: false };
+      }
+      return { label: feedDayLabel(deal.days), open: false };
+    }
+
+    function feedVerifiedLabel(deal) {
+      if (!deal?.verifiedAt) return "";
+      const date = new Date(deal.verifiedAt);
+      if (Number.isNaN(date.getTime())) return "";
+      return `Automatisch geprüft ${new Intl.DateTimeFormat("de-AT", { timeZone: "Europe/Vienna", day: "numeric", month: "short" }).format(date)}`;
+    }
+
+    function feedCard(venue) {
+      const deal = pickFeedDeal(venue);
+      if (!deal) return "";
+      const status = feedDealStatus(deal);
+      const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
+      const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
+      const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
+      const imageUrl = dealFeedSafeHttpUrl(venue.image || "");
+      const verified = feedVerifiedLabel(deal);
+      const district = dealFeedVenueDistrict(venue);
+      return `
+        <article class="live-deal-card">
+          <div class="live-deal-media">
+            ${imageUrl ? `<img class="live-deal-image" src="${dealFeedEscape(imageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.closest('.live-deal-media')?.classList.add('image-failed'); this.style.display='none'">` : ""}
+            <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
+          </div>
+          <div class="live-deal-body">
+            <div class="live-deal-title-row">
+              <h3>${dealFeedEscape(venue.name)}</h3>
+              ${distance != null ? `<span class="live-deal-distance">📍 ${dealFeedEscape(formatFeedDistance(distance))}</span>` : ""}
+            </div>
+            <p class="live-deal-offer">${dealFeedEscape(deal.text || deal.label || "Getränkedeal")}</p>
+            <div class="live-deal-meta-row">
+              <span>◷ ${dealFeedEscape(feedDayLabel(deal.days))} · ${dealFeedEscape(deal.from)}–${dealFeedEscape(deal.to)}</span>
+              ${district ? `<span class="district-chip">${dealFeedEscape(district)}</span>` : ""}
+            </div>
+            <p class="live-deal-address">${dealFeedEscape(venue.address || "Wien")}</p>
+            ${verified ? `<p class="live-deal-verified">✓ ${dealFeedEscape(verified)}</p>` : ""}
+            <div class="live-deal-actions">
+              <a class="live-deal-directions" href="${directions}" target="_blank" rel="noopener">📍 Google Maps</a>
+              ${sourceUrl ? `<a class="live-deal-source" href="${dealFeedEscape(sourceUrl)}" target="_blank" rel="noopener">Quelle</a>` : ""}
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function renderDealFeed() {
+      const grid = document.getElementById("dealFeedGrid");
+      const status = document.getElementById("dealFeedStatus");
+      if (!grid || !status) return;
+      const clock = viennaClock();
+
+      let rows = dealFeedVenues.filter(venue => {
+        const deals = dealFeedValidDeals(venue);
+        const districtMatches = dealFeedDistrict === "all" || dealFeedVenueDistrict(venue) === dealFeedDistrict;
+        if (!districtMatches || !dealFeedMatchesSearch(venue)) return false;
+        if (dealFeedMode === "now") return deals.some(deal => dealIsOpenNow(deal, clock));
+        if (dealFeedMode === "today") return deals.some(deal => dealIsToday(deal, clock));
+        return deals.length > 0;
+      });
+
+      let fallbackToToday = false;
+      if (dealFeedMode === "now" && rows.length === 0 && !dealFeedSearch && dealFeedDistrict === "all") {
+        rows = dealFeedVenues.filter(venue => dealFeedValidDeals(venue).some(deal => dealIsToday(deal, clock)));
+        fallbackToToday = rows.length > 0;
+      }
+
+      rows = rows.map(venue => ({
+        ...venue,
+        _distance: dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null,
+        _deal: pickFeedDeal(venue)
+      })).sort((a, b) => {
+        const aOpen = a._deal ? dealIsOpenNow(a._deal, clock) : false;
+        const bOpen = b._deal ? dealIsOpenNow(b._deal, clock) : false;
+        if (aOpen !== bOpen) return aOpen ? -1 : 1;
+        if (dealFeedLocation && a._distance !== b._distance) return a._distance - b._distance;
+        return a.name.localeCompare(b.name, "de");
+      });
+
+      if (!rows.length) {
+        grid.innerHTML = `<div class="deal-feed-empty"><strong>Keine passenden Deals gefunden.</strong><br>Versuche einen anderen Bezirk, lösche die Suche oder wechsle zu Heute / Alle Deals.</div>`;
+      } else {
+        grid.innerHTML = rows.slice(0, dealFeedMode === "all" ? 30 : 18).map(feedCard).join("");
+      }
+
+      const locationText = dealFeedLocation ? " · nach Entfernung sortiert" : "";
+      status.textContent = fallbackToToday
+        ? `Gerade ist kein gespeicherter Deal offen – ${rows.length} Locations mit Deals heute${locationText}`
+        : dealFeedMode === "now"
+          ? `${rows.length} Locations mit Deals jetzt${locationText}`
+          : dealFeedMode === "today"
+            ? `${rows.length} Locations mit Deals heute${locationText}`
+            : `${rows.length} Locations mit Deals${locationText}`;
+    }
+
+    async function loadAutomaticDealFeed() {
+      const status = document.getElementById("dealFeedStatus");
+      try {
+        const [manualResult, autoResult] = await Promise.allSettled([
+          fetch("/data/bars.json", { cache: "no-store" }).then(response => response.ok ? response.json() : []),
+          fetch("/data/deals-auto.json", { cache: "no-store" }).then(response => response.ok ? response.json() : [])
+        ]);
+        const manual = manualResult.status === "fulfilled" && Array.isArray(manualResult.value) ? manualResult.value : [];
+        const automatic = autoResult.status === "fulfilled" && Array.isArray(autoResult.value) ? autoResult.value : [];
+        dealFeedVenues = mergeDealFeedVenues(manual, automatic);
+        renderDealFeed();
+      } catch (error) {
+        console.warn("Automatischer Deal-Feed konnte nicht geladen werden", error);
+        if (status) status.textContent = "Deal-Daten konnten nicht geladen werden.";
+      }
+    }
+
+    document.querySelectorAll("[data-deal-mode]").forEach(button => {
+      button.addEventListener("click", () => {
+        dealFeedMode = button.dataset.dealMode || "now";
+        document.querySelectorAll("[data-deal-mode]").forEach(item => item.classList.toggle("active", item === button));
+        renderDealFeed();
+      });
+    });
+
+    document.getElementById("dealSearchInput")?.addEventListener("input", event => {
+      dealFeedSearch = String(event.target.value || "").trim();
+      renderDealFeed();
+    });
+
+    document.querySelectorAll("[data-deal-district]").forEach(button => {
+      button.addEventListener("click", () => {
+        dealFeedDistrict = button.dataset.dealDistrict || "all";
+        document.querySelectorAll("[data-deal-district]").forEach(item => item.classList.toggle("active", item === button));
+        renderDealFeed();
+      });
+    });
+
+    document.querySelectorAll("[data-home-district]").forEach(button => {
+      button.addEventListener("click", () => {
+        dealFeedDistrict = button.dataset.homeDistrict || "all";
+        document.querySelectorAll("[data-deal-district]").forEach(item => {
+          item.classList.toggle("active", item.dataset.dealDistrict === dealFeedDistrict);
+        });
+        renderDealFeed();
+        document.getElementById("live-deals")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    document.getElementById("dealNearMeBtn")?.addEventListener("click", () => {
+      const button = document.getElementById("dealNearMeBtn");
+      const status = document.getElementById("dealFeedStatus");
+      if (!navigator.geolocation) {
+        if (status) status.textContent = "Dein Browser unterstützt die Standortfunktion nicht. Du kannst Wiener Deals trotzdem ansehen.";
+        return;
+      }
+      button.disabled = true;
+      button.textContent = "Standort wird gesucht…";
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          dealFeedLocation = { lat: position.coords.latitude, lng: position.coords.longitude };
+          button.disabled = false;
+          button.textContent = "✓ Nächste zuerst";
+          dealFeedMode = "now";
+          document.querySelectorAll("[data-deal-mode]").forEach(item => item.classList.toggle("active", item.dataset.dealMode === "now"));
+          renderDealFeed();
+          document.getElementById("live-deals")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        },
+        () => {
+          button.disabled = false;
+          button.textContent = "📍 Meinen Standort verwenden";
+          if (status) status.textContent = "Standortfreigabe war nicht verfügbar. Du kannst Wiener Deals trotzdem ansehen.";
+        },
+        { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 }
+      );
+    });
+
+    loadAutomaticDealFeed();
   </script>
 <script defer="True" src="/assets/js/site.js"></script></body>
 </html>
