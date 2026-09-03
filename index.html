@@ -1,44 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCPTVZJSXR"></script>
-  <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CCPTVZJSXR"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-CCPTVZJSXR");
   </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Happy Hour Near Me in Vienna | BarDeals</title>
-  <meta name="description" content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues with Google Maps directions.">
-  <link rel="canonical" href="https://bardeals.at/">
-
-  <link rel="alternate" hreflang="en" href="https://bardeals.at/">
-  <link rel="alternate" hreflang="de" href="https://bardeals.at/de/">
-  <link rel="alternate" hreflang="x-default" href="https://bardeals.at/">
-
-  <meta property="og:title" content="Happy Hour Near Me in Vienna | BarDeals">
-  <meta property="og:description" content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues.">
-  <meta property="og:url" content="https://bardeals.at/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="BarDeals Vienna">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/assets/css/launch.css">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Happy Hour Near Me in Vienna | BarDeals</title>
+<meta content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues with Google Maps directions." name="description"/>
+<link href="https://bardeals.at/" rel="canonical"/>
+<link href="https://bardeals.at/" hreflang="en" rel="alternate"/>
+<link href="https://bardeals.at/de/" hreflang="de" rel="alternate"/>
+<link href="https://bardeals.at/" hreflang="x-default" rel="alternate"/>
+<meta content="Happy Hour Near Me in Vienna | BarDeals" property="og:title"/>
+<meta content="Find happy hour deals near you in Vienna today. Discover drink offers, cocktail specials, beer deals, pubs, sports bars and nightlife venues." property="og:description"/>
+<meta content="https://bardeals.at/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="BarDeals Vienna" property="og:site_name"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Playfair+Display:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/launch.css" rel="stylesheet"/>
+<style>
     .nav-wrap {
       display: flex;
       align-items: center;
@@ -1249,716 +1242,178 @@
       .live-deal-distance { font-size:9px; }
     }
 
-  
-
-    /* ===== Mobile UX v2: compact, fast and thumb-friendly ===== */
-    .mobile-menu,
-    .mobile-home-extras,
-    .mobile-bottom-nav { display: none; }
-
-    .logo span {
-      background: transparent;
-      padding: 0;
-      color: var(--bd-orange);
-    }
-
-    .search-hero { margin-bottom: 0; }
-
-    @media (max-width: 760px) {
-      html { scroll-padding-top: 124px; }
-      body { padding-bottom: 76px; overflow-x: hidden; }
-      .page { padding: 0 14px; }
-
-      .top-nav {
-        min-height: 58px;
-        height: 58px;
-        padding: 0;
-        margin: 0 -14px;
-        padding-inline: 14px;
-        display: grid;
-        grid-template-columns: 44px 1fr auto;
-        gap: 8px;
-        border-bottom: 1px solid #ececec;
-      }
-      .top-nav .logo {
-        justify-self: center;
-        font-size: 20px;
-        white-space: nowrap;
-      }
-      .nav-wrap { margin: 0; justify-self: end; }
-      .nav-links { display: none !important; }
-      .language-switcher { padding: 2px; gap: 2px; }
-      .language-switcher a { font-size: 10px; padding: 6px 7px; }
-
-      .mobile-menu { display: block; position: relative; z-index: 70; }
-      .mobile-menu summary {
-        list-style: none;
-        width: 40px;
-        height: 40px;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 800;
-        border-radius: 10px;
-      }
-      .mobile-menu summary::-webkit-details-marker { display:none; }
-      .mobile-menu[open] summary { background:#f4f6f4; }
-      .mobile-menu-panel {
-        position: absolute;
-        top: 48px;
-        left: 0;
-        width: 190px;
-        padding: 8px;
-        background:#fff;
-        border:1px solid #e4e4e4;
-        border-radius:14px;
-        box-shadow:0 16px 40px rgba(0,0,0,.14);
-        display:grid;
-        gap:3px;
-      }
-      .mobile-menu-panel a {
-        text-decoration:none;
-        padding:11px 12px;
-        border-radius:9px;
-        font-size:13px;
-        font-weight:800;
-      }
-      .mobile-menu-panel a.active { background:#edf7f0; color:var(--bd-green-dark); }
-
-      .search-hero {
-        padding: 22px 0 20px;
-        margin: 0;
-        text-align: center;
-      }
-      .search-hero-inner { max-width: 520px; }
-      .search-hero-kicker {
-        font-size: 9px;
-        margin-bottom: 7px;
-        letter-spacing: .13em;
-      }
-      .search-hero h1 {
-        font-size: clamp(34px, 10.5vw, 46px);
-        line-height: .98;
-        letter-spacing: -.045em;
-      }
-      .search-hero-subtitle {
-        margin: 10px auto 14px;
-        font-size: 13px;
-        line-height: 1.45;
-        max-width: 360px;
-      }
-      .hero-search { max-width: 460px; }
-      .hero-search-icon { left: 14px; font-size: 19px; }
-      .hero-search input {
-        height: 46px;
-        border-radius: 12px;
-        padding-left: 42px;
-        font-size: 13px;
-        box-shadow: 0 4px 16px rgba(0,0,0,.05);
-      }
-      .hero-actions {
-        max-width: 460px;
-        margin: 9px auto 0;
-        gap: 7px;
-      }
-      .near-me-btn,
-      .browse-bars-btn {
-        min-height: 45px;
-        border-radius: 10px;
-        font-size: 13px;
-      }
-      .near-me-btn { box-shadow: none; }
-      .hero-trust {
-        max-width: 460px;
-        margin: 10px auto 0;
-        justify-content: center;
-        gap: 5px 10px;
-        font-size: 9px;
-      }
-
-      .live-deals {
-        padding-top: 20px;
-        margin-bottom: 24px;
-        border-top: 1px solid #ececec;
-      }
-      .live-deals-head { margin-bottom: 12px; }
-      .live-deals .section-kicker {
-        text-align: left;
-        margin-bottom: 5px;
-        font-size: 9px;
-      }
-      .live-deals .section-title {
-        text-align: left;
-        font-size: 29px;
-        line-height: 1.02;
-        margin-bottom: 0;
-      }
-      .live-deals-intro {
-        margin-top: 6px;
-        font-size: 11px;
-        line-height: 1.45;
-      }
-
-      .deal-feed-toolbar {
-        position: sticky;
-        top: 58px;
-        z-index: 35;
-        background: rgba(255,255,255,.97);
-        backdrop-filter: blur(10px);
-        margin: 0 -14px 12px;
-        padding: 8px 14px 9px;
-        border-top: 1px solid #f0f0f0;
-        border-bottom: 1px solid #e6e6e6;
-        display: grid;
-        gap: 7px;
-      }
-      .deal-feed-filters {
-        display: grid;
-        grid-template-columns: repeat(3,minmax(0,1fr));
-        gap: 6px;
-      }
-      .deal-feed-filter {
-        min-height: 36px;
-        padding: 0 5px;
-        font-size: 10px;
-        white-space: nowrap;
-      }
-      .deal-feed-status {
-        font-size: 10px;
-        line-height: 1.25;
-        min-height: 13px;
-      }
-
-      .deal-browser-shell { display: block; }
-      .deal-sidebar { position: static; margin-bottom: 10px; }
-      .sidebar-block h3 { margin: 0 0 6px; font-size: 10px; }
-      .district-filter-list {
-        display: flex;
-        gap: 6px;
-        overflow-x: auto;
-        padding: 1px 0 5px;
-        margin-right: -14px;
-        padding-right: 14px;
-        scroll-snap-type: x proximity;
-      }
-      .district-filter {
-        flex: 0 0 auto;
-        min-height: 34px;
-        padding: 0 10px;
-        border-radius: 999px;
-        scroll-snap-align: start;
-      }
-      .district-filter strong { font-size: 10px; }
-      .district-filter span { display: none; }
-      .district-filter.active { box-shadow: none; }
-      .sidebar-info-card, .sidebar-bars-link { display: none; }
-
-      .deal-feed-grid { grid-template-columns: 1fr; gap: 9px; }
-      .live-deal-card {
-        display: grid;
-        grid-template-columns: 112px minmax(0,1fr);
-        min-height: 158px;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0,0,0,.055);
-      }
-      .live-deal-card:hover { transform:none; }
-      .live-deal-media { min-height: 100%; aspect-ratio: auto; }
-      .live-deal-image { min-height: 100%; }
-      .live-deal-badge {
-        left: 6px;
-        top: 6px;
-        padding: 5px 6px;
-        font-size: 7px;
-      }
-      .live-deal-body { padding: 10px; min-width: 0; }
-      .live-deal-title-row { gap: 5px; }
-      .live-deal-card h3 {
-        font-size: 14px;
-        line-height: 1.15;
-        overflow-wrap: anywhere;
-      }
-      .live-deal-distance {
-        font-size: 8px;
-        line-height: 1.15;
-      }
-      .live-deal-offer {
-        font-size: 12px;
-        line-height: 1.28;
-        margin: 3px 0 6px;
-        min-height: 0;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .live-deal-meta-row { gap: 5px; font-size: 8px; }
-      .district-chip { padding: 1px 5px; }
-      .live-deal-address { display: none; }
-      .live-deal-verified {
-        margin-top: 5px;
-        font-size: 7px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .live-deal-actions {
-        grid-template-columns: minmax(0,1fr) auto;
-        gap: 5px;
-        margin-top: auto;
-        padding-top: 6px;
-      }
-      .live-deal-actions a {
-        min-height: 32px;
-        padding: 0 7px;
-        border-radius: 7px;
-        font-size: 8px;
-      }
-      .live-deal-directions {
-        background: var(--bd-green);
-        border-color: var(--bd-green);
-        color: #fff;
-      }
-      .live-deal-directions:hover { color:#fff; }
-
-      .mobile-hide-legacy { display: none !important; }
-
-      .mobile-home-extras {
-        display: grid;
-        gap: 14px;
-        margin: 22px 0 28px;
-      }
-      .mobile-extra-block {
-        border: 1px solid #e7e7e7;
-        border-radius: 14px;
-        padding: 14px;
-        background: #fff;
-      }
-      .mobile-extra-heading {
-        display:flex;
-        align-items:flex-end;
-        justify-content:space-between;
-        gap:10px;
-        margin-bottom:10px;
-      }
-      .mobile-extra-heading a {
-        color:var(--bd-green-dark);
-        font-size:10px;
-        font-weight:850;
-        text-decoration:none;
-      }
-      .mobile-extra-kicker {
-        margin:0 0 3px;
-        color:var(--bd-green);
-        text-transform:uppercase;
-        letter-spacing:.1em;
-        font-size:8px;
-        font-weight:900;
-      }
-      .mobile-extra-block h2 {
-        margin:0;
-        font-family:"Playfair Display",Georgia,serif;
-        font-size:21px;
-        line-height:1;
-      }
-      .mobile-district-rail {
-        display:flex;
-        gap:7px;
-        overflow-x:auto;
-        margin-right:-14px;
-        padding-right:14px;
-        scrollbar-width:none;
-      }
-      .mobile-district-rail::-webkit-scrollbar { display:none; }
-      .mobile-district-rail button {
-        flex:0 0 94px;
-        min-height:57px;
-        text-align:left;
-        padding:8px 10px;
-        border:1px solid #e1e1e1;
-        border-radius:10px;
-        background:#fafafa;
-        font:inherit;
-        cursor:pointer;
-      }
-      .mobile-district-rail strong,
-      .mobile-district-rail span { display:block; }
-      .mobile-district-rail strong { font-size:12px; }
-      .mobile-district-rail span { margin-top:2px; color:#777; font-size:8px; }
-      .mobile-district-rail button.active { border-color:#9fd3ad; background:#f1faf3; }
-
-      .how-mobile h2 { margin-bottom: 11px; }
-      .mobile-how-grid { display:grid; gap:8px; }
-      .mobile-how-grid > div {
-        display:grid;
-        grid-template-columns:24px 90px 1fr;
-        align-items:center;
-        gap:7px;
-        min-height:36px;
-      }
-      .mobile-how-grid b {
-        width:22px;height:22px;border-radius:50%;
-        display:grid;place-items:center;
-        background:#edf7f0;color:var(--bd-green-dark);
-        font-size:9px;
-      }
-      .mobile-how-grid strong { font-size:10px; }
-      .mobile-how-grid span { color:#777; font-size:9px; line-height:1.3; }
-
-      .mobile-for-bars {
-        display:grid;
-        grid-template-columns:1fr auto;
-        gap:2px 8px;
-        align-items:center;
-        padding:14px 15px;
-        border-radius:14px;
-        background:#f3f8f4;
-        border:1px solid #d9ebdd;
-        text-decoration:none;
-      }
-      .mobile-for-bars span { font-size:9px; color:#657067; }
-      .mobile-for-bars strong { grid-column:1; font-size:12px; }
-      .mobile-for-bars b { grid-column:2; grid-row:1 / span 2; color:var(--bd-green); font-size:20px; }
-
-      .footer {
-        margin-top: 24px;
-        padding: 22px 14px 92px;
-      }
-      .footer-inner { gap: 16px; }
-      .footer-brand { font-size: 18px; }
-      .footer p, .footer-links, .footer-note { font-size: 10px; }
-
-      .mobile-bottom-nav {
-        position: fixed;
-        z-index: 80;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 66px;
-        padding: 6px max(8px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
-        background: rgba(255,255,255,.97);
-        backdrop-filter: blur(14px);
-        border-top: 1px solid #dedede;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        box-shadow: 0 -6px 22px rgba(0,0,0,.06);
-      }
-      .mobile-bottom-nav a,
-      .mobile-bottom-nav button {
-        appearance:none;
-        border:0;
-        background:transparent;
-        color:#555;
-        text-decoration:none;
-        font:inherit;
-        font-size:8px;
-        font-weight:800;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:3px;
-        cursor:pointer;
-      }
-      .mobile-bottom-nav span { font-size:17px; line-height:1; }
-      .mobile-bottom-nav .active { color:var(--bd-green); }
-    }
-
-    @media (max-width: 370px) {
-      .search-hero h1 { font-size: 32px; }
-      .live-deal-card { grid-template-columns: 102px minmax(0,1fr); }
-      .live-deal-card h3 { font-size:13px; }
-      .live-deal-offer { font-size:11px; }
-    }
-
   </style>
-</head>
-
+<link href="/assets/css/site.css" rel="stylesheet"/></head>
 <body>
-
-  <main class="page">
-
-    <nav class="top-nav">
-      <details class="mobile-menu">
-        <summary aria-label="Open navigation">☰</summary>
-        <div class="mobile-menu-panel">
-          <a class="active" href="/">Deals</a>
-          <a href="/bars.html">Bars</a>
-          <a href="/clubs.html">Clubs</a>
-          <a href="/for-bars.html">For Bars</a>
-          <a href="/blog.html">Blog</a>
-        </div>
-      </details>
-
-      <a class="logo" href="/">BAR<span>DEALS</span></a>
-
-      <div class="nav-wrap">
-        <div class="nav-links">
-          <a class="active" href="/">Deals</a>
-          <a href="/bars.html">Bars</a>
-          <a href="/clubs.html">Clubs</a>
-          <a href="/for-bars.html">For Bars</a>
-          <a href="/blog.html">Blog</a>
-        </div>
-
-        <div class="language-switcher" aria-label="Language selector">
-          <a class="active" href="/" hreflang="en" lang="en">EN</a>
-          <a href="/de/" hreflang="de" lang="de">DE</a>
-        </div> 
-      </div>
-    </nav>
-
-    <section class="hero search-hero" aria-labelledby="pageTitle">
-      <div class="search-hero-inner">
-        <p class="search-hero-kicker">Vienna · live bar deals</p>
-        <h1 id="pageTitle">Happy Hour Near Me in Vienna</h1>
-        <p class="search-hero-subtitle">Find cocktail deals, beer specials and happy hours from official venue sources — fast.</p>
-
-        <div class="hero-search" role="search">
-          <span class="hero-search-icon" aria-hidden="true">⌕</span>
-          <input id="dealSearchInput" type="search" autocomplete="off" placeholder="Search by bar, deal or area…" aria-label="Search happy hour deals">
-        </div>
-
-        <div class="hero-actions">
-          <button id="dealNearMeBtn" class="near-me-btn" type="button">📍 Use my location</button>
-          <a class="browse-bars-btn" href="/bars.html">Browse all bars</a>
-        </div>
-
-        <div class="hero-trust" aria-label="BarDeals data information">
-          <span>✓ Official venue sources</span>
-          <span>✓ Updated daily</span>
-          <span>✓ Google Maps directions</span>
-        </div>
-      </div>
-
-      <!-- Kept for the existing featured-venue JavaScript. Hidden visually so legacy functionality does not break. -->
-      <article id="heroCard" class="venue-card hero-card legacy-hero-data" tabindex="-1" aria-hidden="true">
-        <img id="heroImage" src="/assets/img/bars/hard-rock-cafe.webp" alt="">
-        <div class="venue-info">
-          <h2 id="heroName">Hard Rock Cafe Vienna</h2>
-          <p id="heroDescription">American restaurant and bar in the city centre.</p>
-          <div id="heroTags" class="tags"></div>
-          <div class="card-actions">
-            <a id="heroMap" class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Vienna" target="_blank" rel="noopener">Google Maps</a>
-            <a id="heroLink" class="btn btn-dark" href="/bars/hard-rock-cafe-vienna.html">View Deal</a>
-          </div>
-        </div>
-        <div id="heroDots" class="hero-dots"></div>
-      </article>
-    </section>
-
-    <section id="live-deals" class="section live-deals" aria-labelledby="liveDealsTitle">
-      <div class="live-deals-head">
-        <div>
-          <p class="section-kicker">Deals in Vienna</p>
-          <h2 id="liveDealsTitle" class="section-title">Happy hours near you</h2>
-          <p class="live-deals-intro">Open a deal, check the official source, then get directions in Google Maps.</p>
-        </div>
-      </div>
-
-      <div class="deal-feed-toolbar">
-        <div class="deal-feed-filters" aria-label="Deal time filter">
-          <button class="deal-feed-filter active" type="button" data-deal-mode="now">● Open now</button>
-          <button class="deal-feed-filter" type="button" data-deal-mode="today">Today</button>
-          <button class="deal-feed-filter" type="button" data-deal-mode="all">All deals</button>
-        </div>
-        <p id="dealFeedStatus" class="deal-feed-status" aria-live="polite">Loading current deals…</p>
-      </div>
-
-      <div class="deal-browser-shell">
-        <aside class="deal-sidebar" aria-label="Filter deals by district">
-          <div id="districtFilters" class="sidebar-block">
-            <h3>Filter by district</h3>
-            <div class="district-filter-list">
-              <button class="district-filter active" type="button" data-deal-district="all">All districts</button>
-              <button class="district-filter" type="button" data-deal-district="1010"><strong>1010</strong><span>Innere Stadt</span></button>
-              <button class="district-filter" type="button" data-deal-district="1030"><strong>1030</strong><span>Landstraße</span></button>
-              <button class="district-filter" type="button" data-deal-district="1060"><strong>1060</strong><span>Mariahilf</span></button>
-              <button class="district-filter" type="button" data-deal-district="1070"><strong>1070</strong><span>Neubau</span></button>
-              <button class="district-filter" type="button" data-deal-district="1080"><strong>1080</strong><span>Josefstadt</span></button>
-              <button class="district-filter" type="button" data-deal-district="1100"><strong>1100</strong><span>Favoriten</span></button>
-              <button class="district-filter" type="button" data-deal-district="1110"><strong>1110</strong><span>Simmering</span></button>
-            </div>
-          </div>
-
-          <div class="sidebar-info-card">
-            <span class="sidebar-info-icon" aria-hidden="true">✓</span>
-            <strong>Checked from official sources</strong>
-            <p>Automatic deal data is refreshed every day. Always confirm details on the source before ordering.</p>
-          </div>
-
-          <a class="sidebar-bars-link" href="/bars.html">Browse all Vienna bars →</a>
-        </aside>
-
-        <div class="deal-results">
-          <div id="dealFeedGrid" class="deal-feed-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="swipe" class="section swiper-section show">
-      <p class="section-kicker">Quick Picks</p>
-      <h2 class="section-title">Swipe Venues</h2>
-
-      <div id="swipeStack" class="tinder-stack"></div>
-
-      <div class="swipe-actions">
-        <button class="filter-btn" type="button" onclick="prevCard()">Back</button>
-        <button class="filter-btn" type="button" onclick="nextCard()">Next Venue</button>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="section-kicker">Categories</p>
-
-      <div class="home-district-grid">
-        <button type="button" data-home-district="1010"><strong>1010</strong><span>Innere Stadt</span></button>
-        <button type="button" data-home-district="1030"><strong>1030</strong><span>Landstraße</span></button>
-        <button type="button" data-home-district="1060"><strong>1060</strong><span>Mariahilf</span></button>
-        <button type="button" data-home-district="1070"><strong>1070</strong><span>Neubau</span></button>
-        <button type="button" data-home-district="1080"><strong>1080</strong><span>Josefstadt</span></button>
-        <button type="button" data-home-district="1100"><strong>1100</strong><span>Favoriten</span></button>
-      </div>
-    </section>
-
-    <section id="featured" class="section">
-      <p class="section-kicker">Bars and Pubs</p>
-      <h2 class="section-title">Featured Venues</h2>
-
-      <div id="barsGrid" class="grid"></div>
-    </section>
-
-    <section class="section">
-      <p class="section-kicker">Nightlife</p>
-      <h2 class="section-title">Clubs</h2>
-
-      <div id="clubsGrid" class="grid"></div>
-    </section>
-
-    <section class="section seo-copy">
-      <p class="section-kicker">Happy hour near me</p>
-      <h2 class="section-title">Find happy hour deals near you in Vienna</h2>
-      <p>
-        Looking for happy hour near me in Vienna? BarDeals helps you find bars, pubs, sports bars,
-        cocktail bars and nightlife venues with drink offers, beer specials, cocktail deals and
-        Google Maps directions. Browse venues, check the deal details and open the location in
-        Google Maps before you visit.
-      </p>
-    </section>
-
-    <section class="section">
-      <div class="platform-cta">
-        <div>
-          <p class="section-kicker">Simple and fast</p>
-          <h2 id="howTitle" class="section-title">How BarDeals works</h2>
-        </div>
-      </div>
-
-      <div class="home-how-grid">
-        <article>
-          <span>1</span>
-          <h3>Use your location</h3>
-          <p>Allow location once and we sort Vienna deals by distance.</p>
-        </article>
-        <article>
-          <span>2</span>
-          <h3>Pick a live deal</h3>
-          <p>See the offer, time, venue and official source without digging around.</p>
-        </article>
-        <article>
-          <span>3</span>
-          <h3>Open Google Maps</h3>
-          <p>Get directions and check the venue details before you go.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="section-kicker">Before You Go</p>
-      <h2 class="section-title">FAQ</h2>
-
-      <div class="faq">
-        <details>
-          <summary>Are all deals confirmed?</summary>
-          <p>
-            Confirmed offers are shown when a venue publishes them or the information was already checked.
-            If a deal is not fully confirmed, the page tells you to check directly with the venue.
-          </p>
-        </details>
-
-        <details>
-          <summary>Why do most cards use placeholder images?</summary>
-          <p>
-            BarDeals only uses owned, supplied or legal placeholder images.
-            We do not copy Google Maps guest photos or random image-search photos.
-          </p>
-        </details>
-
-        <details>
-          <summary>How should I use the Google Maps buttons?</summary>
-          <p>
-            Open the venue in Google Maps, check directions, current opening times and recent venue updates before visiting.
-          </p>
-        </details>
-
-        <details>
-          <summary>Can a venue get a full bar page?</summary>
-          <p>
-            Yes. Full pages can include real photos, official offers, events and richer venue details once the information is confirmed.
-          </p>
-        </details>
-
-        <details>
-          <summary>How can a bar update or claim a listing?</summary>
-          <p>
-            Bar owners and managers can use the For Bars page to send updated information, official deals,
-            photos, opening hours and group booking details.
-          </p>
-        </details>
-      </div>
-      <a class="home-for-bars-btn" href="/for-bars.html">List your bar →</a>
-    </section>
-
-    <section class="section home-seo-copy" aria-label="About BarDeals Vienna">
-      <p>BarDeals helps people find happy hours, cocktail specials, beer deals and bar offers near them in Vienna. Deal information is checked against official venue sources and refreshed regularly. Prices, times and availability can change, so always confirm the current offer before ordering.</p>
-    </section>
-
-  </main>
-
-  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
-    <a class="active" href="#live-deals"><span>◆</span>Deals</a>
-    <button type="button" onclick="document.getElementById('dealNearMeBtn')?.click()"><span>⌖</span>Near me</button>
-    <a href="#districtFilters"><span>▦</span>Districts</a>
-    <a href="/for-bars.html"><span>♙</span>For Bars</a>
-  </nav>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">BAR<span>DEALS</span></div>
-        <p>
+<main class="page">
+<nav aria-label="Primary navigation" class="top-nav site-nav">
+<a aria-label="BarDeals home" class="logo" href="/">BAR<span>DEALS</span></a>
+<button aria-controls="siteNavPanel" aria-expanded="false" aria-label="Menu" class="site-menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-wrap" id="siteNavPanel">
+<div class="nav-links"><a aria-current="page" class="active" href="/">Deals</a><a href="/bars.html">Bars</a><a href="/clubs.html">Clubs</a><a href="/for-bars.html">For Bars</a><a href="/blog.html">Blog</a></div>
+<div aria-label="Language selector" class="language-switcher">
+<a class="active" href="/" hreflang="en" lang="en">EN</a>
+<a href="/de/" hreflang="de-AT" lang="de">DE</a>
+</div>
+</div>
+</nav>
+<section aria-labelledby="pageTitle" class="hero search-hero">
+<div class="search-hero-inner">
+<p class="search-hero-kicker">Vienna · live bar deals</p>
+<h1 id="pageTitle">Happy Hour Near Me in Vienna</h1>
+<p class="search-hero-subtitle">Find cocktail deals, beer specials and happy hours from official venue sources — fast.</p>
+<div class="hero-search" role="search">
+<span aria-hidden="true" class="hero-search-icon">⌕</span>
+<input aria-label="Search happy hour deals" autocomplete="off" id="dealSearchInput" placeholder="Search by bar, deal or area…" type="search"/>
+</div>
+<div class="hero-actions">
+<button class="near-me-btn" id="dealNearMeBtn" type="button">📍 Use my location</button>
+<a class="browse-bars-btn" href="/bars.html">Browse all bars</a>
+</div>
+<div aria-label="BarDeals data information" class="hero-trust">
+<span>✓ Official venue sources</span>
+<span>✓ Updated daily</span>
+<span>✓ Google Maps directions</span>
+</div>
+</div>
+<!-- Kept for the existing featured-venue JavaScript. Hidden visually so legacy functionality does not break. -->
+<article aria-hidden="true" class="venue-card hero-card legacy-hero-data" id="heroCard" tabindex="-1">
+<img alt="" id="heroImage" src="/assets/img/bars/hard-rock-cafe.webp"/>
+<div class="venue-info">
+<h2 id="heroName">Hard Rock Cafe Vienna</h2>
+<p id="heroDescription">American restaurant and bar in the city centre.</p>
+<div class="tags" id="heroTags"></div>
+<div class="card-actions">
+<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&amp;query=Hard+Rock+Cafe+Vienna" id="heroMap" rel="noopener" target="_blank">Google Maps</a>
+<a class="btn btn-dark" href="/bars/hard-rock-cafe-vienna.html" id="heroLink">View Deal</a>
+</div>
+</div>
+<div class="hero-dots" id="heroDots"></div>
+</article>
+</section>
+<section aria-labelledby="liveDealsTitle" class="section live-deals" id="live-deals">
+<div class="live-deals-head">
+<div>
+<p class="section-kicker">Deals in Vienna</p>
+<h2 class="section-title" id="liveDealsTitle">Happy hours near you</h2>
+<p class="live-deals-intro">Open a deal, check the official source, then get directions in Google Maps.</p>
+</div>
+</div>
+<div class="deal-feed-toolbar">
+<div aria-label="Deal time filter" class="deal-feed-filters">
+<button class="deal-feed-filter active" data-deal-mode="now" type="button">● Open now</button>
+<button class="deal-feed-filter" data-deal-mode="today" type="button">Today</button>
+<button class="deal-feed-filter" data-deal-mode="all" type="button">All deals</button>
+</div>
+<p aria-live="polite" class="deal-feed-status" id="dealFeedStatus">Loading current deals…</p>
+</div>
+<div class="deal-browser-shell">
+<aside aria-label="Filter deals by district" class="deal-sidebar">
+<div class="sidebar-block">
+<h3>Filter by district</h3>
+<div class="district-filter-list">
+<button class="district-filter active" data-deal-district="all" type="button">All districts</button>
+<button class="district-filter" data-deal-district="1010" type="button"><strong>1010</strong><span>Innere Stadt</span></button>
+<button class="district-filter" data-deal-district="1030" type="button"><strong>1030</strong><span>Landstraße</span></button>
+<button class="district-filter" data-deal-district="1060" type="button"><strong>1060</strong><span>Mariahilf</span></button>
+<button class="district-filter" data-deal-district="1070" type="button"><strong>1070</strong><span>Neubau</span></button>
+<button class="district-filter" data-deal-district="1080" type="button"><strong>1080</strong><span>Josefstadt</span></button>
+<button class="district-filter" data-deal-district="1100" type="button"><strong>1100</strong><span>Favoriten</span></button>
+<button class="district-filter" data-deal-district="1110" type="button"><strong>1110</strong><span>Simmering</span></button>
+</div>
+</div>
+<div class="sidebar-info-card">
+<span aria-hidden="true" class="sidebar-info-icon">✓</span>
+<strong>Checked from official sources</strong>
+<p>Automatic deal data is refreshed every day. Always confirm details on the source before ordering.</p>
+</div>
+<a class="sidebar-bars-link" href="/bars.html">Browse all Vienna bars →</a>
+</aside>
+<div class="deal-results">
+<div class="deal-feed-grid" id="dealFeedGrid"></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="districtsTitle" class="section home-discovery" id="districts">
+<div class="home-section-head">
+<div>
+<p class="section-kicker">Popular areas</p>
+<h2 class="section-title" id="districtsTitle">Browse Vienna by district</h2>
+</div>
+<a class="home-text-link" href="/bars.html">See all bars →</a>
+</div>
+<div class="home-district-grid">
+<button data-home-district="1010" type="button"><strong>1010</strong><span>Innere Stadt</span></button>
+<button data-home-district="1030" type="button"><strong>1030</strong><span>Landstraße</span></button>
+<button data-home-district="1060" type="button"><strong>1060</strong><span>Mariahilf</span></button>
+<button data-home-district="1070" type="button"><strong>1070</strong><span>Neubau</span></button>
+<button data-home-district="1080" type="button"><strong>1080</strong><span>Josefstadt</span></button>
+<button data-home-district="1100" type="button"><strong>1100</strong><span>Favoriten</span></button>
+</div>
+</section>
+<section aria-labelledby="howTitle" class="section home-how">
+<div class="home-section-head">
+<div>
+<p class="section-kicker">Simple and fast</p>
+<h2 class="section-title" id="howTitle">How BarDeals works</h2>
+</div>
+</div>
+<div class="home-how-grid">
+<article>
+<span>1</span>
+<h3>Use your location</h3>
+<p>Allow location once and we sort Vienna deals by distance.</p>
+</article>
+<article>
+<span>2</span>
+<h3>Pick a live deal</h3>
+<p>See the offer, time, venue and official source without digging around.</p>
+</article>
+<article>
+<span>3</span>
+<h3>Open Google Maps</h3>
+<p>Get directions and check the venue details before you go.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="forBarsTitle" class="section home-for-bars">
+<div class="home-for-bars-copy">
+<p class="section-kicker">For Bars</p>
+<h2 class="section-title" id="forBarsTitle">Own a bar in Vienna?</h2>
+<p>Get your happy hour or drink deal in front of people actively looking for somewhere to go.</p>
+</div>
+<a class="home-for-bars-btn" href="/for-bars.html">List your bar →</a>
+</section>
+<section aria-label="About BarDeals Vienna" class="section home-seo-copy">
+<p>BarDeals helps people find happy hours, cocktail specials, beer deals and bar offers near them in Vienna. Deal information is checked against official venue sources and refreshed regularly. Prices, times and availability can change, so always confirm the current offer before ordering.</p>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-inner">
+<div>
+<div class="footer-brand">BAR<span>DEALS</span></div>
+<p>
           Happy hours, drink deals, sports bars, clubs and group-friendly venues in Vienna.
           Built for tourists, students, expats and locals looking for a better night out.
         </p>
-      </div>
-
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/bars.html">Bars</a>
-        <a href="/clubs.html">Clubs</a>
-        <a href="/for-bars.html">For Bars</a>
-        <a href="/blog.html">Blog</a>
-        <a href="mailto:hello@bardeals.at">Contact</a>
-      </div>
+</div>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/bars.html">Bars</a>
+<a href="/clubs.html">Clubs</a>
+<a href="/for-bars.html">For Bars</a>
+<a href="/blog.html">Blog</a>
+<a href="mailto:hello@bardeals.at">Contact</a>
+</div>
+</div>
+<div class="footer-note">
+      Deals, prices, opening times and events can change. Always check directly with the venue before visiting.<br/>
+      Automatic venue discovery may use <a href="https://www.openstreetmap.org/copyright" rel="noopener" style="color:inherit" target="_blank">© OpenStreetMap contributors</a>.
     </div>
-
-    <div class="footer-note">
-      Deals, prices, opening times and events can change. Always check directly with the venue before visiting.<br>
-      Automatic venue discovery may use <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color:inherit">© OpenStreetMap contributors</a>.
-    </div>
-  </footer>
-
-  <script>
+</footer>
+<script>
     const img = {
       belushis: "/assets/img/bars/belushis1.jpg",
       longHall: "/assets/img/bars/The-Long-Hall-Bar-Vienna.webp",
@@ -2662,7 +2117,7 @@
     document.querySelectorAll("[data-deal-district]").forEach(button => {
       button.addEventListener("click", () => {
         dealFeedDistrict = button.dataset.dealDistrict || "all";
-        document.querySelectorAll("[data-deal-district]").forEach(item => item.classList.toggle("active", item.dataset.dealDistrict === dealFeedDistrict));
+        document.querySelectorAll("[data-deal-district]").forEach(item => item.classList.toggle("active", item === button));
         renderDealFeed();
       });
     });
@@ -2708,6 +2163,5 @@
 
     loadAutomaticDealFeed();
   </script>
-
-</body>
+<script defer="True" src="/assets/js/site.js"></script></body>
 </html>
