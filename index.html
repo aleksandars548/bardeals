@@ -2030,29 +2030,69 @@
         .filter(deal => !/\bno\s+deals?\b/i.test(deal?.text || ""));
     }
 
+    function dealFeedVenueMergeKey(venue) {
+      // Treat common city suffixes as the same venue name, e.g.
+      // "Travelshack" (manual) and "Travelshack Vienna" (crawler).
+      return dealFeedNormalizeName(venue?.name || "")
+        .replace(/(?:vienna|wien)$/i, "");
+    }
+
     function mergeDealFeedVenues(manual, automatic) {
       const byName = new Map();
-      for (const sourceVenue of [...manual, ...automatic]) {
-        if (!sourceVenue?.name || !Number.isFinite(Number(sourceVenue.lat)) || !Number.isFinite(Number(sourceVenue.lng))) continue;
-        const key = dealFeedNormalizeName(sourceVenue.name);
+
+      function mergeVenue(sourceVenue, isAutomatic) {
+        if (!sourceVenue?.name || !Number.isFinite(Number(sourceVenue.lat)) || !Number.isFinite(Number(sourceVenue.lng))) return;
+        const key = dealFeedVenueMergeKey(sourceVenue);
         const deals = dealFeedValidDeals(sourceVenue);
-        if (!deals.length) continue;
+        if (!key || !deals.length) return;
 
         if (!byName.has(key)) {
-          byName.set(key, { ...sourceVenue, lat: Number(sourceVenue.lat), lng: Number(sourceVenue.lng), deals: [] });
+          byName.set(key, {
+            ...sourceVenue,
+            lat: Number(sourceVenue.lat),
+            lng: Number(sourceVenue.lng),
+            deals: [],
+            __hasAutomaticDeals: false
+          });
         }
+
         const target = byName.get(key);
+
+        // Crawler data wins over bars.json for a venue it successfully covers.
+        // This prevents the same bar from appearing twice with an old manual
+        // deal and a newly verified automatic deal. bars.json remains a fallback
+        // for venues that have no valid crawler deals.
+        if (isAutomatic && !target.__hasAutomaticDeals) {
+          target.deals = [];
+          target.__hasAutomaticDeals = true;
+        }
+        if (!isAutomatic && target.__hasAutomaticDeals) return;
+
         for (const deal of deals) {
           const mergeKey = dealFeedMergeKey(deal);
           const existingIndex = target.deals.findIndex(old => dealFeedMergeKey(old) === mergeKey);
           if (existingIndex === -1) target.deals.push(deal);
           else if (Number(deal.confidence || 0) > Number(target.deals[existingIndex].confidence || 0)) target.deals[existingIndex] = deal;
         }
-        if (sourceVenue.website && !target.website) target.website = sourceVenue.website;
-        if (sourceVenue.image && (!target.image || sourceVenue.auto)) target.image = sourceVenue.image;
-        if (sourceVenue.imageSourceUrl && (!target.imageSourceUrl || sourceVenue.auto)) target.imageSourceUrl = sourceVenue.imageSourceUrl;
+
+        // Prefer fresh crawler metadata when available, but keep manual artwork
+        // as a fallback if the crawler did not find a validated image.
+        if (sourceVenue.website && (isAutomatic || !target.website)) target.website = sourceVenue.website;
+        if (sourceVenue.address && (isAutomatic || !target.address)) target.address = sourceVenue.address;
+        if (sourceVenue.zip && (isAutomatic || !target.zip)) target.zip = sourceVenue.zip;
+        if (sourceVenue.category && !target.category) target.category = sourceVenue.category;
+        if (sourceVenue.image && (isAutomatic || !target.image)) target.image = sourceVenue.image;
+        if (sourceVenue.imageSourceUrl && (isAutomatic || !target.imageSourceUrl)) target.imageSourceUrl = sourceVenue.imageSourceUrl;
+        if (isAutomatic) {
+          target.lat = Number(sourceVenue.lat);
+          target.lng = Number(sourceVenue.lng);
+        }
       }
-      return [...byName.values()];
+
+      for (const venue of manual) mergeVenue(venue, false);
+      for (const venue of automatic) mergeVenue(venue, true);
+
+      return [...byName.values()].map(({ __hasAutomaticDeals, ...venue }) => venue);
     }
 
     function viennaClock() {
