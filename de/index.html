@@ -1322,6 +1322,58 @@
       .placeholder-subline { font-size: 7px; letter-spacing: .1em; }
     }
 
+
+
+    /* Placeholder v3: media paints its own fallback, no nested markup. */
+    .live-deal-media.show-placeholder {
+      background: linear-gradient(145deg, #164b33, #0f3424) !important;
+    }
+    .live-deal-media.show-placeholder::before {
+      content: attr(data-placeholder) !important;
+      position: absolute !important;
+      inset: 0 !important;
+      display: grid !important;
+      place-items: center !important;
+      padding: 18px !important;
+      color: #fff !important;
+      background: transparent !important;
+      font-family: "Inter", Arial, sans-serif !important;
+      font-size: clamp(18px, 2.2vw, 26px) !important;
+      line-height: 1.05 !important;
+      letter-spacing: -.025em !important;
+      font-weight: 900 !important;
+      text-align: center !important;
+      text-transform: uppercase !important;
+      z-index: 1 !important;
+    }
+    .live-deal-media.show-placeholder::after {
+      content: "BARDEALS · VIENNA" !important;
+      position: absolute !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 18px !important;
+      display: block !important;
+      color: rgba(255,255,255,.62) !important;
+      background: transparent !important;
+      font-size: 8px !important;
+      line-height: 1 !important;
+      letter-spacing: .14em !important;
+      font-weight: 800 !important;
+      text-align: center !important;
+      z-index: 1 !important;
+    }
+    .live-deal-media.has-official-image::before,
+    .live-deal-media.has-official-image::after { content: none !important; }
+    @media (max-width: 760px) {
+      .live-deal-media.show-placeholder::before {
+        padding: 8px !important;
+        font-size: 12px !important;
+      }
+      .live-deal-media.show-placeholder::after {
+        bottom: 10px !important;
+        font-size: 6px !important;
+      }
+    }
 </style>
 <link href="/assets/css/site.css" rel="stylesheet"/></head>
 <body>
@@ -2115,17 +2167,6 @@
       })[kind] || "◇";
     }
 
-    function feedPlaceholderHtml(venue, deal) {
-      const kind = feedPlaceholderKind(venue, deal);
-      const label = feedPlaceholderLabel(kind);
-      const icon = feedPlaceholderIcon(kind);
-      return `<div class="live-deal-placeholder placeholder-${kind}" aria-hidden="true">
-        <span class="placeholder-icon">${icon}</span>
-        <strong>${label}</strong>
-        <span class="placeholder-subline">BARDEALS · WIEN</span>
-      </div>`;
-    }
-
     function feedCard(venue) {
       const deal = pickFeedDeal(venue);
       if (!deal) return "";
@@ -2134,13 +2175,11 @@
       const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
       const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
       const officialImageUrl = dealFeedSafeHttpUrl(venue.image || "");
-      const placeholderHtml = feedPlaceholderHtml(venue, deal);
       const verified = feedVerifiedLabel(deal);
       const district = dealFeedVenueDistrict(venue);
       return `
         <article class="live-deal-card">
-          <div class="live-deal-media ${officialImageUrl ? "has-official-image" : "show-placeholder"}">
-            ${placeholderHtml}
+          <div class="live-deal-media ${officialImageUrl ? "has-official-image" : "show-placeholder"}" data-placeholder="${dealFeedEscape(feedPlaceholderLabel(feedPlaceholderKind(venue, deal)))}">
             ${officialImageUrl ? `<img class="live-deal-image" src="${dealFeedEscape(officialImageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.onerror=null; this.remove(); this.parentElement.classList.remove('has-official-image'); this.parentElement.classList.add('show-placeholder');">` : ""}
             <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
           </div>
