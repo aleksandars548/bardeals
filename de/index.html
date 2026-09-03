@@ -851,16 +851,86 @@
     }
     .live-deal-media.image-failed::after,
     .live-deal-media:not(:has(img))::after {
-      content: "BARDEALS";
+      content: none !important;
+      display: none !important;
+    }
+
+    /* Clean branded fallback when a venue has no official photo. */
+    .live-deal-media.show-placeholder {
+      aspect-ratio: auto;
+      min-height: 152px;
+      background: #123c29;
+    }
+    .live-deal-placeholder {
       position: absolute;
       inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 20px;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,.07), transparent 30%),
+        linear-gradient(145deg, #164b33, #0f3424);
+    }
+    .live-deal-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 11px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+    .live-deal-placeholder > * { position: relative; z-index: 1; }
+    .placeholder-icon {
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      color: #aaa;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .14em;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      font-size: 17px;
+      line-height: 1;
     }
+    .live-deal-placeholder strong {
+      margin: 0;
+      color: #fff;
+      font-family: "Inter", Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: .02em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .placeholder-subline {
+      color: rgba(255,255,255,.66);
+      font-size: 9px;
+      line-height: 1;
+      letter-spacing: .16em;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .placeholder-club {
+      background: linear-gradient(145deg, #30233f, #1c1726);
+    }
+    .placeholder-bar {
+      color: #123c29;
+      background: linear-gradient(145deg, #f7f4ec, #ece7da);
+    }
+    .placeholder-bar::before { border-color: rgba(18,60,41,.13); }
+    .placeholder-bar .placeholder-icon {
+      border-color: rgba(18,60,41,.22);
+      background: rgba(18,60,41,.06);
+    }
+    .placeholder-bar strong { color: #123c29; }
+    .placeholder-bar .placeholder-subline { color: rgba(18,60,41,.58); }
+    .live-deal-media.has-official-image .live-deal-placeholder { display: none; }
+
 
     .live-deal-image {
       width: 100%;
@@ -1242,7 +1312,17 @@
       .live-deal-distance { font-size:9px; }
     }
 
-  </style>
+  
+    @media (max-width: 760px) {
+      .live-deal-media.show-placeholder { min-height: 112px; }
+      .live-deal-placeholder { gap: 5px; padding: 10px 8px; }
+      .live-deal-placeholder::before { inset: 6px; border-radius: 8px; }
+      .placeholder-icon { width: 27px; height: 27px; font-size: 14px; }
+      .live-deal-placeholder strong { font-size: 13px; line-height: 1.05; }
+      .placeholder-subline { font-size: 7px; letter-spacing: .1em; }
+    }
+
+</style>
 <link href="/assets/css/site.css" rel="stylesheet"/></head>
 <body>
 <main class="page">
@@ -2025,13 +2105,24 @@
       })[kind] || "BAR";
     }
 
+    function feedPlaceholderIcon(kind) {
+      return ({
+        cocktail: "🍸",
+        pub: "🍺",
+        sports: "⚽",
+        club: "♪",
+        bar: "◇"
+      })[kind] || "◇";
+    }
+
     function feedPlaceholderHtml(venue, deal) {
       const kind = feedPlaceholderKind(venue, deal);
       const label = feedPlaceholderLabel(kind);
+      const icon = feedPlaceholderIcon(kind);
       return `<div class="live-deal-placeholder placeholder-${kind}" aria-hidden="true">
-        <span class="placeholder-brand"><b>BAR</b><em>DEALS</em></span>
+        <span class="placeholder-icon">${icon}</span>
         <strong>${label}</strong>
-        <span class="placeholder-city">VIENNA</span>
+        <span class="placeholder-subline">BARDEALS · WIEN</span>
       </div>`;
     }
 
