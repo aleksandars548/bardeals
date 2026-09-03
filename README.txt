@@ -1,15 +1,15 @@
-BarDeals parser hardening v5 - DIRECT REPLACEMENTS
+BarDeals crawler cleanup v6
 
-Copy these files into the root of your current bardeals repo and replace existing files:
-- scripts/lib/deal-parser.mjs
-- scripts/crawl-deals.mjs
-- scripts/test-deal-parser.mjs
+Copy the scripts folder into the root of your bardeals project and replace/merge files.
+This adds:
+- scripts/lib/deal-cleanup.mjs
+- scripts/test-deal-cleanup.mjs
+- replaces scripts/merge-crawl-shards.mjs
 
-Then run:
-node scripts/test-deal-parser.mjs
-node --check scripts/crawl-deals.mjs
+Run locally:
+  node scripts/test-deal-cleanup.mjs
+  node --check scripts/merge-crawl-shards.mjs
 
-Expected:
-Deal parser tests passed.
-
-No apply-parser-hardening-v5.mjs script is needed.
+Then commit/push and run the Update Vienna happy-hour deals workflow again.
+Suggested commit:
+  Clean duplicate and mismatched crawler deals

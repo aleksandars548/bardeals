@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { cleanupVenueDeals } from "./lib/deal-cleanup.mjs";
 
 const ROOT = process.cwd();
 const SHARD_DIR = path.join(ROOT, "data", "crawl-shards");
@@ -91,7 +92,10 @@ for (const [id, venue] of byId) {
   if (!latest || latest < cutoff) byId.delete(id);
 }
 
-const autoDeals = [...byId.values()].sort((a, b) => a.name.localeCompare(b.name, "de"));
+const autoDeals = [...byId.values()]
+  .map((venue) => ({ ...venue, deals: cleanupVenueDeals(venue.deals) }))
+  .filter((venue) => venue.deals.length)
+  .sort((a, b) => a.name.localeCompare(b.name, "de"));
 const allCandidates = results
   .filter((result) => Array.isArray(result.candidates) && result.candidates.length)
   .map((result) => ({
