@@ -23,7 +23,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:16:47.725Z",
+        "verifiedAt": "2026-09-03T18:54:26.408Z",
         "confidence": 1,
         "auto": true
       }
@@ -61,28 +61,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:18:44.049Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "10:00",
-        "to": "22:00",
-        "text": "Happy Hour. Jeden Tag 16:00 - 24:00. Alle Cocktails 7,50€ .",
-        "label": "Happy Hour",
-        "priceHint": null,
-        "sourceUrl": "https://cafefrog.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T17:18:44.049Z",
+        "verifiedAt": "2026-09-03T18:56:56.203Z",
         "confidence": 1,
         "auto": true
       }
@@ -120,7 +99,7 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:17:48.744Z",
+        "verifiedAt": "2026-09-03T18:55:10.657Z",
         "confidence": 1,
         "auto": true
       }
@@ -158,7 +137,7 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:17:48.874Z",
+        "verifiedAt": "2026-09-03T18:55:47.883Z",
         "confidence": 1,
         "auto": true
       }
@@ -196,23 +175,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:22:53.700Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          6
-        ],
-        "from": "10:00",
-        "to": "17:00",
-        "text": "Cocktail Happy Hour .",
-        "label": "Happy Hour",
-        "priceHint": null,
-        "sourceUrl": "https://evaundadam.bar/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T17:22:53.700Z",
+        "verifiedAt": "2026-09-03T18:59:54.507Z",
         "confidence": 1,
         "auto": true
       }
@@ -247,7 +210,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:25:30.371Z",
+        "verifiedAt": "2026-09-03T19:02:54.844Z",
         "confidence": 1,
         "auto": true
       }
@@ -282,7 +245,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:22:00.585Z",
+        "verifiedAt": "2026-09-03T19:00:31.362Z",
         "confidence": 1,
         "auto": true
       }
@@ -320,7 +283,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:25:31.280Z",
+        "verifiedAt": "2026-09-03T19:05:19.454Z",
         "confidence": 1,
         "auto": true
       }
@@ -358,7 +321,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:26:59.303Z",
+        "verifiedAt": "2026-09-03T19:04:24.360Z",
         "confidence": 1,
         "auto": true
       }
@@ -381,25 +344,6 @@
     "deals": [
       {
         "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "from": "15:00",
-        "to": "01:00",
-        "text": "Ob zur Happy Hour oder f&uuml;r einen zwanglosen Abend &ndash; unsere talentierten Barkeeper stehen bereit, um ein au&szlig;ergew&ouml;hnliches Trinkerlebnis zu mixen.",
-        "label": "Happy Hour",
-        "priceHint": null,
-        "sourceUrl": "https://www.shebeen.at/de/drinks.html",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T17:28:51.222Z",
-        "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
           0,
           1,
           2,
@@ -415,7 +359,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/en/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:28:51.222Z",
+        "verifiedAt": "2026-09-03T19:03:52.965Z",
         "confidence": 1,
         "auto": true
       }
@@ -449,7 +393,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:34:18.607Z",
+        "verifiedAt": "2026-09-03T19:11:40.045Z",
         "confidence": 1,
         "auto": true
       },
@@ -465,7 +409,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:34:18.607Z",
+        "verifiedAt": "2026-09-03T19:11:40.045Z",
         "confidence": 1,
         "auto": true
       }
@@ -503,7 +447,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:35:51.489Z",
+        "verifiedAt": "2026-09-03T19:11:01.936Z",
         "confidence": 1,
         "auto": true
       },
@@ -518,7 +462,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T17:35:51.489Z",
+        "verifiedAt": "2026-09-03T19:11:01.936Z",
         "confidence": 1,
         "auto": true
       }
