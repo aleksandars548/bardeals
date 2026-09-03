@@ -1,63 +1,35 @@
 [
   {
-    "id": "bar-lounge-all-italiana-13275971977",
-    "name": "Bar Lounge All'Italiana",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.2009237,
-    "lng": 16.3931606,
+    "id": "bar-pani-1707193972",
+    "name": "Bar Pani",
+    "address": "Roßauer Lände 41, 1090 Wien",
+    "zip": "1090",
+    "lat": 48.2258841,
+    "lng": 16.3658549,
     "category": "Bar",
     "featured": false,
-    "website": "https://www.allitaliana.at/",
+    "website": "https://www.barpani.com/",
     "image": null,
     "imageSourceUrl": null,
     "deals": [
       {
         "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+          4
         ],
-        "from": "11:00",
-        "to": "15:00",
-        "text": "Negroni, Spritz & Signature Cocktails – perfektes Afterwork und lange Abende.",
-        "label": "Afterwork",
+        "from": "17:00",
+        "to": "19:00",
+        "text": "Happy Hour .",
+        "label": "Happy Hour",
         "priceHint": null,
-        "sourceUrl": "https://www.allitaliana.at/",
+        "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:20.524Z",
-        "confidence": 0.95,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "11:00",
-        "to": "15:00",
-        "text": "Bar & Lounge – Aperitivo, Cocktails, Espresso.",
-        "label": "Aperitivo",
-        "priceHint": null,
-        "sourceUrl": "https://www.allitaliana.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:20.524Z",
-        "confidence": 0.95,
+        "verifiedAt": "2026-09-03T16:30:52.802Z",
+        "confidence": 1,
         "auto": true
       }
     ],
-    "discoveredFrom": "https://www.openstreetmap.org/node/13275971977",
-    "auto": true,
-    "imageValidated": false
+    "discoveredFrom": "https://www.openstreetmap.org/node/1707193972",
+    "auto": true
   },
   {
     "id": "cafe-frog-347442567",
@@ -89,7 +61,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:57.044Z",
+        "verifiedAt": "2026-09-03T16:32:40.882Z",
         "confidence": 1,
         "auto": true
       },
@@ -110,7 +82,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:57.044Z",
+        "verifiedAt": "2026-09-03T16:32:40.882Z",
         "confidence": 1,
         "auto": true
       },
@@ -131,14 +103,13 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:57.044Z",
+        "verifiedAt": "2026-09-03T16:32:40.882Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/347442567",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "casablanca-3215857484",
@@ -170,14 +141,13 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:58.925Z",
+        "verifiedAt": "2026-09-03T16:32:18.860Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3215857484",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "chill-out-1756941534",
@@ -209,14 +179,13 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:06.218Z",
+        "verifiedAt": "2026-09-03T16:32:17.993Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1756941534",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "eva-adam-10948791505",
@@ -248,7 +217,7 @@
         "priceHint": "€ 9,50",
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:07.275Z",
+        "verifiedAt": "2026-09-03T16:37:12.340Z",
         "confidence": 1,
         "auto": true
       },
@@ -264,65 +233,13 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:07.275Z",
+        "verifiedAt": "2026-09-03T16:37:12.340Z",
         "confidence": 1,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          6
-        ],
-        "from": "09:00",
-        "to": "15:00",
-        "text": "Egal ob After-Work-Prickeln unter der Woche oder ein ausgelassener Brunch am Samstag.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://evaundadam.bar/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:07.275Z",
-        "confidence": 0.95,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/10948791505",
-    "auto": true,
-    "imageValidated": true
-  },
-  {
-    "id": "funky-monkey-566660740",
-    "name": "Funky Monkey",
-    "address": "Sterngasse 11, 1010 Wien",
-    "zip": "1010",
-    "lat": 48.212021,
-    "lng": 16.3723092,
-    "category": "Bar",
-    "featured": false,
-    "website": "http://www.funkymonkey.at/",
-    "image": null,
-    "imageSourceUrl": null,
-    "deals": [
-      {
-        "days": [
-          4,
-          5,
-          6
-        ],
-        "from": "19:00",
-        "to": "02:00",
-        "text": "Afterwork .",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
-        "confidence": 0.95,
-        "auto": true
-      }
-    ],
-    "discoveredFrom": "https://www.openstreetmap.org/node/566660740",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "koo-7-3016770833",
@@ -351,51 +268,48 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:51.974Z",
+        "verifiedAt": "2026-09-03T16:40:09.741Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3016770833",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
-    "id": "lenz-social-dining-10819836558",
-    "name": "LENZ - Social Dining",
-    "address": "Am Stadtpark 1, 1030 Wien",
-    "zip": "1030",
-    "lat": 48.2061375,
-    "lng": 16.3837085,
-    "category": "Restaurant Bar",
+    "id": "koo-billardcafe-1363142293",
+    "name": "Köö Billardcafe",
+    "address": "Breitenfurter Straße 370, 1230 Wien",
+    "zip": "1230",
+    "lat": 48.1367485,
+    "lng": 16.2801832,
+    "category": "Pub",
     "featured": false,
-    "website": "https://lenz-socialdining.at/",
+    "website": "https://www.billardcafe.at/de/lokale/k-oe-oe-23.html",
     "image": null,
     "imageSourceUrl": null,
     "deals": [
       {
         "days": [
+          1,
           2,
           3,
-          4,
-          5,
-          6
+          4
         ],
-        "from": "17:00",
-        "to": "19:00",
-        "text": "After work: Austrian Wine & Cheese .",
-        "label": "Afterwork",
+        "from": "16:00",
+        "to": "18:00",
+        "text": "Bier Happy Hour - Event Aktuell - Events - billardcafe.at Toggle navigation JOBS .",
+        "label": "Happy Hour",
         "priceHint": null,
-        "sourceUrl": "https://lenz-socialdining.at/",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:04.977Z",
-        "confidence": 0.95,
+        "verifiedAt": "2026-09-03T16:36:26.592Z",
+        "confidence": 1,
         "auto": true
       }
     ],
-    "discoveredFrom": "https://www.openstreetmap.org/node/10819836558",
-    "auto": true,
-    "imageValidated": false
+    "discoveredFrom": "https://www.openstreetmap.org/node/1363142293",
+    "auto": true
   },
   {
     "id": "loop-588084968",
@@ -427,7 +341,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:08.143Z",
+        "verifiedAt": "2026-09-03T16:40:11.975Z",
         "confidence": 1,
         "auto": true
       },
@@ -448,14 +362,13 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:08.143Z",
+        "verifiedAt": "2026-09-03T16:40:11.975Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/588084968",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "mabel-s-no90-311820993",
@@ -487,14 +400,13 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:15.895Z",
+        "verifiedAt": "2026-09-03T16:41:35.333Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/311820993",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "santos-13116627555",
@@ -526,14 +438,13 @@
         "priceHint": "€ 9.9",
         "sourceUrl": "https://www.santos-bar.com/de/dirty-drinks/cocteles.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:08.676Z",
+        "verifiedAt": "2026-09-03T16:42:49.527Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/13116627555",
-    "auto": true,
-    "imageValidated": true
+    "auto": true
   },
   {
     "id": "shebeen-256669972",
@@ -563,14 +474,34 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/de/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:19.407Z",
+        "verifiedAt": "2026-09-03T16:43:15.013Z",
+        "confidence": 1,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "15:00",
+        "to": "01:00",
+        "text": "Join us for happy hour or a casual evening, our bartenders are ready to mix your new favorite drink.",
+        "label": "Happy Hour",
+        "priceHint": null,
+        "sourceUrl": "https://www.shebeen.at/en/drinks.html",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:43:15.013Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/256669972",
-    "auto": true,
-    "imageValidated": true
+    "auto": true
   },
   {
     "id": "summer-station-344657319",
@@ -587,23 +518,37 @@
     "deals": [
       {
         "days": [
-          4
+          3
         ],
         "from": "18:00",
         "to": "22:00",
-        "text": "Afterwork: Island BASS FREE Entry / .",
+        "text": "Afterwork: Island Groove FREE Entry. Mi., 22.",
         "label": "Afterwork",
         "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/events-1",
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-22-18-00/form",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:43.313Z",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
         "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          4
+        ],
+        "from": "18:00",
+        "to": "19:00",
+        "text": "Angebot: 18-19 Uhr 1+1 auf alle Infusion Drinks (Finlandia Botanicals & Kinley mixers) . 🌅 Dance to House Beats from 90s/2000s with DJ Martin_van_Vienna .",
+        "label": "1+1",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/way/344657319",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   },
   {
     "id": "travelshack-vienna-1530271340",
@@ -631,7 +576,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 1,
         "auto": true
       },
@@ -647,7 +592,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 1,
         "auto": true
       },
@@ -664,14 +609,50 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1530271340",
-    "auto": true,
-    "imageValidated": true
+    "auto": true
+  },
+  {
+    "id": "usus-am-wasser-3461389414",
+    "name": "USUS am Wasser",
+    "address": "An der Neuen Donau 1, 1210 Wien",
+    "zip": "1210",
+    "lat": 48.2409906,
+    "lng": 16.398665,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://amwasser.wien/event",
+    "image": null,
+    "imageSourceUrl": null,
+    "deals": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "10:00",
+        "to": "16:00",
+        "text": "Weißer Spritzer 0,5l vom Fass . 4,16 € 4,16 € 4.16 EUR .",
+        "label": "Discount drinks",
+        "priceHint": "€ 4,16",
+        "sourceUrl": "https://amwasser.wien/shop/category/bar-4",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:37.620Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/3461389414",
+    "auto": true
   },
   {
     "id": "weberknecht-3360770299",
@@ -703,7 +684,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:31.089Z",
+        "verifiedAt": "2026-09-03T16:50:22.549Z",
         "confidence": 1,
         "auto": true
       },
@@ -718,7 +699,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:31.089Z",
+        "verifiedAt": "2026-09-03T16:50:22.549Z",
         "confidence": 1,
         "auto": true
       },
@@ -737,13 +718,12 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:31.089Z",
+        "verifiedAt": "2026-09-03T16:50:22.549Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/3360770299",
-    "auto": true,
-    "imageValidated": false
+    "auto": true
   }
 ]

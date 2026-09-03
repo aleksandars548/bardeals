@@ -13,7 +13,7 @@
         "priceHint": "€ 5,10",
         "sourceUrl": "https://two-lounge.at/spritzer/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:18.939Z",
+        "verifiedAt": "2026-09-03T16:31:57.861Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -26,7 +26,7 @@
         "priceHint": "€ 7,50",
         "sourceUrl": "https://two-lounge.at/spritzer/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:18.939Z",
+        "verifiedAt": "2026-09-03T16:31:57.861Z",
         "confidence": 0.65,
         "auto": true
       }
@@ -46,7 +46,7 @@
         "priceHint": "€11.90",
         "sourceUrl": "https://www.addictedtoburger.at/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:06.100Z",
+        "verifiedAt": "2026-09-03T16:30:20.894Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -66,28 +66,8 @@
         "priceHint": "€ 3",
         "sourceUrl": "https://www.admiral.ag/sportbars/aktuelle-aktionen/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:08.610Z",
+        "verifiedAt": "2026-09-03T16:30:48.920Z",
         "confidence": 0.85,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "albertgasse39-636106660",
-    "name": "albertgasse39",
-    "website": "http://www.albertgasse39.at/",
-    "candidates": [
-      {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "APEROL SPRITZER 0,25l 6,4 . ALBERT SPRITZER 0,25l 6,9 SARTI ROSA SPRIZZ Sarti Rosa 0,25l 4,5 . LIMONE SPRIZZ Italicus Bergamotto, Limoncello, Cava, Soda 14,5 .",
-        "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "https://www.albert.bar/drinks",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:10.545Z",
-        "confidence": 0.7,
         "auto": true
       }
     ]
@@ -106,28 +86,77 @@
         "priceHint": null,
         "sourceUrl": "https://www.atlasatlas.at/drinks",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:19.871Z",
+        "verifiedAt": "2026-09-03T16:30:18.466Z",
         "confidence": 0.7,
         "auto": true
       }
     ]
   },
   {
-    "id": "battle-axe-5152455677",
-    "name": "Battle Axe",
-    "website": "http://www.battleaxe.at/",
+    "id": "bar-lounge-all-italiana-13275971977",
+    "name": "Bar Lounge All'Italiana",
+    "website": "https://www.allitaliana.at/",
+    "candidates": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "15:00",
+        "text": "Negroni, Spritz & Signature Cocktails – perfektes Afterwork und lange Abende.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.allitaliana.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:30:22.526Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "11:00",
+        "to": "15:00",
+        "text": "Bar & Lounge – Aperitivo, Cocktails, Espresso.",
+        "label": "Aperitivo",
+        "priceHint": null,
+        "sourceUrl": "https://www.allitaliana.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:30:22.526Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "bar-pani-1707193972",
+    "name": "Bar Pani",
+    "website": "https://www.barpani.com/",
     "candidates": [
       {
         "days": [],
-        "from": null,
-        "to": null,
-        "text": "Pfirsich Spritzer 2.90 . Aperol Spritzer 3.80 . Mead 22.- .",
-        "label": "Discount drinks",
+        "from": "11:00",
+        "to": "15:00",
+        "text": "1+1: 2 zum Preis von 1 .",
+        "label": "1+1",
         "priceHint": null,
-        "sourceUrl": "http://www.battleaxe.at/",
+        "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:22.728Z",
-        "confidence": 0.7,
+        "verifiedAt": "2026-09-03T16:30:52.802Z",
+        "confidence": 1,
         "auto": true
       }
     ]
@@ -146,43 +175,7 @@
         "priceHint": null,
         "sourceUrl": "https://sportbox.cc/unternehmen/sportinsel",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:22.960Z",
-        "confidence": 0.65,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "bestens-die-bar-1068145208",
-    "name": "bestens. die bar",
-    "website": "https://bestens.bar/",
-    "candidates": [
-      {
-        "days": [
-          0,
-          3
-        ],
-        "from": null,
-        "to": null,
-        "text": "Ideal für Dates, Afterwork oder einfach, um neue Favoriten zu entdecken. Die Auswahl wechselt regelmäßig und hält den Mittwoch bewusst spannend.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://bestens.bar/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:40.355Z",
-        "confidence": 0.35,
-        "auto": true
-      },
-      {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "Bitter und frisch – der Aperitivo ohne Promille. bitter frisch .",
-        "label": "Aperitivo",
-        "priceHint": "€ 13,50",
-        "sourceUrl": "https://bestens.bar/cocktail-menu-2/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:40.355Z",
+        "verifiedAt": "2026-09-03T16:30:27.107Z",
         "confidence": 0.65,
         "auto": true
       }
@@ -202,7 +195,7 @@
         "priceHint": null,
         "sourceUrl": "https://bierhalle.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:47.429Z",
+        "verifiedAt": "2026-09-03T16:32:12.825Z",
         "confidence": 0.25,
         "auto": true
       },
@@ -215,7 +208,7 @@
         "priceHint": null,
         "sourceUrl": "https://bierhalle.at/speisekarte/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:47.429Z",
+        "verifiedAt": "2026-09-03T16:32:12.825Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -235,7 +228,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billabong.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:34.519Z",
+        "verifiedAt": "2026-09-03T16:31:05.358Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -260,7 +253,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:34.645Z",
+        "verifiedAt": "2026-09-03T16:31:03.927Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -278,7 +271,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:34.645Z",
+        "verifiedAt": "2026-09-03T16:31:03.927Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -291,8 +284,103 @@
         "priceHint": "€ 5",
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:34.645Z",
+        "verifiedAt": "2026-09-03T16:31:03.927Z",
         "confidence": 0.65,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "bogside-inn-410753771",
+    "name": "Bogside Inn",
+    "website": "https://www.bogside.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Bottled Wieselburger Gold 0,5l Stiegl Wheat Beer 0,5l Trumer Pils 0,5l Murauer Dark Beer 0,5l Heineken 0,33l Corona 0,33l Stiegl Alc. Free 0,5l Stiegl Radler 0,5l Bulmers Apple or Pear Cide…",
+        "label": "Discount drinks",
+        "priceHint": null,
+        "sourceUrl": "https://www.bogside.at/copy-of-drinks-menu?menu=copy-of-wine",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:31:12.624Z",
+        "confidence": 0.85,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "bricks-337947392",
+    "name": "Bricks",
+    "website": "https://www.bricks.co.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": "20:00",
+        "to": "22:00",
+        "text": "HAPPY HOUR. von 20:00 bis 22:00 Uhr.",
+        "label": "Happy Hour",
+        "priceHint": "€ 5,00",
+        "sourceUrl": "https://bricks.co.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:31:44.456Z",
+        "confidence": 1,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": "20:00",
+        "to": "22:00",
+        "text": "HAPPY HOUR. von 20:00 bis 22:00 Uhr.",
+        "label": "Discount drinks",
+        "priceHint": "€ 5,00",
+        "sourceUrl": "https://bricks.co.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:31:44.456Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "buschenschank-im-weingarten-5766190562",
+    "name": "Buschenschank im Weingarten",
+    "website": "https://wein.nummer5.at/",
+    "candidates": [
+      {
+        "days": [
+          2
+        ],
+        "from": null,
+        "to": null,
+        "text": "*1+1+1 Verhackters/Crema di Lardo /handgerührtes Grammelschmalz ab 4,90 €/110g. *2,5-5kg Erdäpfel Ditta – speckige und Erdäpfel Hermes mehlige 5,50 € /8,50 €. *NEU im Programm unser Bio-Wei…",
+        "label": "1+1",
+        "priceHint": null,
+        "sourceUrl": "https://wein.nummer5.at/2025/11/20/lammfleisch-weihnachtsangebote/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:31:19.997Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "cafe-admiral-686367645",
+    "name": "Cafe Admiral",
+    "website": "https://www.admiral.ag/filialen/detail/id/137/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Weißer Spritzer 0,25l. Pfanner Eistee 0,33l Fl.",
+        "label": "Discount drinks",
+        "priceHint": "€ 3",
+        "sourceUrl": "https://www.admiral.ag/sportbars/aktuelle-aktionen/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:31:43.785Z",
+        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -311,7 +399,7 @@
         "priceHint": "€ 3,90",
         "sourceUrl": "https://www.cafeamadeus.at/getraenke/bier",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:45.429Z",
+        "verifiedAt": "2026-09-03T16:31:22.188Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -331,7 +419,7 @@
         "priceHint": "€4,50",
         "sourceUrl": "https://www.cafebillroth.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:47.804Z",
+        "verifiedAt": "2026-09-03T16:31:21.811Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -359,7 +447,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:57.044Z",
+        "verifiedAt": "2026-09-03T16:32:40.882Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -385,7 +473,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.cafezipp.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:54.460Z",
+        "verifiedAt": "2026-09-03T16:31:35.542Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -398,28 +486,28 @@
         "priceHint": null,
         "sourceUrl": "https://www.cafezipp.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:54.460Z",
+        "verifiedAt": "2026-09-03T16:31:35.542Z",
         "confidence": 0.85,
         "auto": true
       }
     ]
   },
   {
-    "id": "cannaregio-12986147336",
-    "name": "Cannaregio",
-    "website": "https://www.bar-cannaregio.com/",
+    "id": "cellavie-aviation-club-1540097806",
+    "name": "CellaVie Aviation Club",
+    "website": "https://www.cellavie.at/de/",
     "candidates": [
       {
         "days": [],
         "from": null,
         "to": null,
-        "text": "Getränkekarte | bar-cannaregio | Aperitivo-Kultur .",
-        "label": "Aperitivo",
+        "text": "Premium Beer 0.33l (96 points Falstaff).",
+        "label": "Discount drinks",
         "priceHint": null,
-        "sourceUrl": "https://www.bar-cannaregio.com/getr%C3%A4nke",
+        "sourceUrl": "https://www.cellavie.at/de/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:46:57.563Z",
-        "confidence": 0.65,
+        "verifiedAt": "2026-09-03T16:32:26.254Z",
+        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -438,7 +526,7 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:06.218Z",
+        "verifiedAt": "2026-09-03T16:32:17.993Z",
         "confidence": 1,
         "auto": true
       }
@@ -458,64 +546,8 @@
         "priceHint": null,
         "sourceUrl": "https://www.crossfield.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:17.082Z",
+        "verifiedAt": "2026-09-03T16:33:13.125Z",
         "confidence": 0.85,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "der-dachboden-im-25hours-hotel-beim-museumsquartier-4551006234",
-    "name": "Der Dachboden im 25hours Hotel beim MuseumsQuartier",
-    "website": "https://www.25hours-hotels.com/restaurants-bars/wien/dachboden",
-    "candidates": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "15:00",
-        "to": "01:00",
-        "text": "Nachmittags ein ruhiger Arbeitsplatz oder eine gemütliche Lounge und abends der Afterwork-Hotspot.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://25hours-hotels.com/de/vienna/at-museumsquartier/restaurants-and-bars/dachboden/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:28.269Z",
-        "confidence": 0.35,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "der-garten-159314351",
-    "name": "Der Garten",
-    "website": "https://www.der-garten.at/",
-    "candidates": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "15:00",
-        "to": "22:00",
-        "text": "Entflieht dem Gro&szlig;stadtwahn und taucht ein die entspannte After-Work Atmosph&auml;re umgeben von Beachvolleyball und Co.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.der-garten.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:24.919Z",
-        "confidence": 0.55,
         "auto": true
       }
     ]
@@ -542,7 +574,35 @@
         "priceHint": null,
         "sourceUrl": "https://www.der-garten.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:25.136Z",
+        "verifiedAt": "2026-09-03T16:32:59.711Z",
+        "confidence": 0.55,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "der-garten-159314351",
+    "name": "Der Garten",
+    "website": "https://www.der-garten.at/",
+    "candidates": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "15:00",
+        "to": "22:00",
+        "text": "Entflieht dem Gro&szlig;stadtwahn und taucht ein die entspannte After-Work Atmosph&auml;re umgeben von Beachvolleyball und Co.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.der-garten.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:35:15.292Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -564,8 +624,28 @@
         "priceHint": null,
         "sourceUrl": "https://www.downunder.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:33.470Z",
+        "verifiedAt": "2026-09-03T16:35:36.588Z",
         "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "eleyx-345289488",
+    "name": "Eleyx",
+    "website": "https://www.eleyx.com/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Fruchtig & Frisch – Sommerliche Aromen und exotische Noten für den perfekten After-Work-Drink.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.eleyx.com/signature-cocktails-die-kunst-der-perfekten-drinks-bei-eleyx/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:36:23.523Z",
+        "confidence": 0.25,
         "auto": true
       }
     ]
@@ -584,7 +664,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:07.275Z",
+        "verifiedAt": "2026-09-03T16:37:12.340Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -599,8 +679,44 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:07.275Z",
+        "verifiedAt": "2026-09-03T16:37:12.340Z",
         "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          6
+        ],
+        "from": "09:00",
+        "to": "15:00",
+        "text": "Egal ob After-Work-Prickeln unter der Woche oder ein ausgelassener Brunch am Samstag.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://evaundadam.bar/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:12.340Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "failys-1110205284",
+    "name": "Failys",
+    "website": "https://www.failys.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Weißer Spritzer 0,2l €4,2. Hugo Prosecco 0,2l €6.",
+        "label": "Discount drinks",
+        "priceHint": "€4,5",
+        "sourceUrl": "https://www.failys.at/food-drinks/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:36:21.036Z",
+        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -610,6 +726,19 @@
     "name": "First American Bar",
     "website": "https://www.firstamericanbar.at/",
     "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Ob After-Work-Drink, zum Chillen mit Freunden oder besondere Anlässe – hier trifft Genuss auf Style.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.firstamericanbar.at/die-coolste-lounge-der-city-event-spot/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:00.338Z",
+        "confidence": 0.25,
+        "auto": true
+      },
       {
         "days": [
           1,
@@ -626,7 +755,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.firstamericanbar.at/bar-room-beste-bar-der-stadt/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:47:54.827Z",
+        "verifiedAt": "2026-09-03T16:37:00.338Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -646,7 +775,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
         "confidence": 0.65,
         "auto": true
       },
@@ -659,7 +788,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -675,7 +804,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
         "confidence": 0.75,
         "auto": true
       },
@@ -693,8 +822,25 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
         "confidence": 0.35,
+        "auto": true
+      },
+      {
+        "days": [
+          4,
+          5,
+          6
+        ],
+        "from": "19:00",
+        "to": "02:00",
+        "text": "Afterwork .",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
+        "confidence": 0.95,
         "auto": true
       },
       {
@@ -714,28 +860,8 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:19.447Z",
+        "verifiedAt": "2026-09-03T16:37:49.463Z",
         "confidence": 0.35,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "halbestadt-3425523135",
-    "name": "Halbestadt",
-    "website": "https://www.halbestadt.at/",
-    "candidates": [
-      {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "Weißwein G’spritz 0,25l.",
-        "label": "Discount drinks",
-        "priceHint": "€ 4,60",
-        "sourceUrl": "https://www.halbestadt.bar/our-menu",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:25.733Z",
-        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -754,23 +880,8 @@
         "priceHint": null,
         "sourceUrl": "https://iltoro.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:55.391Z",
+        "verifiedAt": "2026-09-03T16:36:36.807Z",
         "confidence": 0.25,
-        "auto": true
-      },
-      {
-        "days": [
-          0
-        ],
-        "from": null,
-        "to": null,
-        "text": "Ob als After-Work-Event, Sommerfest oder Weihnachtsfeier: Eine Firmenfeier ist weit mehr als nur Essen und Trinken.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://iltoro.at/firmenfeier-wien/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:55.391Z",
-        "confidence": 0.35,
         "auto": true
       }
     ]
@@ -789,7 +900,7 @@
         "priceHint": "€3.80",
         "sourceUrl": "https://www.jazzcafesofa.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:40.385Z",
+        "verifiedAt": "2026-09-03T16:35:49.277Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -802,7 +913,7 @@
         "priceHint": "€1,90",
         "sourceUrl": "https://www.jazzcafesofa.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:40.385Z",
+        "verifiedAt": "2026-09-03T16:35:49.277Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -830,7 +941,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.jins.at/jins1070",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:42.671Z",
+        "verifiedAt": "2026-09-03T16:39:56.097Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -850,7 +961,7 @@
         "priceHint": null,
         "sourceUrl": "https://johnnys-pub.at/drinks/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:45.876Z",
+        "verifiedAt": "2026-09-03T16:39:26.811Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -872,7 +983,7 @@
         "priceHint": null,
         "sourceUrl": "https://klyo.at/pages/events-wien",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:51.336Z",
+        "verifiedAt": "2026-09-03T16:38:17.481Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -897,22 +1008,22 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/k-oe-oe-23.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:53.051Z",
+        "verifiedAt": "2026-09-03T16:36:26.592Z",
         "confidence": 0.95,
         "auto": true
       },
       {
         "days": [
-          3
+          1
         ],
         "from": null,
         "to": null,
         "text": "Longdrink Happy Hour - Event Aktuell - Events - billardcafe.at Toggle navigation JOBS .",
         "label": "Happy Hour",
         "priceHint": null,
-        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/longdrink-happy-hour-1.html",
+        "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/longdrink-happy-hour.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:53.051Z",
+        "verifiedAt": "2026-09-03T16:36:26.592Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -932,7 +1043,7 @@
         "priceHint": "€ 15",
         "sourceUrl": "https://www.krypt.bar/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:52.465Z",
+        "verifiedAt": "2026-09-03T16:40:05.907Z",
         "confidence": 0.65,
         "auto": true
       },
@@ -949,7 +1060,7 @@
         "priceHint": "€ 12",
         "sourceUrl": "https://www.krypt.bar/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:52.465Z",
+        "verifiedAt": "2026-09-03T16:40:05.907Z",
         "confidence": 0.75,
         "auto": true
       }
@@ -977,7 +1088,7 @@
         "priceHint": null,
         "sourceUrl": "https://lapaninoteca.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:53.981Z",
+        "verifiedAt": "2026-09-03T16:40:13.567Z",
         "confidence": 0.55,
         "auto": true
       },
@@ -990,8 +1101,126 @@
         "priceHint": null,
         "sourceUrl": "https://lapaninoteca.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:53.981Z",
+        "verifiedAt": "2026-09-03T16:40:13.567Z",
         "confidence": 0.25,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "la-salvia-768480198",
+    "name": "la Salvia",
+    "website": "https://lasalvia.at/",
+    "candidates": [
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "APERITIVO e SPUNTINI dopo lavoro . 30. Januar 2015 Happy Hour mit Cocktails, Prosecco und Wein – 3.",
+        "label": "Happy Hour",
+        "priceHint": null,
+        "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:40.702Z",
+        "confidence": 0.95,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "APERITIVO e SPUNTINI dopo lavoro - La Salvia Link zu Facebook .",
+        "label": "Aperitivo",
+        "priceHint": null,
+        "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:40.702Z",
+        "confidence": 0.65,
+        "auto": true
+      },
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "APERITIVO e SPUNTINI dopo lavoro . 30. Januar 2015 Happy Hour mit Cocktails, Prosecco und Wein – 3.",
+        "label": "Aperitivo",
+        "priceHint": null,
+        "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:40.702Z",
+        "confidence": 0.75,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "PESCE e COCKTAILS 13. bis 23.2.",
+        "label": "Discount drinks",
+        "priceHint": null,
+        "sourceUrl": "https://lasalvia.at/pesce-e-cocktails-13-bis-23-2/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:40.702Z",
+        "confidence": 0.85,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": "11:00",
+        "to": "11:00",
+        "text": "uploads/2024/10/logo.svg erland 2018-01-23 20:02:28 2024-11-11 13:23:24 PESCE e COCKTAILS 13. bis 23.2.",
+        "label": "Discount drinks",
+        "priceHint": null,
+        "sourceUrl": "https://lasalvia.at/pesce-e-cocktails-13-bis-23-2/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:37:40.702Z",
+        "confidence": 0.9,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "latidos-11257879246",
+    "name": "Latidos",
+    "website": "https://latidoscocktailbar.at/",
+    "candidates": [
+      {
+        "days": [
+          1,
+          2
+        ],
+        "from": "18:00",
+        "to": "02:00",
+        "text": "Perfekt für Afterwork-Drinks, Partys und besondere Anlässe.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://latidoscocktailbar.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:42:32.704Z",
+        "confidence": 0.35,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Matcha Cocktail 11,00 .",
+        "label": "Discount drinks",
+        "priceHint": null,
+        "sourceUrl": "https://latidoscocktailbar.at/drinks-and-food/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:42:32.704Z",
+        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -1012,28 +1241,34 @@
         "priceHint": null,
         "sourceUrl": "https://laurel-leaf.at/de/karte/bier",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:48:58.605Z",
+        "verifiedAt": "2026-09-03T16:36:44.489Z",
         "confidence": 0.8,
         "auto": true
       }
     ]
   },
   {
-    "id": "loco-bar-5184042865",
-    "name": "Loco Bar",
-    "website": "https://www.locobar.at/",
+    "id": "lenz-social-dining-10819836558",
+    "name": "LENZ - Social Dining",
+    "website": "https://lenz-socialdining.at/",
     "candidates": [
       {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "0,28 l *von Happy Hour ausgeschlossen!",
-        "label": "Happy Hour",
-        "priceHint": "€ 5,90",
-        "sourceUrl": "https://www.locobar.at/karte/",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "17:00",
+        "to": "19:00",
+        "text": "After work: Austrian Wine & Cheese .",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://lenz-socialdining.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:11.443Z",
-        "confidence": 0.85,
+        "verifiedAt": "2026-09-03T16:40:10.765Z",
+        "confidence": 0.95,
         "auto": true
       }
     ]
@@ -1059,7 +1294,7 @@
         "priceHint": null,
         "sourceUrl": "https://lucybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:09.196Z",
+        "verifiedAt": "2026-09-03T16:36:49.451Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -1074,7 +1309,7 @@
         "priceHint": null,
         "sourceUrl": "https://lucybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:09.196Z",
+        "verifiedAt": "2026-09-03T16:36:49.451Z",
         "confidence": 0.15,
         "auto": true
       }
@@ -1094,7 +1329,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:15.895Z",
+        "verifiedAt": "2026-09-03T16:41:35.333Z",
         "confidence": 1,
         "auto": true
       },
@@ -1107,7 +1342,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:15.895Z",
+        "verifiedAt": "2026-09-03T16:41:35.333Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -1120,28 +1355,8 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:15.895Z",
+        "verifiedAt": "2026-09-03T16:41:35.333Z",
         "confidence": 0.65,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "miranda-3796926372",
-    "name": "Miranda",
-    "website": "http://www.mirandabar.com/",
-    "candidates": [
-      {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "Piz Spritz 9 € . Gin, Blutwurz, Elderflower, Lemon, Prosecco .",
-        "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "http://www.mirandabar.com/?page_id=143",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:20.600Z",
-        "confidence": 0.85,
         "auto": true
       }
     ]
@@ -1160,7 +1375,7 @@
         "priceHint": "€ 11.30",
         "sourceUrl": "https://www.mollydarcys.at/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:26.596Z",
+        "verifiedAt": "2026-09-03T16:40:31.951Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -1182,7 +1397,7 @@
         "priceHint": null,
         "sourceUrl": "https://monami.at/bar",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:24.708Z",
+        "verifiedAt": "2026-09-03T16:41:17.989Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -1204,156 +1419,68 @@
         "priceHint": null,
         "sourceUrl": "https://www.nanog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:30.723Z",
+        "verifiedAt": "2026-09-03T16:40:35.384Z",
         "confidence": 0.35,
         "auto": true
       }
     ]
   },
   {
-    "id": "napo-lindo-6331569607",
-    "name": "Napo Lindo",
-    "website": "https://www.napolino.at/",
-    "candidates": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "11:00",
-        "to": "22:00",
-        "text": "Ob Frühstück, Lunch, Coffee Break oder After Work – bei Napolino genießt du Italien zu jeder Tageszeit.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.napolino.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:35.586Z",
-        "confidence": 0.35,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "from": "11:00",
-        "to": "22:00",
-        "text": "Am Abend verwandelt sich Napolino in den perfekten Treffpunkt für Aperitivo, Spritz und italienische Drinks.",
-        "label": "Aperitivo",
-        "priceHint": null,
-        "sourceUrl": "https://www.napolino.at/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:35.586Z",
-        "confidence": 0.35,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "noa-334636027",
-    "name": "Noa",
-    "website": "https://www.noa.wien/",
-    "candidates": [
-      {
-        "days": [],
-        "from": "00:00",
-        "to": "09:00",
-        "text": "After work.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.noa.wien/events/",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:36.803Z",
-        "confidence": 0.85,
-        "auto": true
-      }
-    ]
-  },
-  {
-    "id": "potions-vienna-13681113501",
-    "name": "Potions Vienna",
-    "website": "https://www.potionsvienna.com/",
+    "id": "o-connor-s-old-oak-irish-pub-1362753598",
+    "name": "O’Connor’s Old Oak Irish Pub",
+    "website": "https://theoak1030.at/",
     "candidates": [
       {
         "days": [],
         "from": null,
         "to": null,
-        "text": "Ginger Beer 0,2l.",
+        "text": "Stiegl Frei-Bier 0,0% 0,5L €5,10 .",
         "label": "Discount drinks",
-        "priceHint": null,
-        "sourceUrl": "https://www.potionsvienna.com/cocktail-karte-potions-vienna/",
+        "priceHint": "€5,40",
+        "sourceUrl": "https://theoak1030.at/menu-3-column/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:49:58.390Z",
+        "verifiedAt": "2026-09-03T16:43:31.307Z",
         "confidence": 0.85,
         "auto": true
       }
     ]
   },
   {
-    "id": "rooftopbar-lamee-8936683619",
-    "name": "Rooftopbar Lamee",
-    "website": "https://lameerooftop.com/",
+    "id": "ocean-sky-2613518524",
+    "name": "Ocean'sky",
+    "website": "https://www.oceansky.at/",
     "candidates": [
       {
-        "days": [
-          2
-        ],
+        "days": [],
         "from": null,
         "to": null,
-        "text": "SARTI APERITIVO, MIONETTO PROSECCO, SODAWASSER, LIMETTE, MORO-ORANGEN . € 13.5 .",
-        "label": "Aperitivo",
-        "priceHint": "€ 13.5",
-        "sourceUrl": "https://lameerooftop.com/barkarte",
+        "text": "ak during the day with a fun non-alcoholic refreshment or enjoy a well deserved after-work drink with friends and colleagues to end the day.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.oceansky.at/en/bar",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:05.634Z",
-        "confidence": 0.75,
+        "verifiedAt": "2026-09-03T16:41:10.972Z",
+        "confidence": 0.25,
         "auto": true
       }
     ]
   },
   {
-    "id": "schikaneder-309293364",
-    "name": "Schikaneder",
-    "website": "https://www.schikaneder.at/",
+    "id": "peter-pane-355123976",
+    "name": "Peter Pane",
+    "website": "https://peterpane.de/standorte",
     "candidates": [
       {
-        "days": [
-          2,
-          4,
-          6
-        ],
+        "days": [],
         "from": null,
         "to": null,
-        "text": "Juni 18:00 mit HAPPY HOUR. Finissage Samstag 01.",
-        "label": "Happy Hour",
+        "text": "LUST AUF EINE AFTER WORK RUNDE?.",
+        "label": "Afterwork",
         "priceHint": null,
-        "sourceUrl": "https://www.schikaneder.at/bar/wand_sucht_kunst",
+        "sourceUrl": "https://peterpane.de/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:12.824Z",
-        "confidence": 0.95,
-        "auto": true
-      },
-      {
-        "days": [],
-        "from": "18:00",
-        "to": "20:00",
-        "text": "HAPPY HOUR von 18:00 bis 20:00. Hauswein/Spritzer/Wieselburger - 50%.",
-        "label": "Happy Hour",
-        "priceHint": null,
-        "sourceUrl": "https://www.schikaneder.at/bar/wand_sucht_kunst",
-        "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:12.824Z",
-        "confidence": 1,
+        "verifiedAt": "2026-09-03T16:45:19.026Z",
+        "confidence": 0.25,
         "auto": true
       }
     ]
@@ -1380,7 +1507,7 @@
         "priceHint": null,
         "sourceUrl": "https://slammerbar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:31.897Z",
+        "verifiedAt": "2026-09-03T16:46:44.115Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1408,7 +1535,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.pub-speakeasy.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:33.091Z",
+        "verifiedAt": "2026-09-03T16:45:41.273Z",
         "confidence": 0.75,
         "auto": true
       }
@@ -1430,21 +1557,177 @@
         "priceHint": null,
         "sourceUrl": "https://www.stadtboden.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:41.073Z",
+        "verifiedAt": "2026-09-03T16:46:42.662Z",
+        "confidence": 0.35,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "summer-station-344657319",
+    "name": "Summer Station",
+    "website": "https://www.summerstation.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Ein Afterwork-Abend auf der Donauinsel bietet dafür die passende Mischung aus Musik, Essen und entspannter Stimmung.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/post/open-air-events-in-wien-mit-essen-und-cocktails-sommer-auf-der-donauinsel",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 0.65,
+        "auto": true
+      },
+      {
+        "days": [
+          0
+        ],
+        "from": null,
+        "to": null,
+        "text": "Wo kann man Afterwork auf der Donauinsel machen?",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/post/afterwork-in-wien-die-besten-ideen-f%C3%BCr-einen-sommerabend-auf-der-donauinsel",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 0.35,
+        "auto": true
+      },
+      {
+        "days": [
+          4
+        ],
+        "from": null,
+        "to": null,
+        "text": "Afterwork mit Kollegen – aber ohne Bürogefühl .",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/post/afterwork-in-wien-die-besten-ideen-f%C3%BCr-einen-sommerabend-auf-der-donauinsel",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
         "confidence": 0.35,
         "auto": true
       },
       {
         "days": [],
+        "from": "18:00",
+        "to": "19:00",
+        "text": "1+1 0,33l Bier vom Fass zwischen 18-19 Uhr✨ .",
+        "label": "1+1",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-22-18-00/form",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 1,
+        "auto": true
+      },
+      {
+        "days": [
+          3
+        ],
         "from": null,
         "to": null,
-        "text": "Weißer Spritzer 0,25 l. €5,50 .",
-        "label": "Discount drinks",
-        "priceHint": "€5,50",
-        "sourceUrl": "https://www.stadtboden.at/menu/",
+        "text": "Afterwork: Island Groove FREE Entry | SummerStation top of page .",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-22-18-00/form",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:50:41.073Z",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 0.75,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          4
+        ],
+        "from": "18:00",
+        "to": "22:00",
+        "text": "Afterwork: Dance House Thursdays. Do., 07.",
+        "label": "Afterwork",
+        "priceHint": null,
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:47:50.260Z",
+        "confidence": 0.95,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "the-black-sheep-1630381889",
+    "name": "The Black Sheep",
+    "website": "https://theblacksheep.at/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Sommer Spritzer 0,5l. 4,60 €.",
+        "label": "Discount drinks",
+        "priceHint": null,
+        "sourceUrl": "https://theblacksheep.at/drinks/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:44:56.773Z",
         "confidence": 0.85,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "the-loft-1927759612",
+    "name": "The Loft",
+    "website": "https://www.theloft.at/",
+    "candidates": [
+      {
+        "days": [
+          4
+        ],
+        "from": null,
+        "to": null,
+        "text": "TECHNO AFTERWORK @ The Loft Zum Inhalt springen .",
+        "label": "Afterwork",
+        "priceHint": "€ 10",
+        "sourceUrl": "https://www.theloft.at/techno-afterwork-3/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:48:39.052Z",
+        "confidence": 0.75,
+        "auto": true
+      },
+      {
+        "days": [
+          4,
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "TECHNO AFTERWORK .",
+        "label": "Afterwork",
+        "priceHint": "€ 10",
+        "sourceUrl": "https://www.theloft.at/techno-afterwork-3/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:48:39.052Z",
+        "confidence": 0.75,
+        "auto": true
+      },
+      {
+        "days": [
+          0,
+          4,
+          5
+        ],
+        "from": null,
+        "to": null,
+        "text": "TECHNO AFTERWORK.",
+        "label": "Afterwork",
+        "priceHint": "€ 10",
+        "sourceUrl": "https://www.theloft.at/techno-afterwork-3/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:48:39.052Z",
+        "confidence": 0.75,
         "auto": true
       }
     ]
@@ -1465,8 +1748,21 @@
         "priceHint": null,
         "sourceUrl": "https://www.thepopp.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:01.786Z",
+        "verifiedAt": "2026-09-03T16:48:48.274Z",
         "confidence": 0.35,
+        "auto": true
+      },
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Buche dein Afterwork oder Event und genieße die besondere Atmosphäre mit Musik und tollen Drinks.",
+        "label": "Afterwork",
+        "priceHint": "€ 650",
+        "sourceUrl": "https://www.thepopp.at/service-page/event-work-occassion",
+        "source": "official_website",
+        "verifiedAt": "2026-09-03T16:48:48.274Z",
+        "confidence": 0.65,
         "auto": true
       }
     ]
@@ -1485,7 +1781,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -1506,7 +1802,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1527,7 +1823,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1544,7 +1840,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1565,7 +1861,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:08.253Z",
+        "verifiedAt": "2026-09-03T16:49:06.548Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1585,7 +1881,7 @@
         "priceHint": "€ 3,80",
         "sourceUrl": "https://www.uswbeisl.com/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:15.336Z",
+        "verifiedAt": "2026-09-03T16:47:24.185Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -1607,7 +1903,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:22.534Z",
+        "verifiedAt": "2026-09-03T16:49:49.144Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1615,12 +1911,12 @@
         "days": [],
         "from": null,
         "to": null,
-        "text": "▶︎ SOL Beer 1+1 #sharewithafriendorastranger 🤝. ▶︎ Cocktail Happy Hour | freshly mixed Cocktails only 7,50 – ’till 00.00h 🍍.",
+        "text": "✪ HAPPY HOUR ✪. ✪ 2 FLOORS ✪WIEN hat seinen besten Samstagsclub WIEDER!Achtung: limitierte Personenanzahl!.",
         "label": "Happy Hour",
-        "priceHint": null,
-        "sourceUrl": "https://www.u4.at/",
+        "priceHint": "12€",
+        "sourceUrl": "https://www.u4.at/events/finally-back-u4-vienna-behave/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:22.534Z",
+        "verifiedAt": "2026-09-03T16:49:49.144Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -1635,7 +1931,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:22.534Z",
+        "verifiedAt": "2026-09-03T16:49:49.144Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1650,7 +1946,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:22.534Z",
+        "verifiedAt": "2026-09-03T16:49:49.144Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1663,7 +1959,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:22.534Z",
+        "verifiedAt": "2026-09-03T16:49:49.144Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -1683,28 +1979,28 @@
         "priceHint": null,
         "sourceUrl": "https://www.weinco.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:31.953Z",
+        "verifiedAt": "2026-09-03T16:48:23.782Z",
         "confidence": 0.25,
         "auto": true
       }
     ]
   },
   {
-    "id": "zobel-1968846330",
-    "name": "Zobel",
-    "website": "https://www.zobel.wien/",
+    "id": "wildling-foods-1377764088",
+    "name": "Wildling Foods",
+    "website": "https://www.wildling-foods.at/",
     "candidates": [
       {
         "days": [],
         "from": null,
         "to": null,
-        "text": "Zobel – Restaurant, Bar & Afterwork in Wien Meidling Search for: Type and press Enter.",
-        "label": "Afterwork",
+        "text": "Zitronen Verbene Spritz 5,5. Thymian Zitrone Spritz 6.",
+        "label": "Discount drinks",
         "priceHint": null,
-        "sourceUrl": "https://www.zobel.wien/",
+        "sourceUrl": "http://wildling-foods.at/wilde-getraenke",
         "source": "official_website",
-        "verifiedAt": "2026-09-03T10:51:53.174Z",
-        "confidence": 0.25,
+        "verifiedAt": "2026-09-03T16:48:33.152Z",
+        "confidence": 0.7,
         "auto": true
       }
     ]
