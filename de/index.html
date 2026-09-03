@@ -2015,15 +2015,24 @@
       return "bar";
     }
 
-    function feedPlaceholderUrl(venue, deal) {
-      const placeholders = {
-        cocktail: "/assets/img/placeholders/cocktail-bar.webp",
-        pub: "/assets/img/placeholders/pub.webp",
-        sports: "/assets/img/placeholders/sports-bar.webp",
-        club: "/assets/img/placeholders/club.webp",
-        bar: "/assets/img/placeholders/bar.webp"
-      };
-      return placeholders[feedPlaceholderKind(venue, deal)] || placeholders.bar;
+    function feedPlaceholderLabel(kind) {
+      return ({
+        cocktail: "COCKTAIL BAR",
+        pub: "PUB",
+        sports: "SPORTS BAR",
+        club: "CLUB",
+        bar: "BAR"
+      })[kind] || "BAR";
+    }
+
+    function feedPlaceholderHtml(venue, deal) {
+      const kind = feedPlaceholderKind(venue, deal);
+      const label = feedPlaceholderLabel(kind);
+      return `<div class="live-deal-placeholder placeholder-${kind}" aria-hidden="true">
+        <span class="placeholder-brand"><b>BAR</b><em>DEALS</em></span>
+        <strong>${label}</strong>
+        <span class="placeholder-city">VIENNA</span>
+      </div>`;
     }
 
     function feedCard(venue) {
@@ -2033,15 +2042,15 @@
       const distance = dealFeedLocation ? feedDistanceKm(dealFeedLocation, venue) : null;
       const directions = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${venue.lat},${venue.lng}`)}`;
       const sourceUrl = dealFeedSafeHttpUrl(deal.sourceUrl || venue.website || "");
-      const placeholderUrl = feedPlaceholderUrl(venue, deal);
       const officialImageUrl = dealFeedSafeHttpUrl(venue.image || "");
-      const imageUrl = officialImageUrl || placeholderUrl;
+      const placeholderHtml = feedPlaceholderHtml(venue, deal);
       const verified = feedVerifiedLabel(deal);
       const district = dealFeedVenueDistrict(venue);
       return `
         <article class="live-deal-card">
-          <div class="live-deal-media">
-            <img class="live-deal-image${officialImageUrl ? "" : " is-placeholder"}" src="${dealFeedEscape(imageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.onerror=null; this.classList.add('is-placeholder'); this.src='${placeholderUrl}'">
+          <div class="live-deal-media ${officialImageUrl ? "has-official-image" : "show-placeholder"}">
+            ${placeholderHtml}
+            ${officialImageUrl ? `<img class="live-deal-image" src="${dealFeedEscape(officialImageUrl)}" alt="${dealFeedEscape(venue.name)}" loading="lazy" decoding="async" onerror="this.onerror=null; this.remove(); this.parentElement.classList.remove('has-official-image'); this.parentElement.classList.add('show-placeholder');">` : ""}
             <span class="live-deal-badge ${status.open ? "open" : ""}">${dealFeedEscape(status.label)}</span>
           </div>
           <div class="live-deal-body">

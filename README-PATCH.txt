@@ -1,15 +1,14 @@
-BarDeals placeholder + DE homepage patch
+BarDeals simple placeholder + mobile fit patch
 
-Copy this entire folder over the root of the bardeals repository and replace existing files.
+Copy the contents of this ZIP into the root of your bardeals repo and replace existing files.
 
-Includes:
-- index.html: automatic branded placeholder fallback for live deal cards
-- de/index.html: new German finder homepage + same live deal feed + placeholders
-- scripts/crawl-deals.mjs: validates extensionless image URLs by Content-Type and rejects HTML/homepage URLs
-- assets/css/site.css: latest shared mobile overflow/header fix
-- assets/img/placeholders/: Cocktail, Pub, Sports Bar, Club, and default Bar placeholders
+Changes:
+- Replaces generated placeholder images with simple responsive HTML/CSS placeholders.
+- Placeholder categories: COCKTAIL BAR, PUB, SPORTS BAR, CLUB, BAR.
+- Keeps real official venue photos when available.
+- If a real image fails, the card automatically reveals the CSS placeholder.
+- Mobile placeholders no longer crop category text because they are not image assets/object-fit crops.
+- Applies to both EN and DE homepages.
+- Keeps the existing DE live deal feed and crawler image validation.
 
-No deal parser rules, data JSON, or GitHub Action schedule are changed.
-
-Suggested commit:
-Add branded venue placeholders and sync German deal finder
+You can leave the old .webp placeholder files in the repo; the homepage no longer uses them.
