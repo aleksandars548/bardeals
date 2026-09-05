@@ -13,7 +13,7 @@
         "priceHint": "€ 6,50",
         "sourceUrl": "https://two-lounge.at/spritzer/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:19:28.262Z",
+        "verifiedAt": "2026-09-05T07:00:27.715Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -41,7 +41,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.allitaliana.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:17:28.977Z",
+        "verifiedAt": "2026-09-05T06:58:39.738Z",
         "confidence": 0.55,
         "auto": true
       },
@@ -62,7 +62,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.allitaliana.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:17:28.977Z",
+        "verifiedAt": "2026-09-05T06:58:39.738Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -82,7 +82,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:17:52.147Z",
+        "verifiedAt": "2026-09-05T06:59:04.790Z",
         "confidence": 1,
         "auto": true
       }
@@ -102,7 +102,7 @@
         "priceHint": null,
         "sourceUrl": "https://sportbox.cc/unternehmen/sportinsel",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:17:33.738Z",
+        "verifiedAt": "2026-09-05T06:58:49.879Z",
         "confidence": 0.65,
         "auto": true
       }
@@ -125,7 +125,7 @@
         "priceHint": null,
         "sourceUrl": "https://bestens.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:20:29.569Z",
+        "verifiedAt": "2026-09-05T07:01:37.271Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -138,7 +138,7 @@
         "priceHint": "€ 12,50",
         "sourceUrl": "https://bestens.bar/cocktail-menu-2/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:20:29.569Z",
+        "verifiedAt": "2026-09-05T07:01:37.271Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -158,7 +158,7 @@
         "priceHint": null,
         "sourceUrl": "https://bierhalle.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:20:09.142Z",
+        "verifiedAt": "2026-09-05T07:01:27.565Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -180,7 +180,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billabong.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:18:07.656Z",
+        "verifiedAt": "2026-09-05T06:59:19.545Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -205,7 +205,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:18:03.502Z",
+        "verifiedAt": "2026-09-05T06:59:35.486Z",
         "confidence": 0,
         "auto": true
       },
@@ -223,7 +223,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:18:03.502Z",
+        "verifiedAt": "2026-09-05T06:59:35.486Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -236,7 +236,7 @@
         "priceHint": "€ 5",
         "sourceUrl": "https://www.bitter.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:18:03.502Z",
+        "verifiedAt": "2026-09-05T06:59:35.486Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -258,7 +258,7 @@
         "priceHint": null,
         "sourceUrl": "https://wein.nummer5.at/2025/11/20/lammfleisch-weihnachtsangebote/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:18:24.074Z",
+        "verifiedAt": "2026-09-05T06:59:33.536Z",
         "confidence": 1,
         "auto": true
       }
@@ -286,7 +286,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:21:06.356Z",
+        "verifiedAt": "2026-09-05T07:01:41.926Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -306,7 +306,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.bar-cannaregio.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:19:40.524Z",
+        "verifiedAt": "2026-09-05T07:00:35.650Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -326,7 +326,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.crossfield.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:20:34.643Z",
+        "verifiedAt": "2026-09-05T07:02:15.090Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -338,16 +338,24 @@
     "website": "https://www.25hours-hotels.com/restaurants-bars/wien/dachboden",
     "candidates": [
       {
-        "days": [],
-        "from": null,
-        "to": null,
-        "text": "Start your outing with an aperitivo and antipasti from our own salumeria.",
-        "label": "Aperitivo",
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "from": "15:00",
+        "to": "01:00",
+        "text": "Nachmittags ein ruhiger Arbeitsplatz oder eine gemütliche Lounge und abends der Afterwork-Hotspot.",
+        "label": "Afterwork",
         "priceHint": null,
-        "sourceUrl": "https://25hours-hotels.com/",
+        "sourceUrl": "https://25hours-hotels.com/de/vienna/at-museumsquartier/restaurants-and-bars/dachboden/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:21:10.491Z",
-        "confidence": 0.65,
+        "verifiedAt": "2026-09-05T07:02:51.057Z",
+        "confidence": 0.35,
         "auto": true
       }
     ]
@@ -374,7 +382,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.der-garten.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:21:30.638Z",
+        "verifiedAt": "2026-09-05T07:02:09.279Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -402,7 +410,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.der-garten.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:20:40.868Z",
+        "verifiedAt": "2026-09-05T07:01:51.475Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -424,7 +432,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.downunder.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:21:13.953Z",
+        "verifiedAt": "2026-09-05T07:02:29.702Z",
         "confidence": 0.75,
         "auto": true
       }
@@ -444,7 +452,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.eleyx.com/signature-cocktails-die-kunst-der-perfekten-drinks-bei-eleyx/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:24:19.075Z",
+        "verifiedAt": "2026-09-05T07:05:34.794Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -464,7 +472,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:25:44.410Z",
+        "verifiedAt": "2026-09-05T07:07:32.617Z",
         "confidence": 0.85,
         "auto": true
       },
@@ -477,7 +485,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:25:44.410Z",
+        "verifiedAt": "2026-09-05T07:07:32.617Z",
         "confidence": 0.7,
         "auto": true
       },
@@ -492,7 +500,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:25:44.410Z",
+        "verifiedAt": "2026-09-05T07:07:32.617Z",
         "confidence": 0.6,
         "auto": true
       },
@@ -510,7 +518,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:25:44.410Z",
+        "verifiedAt": "2026-09-05T07:07:32.617Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -530,7 +538,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.firstamericanbar.at/die-coolste-lounge-der-city-event-spot/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:24:36.641Z",
+        "verifiedAt": "2026-09-05T07:07:41.823Z",
         "confidence": 0.25,
         "auto": true
       },
@@ -550,7 +558,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.firstamericanbar.at/bar-room-beste-bar-der-stadt/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:24:36.641Z",
+        "verifiedAt": "2026-09-05T07:07:41.823Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -572,7 +580,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -585,7 +593,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.93,
         "auto": true
       },
@@ -598,7 +606,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.93,
         "auto": true
       },
@@ -611,7 +619,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.73,
         "auto": true
       },
@@ -626,7 +634,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -642,7 +650,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/afterwork/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.75,
         "auto": true
       },
@@ -663,7 +671,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/veranstaltungslocation/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:12.519Z",
+        "verifiedAt": "2026-09-05T07:09:13.226Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -683,7 +691,7 @@
         "priceHint": null,
         "sourceUrl": "https://iltoro.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:46.393Z",
+        "verifiedAt": "2026-09-05T07:08:41.775Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -703,7 +711,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.jazzcafesofa.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:25:25.270Z",
+        "verifiedAt": "2026-09-05T07:07:12.445Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -731,7 +739,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.jins.at/jins1070",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:33.397Z",
+        "verifiedAt": "2026-09-05T07:09:40.787Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -751,7 +759,7 @@
         "priceHint": null,
         "sourceUrl": "https://johnnys-pub.at/drinks/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:28:23.911Z",
+        "verifiedAt": "2026-09-05T07:09:05.907Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -773,7 +781,7 @@
         "priceHint": null,
         "sourceUrl": "https://klyo.at/pages/events-wien",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:30:46.848Z",
+        "verifiedAt": "2026-09-05T07:11:58.337Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -798,7 +806,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/k-oe-oe-23.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:14.884Z",
+        "verifiedAt": "2026-09-05T07:07:57.183Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -813,7 +821,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/longdrink-happy-hour.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:14.884Z",
+        "verifiedAt": "2026-09-05T07:07:57.183Z",
         "confidence": 1,
         "auto": true
       }
@@ -833,7 +841,7 @@
         "priceHint": "€ 15",
         "sourceUrl": "https://www.krypt.bar/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:09.382Z",
+        "verifiedAt": "2026-09-05T07:10:36.176Z",
         "confidence": 0.65,
         "auto": true
       },
@@ -850,7 +858,7 @@
         "priceHint": "€ 14",
         "sourceUrl": "https://www.krypt.bar/menu",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:09.382Z",
+        "verifiedAt": "2026-09-05T07:10:36.176Z",
         "confidence": 0.75,
         "auto": true
       }
@@ -878,7 +886,7 @@
         "priceHint": null,
         "sourceUrl": "https://lapaninoteca.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:14.047Z",
+        "verifiedAt": "2026-09-05T07:10:45.173Z",
         "confidence": 0.55,
         "auto": true
       },
@@ -891,7 +899,7 @@
         "priceHint": null,
         "sourceUrl": "https://lapaninoteca.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:14.047Z",
+        "verifiedAt": "2026-09-05T07:10:45.173Z",
         "confidence": 0.25,
         "auto": true
       },
@@ -910,7 +918,7 @@
         "priceHint": null,
         "sourceUrl": "https://lapaninoteca.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:14.047Z",
+        "verifiedAt": "2026-09-05T07:10:45.173Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -935,7 +943,7 @@
         "priceHint": null,
         "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:43.832Z",
+        "verifiedAt": "2026-09-05T07:09:30.788Z",
         "confidence": 1,
         "auto": true
       },
@@ -948,7 +956,7 @@
         "priceHint": null,
         "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:43.832Z",
+        "verifiedAt": "2026-09-05T07:09:30.788Z",
         "confidence": 0.73,
         "auto": true
       },
@@ -966,7 +974,7 @@
         "priceHint": null,
         "sourceUrl": "https://lasalvia.at/happy-hour-cocktails-prosecco-und-wein/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:27:43.832Z",
+        "verifiedAt": "2026-09-05T07:09:30.788Z",
         "confidence": 0.83,
         "auto": true
       }
@@ -994,7 +1002,7 @@
         "priceHint": null,
         "sourceUrl": "https://latidoscocktailbar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:30:04.106Z",
+        "verifiedAt": "2026-09-05T07:13:42.387Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -1022,7 +1030,7 @@
         "priceHint": null,
         "sourceUrl": "https://lenz-socialdining.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:33:03.495Z",
+        "verifiedAt": "2026-09-05T07:13:36.822Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1041,7 +1049,7 @@
         "priceHint": null,
         "sourceUrl": "https://lenz-socialdining.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:33:03.495Z",
+        "verifiedAt": "2026-09-05T07:13:36.822Z",
         "confidence": 0.55,
         "auto": true
       }
@@ -1068,7 +1076,7 @@
         "priceHint": null,
         "sourceUrl": "https://lucybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:52.685Z",
+        "verifiedAt": "2026-09-05T07:08:35.402Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -1083,7 +1091,7 @@
         "priceHint": null,
         "sourceUrl": "https://lucybar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:26:52.685Z",
+        "verifiedAt": "2026-09-05T07:08:35.402Z",
         "confidence": 0.15,
         "auto": true
       }
@@ -1103,7 +1111,7 @@
         "priceHint": null,
         "sourceUrl": "https://luftbad.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:29:44.526Z",
+        "verifiedAt": "2026-09-05T07:10:00.700Z",
         "confidence": 0.85,
         "auto": true
       }
@@ -1123,7 +1131,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:28:35.863Z",
+        "verifiedAt": "2026-09-05T07:12:29.704Z",
         "confidence": 1,
         "auto": true
       },
@@ -1138,7 +1146,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:28:35.863Z",
+        "verifiedAt": "2026-09-05T07:12:29.704Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1153,8 +1161,43 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:28:35.863Z",
+        "verifiedAt": "2026-09-05T07:12:29.704Z",
         "confidence": 0.75,
+        "auto": true
+      }
+    ]
+  },
+  {
+    "id": "mikata-2162384112",
+    "name": "Mikata",
+    "website": "https://www.mikata.at/de/",
+    "candidates": [
+      {
+        "days": [],
+        "from": null,
+        "to": null,
+        "text": "Mikata Happy Hour – Mikata .",
+        "label": "Happy Hour",
+        "priceHint": null,
+        "sourceUrl": "https://www.mikata.at/happy-hour/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-05T07:14:09.573Z",
+        "confidence": 0.93,
+        "auto": true
+      },
+      {
+        "days": [
+          3
+        ],
+        "from": null,
+        "to": null,
+        "text": "Mikata Happy Hour.",
+        "label": "Happy Hour",
+        "priceHint": null,
+        "sourceUrl": "https://www.mikata.at/en/happy-hour/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-05T07:14:09.573Z",
+        "confidence": 1,
         "auto": true
       }
     ]
@@ -1175,7 +1218,7 @@
         "priceHint": null,
         "sourceUrl": "https://monami.at/bar",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:34:21.034Z",
+        "verifiedAt": "2026-09-05T07:14:38.905Z",
         "confidence": 0,
         "auto": true
       }
@@ -1198,7 +1241,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.nanog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:31:12.597Z",
+        "verifiedAt": "2026-09-05T07:11:09.529Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -1220,7 +1263,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.oceansky.at/en/bar",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:32:10.485Z",
+        "verifiedAt": "2026-09-05T07:11:54.537Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -1240,7 +1283,7 @@
         "priceHint": null,
         "sourceUrl": "https://peterpane.de/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:33:56.677Z",
+        "verifiedAt": "2026-09-05T07:17:55.403Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -1268,7 +1311,7 @@
         "priceHint": null,
         "sourceUrl": "https://slammerbar.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:43:08.543Z",
+        "verifiedAt": "2026-09-05T07:22:19.828Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1296,7 +1339,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.pub-speakeasy.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:41:18.450Z",
+        "verifiedAt": "2026-09-05T07:20:57.633Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1318,7 +1361,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.stadtboden.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:42:38.103Z",
+        "verifiedAt": "2026-09-05T07:25:47.204Z",
         "confidence": 0.35,
         "auto": true
       }
@@ -1330,49 +1373,30 @@
     "website": "https://www.summerstation.at/",
     "candidates": [
       {
-        "days": [
-          0,
-          4
-        ],
+        "days": [],
         "from": "18:00",
         "to": "19:00",
-        "text": "Angebot: 18-19 Uhr 1+1 auf alle Infusion Drinks (Finlandia Botanicals & Kinley mixers) . 🌅 Dance to House Beats from 90s/2000s with DJ Martin_van_Vienna .",
+        "text": "1+1 0,33l Bier vom Fass zwischen 18-19 Uhr✨ .",
         "label": "1+1",
         "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-01-18-00/form",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:38:07.051Z",
+        "verifiedAt": "2026-09-05T07:21:28.343Z",
         "confidence": 1,
         "auto": true
       },
       {
         "days": [
-          4
+          3
         ],
         "from": "18:00",
         "to": "22:00",
-        "text": "Afterwork: Dance House Thursdays | SummerStation top of page .",
+        "text": "Afterwork: Island Groove FREE Entry | SummerStation top of page .",
         "label": "Afterwork",
         "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
+        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-07-01-18-00/form",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:38:07.051Z",
-        "confidence": 0.95,
-        "auto": true
-      },
-      {
-        "days": [
-          0,
-          4
-        ],
-        "from": "18:00",
-        "to": "22:00",
-        "text": "Afterwork: Dance House Thursdays. Do., 07.",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-dance-house-thursdays-2025-08-07-18-00/form",
-        "source": "official_website",
-        "verifiedAt": "2026-09-04T07:38:07.051Z",
+        "verifiedAt": "2026-09-05T07:21:28.343Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1394,7 +1418,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.thepopp.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:39:11.107Z",
+        "verifiedAt": "2026-09-05T07:22:33.963Z",
         "confidence": 0.35,
         "auto": true
       },
@@ -1407,7 +1431,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.thepopp.at/service-page/event-work-occassion",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:39:11.107Z",
+        "verifiedAt": "2026-09-05T07:22:33.963Z",
         "confidence": 0.25,
         "auto": true
       }
@@ -1429,7 +1453,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:39:40.189Z",
+        "verifiedAt": "2026-09-05T07:23:31.554Z",
         "confidence": 0.6,
         "auto": true
       }
@@ -1442,16 +1466,16 @@
     "candidates": [
       {
         "days": [
-          5
+          6
         ],
         "from": null,
         "to": null,
-        "text": "🍹Cocktail Happy Hour bis Mitternacht🍹 . Early Bird: 8 Euro – limitiert.",
+        "text": "🍸 Cocktail Happy Hour – 7,50€ bis Mitternacht .",
         "label": "Happy Hour",
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:45:14.169Z",
+        "verifiedAt": "2026-09-05T07:24:37.654Z",
         "confidence": 0.95,
         "auto": true
       },
@@ -1466,7 +1490,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.u4.at/events/u4-opening-back-in-black/",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:45:14.169Z",
+        "verifiedAt": "2026-09-05T07:24:37.654Z",
         "confidence": 0.95,
         "auto": true
       }
@@ -1486,7 +1510,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.weinco.at/inspiration/alle-aktionen-46254",
         "source": "official_website",
-        "verifiedAt": "2026-09-04T07:45:35.509Z",
+        "verifiedAt": "2026-09-05T07:24:50.848Z",
         "confidence": 0.33,
         "auto": true
       }
