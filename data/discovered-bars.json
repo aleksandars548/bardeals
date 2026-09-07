@@ -8130,21 +8130,6 @@
     "sourceUrl": "https://www.openstreetmap.org/way/183616032"
   },
   {
-    "id": "neulich-1676768068",
-    "osmId": "node/1676768068",
-    "name": "Neulich",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.1989204,
-    "lng": 16.3878548,
-    "category": "Bar",
-    "website": "https://www.facebook.com/neulich.winkler",
-    "phone": "+43 676 9197991",
-    "openingHours": "Tu-Th 18:00-24:00; Fr,Sa 18:00-02:00",
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/1676768068"
-  },
-  {
     "id": "new-bar-450170234",
     "osmId": "node/450170234",
     "name": "New Bar",
