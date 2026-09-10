@@ -590,8 +590,8 @@
     "name": "AUX Bar",
     "address": "Argentinierstraße 30B, 1040 Wien",
     "zip": "1040",
-    "lat": 48.1949449,
-    "lng": 16.3730194,
+    "lat": 48.194493,
+    "lng": 16.3730582,
     "category": "Bar",
     "website": "https://www.funkhaus.wien/en/gastronomy",
     "phone": null,
@@ -4838,9 +4838,9 @@
     "lat": 48.2121012,
     "lng": 16.3643218,
     "category": "Bar",
-    "website": null,
+    "website": "https://freybier.wien/",
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Mo-Sa 11:30-23:00; Su,PH 12:00-20:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1009032977"
   },
@@ -5293,6 +5293,21 @@
     "openingHours": null,
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/13462187001"
+  },
+  {
+    "id": "gummiboot-14166993799",
+    "osmId": "node/14166993799",
+    "name": "Gummiboot",
+    "address": "Wien",
+    "zip": "",
+    "lat": 48.1868149,
+    "lng": 16.3578425,
+    "category": "Pub",
+    "website": null,
+    "phone": null,
+    "openingHours": null,
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/14166993799"
   },
   {
     "id": "gundis-cafe-restaurant-6188291485",
@@ -6540,6 +6555,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/4874643715"
   },
   {
+    "id": "krawall-bar-deli-14162339521",
+    "osmId": "node/14162339521",
+    "name": "Krawall Bar & Deli",
+    "address": "Zollergasse 7, 1070 Wien",
+    "zip": "1070",
+    "lat": 48.1992369,
+    "lng": 16.3510057,
+    "category": "Bar",
+    "website": null,
+    "phone": null,
+    "openingHours": "Tu-Th 14:00-02:00, Fr-Sa 14:00-03:00, Su 18:00-23:00",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/14162339521"
+  },
+  {
     "id": "kreisky-683569946",
     "osmId": "node/683569946",
     "name": "Kreisky",
@@ -7629,7 +7659,7 @@
     "lng": 16.3871844,
     "category": "Pub",
     "website": "https://www.mickeyfinns.at/",
-    "phone": "+43 680 3340027",
+    "phone": "+436767713855",
     "openingHours": "Mo-Th 17:00-24:00; Fr-Sa 18:00-24:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/470017960"
@@ -8440,7 +8470,7 @@
     "category": "Bar",
     "website": "https://olindabar.com/",
     "phone": null,
-    "openingHours": "We-Fr 17:00-24:00; Sa 13:00-24:00",
+    "openingHours": "Tu-Th 17:00-24:00; Fr-Sa 17:00-01:00; Su 17:00-23:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1439051816"
   },
@@ -11335,7 +11365,7 @@
     "category": "Pub",
     "website": "http://habit.wien/",
     "phone": "+43 660 37 28 776",
-    "openingHours": "Tu-Th 17:00-00:00; Fr-Sa 17:00-02:00",
+    "openingHours": "Mo-Th 17:00-00:00; Fr-Sa 17:00-02:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/5167185959"
   },
