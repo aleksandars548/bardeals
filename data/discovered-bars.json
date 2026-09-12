@@ -1225,7 +1225,7 @@
     "category": "Bar",
     "website": "https://www.bitter.bar/",
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Mo-Tu,Su off; We-Sa 18:00-23:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/6762165857"
   },
@@ -5305,7 +5305,7 @@
     "category": "Pub",
     "website": null,
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Mo-Sa 15:00-23:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/14166993799"
   },

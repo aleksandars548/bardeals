@@ -23,12 +23,44 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:22:20.924Z",
+        "verifiedAt": "2026-09-12T07:13:18.773Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/1707193972",
+    "auto": true
+  },
+  {
+    "id": "bricks-337947392",
+    "name": "Bricks",
+    "address": "Taborstraße 38, 1020 Wien",
+    "zip": "1020",
+    "lat": 48.218708,
+    "lng": 16.3810931,
+    "category": "Club",
+    "featured": false,
+    "website": "https://www.bricks.co.at/",
+    "image": null,
+    "imageSourceUrl": null,
+    "deals": [
+      {
+        "days": [
+          6
+        ],
+        "from": "20:00",
+        "to": "22:00",
+        "text": "HAPPY HOUR. von 20:00 bis 22:00 Uhr.",
+        "label": "Happy Hour",
+        "priceHint": "€ 5,00",
+        "sourceUrl": "https://bricks.co.at/",
+        "source": "official_website",
+        "verifiedAt": "2026-09-12T07:14:49.654Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/337947392",
     "auto": true
   },
   {
@@ -55,13 +87,13 @@
           6
         ],
         "from": "16:00",
-        "to": "00:00",
-        "text": "Happy Hour. täglich 16:00 bis 00:00.",
+        "to": "22:00",
+        "text": "Happy Hour. täglich 16:00 bis 22:00.",
         "label": "Happy Hour",
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:25:03.786Z",
+        "verifiedAt": "2026-09-12T07:15:25.304Z",
         "confidence": 1,
         "auto": true
       }
@@ -99,7 +131,7 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:25:28.207Z",
+        "verifiedAt": "2026-09-12T07:15:33.307Z",
         "confidence": 1,
         "auto": true
       }
@@ -137,7 +169,7 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:24:17.703Z",
+        "verifiedAt": "2026-09-12T07:15:10.434Z",
         "confidence": 1,
         "auto": true
       }
@@ -175,7 +207,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:31:01.872Z",
+        "verifiedAt": "2026-09-12T07:20:55.109Z",
         "confidence": 1,
         "auto": true
       }
@@ -209,7 +241,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:29:33.217Z",
+        "verifiedAt": "2026-09-12T07:20:51.066Z",
         "confidence": 1,
         "auto": true
       },
@@ -230,7 +262,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:29:33.217Z",
+        "verifiedAt": "2026-09-12T07:20:51.066Z",
         "confidence": 1,
         "auto": true
       }
@@ -265,7 +297,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:30:25.913Z",
+        "verifiedAt": "2026-09-12T07:21:26.210Z",
         "confidence": 1,
         "auto": true
       }
@@ -300,7 +332,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:31:17.831Z",
+        "verifiedAt": "2026-09-12T07:21:46.057Z",
         "confidence": 1,
         "auto": true
       }
@@ -338,7 +370,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:36:32.582Z",
+        "verifiedAt": "2026-09-12T07:27:04.744Z",
         "confidence": 1,
         "auto": true
       },
@@ -359,7 +391,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:36:32.582Z",
+        "verifiedAt": "2026-09-12T07:27:04.744Z",
         "confidence": 1,
         "auto": true
       }
@@ -397,7 +429,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:32:02.753Z",
+        "verifiedAt": "2026-09-12T07:22:54.292Z",
         "confidence": 1,
         "auto": true
       }
@@ -432,7 +464,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.nanog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:35:08.114Z",
+        "verifiedAt": "2026-09-12T07:26:58.701Z",
         "confidence": 1,
         "auto": true
       }
@@ -470,44 +502,12 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/de/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:36:51.117Z",
+        "verifiedAt": "2026-09-12T07:26:30.289Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/256669972",
-    "auto": true
-  },
-  {
-    "id": "summer-station-344657319",
-    "name": "Summer Station",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.2398117,
-    "lng": 16.3957116,
-    "category": "Bar",
-    "featured": false,
-    "website": "https://www.summerstation.at/",
-    "image": null,
-    "imageSourceUrl": null,
-    "deals": [
-      {
-        "days": [
-          3
-        ],
-        "from": "18:00",
-        "to": "22:00",
-        "text": "Afterwork: Island Groove FREE Entry | SummerStation top of page .",
-        "label": "Afterwork",
-        "priceHint": null,
-        "sourceUrl": "https://www.summerstation.at/event-details/afterwork-island-groove-free-entry-2026-09-16-18-00/form",
-        "source": "official_website",
-        "verifiedAt": "2026-09-10T07:47:45.268Z",
-        "confidence": 0.95,
-        "auto": true
-      }
-    ],
-    "discoveredFrom": "https://www.openstreetmap.org/way/344657319",
     "auto": true
   },
   {
@@ -540,7 +540,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:23.366Z",
+        "verifiedAt": "2026-09-12T07:39:51.050Z",
         "confidence": 1,
         "auto": true
       },
@@ -557,7 +557,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:23.366Z",
+        "verifiedAt": "2026-09-12T07:39:51.050Z",
         "confidence": 1,
         "auto": true
       },
@@ -578,7 +578,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:23.366Z",
+        "verifiedAt": "2026-09-12T07:39:51.050Z",
         "confidence": 1,
         "auto": true
       },
@@ -596,7 +596,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:23.366Z",
+        "verifiedAt": "2026-09-12T07:39:51.050Z",
         "confidence": 1,
         "auto": true
       },
@@ -615,7 +615,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:23.366Z",
+        "verifiedAt": "2026-09-12T07:39:51.050Z",
         "confidence": 1,
         "auto": true
       }
@@ -653,7 +653,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:26.172Z",
+        "verifiedAt": "2026-09-12T07:37:32.872Z",
         "confidence": 1,
         "auto": true
       },
@@ -672,7 +672,7 @@
         "priceHint": null,
         "sourceUrl": "https://weberknecht.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-10T07:49:26.172Z",
+        "verifiedAt": "2026-09-12T07:37:32.872Z",
         "confidence": 1,
         "auto": true
       }
