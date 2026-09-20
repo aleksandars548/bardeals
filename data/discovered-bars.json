@@ -6390,6 +6390,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/430388313"
   },
   {
+    "id": "kleinlaut-14197250101",
+    "osmId": "node/14197250101",
+    "name": "Kleinlaut",
+    "address": "Gutenberggasse 28, 1070 Wien",
+    "zip": "1070",
+    "lat": 48.2040589,
+    "lng": 16.3555671,
+    "category": "Bar",
+    "website": "https://kleinlaut.wien/",
+    "phone": "+43 676 6616644",
+    "openingHours": "Tu-Sa 18:00-02:00",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/14197250101"
+  },
+  {
     "id": "kleinod-6019766386",
     "osmId": "node/6019766386",
     "name": "Kleinod",
@@ -10138,6 +10153,21 @@
     "openingHours": null,
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1665276227"
+  },
+  {
+    "id": "schrei-sohne-11280480090",
+    "osmId": "node/11280480090",
+    "name": "Schrei & Söhne",
+    "address": "Schönbrunner Straße 48, 1050 Wien",
+    "zip": "1050",
+    "lat": 48.1912927,
+    "lng": 16.3556092,
+    "category": "Bar",
+    "website": "https://www.schrei.wien/",
+    "phone": null,
+    "openingHours": "Mo,Su,PH off; Tu-Th 11:00-19:00; Fr 11:00-21:00; Sa 09:30-15:00",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/11280480090"
   },
   {
     "id": "schutzhaus-am-ameisbach-2955751386",
