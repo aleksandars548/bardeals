@@ -3535,7 +3535,7 @@
     "category": "Pub",
     "website": "https://derwisch.wien/",
     "phone": "+43 19563677",
-    "openingHours": "Su-Th 14:00-02:00; Fr-Sa 14:00-04:00",
+    "openingHours": "Su, Tu-Th 16:00-00:00; Fr-Sa 16:00-04:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1717868121"
   },
@@ -8640,21 +8640,6 @@
     "sourceUrl": "https://www.openstreetmap.org/node/3271174773"
   },
   {
-    "id": "paradice-boardgame-bar-8156064462",
-    "osmId": "node/8156064462",
-    "name": "ParaDice - Boardgame Bar",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.2135075,
-    "lng": 16.3357169,
-    "category": "Bar",
-    "website": "https://www.paradice-board-game-bar.at/",
-    "phone": null,
-    "openingHours": "Tu-Fr 17:00-23:00; Sa 08:00-23:00; Su, PH off",
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/8156064462"
-  },
-  {
     "id": "park-cafe-847183480",
     "osmId": "node/847183480",
     "name": "Park Cafe",
@@ -10275,21 +10260,6 @@
     "sourceUrl": "https://www.openstreetmap.org/node/12806367321"
   },
   {
-    "id": "scout-7-11994912988",
-    "osmId": "node/11994912988",
-    "name": "Scout 7",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.1984844,
-    "lng": 16.3433156,
-    "category": "Pub",
-    "website": null,
-    "phone": null,
-    "openingHours": null,
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/11994912988"
-  },
-  {
     "id": "seiler-s-956430137",
     "osmId": "node/956430137",
     "name": "Seiler's",
@@ -10953,8 +10923,8 @@
     "id": "strandbar-herrmann-425425281",
     "osmId": "way/425425281",
     "name": "Strandbar Herrmann",
-    "address": "Herrmannpark, Wien",
-    "zip": "",
+    "address": "Herrmannpark 1, 1030 Wien",
+    "zip": "1030",
     "lat": 48.2119148,
     "lng": 16.385765,
     "category": "Bar",
