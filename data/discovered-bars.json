@@ -10875,6 +10875,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/2886905792"
   },
   {
+    "id": "stehsopherl-4432703041",
+    "osmId": "node/4432703041",
+    "name": "Stehsopherl",
+    "address": "Webgasse 45, 1060 Wien",
+    "zip": "1060",
+    "lat": 48.1964631,
+    "lng": 16.3440763,
+    "category": "Bar",
+    "website": null,
+    "phone": null,
+    "openingHours": "Mo-Fr 15:00-00:00; Sa 11:00-00:00; Su off",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/4432703041"
+  },
+  {
     "id": "stehzeit-497741074",
     "osmId": "node/497741074",
     "name": "Stehzeit",
