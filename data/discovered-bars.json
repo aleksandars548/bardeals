@@ -1418,9 +1418,9 @@
     "lat": 48.2010991,
     "lng": 16.3269602,
     "category": "Pub",
-    "website": "https://www.facebook.com/brauhundbar",
+    "website": "https://www.brauhund.com/",
     "phone": null,
-    "openingHours": "Mo, We-Sa 17:00-02:00; Su 16:00-23:00",
+    "openingHours": "Mo,We,Th 18:00-01:00; Fr,Sa 18:00-02:00; Su 17:00-23:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1776090872"
   },
@@ -8125,7 +8125,7 @@
     "category": "Bar",
     "website": "https://needlevinylbar.com/",
     "phone": null,
-    "openingHours": "Mo-Fr 11:00-02:00, Sa,Su 14:00-02:00",
+    "openingHours": "Mo-Su 17:00-02:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/6019712909"
   },
@@ -11503,21 +11503,6 @@
     "openingHours": "Mo-Fr 09:00-23:00+",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/2624695918"
-  },
-  {
-    "id": "the-other-place-vienna-11886824896",
-    "osmId": "node/11886824896",
-    "name": "The Other Place Vienna",
-    "address": "Steinbauergasse 34, Wien",
-    "zip": "",
-    "lat": 48.1823123,
-    "lng": 16.3404817,
-    "category": "Pub",
-    "website": null,
-    "phone": null,
-    "openingHours": "Mo-Fr 13:00-24:00, Sa 17:00-24:00, Su,PH 15:00-20:00",
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/11886824896"
   },
   {
     "id": "the-popp-13507439167",

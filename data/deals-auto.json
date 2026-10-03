@@ -23,7 +23,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:03:49.793Z",
+        "verifiedAt": "2026-10-03T08:15:01.595Z",
         "confidence": 1,
         "auto": true
       }
@@ -93,7 +93,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:07:24.733Z",
+        "verifiedAt": "2026-10-03T08:17:54.630Z",
         "confidence": 1,
         "auto": true
       }
@@ -131,7 +131,7 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-30T08:42:07.989Z",
+        "verifiedAt": "2026-10-03T08:17:38.498Z",
         "confidence": 1,
         "auto": true
       }
@@ -169,7 +169,7 @@
         "priceHint": null,
         "sourceUrl": "http://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-09-30T08:41:28.095Z",
+        "verifiedAt": "2026-10-03T08:16:20.008Z",
         "confidence": 1,
         "auto": true
       }
@@ -207,7 +207,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:10:52.765Z",
+        "verifiedAt": "2026-10-03T08:23:03.675Z",
         "confidence": 1,
         "auto": true
       }
@@ -241,7 +241,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:14:00.295Z",
+        "verifiedAt": "2026-10-03T08:22:26.282Z",
         "confidence": 1,
         "auto": true
       },
@@ -262,7 +262,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:14:00.295Z",
+        "verifiedAt": "2026-10-03T08:22:26.282Z",
         "confidence": 1,
         "auto": true
       }
@@ -297,7 +297,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:14:23.816Z",
+        "verifiedAt": "2026-10-03T08:22:54.731Z",
         "confidence": 1,
         "auto": true
       }
@@ -332,7 +332,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:16:57.055Z",
+        "verifiedAt": "2026-10-03T08:26:33.952Z",
         "confidence": 1,
         "auto": true
       }
@@ -370,7 +370,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:15:41.785Z",
+        "verifiedAt": "2026-10-03T08:23:38.480Z",
         "confidence": 1,
         "auto": true
       },
@@ -391,7 +391,7 @@
         "priceHint": "€ 8,00",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:15:41.785Z",
+        "verifiedAt": "2026-10-03T08:23:38.480Z",
         "confidence": 1,
         "auto": true
       }
@@ -414,22 +414,16 @@
     "deals": [
       {
         "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
           6
         ],
         "from": "18:00",
         "to": "20:00",
-        "text": "Daily Happy Hour. Unsere Happy Hour – täglich von 18-20 Uhr, auch am Samstag, Sonntag und an Feiertagen – bietet die beste Gelegenheit zum ausführlichen Probieren unserer Cocktail-Kreatione…",
+        "text": "Tägliche Happy Hour Cocktails. Von 18–20 Uhr jeder Cocktail 4 € billiger.",
         "label": "Happy Hour",
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:15:46.178Z",
+        "verifiedAt": "2026-10-03T08:25:59.224Z",
         "confidence": 1,
         "auto": true
       }
@@ -464,7 +458,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.nanog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:20:54.443Z",
+        "verifiedAt": "2026-10-03T08:32:18.398Z",
         "confidence": 1,
         "auto": true
       }
@@ -502,7 +496,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/de/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:21:53.005Z",
+        "verifiedAt": "2026-10-03T08:30:41.831Z",
         "confidence": 1,
         "auto": true
       }
@@ -540,7 +534,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:34:52.676Z",
+        "verifiedAt": "2026-10-03T08:41:18.087Z",
         "confidence": 1,
         "auto": true
       },
@@ -557,7 +551,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:34:52.676Z",
+        "verifiedAt": "2026-10-03T08:41:18.087Z",
         "confidence": 1,
         "auto": true
       },
@@ -578,7 +572,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:34:52.676Z",
+        "verifiedAt": "2026-10-03T08:41:18.087Z",
         "confidence": 1,
         "auto": true
       },
@@ -596,7 +590,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:34:52.676Z",
+        "verifiedAt": "2026-10-03T08:41:18.087Z",
         "confidence": 1,
         "auto": true
       },
@@ -615,7 +609,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-01T09:34:52.676Z",
+        "verifiedAt": "2026-10-03T08:41:18.087Z",
         "confidence": 1,
         "auto": true
       }
