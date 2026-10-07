@@ -1455,6 +1455,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/337947392"
   },
   {
+    "id": "bros-pizza-13749706758",
+    "osmId": "node/13749706758",
+    "name": "Bros. Pizza",
+    "address": "Bruno-Marek-Allee 20, Wien",
+    "zip": "",
+    "lat": 48.226004,
+    "lng": 16.3924188,
+    "category": "Restaurant Bar",
+    "website": "https://www.pizzabros.at/",
+    "phone": null,
+    "openingHours": "Tu-Th,Su 11:30-23:00; Fr-Sa 11:30-24:00",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/13749706758"
+  },
+  {
     "id": "brot-und-spiele-1193859571",
     "osmId": "node/1193859571",
     "name": "Brot und Spiele",
@@ -3235,7 +3250,7 @@
     "category": "Pub",
     "website": null,
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Mo-Th 16:00-01:00, Fr,Sa 16:00-02:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/1660997102"
   },
@@ -4528,6 +4543,21 @@
     "openingHours": "Tu-Th 18:00-00:00; Fr-Sa 18:00-02:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/13018782563"
+  },
+  {
+    "id": "fivebar-409230019",
+    "osmId": "node/409230019",
+    "name": "fivebar",
+    "address": "Pfeilgasse 8, 1080 Wien",
+    "zip": "1080",
+    "lat": 48.2084283,
+    "lng": 16.3475406,
+    "category": "Bar",
+    "website": null,
+    "phone": null,
+    "openingHours": null,
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/409230019"
   },
   {
     "id": "flanagans-321595780",
@@ -6010,7 +6040,7 @@
     "category": "Bar",
     "website": null,
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Mo-Su,PH 07:00-24:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/way/1427726798"
   },
@@ -7078,21 +7108,6 @@
     "openingHours": null,
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/4264226302"
-  },
-  {
-    "id": "living-room-409230019",
-    "osmId": "node/409230019",
-    "name": "Living Room",
-    "address": "Pfeilgasse 8, 1080 Wien",
-    "zip": "1080",
-    "lat": 48.2084283,
-    "lng": 16.3475406,
-    "category": "Pub",
-    "website": "http://yourlivingroom.at/",
-    "phone": "+43 1 4058243",
-    "openingHours": "Mo-Th 18:00-02:00; Fr-Sa 18:00-04:00; Su 18:00-24:00",
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/409230019"
   },
   {
     "id": "loco-bar-5184042865",
@@ -8961,7 +8976,7 @@
     "address": "Stadlauer Straße 41A, 1220 Wien",
     "zip": "1220",
     "lat": 48.2330525,
-    "lng": 16.4582111,
+    "lng": 16.4582095,
     "category": "Pub",
     "website": "https://www.platin-billard.at/",
     "phone": null,
@@ -9070,7 +9085,7 @@
     "category": "Club",
     "website": null,
     "phone": null,
-    "openingHours": null,
+    "openingHours": "Fr 22:00-04:00, Sa 22:00-04:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/6310206984"
   },
@@ -10530,6 +10545,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/14062376454"
   },
   {
+    "id": "sipsong-bar-401268104",
+    "osmId": "node/401268104",
+    "name": "Sipsong Bar",
+    "address": "Wien",
+    "zip": "",
+    "lat": 48.211834,
+    "lng": 16.3521658,
+    "category": "Bar",
+    "website": null,
+    "phone": null,
+    "openingHours": "We,Th 17:30-23:30; Fr,Sa 17:30-24:00; Su 17:30-22:30; Tu off; Mo off",
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/401268104"
+  },
+  {
     "id": "sky-bar-3171408096",
     "osmId": "node/3171408096",
     "name": "Sky Bar",
@@ -10978,21 +11008,6 @@
     "openingHours": "Tu-Sa 17:00-24:00",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/434487717"
-  },
-  {
-    "id": "studio-169a-7272328740",
-    "osmId": "node/7272328740",
-    "name": "Studio 169a",
-    "address": "Wien",
-    "zip": "",
-    "lat": 48.2286018,
-    "lng": 16.3324965,
-    "category": "Club",
-    "website": null,
-    "phone": null,
-    "openingHours": null,
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/7272328740"
   },
   {
     "id": "studio-37-3754664959",
@@ -11950,7 +11965,7 @@
     "category": "Bar",
     "website": "https://www.tschau.at/",
     "phone": null,
-    "openingHours": "\"bei Schönwetter\"",
+    "openingHours": null,
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/8755703066"
   },
