@@ -945,6 +945,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/1438259632"
   },
   {
+    "id": "bellagio-14279479223",
+    "osmId": "node/14279479223",
+    "name": "Bellagio",
+    "address": "Wien",
+    "zip": "",
+    "lat": 48.208095,
+    "lng": 16.3336527,
+    "category": "Bar",
+    "website": null,
+    "phone": null,
+    "openingHours": null,
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/14279479223"
+  },
+  {
     "id": "bergstation-tirol-2476501165",
     "osmId": "node/2476501165",
     "name": "Bergstation Tirol",
