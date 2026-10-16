@@ -23,7 +23,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.barpani.com/events",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:33:21.209Z",
+        "verifiedAt": "2026-10-16T07:18:42.689Z",
         "confidence": 1,
         "auto": true
       }
@@ -55,7 +55,7 @@
         "priceHint": "€ 5,00",
         "sourceUrl": "https://bricks.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-09-29T08:41:43.057Z",
+        "verifiedAt": "2026-10-16T07:20:55.507Z",
         "confidence": 1,
         "auto": true
       }
@@ -93,7 +93,7 @@
         "priceHint": null,
         "sourceUrl": "https://cafefrog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:36:44.716Z",
+        "verifiedAt": "2026-10-16T07:22:22.517Z",
         "confidence": 1,
         "auto": true
       }
@@ -131,7 +131,7 @@
         "priceHint": null,
         "sourceUrl": "https://casablanca.gusti.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:34:31.226Z",
+        "verifiedAt": "2026-10-16T07:19:59.079Z",
         "confidence": 1,
         "auto": true
       }
@@ -169,7 +169,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.chillout-lounge.at/startseite/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:34:14.664Z",
+        "verifiedAt": "2026-10-16T07:19:15.434Z",
         "confidence": 1,
         "auto": true
       }
@@ -207,7 +207,7 @@
         "priceHint": null,
         "sourceUrl": "https://evaundadam.bar/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:39:56.488Z",
+        "verifiedAt": "2026-10-16T07:26:37.849Z",
         "confidence": 1,
         "auto": true
       }
@@ -241,7 +241,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:38:43.134Z",
+        "verifiedAt": "2026-10-16T07:22:33.678Z",
         "confidence": 1,
         "auto": true
       },
@@ -262,12 +262,44 @@
         "priceHint": null,
         "sourceUrl": "https://www.funkymonkeybar.at/specials/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:38:43.134Z",
+        "verifiedAt": "2026-10-16T07:22:33.678Z",
         "confidence": 1,
         "auto": true
       }
     ],
     "discoveredFrom": "https://www.openstreetmap.org/node/566660740",
+    "auto": true
+  },
+  {
+    "id": "g5-live-musik-bar-11339479082",
+    "name": "G5 Live Musik Bar",
+    "address": "217, 1190 Wien",
+    "zip": "1190",
+    "lat": 48.2358221,
+    "lng": 16.3562271,
+    "category": "Bar",
+    "featured": false,
+    "website": "https://www.g5musicgroup.at/g5livemusicbar/",
+    "image": null,
+    "imageSourceUrl": null,
+    "deals": [
+      {
+        "days": [
+          5
+        ],
+        "from": "19:00",
+        "to": "23:45",
+        "text": "G5 Party Night – DJs / Beer Pong / Happy Hour . G5 – Live Music Bar .",
+        "label": "Happy Hour",
+        "priceHint": null,
+        "sourceUrl": "https://g5musicgroup.at/all-events/",
+        "source": "official_website",
+        "verifiedAt": "2026-10-16T07:28:17.517Z",
+        "confidence": 1,
+        "auto": true
+      }
+    ],
+    "discoveredFrom": "https://www.openstreetmap.org/node/11339479082",
     "auto": true
   },
   {
@@ -297,7 +329,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/lokale/1070-kirchengasse.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:46:06.955Z",
+        "verifiedAt": "2026-10-16T07:29:08.022Z",
         "confidence": 1,
         "auto": true
       }
@@ -332,7 +364,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.billardcafe.at/de/events/event-aktuell/bier-happy-hour-1.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:47:02.673Z",
+        "verifiedAt": "2026-10-16T07:31:13.099Z",
         "confidence": 1,
         "auto": true
       }
@@ -370,7 +402,7 @@
         "priceHint": "€ 8,50",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:44:55.444Z",
+        "verifiedAt": "2026-10-16T07:24:01.445Z",
         "confidence": 1,
         "auto": true
       },
@@ -391,7 +423,7 @@
         "priceHint": "€ 8,50",
         "sourceUrl": "https://loop.co.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:44:55.444Z",
+        "verifiedAt": "2026-10-16T07:24:01.445Z",
         "confidence": 1,
         "auto": true
       }
@@ -423,7 +455,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.mabels.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:41:31.100Z",
+        "verifiedAt": "2026-10-16T07:30:46.059Z",
         "confidence": 1,
         "auto": true
       },
@@ -444,7 +476,7 @@
         "priceHint": "€4",
         "sourceUrl": "https://www.mabels.at/cocktails-en.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:41:31.100Z",
+        "verifiedAt": "2026-10-16T07:30:46.059Z",
         "confidence": 1,
         "auto": true
       },
@@ -465,7 +497,7 @@
         "priceHint": "€4",
         "sourceUrl": "https://www.mabels.at/cocktails-en.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:41:31.100Z",
+        "verifiedAt": "2026-10-16T07:30:46.059Z",
         "confidence": 1,
         "auto": true
       }
@@ -500,7 +532,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.nanog.at/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:48:56.891Z",
+        "verifiedAt": "2026-10-16T07:32:33.468Z",
         "confidence": 1,
         "auto": true
       }
@@ -538,7 +570,7 @@
         "priceHint": null,
         "sourceUrl": "https://www.shebeen.at/de/drinks.html",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T07:54:49.775Z",
+        "verifiedAt": "2026-10-16T07:35:28.121Z",
         "confidence": 1,
         "auto": true
       }
@@ -576,7 +608,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T08:03:03.575Z",
+        "verifiedAt": "2026-10-16T07:40:45.732Z",
         "confidence": 1,
         "auto": true
       },
@@ -593,7 +625,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T08:03:03.575Z",
+        "verifiedAt": "2026-10-16T07:40:45.732Z",
         "confidence": 1,
         "auto": true
       },
@@ -614,7 +646,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T08:03:03.575Z",
+        "verifiedAt": "2026-10-16T07:40:45.732Z",
         "confidence": 1,
         "auto": true
       },
@@ -632,7 +664,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T08:03:03.575Z",
+        "verifiedAt": "2026-10-16T07:40:45.732Z",
         "confidence": 1,
         "auto": true
       },
@@ -651,7 +683,7 @@
         "priceHint": null,
         "sourceUrl": "https://travelshackvienna.com/",
         "source": "official_website",
-        "verifiedAt": "2026-10-15T08:03:03.575Z",
+        "verifiedAt": "2026-10-16T07:40:45.732Z",
         "confidence": 1,
         "auto": true
       }

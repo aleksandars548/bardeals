@@ -7050,6 +7050,21 @@
     "sourceUrl": "https://www.openstreetmap.org/node/441571054"
   },
   {
+    "id": "libelle-wien-2145110892",
+    "osmId": "node/2145110892",
+    "name": "Libelle Wien",
+    "address": "Tellgasse 25, 1150 Wien",
+    "zip": "1150",
+    "lat": 48.2010306,
+    "lng": 16.3255219,
+    "category": "Bar",
+    "website": "https://www.libelle.at/",
+    "phone": null,
+    "openingHours": null,
+    "source": "OpenStreetMap",
+    "sourceUrl": "https://www.openstreetmap.org/node/2145110892"
+  },
+  {
     "id": "likor-stube-356313837",
     "osmId": "node/356313837",
     "name": "Likör-Stube",
@@ -9865,7 +9880,7 @@
     "category": "Pub",
     "website": "https://www.rupps.at/",
     "phone": "+43 1 5452284",
-    "openingHours": "Mo,Su,PH off; Tu-Sa 18:00-02:00",
+    "openingHours": "Tu-Sa 18:00-02:00; Mo,Su,PH off",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/476340834"
   },
@@ -10228,21 +10243,6 @@
     "openingHours": "Mo off; Tu-Su 11:00-21:45",
     "source": "OpenStreetMap",
     "sourceUrl": "https://www.openstreetmap.org/node/3503645673"
-  },
-  {
-    "id": "schwelle-wien-2145110892",
-    "osmId": "node/2145110892",
-    "name": "schwelle.wien",
-    "address": "Tellgasse 25, 1150 Wien",
-    "zip": "1150",
-    "lat": 48.2010306,
-    "lng": 16.3255219,
-    "category": "Bar",
-    "website": "https://schwelle.at/",
-    "phone": null,
-    "openingHours": null,
-    "source": "OpenStreetMap",
-    "sourceUrl": "https://www.openstreetmap.org/node/2145110892"
   },
   {
     "id": "schwirtz-3964578496",
